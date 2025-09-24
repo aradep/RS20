@@ -37,11 +37,12 @@ UPDATE `gameobject` SET `spawnmask` = 0 WHERE `map` NOT IN (
 169 -- Azshara Crater
 );
 
--- Re-enable Argent Tournament Grounds
-UPDATE `gameobject` SET `spawnMask` = '1' WHERE `map` = 571 AND `position_x` > 8000 AND `position_x` < 8800 AND `position_y` < 1200 AND `position_y` > 500;
-UPDATE `creature`   SET `spawnMask` = '1' WHERE `map` = 571 AND `position_x` > 8000 AND `position_x` < 8800 AND `position_y` < 1200 AND `position_y` > 500;
--- Re-disable unwanted NPCs in Argent Tournament Grounds
-UPDATE `creature`   SET `spawnMask` = '0' WHERE `id1` NOT IN (17213, 36069, 33543, 33643, 28756, 20735, 32287, 30115);
+-- Re-enable all stuff in coordinates of Argent Tournament Grounds
+UPDATE `gameobject` SET `spawnMask` = 1 WHERE `map` = 571 AND `position_x` > 8000 AND `position_x` < 8800 AND `position_y` < 1200 AND `position_y` > 500;
+UPDATE `creature` SET `spawnMask` = 1 WHERE `map` = 571 AND `position_x` > 8000 AND `position_x` < 8800 AND `position_y` < 1200 AND `position_y` > 500;
+-- Re-disable unwanted stuff at Argent Tournament Grounds
+UPDATE `creature` SET `spawnMask` = 0 WHERE `id1` IN (17213, 36069, 33543, 33643, 28756, 20735, 32287, 30115);
+UPDATE `gameobject` SET `spawnMask` = 0 WHERE `id` IN (186943);
 
 -- Delete unused linked respawns
 DELETE lr

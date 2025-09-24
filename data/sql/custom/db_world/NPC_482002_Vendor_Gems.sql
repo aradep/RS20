@@ -22,6 +22,7 @@ SET
 @Type       = 7, -- 0:None, 1:Beast, 2:Dragonkin, 3:Demon, 4:Elemental, 5:Giant, 6:Undead, 7:Humanoid, 8:Critter, 9:Mechanical --
 @Flags      = 128, -- 128: Normal vendor, 4224: Repair vendor
 @Level      = 23,
+@Class      = 1,
 @Faction    = 35;
 DELETE FROM creature_template WHERE `Entry` = @Entry;
 INSERT INTO creature_template (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    

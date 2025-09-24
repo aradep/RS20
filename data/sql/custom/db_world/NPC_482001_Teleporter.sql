@@ -30,6 +30,11 @@ INSERT INTO creature_template (entry, name, subname, IconName, gossip_menu_id, m
 DELETE FROM creature_template_model WHERE CreatureID = @Entry;
 INSERT INTO creature_template_model VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
+DELETE FROM `creature` WHERE `guid` IN (@HonorVend,@ArenaVend) AND `Comment` = 'CustomNPC';
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
+(@HonorVend, 0, 0, 571, 0, 0, 1, 1, 1, 8520.04, 820.728, 562.89, 4.57566, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC'),
+(@ArenaVend, 0, 0, 571, 0, 0, 1, 1, 1, 8510.16, 820.545, 562.89, 4.75237, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+
 -- Teleports
 SET
 -- Base menu
@@ -37,7 +42,7 @@ SET
 
 -- Option 1 (Coliseum)
 @SelectIcon_Option1  = 7, 
-@Select_Option1      = 'Coliseum (BG/Arena)',
+@Select_Option1      = 'Coliseum (Dueling/BGs/Arena)',
 @Explain_Option1     = 'The Coliseum is where you will find the PvP vendors and arena services. You can also challenge players to a duel here.',
 @ConfirmIcon_Option1 = 2, 
 @Confirm_Option1     = 'Go to the arena.',
@@ -45,7 +50,7 @@ SET
 
 -- Option 2 (Azshara Crater)
 @SelectIcon_Option2  = 7, 
-@Select_Option2      = 'Azshara Crater (wPvP)',
+@Select_Option2      = 'Azshara Crater (Open-world PvP)',
 @Explain_Option2     = 'Azshara Crater is an open-world PvP zone full of daily quests that reward Honor Coins and other useful items. You will also find Small Dream Shards on the corpses of your enemies while inside of Azshara Crater.$b$bAre you sure you wish to enter?',
 @ConfirmIcon_Option2 = 2, 
 @Confirm_Option2     = 'Enter Azshara Crater.',
@@ -56,7 +61,7 @@ SET
 @Select_Option3      = 'Dungeons (Blizzlike)',
 @Explain_Option3     = 'There are many rare items to be found in the darkest depths of Azeroth but it would be wise to bring a friend.$b$bYou will find Small Dream Shards on the corpses of your enemies while inside of dungeons. Disenchant any item you don\'t need to acquire Magic Dust, a currency for purchasing enchantments.',
 @ConfirmIcon_Dung    = 9,
-@Confirm_Dungeon1    = 'Teleport to Deadmines.',
+@Confirm_Dungeon1    = 'Teleport to the Deadmines.',
 @Confirm_Dungeon2    = 'Teleport to Wailing Caverns.',
 @Confirm_Dungeon3    = 'Teleport to Shadowfang Keep.',
 @Confirm_Dungeon4    = 'Teleport to Blackfathom Deeps.',
@@ -73,7 +78,7 @@ SET
 @Explain_Option4     = 'The Hall of Champions contains class trainers, vendors for gear, glyphs, enchants, and consumables, and services like the barber and auctionhouse.',
 @ConfirmIcon_Option4 = 2, 
 @Confirm_Option4     = 'Teleport to Hall of Champions.',
-@Map_Option4 = 189, @X_Option4 = 1945.74, @Y_Option4 = -431.596, @Z_Option4 = 16.368, @O_Option4 = 0,
+@Map_Option4 = 189, @X_Option4 = 1978.44, @Y_Option4 = -431.66, @Z_Option4 = 11.272, @O_Option4 = 3.11,
 
 -- Back
 @Back = 'Back.';
