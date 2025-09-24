@@ -8,9 +8,9 @@
 -- -----------------------------------
 
 SET
-@GunVendor          := 29476,
-@BowVendor          := 28989,
-@AmmoVendor         := 29493,
+@GunVendor          = 29476,
+@BowVendor          = 28989,
+@AmmoVendor         = 29493,
 
 DELETE FROM `npc_vendor` WHERE `entry` IN (@WandVendor,@StaffVendor,@GunVendor,@BowVendor,@AmmoVendor,@DaggerFistVendor,@SwordsVendor,@AxePolearmVendor,@MacesVendor); INSERT INTO `npc_vendor` (`entry`, `slot`, `item`) VALUES
 
