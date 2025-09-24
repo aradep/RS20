@@ -10,7 +10,7 @@
 -- General edits
 -- -----------------------------------
 -- Trinkets
-UPDATE item_template SET `bonding` = 2, `buyprice` = 0, `quality`=4, `buyprice`=0, `requireddisenchantskill`=0, `disenchantid`=0, `sellprice` = 0, `class`=4, `subclass`=0, `allowablerace`=-1, `inventorytype`=12, `spellcooldown_1`=-1, `spellcategorycooldown_1`=-1, `spellcooldown_2`=-1, `spellcategorycooldown_2`=-1, `ItemLevel` = 30, `requiredlevel` = 20, `stat_type1` = 0, `stat_value1` = 0, `Flags` = 524352 WHERE `entry` IN (42988,47661,47664,40707,45145,29388,33828,38362,45436,19288,47662,31856,38364,31857,37574,42990,38363,19289,19287,31858,31859,19290,28065,40337,30841);
+UPDATE item_template SET `bonding` = 2, `buyprice` = 0, `quality`=4, `buyprice`=0, `requireddisenchantskill`=0, `disenchantid`=0, `sellprice` = 0, `class`=4, `subclass`=0, `allowablerace`=-1, `inventorytype`=12, `spellcooldown_1`=-1, `spellcategorycooldown_1`=-1, `spellcooldown_2`=-1, `spellcategorycooldown_2`=-1, `ItemLevel` = 30, `requiredlevel` = 0, `stat_type1` = 7, `stat_value1` = 10, `Flags` = 524352 WHERE `entry` IN (42988,47661,47664,40707,45145,29388,33828,38362,45436,19288,47662,31856,38364,31857,37574,42990,38363,19289,19287,31858,31859,19290,28065,40337,30841);
 -- Decks
 UPDATE item_template SET `bonding` = 0, `maxcount` = 1, `buyprice` = 0, `sellprice` = 1000000,  `ItemLevel` = 30, `requiredlevel` = 20 WHERE `entry` IN (44326,44259,31890,31914,19228,19267,19277,31891,19257,44294,31907);
 -- Cards
@@ -21,7 +21,7 @@ SET
 @DruidSpell1  = 37316,  -- When you shift out of Bear Form, Dire Bear Form, or Cat Form, your next Regrowth spell takes 2 fewer sec. to cast.
 @DruidSpell2  = 0,  -- 
 @DruidName    = 'Darkmoon Card: Vision',
-@PriestSpell1 = 33154,  -- Your spell criticals have a 50% chance to cause your next Smite or Flash Heal spell to be instant cast, cost no mana but be incapable of a critical hit. This effect lasts 10 sec.
+@PriestSpell1 = 33150,  -- Your spell criticals have a 25% chance to cause your next Smite or Flash Heal spell to be instant cast, cost no mana but be incapable of a critical hit. This effect lasts 10 sec.
 @PriestSpell2 = 0,  -- 
 @PriestName   = 'Darkmoon Card: Confessor',
 @RogueSpell1  = 51672,  -- Whenever you dodge an attack you gain an Unfair Advantage, striking back for 50% of your main hand weapon's damage. This cannot occur more than once per second.
@@ -36,7 +36,7 @@ SET
 @WarriorSpell1= 57499,  -- Your Charge, Intercept and Intervene abilities are now usable while in combat and in any stance. In addition, your Intervene ability will remove all movement impairing effects.
 @WarriorSpell2= 0,  -- 
 @WarriorName  = 'Darkmoon Card: Warpath',
-@PaladinSpell1= 53591,  -- Increases your spell power by an amount equal to 40% of your Strength and increases the amount healed by your critical heals by 20%.
+@PaladinSpell1= 53556,  -- Increases the range of your Judgement of Light and Judgement of Wisdom spells by 15 yards and increases your chance to hit by 2%.
 @PaladinSpell2= 0,  -- 
 @PaladinName  = 'Darkmoon Card: Avenger',
 @HunterSpell1 = 56317,  -- Increases your pet's damage by 16% and you and your pet's movement speed by 8% while your pet is active. This does not stack with other movement speed increasing effects.
@@ -47,15 +47,15 @@ SET
 @WarlockName  = 'Darkmoon Card: Ritual';
 
 -- Trinkets
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@DruidSpell1,`spellid_2`=@DruidSpell2,`name`=@DruidName,`AllowableClass`=1024,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=1 WHERE `entry`=42988;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@PriestSpell1,`spellid_2`=@PriestSpell2,`name`=@PriestName,`AllowableClass`=16,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=31856;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@RogueSpell1,`spellid_2`=@RogueSpell2,`name`=@RogueName,`AllowableClass`=8,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=31859;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@MageSpell1,`spellid_2`=@MageSpell2,`name`=@MageName,`AllowableClass`=128,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19288;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@ShamanSpell1,`spellid_2`=@ShamanSpell2,`name`=@ShamanName,`AllowableClass`=64,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19289;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@WarriorSpell1,`spellid_2`=@WarriorSpell2,`name`=@WarriorName,`AllowableClass`=1,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=31857;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@PaladinSpell1,`spellid_2`=@PaladinSpell2,`name`=@PaladinName,`AllowableClass`=2,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19287;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@HunterSpell1,`spellid_2`=@HunterSpell2,`name`=@HunterName,`AllowableClass`=4,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=42990;
-UPDATE `item_template` SET `quality`=4,`spellid_1`=@WarlockSpell1,`spellid_2`=@WarlockSpell2,`name`=@WarlockName,`AllowableClass`=256,`stat_type1`=0,`stat_value1`=0,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19290;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@DruidSpell1,`spellid_2`=@DruidSpell2,`name`=@DruidName,`AllowableClass`=1024,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=1 WHERE `entry`=42988;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@PriestSpell1,`spellid_2`=@PriestSpell2,`name`=@PriestName,`AllowableClass`=16,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=31856;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@RogueSpell1,`spellid_2`=@RogueSpell2,`name`=@RogueName,`AllowableClass`=8,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=31859;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@MageSpell1,`spellid_2`=@MageSpell2,`name`=@MageName,`AllowableClass`=128,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19288;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@ShamanSpell1,`spellid_2`=@ShamanSpell2,`name`=@ShamanName,`AllowableClass`=64,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19289;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@WarriorSpell1,`spellid_2`=@WarriorSpell2,`name`=@WarriorName,`AllowableClass`=1,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=31857;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@PaladinSpell1,`spellid_2`=@PaladinSpell2,`name`=@PaladinName,`AllowableClass`=2,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19287;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@HunterSpell1,`spellid_2`=@HunterSpell2,`name`=@HunterName,`AllowableClass`=4,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=42990;
+UPDATE `item_template` SET `quality`=4,`spellid_1`=@WarlockSpell1,`spellid_2`=@WarlockSpell2,`name`=@WarlockName,`AllowableClass`=256,`spelltrigger_1`=1,`spelltrigger_2`=1,`spellid_3`=0,`spelltrigger_3`=0 WHERE `entry`=19290;
 
 -- Decks
 UPDATE `item_template` SET `name` = 'Dreams Deck',     `quality`=4, `startquest`=13327, `AllowableClass` = 1024 WHERE `entry` = 44259;

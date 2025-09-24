@@ -50,3 +50,6 @@ FROM linked_respawn lr
 LEFT JOIN creature c1 ON lr.guid = c1.guid
 LEFT JOIN creature c2 ON lr.linkedguid = c2.guid
 WHERE (c1.spawnmask = 0 OR c2.spawnmask = 0);
+
+-- Remove transports
+DELETE FROM `transports` WHERE `guid` > 0;
