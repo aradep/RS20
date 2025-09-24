@@ -1,7 +1,13 @@
--- SmartAI Teleport NPC
--- ------------------------
+-- -----------------------------------
+-- Dragonshrine Instant-20 Funserver
+-- Made for AzerothCore 3.3.5a
+-- Discord: @Degen
+-- 2025
+-- -----------------------------------
+-- SmartAI teleport NPC
+-- -----------------------------------
 
--- Creature
+-- Creature template
 SET
 @Entry      = 482001,
 @Model      = 29133,
@@ -30,12 +36,21 @@ INSERT INTO creature_template (entry, name, subname, IconName, gossip_menu_id, m
 DELETE FROM creature_template_model WHERE CreatureID = @Entry;
 INSERT INTO creature_template_model VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
-DELETE FROM `creature` WHERE `guid` IN (@HonorVend,@ArenaVend) AND `Comment` = 'CustomNPC';
+-- Creature
+-- ------------------------
+DELETE FROM `creature` WHERE `id1` = @Entry AND `Comment` = 'CustomNPC';
+-- Hub
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
-(@HonorVend, 0, 0, 571, 0, 0, 1, 1, 1, 8520.04, 820.728, 562.89, 4.57566, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC'),
-(@ArenaVend, 0, 0, 571, 0, 0, 1, 1, 1, 8510.16, 820.545, 562.89, 4.75237, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 1, 1964.995, -431.62, 6.177, 6.28, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+-- Duel Arena
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
+(@Entry, 0, 0, 571, 0, 0, 1, 1, 1, 8515.134, 766.378, 559.69, 4.69, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+-- Azshara Crater
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
+(@Entry, 0, 0, 37, 0, 0, 1, 1, 1, 442.269, 145.869, 268.44, 5.349, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
 
--- Teleports
+-- Teleportation
+-- ------------------------
 SET
 -- Base menu
 @Root = 'Images of a far-off land flash before your eyes.',
@@ -44,7 +59,7 @@ SET
 @SelectIcon_Option1  = 7, 
 @Select_Option1      = 'Coliseum (Dueling/BGs/Arena)',
 @Explain_Option1     = 'The Coliseum is where you will find the PvP vendors and arena services. You can also challenge players to a duel here.',
-@ConfirmIcon_Option1 = 2, 
+@ConfirmIcon_Option1 = 9, 
 @Confirm_Option1     = 'Go to the arena.',
 @Map_Option1 = 571, @X_Option1 = 8515.2158, @Y_Option1 = 781.480, @Z_Option1 = 560.5, @O_Option1 = 1.57,
 
@@ -52,14 +67,14 @@ SET
 @SelectIcon_Option2  = 7, 
 @Select_Option2      = 'Azshara Crater (Open-world PvP)',
 @Explain_Option2     = 'Azshara Crater is an open-world PvP zone full of daily quests that reward Honor Coins and other useful items. You will also find Small Dream Shards on the corpses of your enemies while inside of Azshara Crater.$b$bAre you sure you wish to enter?',
-@ConfirmIcon_Option2 = 2, 
+@ConfirmIcon_Option2 = 9, 
 @Confirm_Option2     = 'Enter Azshara Crater.',
 @Map_Option2 = 37, @X_Option2 = 444.971, @Y_Option2 = 141.985, @Z_Option2 = 305.964, @O_Option2 = 2.232,
 
 -- Option 3 (Dungeons)
 @SelectIcon_Option3  = 7, 
-@Select_Option3      = 'Dungeons (Blizzlike)',
-@Explain_Option3     = 'There are many rare items to be found in the darkest depths of Azeroth but it would be wise to bring a friend.$b$bYou will find Small Dream Shards on the corpses of your enemies while inside of dungeons. Disenchant any item you don\'t need to acquire Magic Dust, a currency for purchasing enchantments.',
+@Select_Option3      = 'Dungeons (Blizzlike PvE)',
+@Explain_Option3     = 'You will find Small Dream Shards on the corpses of your enemies while inside of dungeons. Disenchant items you don\'t need to acquire Magic Dust, a currency that can be traded for enchantment scrolls.',
 @ConfirmIcon_Dung    = 9,
 @Confirm_Dungeon1    = 'Teleport to the Deadmines.',
 @Confirm_Dungeon2    = 'Teleport to Wailing Caverns.',

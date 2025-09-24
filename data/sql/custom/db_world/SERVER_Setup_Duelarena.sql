@@ -42,8 +42,8 @@ REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `
 
 -- Vendor Val'kyrs
 UPDATE `creature_template` SET `npcflag`=130 WHERE `entry` IN (@HonorVend, @ArenaVend);
-UPDATE `creature_template` SET `name`='Keeper Sif', `subname`='Initiate Outfitter', `rank`=3, `healthmodifier`=100, `scale`=0.55, faction=35 WHERE `entry`=@HonorVend;
-UPDATE `creature_template` SET `name`='Keeper Yrsa', `subname`='Veteran Outfitter', `rank`=3, `healthmodifier`=100, `scale`=0.55, faction=35 WHERE `entry`=@ArenaVend;
+UPDATE `creature_template` SET `name`='Keeper Sif', `subname`='Initiate Outfitter', `rank`=3, `healthmodifier`=100, `scale`=0.55, `faction`=35 WHERE `entry`=@HonorVend;
+UPDATE `creature_template` SET `name`='Keeper Yrsa', `subname`='Veteran Outfitter', `rank`=3, `healthmodifier`=100, `scale`=0.55, `faction`=35 WHERE `entry`=@ArenaVend;
 UPDATE `creature_template_model` SET `CreaturedisplayID` = 29240,`DisplayScale`= 0.5 WHERE `CreatureID` IN (@HonorVend,@ArenaVend);
 DELETE FROM `creature` WHERE `id1` IN (@HonorVend,@ArenaVend) AND `Comment` = 'CustomNPC';
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
@@ -51,10 +51,10 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 (@ArenaVend, 0, 0, 571, 0, 0, 1, 1, 1, 8510.16, 820.545, 562.89, 4.75237, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
 
 -- Arena Val'kyrs
-UPDATE `creature_template` SET `name`='Sigrun', `subname`='Arena Battlemaster', `scale`=0.5, faction=35 WHERE `entry`= @ArenaQue2;
-UPDATE `creature_template` SET `name`='Hilde', `subname`='Arena Team Organizer', `scale`=0.5,  gossip_menu_id=0, npcflag=262144, faction=35 WHERE `entry`= @ArenaTeam2;
-UPDATE `creature_template` SET `name`='Astrid', `subname`='Arena Battlemaster', `scale`=0.5, faction=35 WHERE `entry`= @ArenaQue1;
-UPDATE `creature_template` SET `name`='Eir', `subname`='Arena Team Organizer', `scale`=0.5, faction=35 WHERE `entry`= @ArenaTeam1;
+UPDATE `creature_template` SET `name`='Sigrun', `subname`='Arena Battlemaster', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaQue2;
+UPDATE `creature_template` SET `name`='Hilde', `subname`='Arena Team Organizer', `scale`=0.5,  `gossip_menu_id`=0, `npcflag`=262144, `faction`=35 WHERE `entry`= @ArenaTeam2;
+UPDATE `creature_template` SET `name`='Astrid', `subname`='Arena Battlemaster', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaQue1;
+UPDATE `creature_template` SET `name`='Eir', `subname`='Arena Team Organizer', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaTeam1;
 UPDATE `creature_template_model` SET `CreaturedisplayID` = 29267,`DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam2,@ArenaQue2);
 UPDATE `creature_template_model` SET `CreaturedisplayID` = 29240,`DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam1,@ArenaQue1);
 DELETE FROM `creature` WHERE `id1` IN (@ArenaQue1,@ArenaTeam1,@ArenaQue2,@ArenaTeam2,@OneVsOne1,@OneVsOne2) AND `Comment` = 'CustomNPC';
@@ -78,7 +78,7 @@ UNION ALL
 SELECT `guid`, '32610' FROM `creature` WHERE `Comment` = 'AllianceDummy';
 
 -- Spectators
-DELETE FROM `creature` WHERE `id1` IN (@HonorVend,@ArenaVend) AND `Comment` = 'CustomNPC';
+DELETE FROM `creature` WHERE `id1` IN (@Spectator1,@Spectator2,@Spectator3,@Spectator4,@Spectator5,@Spectator6,@Spectator7) AND `Comment` = 'CustomNPC';
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
 (@Spectator1, 0, 0, 571, 0, 0, 1, 1, 0, 8555.83, 781.607, 574.617, 2.88161, 300, 0, 0, 5052, 0, 0, 0, 0, 0, '', 'CustomNPC'),
 (@Spectator2, 0, 0, 571, 0, 0, 1, 1, 0, 8474.87, 803.813, 574.622, 6.05461, 300, 0, 0, 5052, 0, 0, 0, 0, 0, '', 'CustomNPC'),
@@ -90,6 +90,9 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 
 -- Fix no equipment
 UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FROM `creature_equip_template` WHERE `creature`.`id1` = `creature_equip_template`.`creatureid`);
+
+-- Stop periodic NPC yells
+UPDATE `creature_text` SET `Type`=12 WHERE  `CreatureID`=35501 AND `GroupID`=1 AND `ID`=0;
 
 -- Gameobjects
 -- -----------------------------------
