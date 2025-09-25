@@ -4,11 +4,8 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Gem Vendor
+-- Mall - Gems
 -- -----------------------------------
-
--- Gems
-UPDATE `item_template` SET `buyprice` = 1000000, `flags` = 4096 WHERE `class` = 3 AND `itemLevel` = 80 AND `sellprice` = 90000;
 
 -- Creature
 SET
@@ -28,6 +25,9 @@ DELETE FROM `creature_template` WHERE `Entry` = @Entry;
 INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
+
+-- Gems
+UPDATE `item_template` SET `buyprice` = 1000000, `flags` = 4096 WHERE `class` = 3 AND `itemLevel` = 80 AND `sellprice` = 90000;
 
 -- Vendor List
 DELETE FROM `npc_vendor` WHERE `Entry` = @Entry;
