@@ -92,8 +92,14 @@ UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FRO
 -- Stop periodic NPC yells
 UPDATE `creature_text` SET `Type`=12 WHERE  `CreatureID`=35501 AND `GroupID`=1 AND `ID`=0;
 
--- Gameobjects
--- -----------------------------------
+-- Valkyr equip weapons
+REPLACE INTO `creature_equip_template` VALUES 
+(@HonorVend, 1, 50070, 0, 0, 18019), 
+(@ArenaVend, 1, 50070, 0, 0, 18019);
+
+-- Valkyr's sheath weapons
+REPLACE INTO `creature_template_addon` (`entry`) VALUES (@HonorVend), (@ArenaVend);
+
 -- Arthas Throne
 DELETE FROM `gameobject` WHERE `id` = 202161;
 INSERT INTO `gameobject` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`) VALUES 

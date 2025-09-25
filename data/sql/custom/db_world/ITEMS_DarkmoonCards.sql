@@ -115,3 +115,8 @@ CASE    `entry`
     WHEN 19284 THEN 'Eight of Dreams'
 END
 WHERE `entry` IN (19276,19278,19279,19280,19281,19282,19283,19284);
+
+-- Questgiver gossip
+DELETE FROM `gossip_menu_option` WHERE  `MenuID`=6202 AND `OptionID`=1;
+UPDATE `npc_text` SET `text0_0`='Greetings, champion. I am professor Paleo, a purveyor of mystical goods from the Darkmoon Faire.$b$bTell me, have you found any of the lesser darkmoon cards on your travels? If you manage to collect a full set, I will exchange it for a trinket of insurmountable power.' WHERE  `ID`=7355;
+UPDATE `broadcast_text` SET `MaleText`='Greetings, champion. I am professor Paleo, a purveyor of mystical goods from the Darkmoon Faire.$b$bTell me, have you found any of the lesser darkmoon cards on your travels? If you manage to collect a full set, I will exchange it for a trinket of insurmountable power.', `FemaleText`='Greetings, champion. I am professor Paleo, a purveyor of mystical goods from the Darkmoon Faire.$b$bTell me, have you found any of the lesser darkmoon cards on your travels? If you manage to collect a full set, I will exchange it for a trinket of insurmountable power.' WHERE  `ID`=10062;

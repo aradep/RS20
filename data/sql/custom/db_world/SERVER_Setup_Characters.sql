@@ -9,6 +9,7 @@
     
 -- Free dual spec
 UPDATE `gossip_menu_option` SET `BoxMoney`=0 WHERE `BoxMoney`=10000000;
+UPDATE `gossip_menu_option` SET `OptionBroadcastTextID`='33765', `OptionType`='18', `OptionNpcFlag`='16', `ActionMenuID`='10373', `BoxText`='Are you sure you wish to learn Dual Talent Specialization?' WHERE  `OptionBroadcastTextID`= 33762 ;    
 
 -- Free class training
 UPDATE `npc_trainer` SET `MoneyCost` = 0 WHERE `ReqLevel` > 0;
