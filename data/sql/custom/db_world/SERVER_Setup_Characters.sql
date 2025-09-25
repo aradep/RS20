@@ -45,23 +45,58 @@ INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES
 DELETE FROM `playercreateinfo_item` WHERE `itemid` IN (14529);
 INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES (0, 0, 14529, 1);
 
+-- Starting Tabards
+DELETE FROM `playercreateinfo_item` WHERE `itemid` IN (15196,15197,45574,45577,45578,45579,45580,45581,45582,45583,45584,45585);
+INSERT INTO `playercreateinfo_item` (`race`, `itemid`, `note`) VALUES
+(1,  45574, 'Stormwind Tabard'),
+(3,  45577, 'Ironforge Tabard'),
+(7,  45578, 'Gnomeregan Tabard'),
+(4,  45579, 'Darnassus Tabard'),
+(11, 45580, 'Exodar Tabard'),
+(2,  45581, 'Orgrimmar Tabard'),
+(8,  45582, 'Senjin Tabard'),
+(5,  45583, 'Undercity Tabard'),
+(6,  45584, 'Thunder Bluff Tabard'),
+(10, 45585, 'Silvermoon City Tabard');
+
 -- Starting Mounts
+DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell` IN (63232,63636,63638,63639,63637,63641,63635,63640,63642,63643);
+INSERT INTO `playercreateinfo_spell_custom` (`racemask`, `Spell`, `Note`) VALUES
+(1,     63232, 'Stormwind Steed'),
+(4,     63636, 'Ironforge Ram'),
+(64,    63638, 'Gnomeregan Mechanostrider'),
+(1024,  63639, 'Exodar Elekk'),
+(8,     63637, 'Darnassian Nightsaber'),
+(32,    63641, 'Thunder Bluff Kodo'),
+(128,   63635, 'Darkspear Raptor'),
+(2,     63640, 'Orgrimmar Wolf'),
+(512,   63642, 'Silvermoon Hawkstrider'),
+(16,    63643, 'Forsaken Warhorse');
 
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Stormwind Steed*/45125),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Ironforge Ram*/45586),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Gnomeregan Mechanostrider*/45589),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Exodar Elekk*/45590),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Darnassian Nightsaber*/45591),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Thunder Bluff Kodo*/45592),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Darkspear Raptor*/45593),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Orgrimmar Wolf*/45595),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Silvermoon Hawkstrider*/45596),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Forsaken Warhorse*/45597),
-
+-- Starting Skills
+DELETE FROM `playercreateinfo_skills` WHERE `skill` IN (762,293,95, 43, 55, 54, 160,44, 172,229,136,45, 226,46, 176,173,162,228);
+INSERT INTO `playercreateinfo_skills` (`racemask`, `classmask`, `skill`, `rank`, `Comment`) VALUES
+(0,     0,      762,    2,    'RIDING'),
+(0,     35,     293,    0,    'PLATE MAIL'),
+(0,     0,      95,     0,    'DEFENSE'),
+(0,     431,    43,     0,    'ONE-HANDED SWORDS'),
+(0,     39,     55,     0,    'TWO-HANDED SWORDS'),
+(0,     1147,   54,     0,    'ONE-HANDED MACES'),
+(0,     1123,   160,    0,    'TWO-HANDED MACES'),
+(0,     111,    44,     0,    'ONE-HANDED AXES'),
+(0,     103,    172,    0,    'TWO-HANDED AXES'),
+(0,     1063,   229,    0,    'POLEARMS'),
+(0,     1493,   136,    0,    'STAVES'),
+(0,     13,     45,     0,    'BOWS'),
+(0,     13,     226,    0,    'CROSSBOWS'),
+(0,     13,     46,     0,    'GUNS'),
+(0,     13,     176,    0,    'THROWING WEAPONS'),
+(0,     1501,   173,    0,    'DAGGERS'),
+(0,     1501,   162,    0,    'UNARMED'),
+(0,     1493,   228,    0,    'WANDS');
 
 -- Starting Spells
 DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell` IN (33391, 201, 202, 198, 199, 196, 197, 200, 674, 227, 264, 5011,266, 2764,2567,1180,3018,15590,71,750,8737,32233,65220,56222,355,7386,2458,20252,10324,5502,8071,3599,5394,697,712,691,1515,883,2641,6991,982,33391,56222,8737,750,48266,48263,34091);
-DELETE FROM `playercreateinfo_spell_custom` WHERE `Note` = 'Lvl80';
 REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES
 -- Riding
 (0, 33391, '150 Riding'),
@@ -107,25 +142,3 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (1501,  1180,  'DAGGERS'),
 (9,     3018,  'SHOOT'),
 (1101,  15590, 'FIST WEAPONS');
-
--- Starting Skills
-DELETE FROM `playercreateinfo_skills` WHERE `skill` IN (762,293,95, 43, 55, 54, 160,44, 172,229,136,45, 226,46, 176,173,162,228);
-INSERT INTO `playercreateinfo_skills` (`racemask`, `classmask`, `skill`, `rank`, `Comment`) VALUES
-(0,     0,      762,    2,    'RIDING'),
-(0,     35,     293,    0,    'PLATE MAIL'),
-(0,     0,      95,     0,    'DEFENSE'),
-(0,     431,    43,     0,    'ONE-HANDED SWORDS'),
-(0,     39,     55,     0,    'TWO-HANDED SWORDS'),
-(0,     1147,   54,     0,    'ONE-HANDED MACES'),
-(0,     1123,   160,    0,    'TWO-HANDED MACES'),
-(0,     111,    44,     0,    'ONE-HANDED AXES'),
-(0,     103,    172,    0,    'TWO-HANDED AXES'),
-(0,     1063,   229,    0,    'POLEARMS'),
-(0,     1493,   136,    0,    'STAVES'),
-(0,     13,     45,     0,    'BOWS'),
-(0,     13,     226,    0,    'CROSSBOWS'),
-(0,     13,     46,     0,    'GUNS'),
-(0,     13,     176,    0,    'THROWING WEAPONS'),
-(0,     1501,   173,    0,    'DAGGERS'),
-(0,     1501,   162,    0,    'UNARMED'),
-(0,     1493,   228,    0,    'WANDS');

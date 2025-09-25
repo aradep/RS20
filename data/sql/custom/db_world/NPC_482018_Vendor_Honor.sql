@@ -48,6 +48,9 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
+-- Tabards
+(@Entry,    0,          @500Honor,        15196), -- Private's Tabard
+(@Entry,    0,          @500Honor,        15197), -- Scout's Tabard
 -- Battle Standards
 (@Entry,    0,          @500Honor,        18606), -- Battle Standard
 (@Entry,    0,          @500Honor,        18607), -- Battle Standard
@@ -78,11 +81,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    3,          @3000Honor,       48687), -- Preened Ironfeather Breastplate
 (@Entry,    3,          @3000Honor,       48689), -- Stained Shadowcraft Tunic
 (@Entry,    3,          @3000Honor,       48691), -- Tattered Dreadmist Robe
--- Heirloom Inscriptions
-(@Entry,    4,          @5000Honor,       44133), -- Greater Inscription of the Axe
-(@Entry,    4,          @5000Honor,       44134), -- Greater Inscription of the Crag
-(@Entry,    4,          @5000Honor,       44135), -- Greater Inscription of the Storm
-(@Entry,    4,          @5000Honor,       44136), -- Greater Inscription of the Pinnacle;
 -- Heirloom Arcanums
 (@Entry,    5,          @6000Honor,       44149), -- Arcanum of Torment
 (@Entry,    5,          @6000Honor,       44150), -- Arcanum of the Stalwart Protector

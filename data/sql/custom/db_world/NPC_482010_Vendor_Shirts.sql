@@ -32,18 +32,6 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
-(@Entry,    1,          0,              15196), -- Private\'s Tabard
-(@Entry,    1,          0,              15197), -- Scout\'s Tabard
-(@Entry,    1,          0,              45574), -- Stormwind Tabard
-(@Entry,    1,          0,              45577), -- Ironforge Tabard
-(@Entry,    1,          0,              45578), -- Gnomeregan Tabard
-(@Entry,    1,          0,              45579), -- Darnassus Tabard
-(@Entry,    1,          0,              45580), -- Exodar Tabard
-(@Entry,    1,          0,              45581), -- Orgrimmar Tabard
-(@Entry,    1,          0,              45582), -- Sen\'jin Tabard
-(@Entry,    1,          0,              45583), -- Undercity Tabard
-(@Entry,    1,          0,              45584), -- Thunder Bluff Tabard
-(@Entry,    1,          0,              45585), -- Silvermoon City Tabard
 (@Entry,    2,          0,              42360),
 (@Entry,    2,          0,              42361),
 (@Entry,    2,          0,              42363),

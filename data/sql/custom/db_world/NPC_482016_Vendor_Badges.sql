@@ -75,17 +75,10 @@ INSERT INTO `npc_vendor`
 (@Entry,    3,          @EmblemofHeroism_x30,       48689), -- Stained Shadowcraft Tunic
 (@Entry,    3,          @EmblemofHeroism_x30,       48691), -- Tattered Dreadmist Robe
 -- Heirloom Inscriptions
-(@Entry,    4,          @EmblemofHeroism_x50,       44133), -- Greater Inscription of the Axe
-(@Entry,    4,          @EmblemofHeroism_x50,       44134), -- Greater Inscription of the Crag
-(@Entry,    4,          @EmblemofHeroism_x50,       44135), -- Greater Inscription of the Storm
-(@Entry,    4,          @EmblemofHeroism_x50,       44136), -- Greater Inscription of the Pinnacle;
--- Heirloom Arcanums
-(@Entry,    5,          @EmblemofHeroism_x60,       44149), -- Arcanum of Torment
-(@Entry,    5,          @EmblemofHeroism_x60,       44150), -- Arcanum of the Stalwart Protector
-(@Entry,    5,          @EmblemofHeroism_x60,       44152), -- Arcanum of Blissful Mending
-(@Entry,    5,          @EmblemofHeroism_x60,       44159), -- Arcanum of Burning Mysteries
-(@Entry,    5,          @EmblemofHeroism_x60,       44701), -- Arcanum of the Savage Gladiator
-(@Entry,    5,          @EmblemofHeroism_x60,       44702); -- Arcanum of the Savage Gladiator
+(@Entry,    4,          @EmblemofHeroism_x60,       44133), -- Greater Inscription of the Axe
+(@Entry,    4,          @EmblemofHeroism_x60,       44134), -- Greater Inscription of the Crag
+(@Entry,    4,          @EmblemofHeroism_x60,       44135), -- Greater Inscription of the Storm
+(@Entry,    4,          @EmblemofHeroism_x60,       44136); -- Greater Inscription of the Pinnacle;
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
