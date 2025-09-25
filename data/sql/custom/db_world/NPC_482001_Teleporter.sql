@@ -90,7 +90,7 @@ SET
 -- Option 4 (Mall)
 @SelectIcon_Option4  = 7, 
 @Select_Option4      = 'Hall of Champions (Mall)',
-@Explain_Option4     = 'The Hall of Champions contains class trainers, vendors for gear, glyphs, enchants, and consumables, and services like the barber and auctionhouse.',
+@Explain_Option4     = 'The Hall of Champions contains class trainers, vendors, and services like the barber and auctionhouse.',
 @ConfirmIcon_Option4 = 2, 
 @Confirm_Option4     = 'Teleport to Hall of Champions.',
 @Map_Option4 = 189, @X_Option4 = 1978.44, @Y_Option4 = -431.66, @Z_Option4 = 11.272, @O_Option4 = 3.11,
@@ -149,26 +149,29 @@ INSERT INTO `gossip_menu` VALUES
 -- Gossip menu options
 DELETE FROM `gossip_menu_option` WHERE `menuID` BETWEEN @GossipMenu AND @GossipMenu+4;
 INSERT INTO `gossip_menu_option` VALUES 
--- Option 1
-(@GossipMenu,   1, @SelectIcon_Option1,     @Select_Option1,      @Broadcast+2,   1,1,    @GossipMenu+1,    0,0,0,NULL,0,0),
+-- New Option 1
+(@GossipMenu,   1, @SelectIcon_Option4,     @Select_Option4,      @Broadcast+15,  1,1,    @GossipMenu+4,    0,0,0,NULL,0,0),
+(@GossipMenu+4, 1, @ConfirmIcon_Option4,    @Confirm_Option4,     @Broadcast+16,  1,1,    0,                0,0,0,NULL,0,0),
+(@GossipMenu+4, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
+
+-- New Option 2
+(@GossipMenu,   2, @SelectIcon_Option1,     @Select_Option1,      @Broadcast+2,   1,1,    @GossipMenu+1,    0,0,0,NULL,0,0),
 (@GossipMenu+1, 1, @ConfirmIcon_Option1,    @Confirm_Option1,     @Broadcast+3,   1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+1, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
--- Option 2
-(@GossipMenu,   2, @SelectIcon_Option2,     @Select_Option2,      @Broadcast+5,   1,1,    @GossipMenu+2,    0,0,0,NULL,0,0),
+
+-- New Option 3
+(@GossipMenu,   3, @SelectIcon_Option2,     @Select_Option2,      @Broadcast+5,   1,1,    @GossipMenu+2,    0,0,0,NULL,0,0),
 (@GossipMenu+2, 1, @ConfirmIcon_Option2,    @Confirm_Option2,     @Broadcast+6,   1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+2, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
--- Option 3
-(@GossipMenu,   3, @SelectIcon_Option3,     @Select_Option3,      @Broadcast+8,   1,1,    @GossipMenu+3,    0,0,0,NULL,0,0),
+
+-- New Option 4
+(@GossipMenu,   4, @SelectIcon_Option3,     @Select_Option3,      @Broadcast+8,   1,1,    @GossipMenu+3,    0,0,0,NULL,0,0),
 (@GossipMenu+3, 1, @ConfirmIcon_Dung,       @Confirm_Dungeon1,    @Broadcast+9,   1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+3, 2, @ConfirmIcon_Dung,       @Confirm_Dungeon2,    @Broadcast+10,  1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+3, 3, @ConfirmIcon_Dung,       @Confirm_Dungeon3,    @Broadcast+11,  1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+3, 4, @ConfirmIcon_Dung,       @Confirm_Dungeon4,    @Broadcast+12,  1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+3, 5, @ConfirmIcon_Dung,       @Confirm_Dungeon5,    @Broadcast+13,  1,1,    0,                0,0,0,NULL,0,0),
-(@GossipMenu+3, 6, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
--- Option 4
-(@GossipMenu,   4, @SelectIcon_Option4,     @Select_Option4,      @Broadcast+15,  1,1,    @GossipMenu+4,    0,0,0,NULL,0,0),
-(@GossipMenu+4, 1, @ConfirmIcon_Option4,    @Confirm_Option4,     @Broadcast+16,  1,1,    0,                0,0,0,NULL,0,0),
-(@GossipMenu+4, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0);
+(@GossipMenu+3, 6, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0);
 
 -- Smart scripts
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @Entry;

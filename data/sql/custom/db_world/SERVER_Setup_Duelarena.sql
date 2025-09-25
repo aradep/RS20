@@ -14,8 +14,7 @@ SET
 @ArenaTeam1   = 32329,
 @ArenaQue2    = 32330,
 @ArenaTeam2   = 29534,
-@Dummy1       = 31144,
-@Dummy2       = 31144,
+@Dummy        = 31144,
 @Spectator1   = 32745,
 @Spectator2   = 32425,
 @Spectator3   = 32743,
@@ -51,9 +50,9 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 UPDATE `creature_template` SET `name`='Sigrun', `subname`='Arena Battlemaster', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaQue2;
 UPDATE `creature_template` SET `name`='Hilde', `subname`='Arena Team Organizer', `scale`=0.5,  `gossip_menu_id`=0, `npcflag`=262144, `faction`=35 WHERE `entry`= @ArenaTeam2;
 UPDATE `creature_template` SET `name`='Astrid', `subname`='Arena Battlemaster', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaQue1;
-UPDATE `creature_template` SET `name`='Eir', `subname`='Arena Team Organizer', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaTeam1;
+UPDATE `creature_template` SET `name`='Eir', `subname`='Arena Team Organizer', `scale`=0.5, `gossip_menu_id`=0, `npcflag`=262144, `faction`=35 WHERE `entry`= @ArenaTeam1;
 UPDATE `creature_template_model` SET `CreaturedisplayID` = 29267, `DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam2,@ArenaQue2);
-UPDATE `creature_template_model` SET `CreaturedisplayID` = 29240, `DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam1,@ArenaQue1);
+UPDATE `creature_template_model` SET `CreaturedisplayID` = 29267, `DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam1,@ArenaQue1);
 DELETE FROM `creature` WHERE `id1` IN (@ArenaQue1,@ArenaTeam1,@ArenaQue2,@ArenaTeam2,@OneVsOne1,@OneVsOne2) AND `Comment` = 'CustomNPC';
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
 (@ArenaQue1,  0, 0, 571, 0, 0, 1, 1, 0, 8480.12, 792.419, 559.69, 6.28238,  300, 0, 0, 10635, 0, 0, 0, 0, 0, '', 'CustomNPC'),
@@ -64,13 +63,20 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 (@OneVsOne2,  0, 0, 571, 0, 0, 1, 1, 0, 8547.29, 787.237, 559.69, 2.79522,  300, 0, 0,  8982, 0, 0, 0, 0, 0, '', 'CustomNPC');
 
 -- Training Dummies
-UPDATE `creature_template` SET `minlevel` = 20, `maxlevel` = 20 WHERE `entry` IN (@Dummy1,@Dummy2);
-DELETE FROM `creature` WHERE `id1` IN (@Dummy1,@Dummy2) AND `Comment` IN ('AllianceDummy','HordeDummy');
+UPDATE `creature_template` SET `minlevel` = 20, `maxlevel` = 20 WHERE `entry` = @Dummy;
+DELETE FROM `creature` WHERE `id1` = @Dummy AND `Comment` IN ('AllianceDummy','HordeDummy');
 INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
-(@GUID+1, @Dummy1, 0, 0, 571, 0, 0, 1, 1, 0, 8537.18, 770.458, 559.691, 2.33182, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'AllianceDummy'),
-(@GUID+2, @Dummy2, 0, 0, 571, 0, 0, 1, 1, 0, 8492.35, 769.339, 559.691, 0.784596, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'HordeDummy');
+(@GUID+1, @Dummy, 0, 0, 571, 0, 0, 1, 1, 0, 8537.18, 770.458, 559.691, 2.33182, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'CustomNPC'),
+(@GUID+2, @Dummy, 0, 0, 571, 0, 0, 1, 1, 0, 8492.35, 769.339, 559.691, 0.784596, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'CustomNPC'),
+(@GUID+3, @Dummy, 0, 0, 571, 0, 0, 1, 1, 0, 8537.42, 814.497, 559.69, 3.93795, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'CustomNPC'),
+(@GUID+4, @Dummy, 0, 0, 571, 0, 0, 1, 1, 0, 8493.14, 814.337, 559.69, 5.50089, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'CustomNPC');
+
 -- Add flag auras
-REPLACE INTO `creature_addon` (`guid`, `auras`) VALUES (@GUID+1, 32609), /* Horde Dummy */ (@GUID+2, 32610); /* Alliance Dummy */
+REPLACE INTO `creature_addon` (`guid`, `auras`) VALUES 
+(@GUID+1, 32609), /* Horde Dummy */ 
+(@GUID+2, 32610), /* Alliance Dummy */
+(@GUID+3, 32609), /* Horde Dummy */ 
+(@GUID+4, 32610); /* Alliance Dummy */
 
 -- Spectators
 DELETE FROM `creature` WHERE `id1` IN (@Spectator1,@Spectator2,@Spectator3,@Spectator4,@Spectator5,@Spectator6,@Spectator7) AND `Comment` = 'CustomNPC';
@@ -87,7 +93,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FROM `creature_equip_template` WHERE `creature`.`id1` = `creature_equip_template`.`creatureid`);
 
 -- Stop periodic NPC yells
-UPDATE `creature_text` SET `Type`=12 WHERE  `CreatureID`=35501 AND `GroupID`=1 AND `ID`=0;
+UPDATE `creature_text` SET `Type`=12 WHERE  `CreatureID`=35501;
 
 -- Valkyr equip weapons
 REPLACE INTO `creature_equip_template` VALUES 
@@ -100,9 +106,9 @@ REPLACE INTO `creature_template_addon` (`entry`) VALUES (@HonorVend), (@ArenaVen
 -- Arthas Throne
 DELETE FROM `gameobject` WHERE `id` = 202161;
 INSERT INTO `gameobject` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`) VALUES 
-(202161, 571, 0, 0, 1, 1, 8515.25, 792.298, 555.44, 1.57079, -0, -0, -0.707105, -0.707109, 300, 255, 1, '', 0);
+(202161, 571, 0, 0, 1, 1, 8515.15, 792.298, 555.44, 1.572, -0, -0, -0.707105, -0.707109, 300, 255, 1, '', 0);
 
 -- Center brazier
 DELETE FROM `gameobject` WHERE `id` = 195318;
 INSERT INTO `gameobject` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`) VALUES 
-(195318, 571, 0, 0, 1, 1, 8515.33, 792.087, 559.69, 0.778307, -0, -0, -0.379405, -0.925231, 300, 0, 1, '', 0);
+(195318, 571, 0, 0, 1, 1, 8515.15, 792.087, 559.69, 0.778307, -0, -0, -0.379405, -0.925231, 300, 0, 1, '', 0);
