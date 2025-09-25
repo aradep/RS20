@@ -10,8 +10,6 @@
 -- NPCs
 -- -----------------------------------
 SET
-@HonorVend    = 38391,
-@ArenaVend    = 38392,
 @ArenaQue1    = 32332,
 @ArenaTeam1   = 32329,
 @ArenaQue2    = 32330,
@@ -25,6 +23,8 @@ SET
 @Spectator5   = 30104,
 @Spectator6   = 32744,
 @Spectator7   = 32749,
+@HonorVend    = 482016,
+@ArenaVend    = 482017,
 @OneVsOne1    = 482020,
 @OneVsOne2    = 482021,
 @Lichking     = 482199, 
@@ -42,10 +42,6 @@ INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, 
 REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `visibilityDistanceType`, `auras`) VALUES ((SELECT `guid` FROM `creature` WHERE `id1` = @Lichking LIMIT 1),0, 0, 1, 0, 0, 0, '73220');
 
 -- Vendor Val'kyrs
-UPDATE `creature_template` SET `npcflag`=130 WHERE `entry` IN (@HonorVend, @ArenaVend);
-UPDATE `creature_template` SET `name`='Keeper Sif', `subname`='Initiate Outfitter', `rank`=3, `healthmodifier`=100, `scale`=0.55, `faction`=35 WHERE `entry`=@HonorVend;
-UPDATE `creature_template` SET `name`='Keeper Yrsa', `subname`='Veteran Outfitter', `rank`=3, `healthmodifier`=100, `scale`=0.55, `faction`=35 WHERE `entry`=@ArenaVend;
-UPDATE `creature_template_model` SET `CreaturedisplayID` = 29240,`DisplayScale`= 0.5 WHERE `CreatureID` IN (@HonorVend,@ArenaVend);
 DELETE FROM `creature` WHERE `id1` IN (@HonorVend,@ArenaVend) AND `Comment` = 'CustomNPC';
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
 (@HonorVend, 0, 0, 571, 0, 0, 1, 1, 1, 8520.04, 820.728, 562.89, 4.57566, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC'),

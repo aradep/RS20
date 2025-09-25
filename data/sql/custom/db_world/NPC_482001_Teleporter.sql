@@ -41,13 +41,13 @@ INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 1234
 DELETE FROM `creature` WHERE `id1` = @Entry AND `Comment` = 'CustomNPC';
 -- Hub
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 1, 1964.995, -431.62, 6.177, 6.28, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1964.995, -431.62, 6.177, 6.28, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
 -- Duel Arena
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
-(@Entry, 0, 0, 571, 0, 0, 1, 1, 1, 8515.134, 766.378, 559.69, 4.69, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+(@Entry, 0, 0, 571, 0, 0, 1, 1, 0, 8515.134, 766.378, 559.69, 4.69, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
 -- Azshara Crater
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
-(@Entry, 0, 0, 37, 0, 0, 1, 1, 1, 442.269, 145.869, 268.44, 5.349, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
+(@Entry, 0, 0, 37, 0, 0, 1, 1, 0, 442.269, 145.869, 268.44, 5.349, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC');
 
 -- Teleportation
 -- ------------------------
