@@ -30,7 +30,7 @@ INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Displ
 DELETE FROM `npc_vendor` WHERE `Entry` = @Entry;
 INSERT INTO `npc_vendor` 
 -- ----------------------------------------------------------------------------------------
-(`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
+(`Entry`,   `Slot`,   `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 (@Entry,    1,         2553,             20426), -- Advisor's Ring
 (@Entry,    1,         2553,             12996), -- Band of Purification
@@ -47,7 +47,5 @@ INSERT INTO `npc_vendor`
 (@Entry,    3,         2553,             21568), -- Rune of Duty
 (@Entry,    3,         2553,             21566); -- Rune of Perfection
 
--- Reduce prices to buy 0 / sell 1
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` 
-SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 
-WHERE `npc_vendor`.`entry` = @Entry;
+-- Refundable
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

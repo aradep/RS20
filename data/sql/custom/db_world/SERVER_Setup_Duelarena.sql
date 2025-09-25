@@ -23,8 +23,8 @@ SET
 @Spectator5   = 30104,
 @Spectator6   = 32744,
 @Spectator7   = 32749,
-@HonorVend    = 482016,
 @ArenaVend    = 482017,
+@HonorVend    = 482018,
 @OneVsOne1    = 482020,
 @OneVsOne2    = 482021,
 @Lichking     = 482199, 
@@ -64,6 +64,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 (@OneVsOne2,  0, 0, 571, 0, 0, 1, 1, 0, 8547.29, 787.237, 559.69, 2.79522,  300, 0, 0,  8982, 0, 0, 0, 0, 0, '', 'CustomNPC');
 
 -- Training Dummies
+UPDATE `creature_template` SET `minlevel` = 20, `maxlevel` = 20 WHERE `entry` IN (@Dummy1,@Dummy2);
 DELETE FROM `creature` WHERE `id1` IN (@Dummy1,@Dummy2) AND `Comment` IN ('AllianceDummy','HordeDummy');
 INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
 (@GUID+1, @Dummy1, 0, 0, 571, 0, 0, 1, 1, 0, 8537.18, 770.458, 559.691, 2.33182, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'AllianceDummy'),

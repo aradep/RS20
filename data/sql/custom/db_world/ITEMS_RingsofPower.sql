@@ -173,7 +173,7 @@ WHERE `spellid_1` = @Ring10Spell; -- Reduces damage taken while affected by Stun
 UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3766   -- +12 Stamina
 WHERE `spellid_1` = @Ring9Spell; -- Reduces the duration of Curse, Disease and Poison effects by 30%
 -- Ring 12
-UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3302   -- +8 Defense Rating
+UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3304   -- +8 Dodge Rating
 WHERE `spellid_1` = @Ring12Spell; -- All attacks against you have a 10% chance to cause half damage
 -- Ring 13
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3363   -- +9 Block Value
@@ -182,5 +182,5 @@ WHERE `spellid_1` = @Ring13Spell; -- Whenever you take damage from or block a me
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3821   -- +8 Resilience Rating
 WHERE `spellid_1` = @Ring14Spell; -- 20% chance when hit by a spell to boost your resistance to that school for 18 sec, stacks 3 times
 -- Ring 20
-UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3766   -- +12 Stamina
+UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3302   -- +8 Defense Rating
 WHERE `spellid_1` = @Ring20Spell; -- Regenerates 6% of your total Health over 6 sec after being the victim of a critical strike

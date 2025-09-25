@@ -59,7 +59,5 @@ INSERT INTO `npc_vendor`
 (@Entry,    8,          2553,             45626), -- Spidersilk Drape
 (@Entry,    8,          2553,             51994); -- Tumultuous Cloak
 
--- Reduce prices to buy 0 / sell 1
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` 
-SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 
-WHERE `npc_vendor`.`entry` = @Entry;
+-- Refundable
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

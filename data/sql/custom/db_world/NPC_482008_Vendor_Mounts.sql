@@ -28,14 +28,15 @@ INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Displ
 
 -- Extended costs
 SET
-@EmblemofValor_x1 = 2589,
+@EmblemofValor_x1  = 2589,
 @EmblemofValor_x15 = 2638,
 @EmblemofValor_x30 = 2540,
 @EmblemofValor_x45 = 2539,
 @EmblemofValor_x60 = 2535,
 @EmblemofValor_x75 = 2538,
 @Champions_Writ_x1 = 2639,
-@40000_Honor = 2403;
+@40000_Honor       = 2403,
+@3750_Arena        = 1664;
 
 -- Vendor List
 DELETE FROM `npc_vendor` WHERE `Entry` = @Entry;
@@ -121,3 +122,6 @@ INSERT INTO `npc_vendor`
 (@Entry,      8,      @Champions_Writ_x1,     /*Invincibles Reins*/50818),
 (@Entry,      8,      @Champions_Writ_x1,     /*Reins of the Travelers Tundra Mammoth*/44234),
 (@Entry,      8,      @Champions_Writ_x1,     /*Reins of the Travelers Tundra Mammoth*/44235);
+
+-- Refundable
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
