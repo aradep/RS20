@@ -29,7 +29,9 @@ SET
 @AIName     := "SmartAI",
 @Script     := "BeastMaster";
 DELETE FROM `creature_template` WHERE `entry` = @Entry;
-INSERT INTO `creature_template` (`entry`, `modelid1`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Entry, @Model, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
+INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
 -- Gossip text
 DELETE FROM `npc_text` WHERE `ID`=601026;
@@ -38,9 +40,6 @@ DELETE FROM `npc_text` WHERE `ID`=601027;
 INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (601027, 'What kind of pet are you looking for?');
 DELETE FROM `npc_text` WHERE `ID`=601028;
 INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (601028, 'Sorry, these pets are for Hunters only.');
-
--- Modify pet display IDs
-UPDATE `creature_template` SET `modelid2`=8840,`modelid3`=913 WHERE `entry`=12037; -- Bear
 
 -- Pet food
 UPDATE `item_template` SET `buyprice` = 0, `sellprice` = 0, `buycount` = 200, `stackable` = 200, `spellid_1` = 0, `spellcategory_1` = 0, `spellcategorycooldown_1` = 0, `requiredlevel` = 0, `itemlevel` = 45 WHERE `entry` IN (3770,4605,4544,4602,21552,8932);
