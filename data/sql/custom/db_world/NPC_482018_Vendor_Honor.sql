@@ -78,11 +78,18 @@ INSERT INTO `npc_vendor`
 (@Entry,    3,          @3000Honor,       48687), -- Preened Ironfeather Breastplate
 (@Entry,    3,          @3000Honor,       48689), -- Stained Shadowcraft Tunic
 (@Entry,    3,          @3000Honor,       48691), -- Tattered Dreadmist Robe
--- Heirloom enchantments
+-- Heirloom Inscriptions
 (@Entry,    4,          @5000Honor,       44133), -- Greater Inscription of the Axe
 (@Entry,    4,          @5000Honor,       44134), -- Greater Inscription of the Crag
 (@Entry,    4,          @5000Honor,       44135), -- Greater Inscription of the Storm
-(@Entry,    4,          @5000Honor,       44136); -- Greater Inscription of the Pinnacle;
+(@Entry,    4,          @5000Honor,       44136), -- Greater Inscription of the Pinnacle;
+-- Heirloom Arcanums
+(@Entry,    5,          @6000Honor,       44149), -- Arcanum of Torment
+(@Entry,    5,          @6000Honor,       44150), -- Arcanum of the Stalwart Protector
+(@Entry,    5,          @6000Honor,       44152), -- Arcanum of Blissful Mending
+(@Entry,    5,          @6000Honor,       44159), -- Arcanum of Burning Mysteries
+(@Entry,    5,          @6000Honor,       44701), -- Arcanum of the Savage Gladiator
+(@Entry,    5,          @6000Honor,       44702); -- Arcanum of the Savage Gladiator
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

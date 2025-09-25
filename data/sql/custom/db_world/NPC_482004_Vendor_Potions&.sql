@@ -41,15 +41,14 @@ INSERT INTO `npc_vendor`
 (@Entry,     5,         2985,               6048), -- Shadow Protection Potion
 (@Entry,     5,         2985,               6051), -- Holy Protection Potion
 (@Entry,     5,         2985,               1450), -- Potion of Fervor
-(@Entry,     5,         2985,               6372), -- Swim Speed Potion
 (@Entry,     5,         2985,               3384), -- Minor Magic Resistance Potion
-(@Entry,     1,         2985,               3391), -- Elixir of Ogre's Strength
-(@Entry,     2,         2985,               6662), -- Elixir of Giant Growth
-(@Entry,     3,         2985,               3390), -- Elixir of Lesser Agility
-(@Entry,     4,         2985,               45621),-- Elixir of Minor Accuracy
-(@Entry,     5,         2985,               6373), -- Elixir of Firepower
+(@Entry,     6,         2985,               3391), -- Elixir of Ogre's Strength
+(@Entry,     6,         2985,               6662), -- Elixir of Giant Growth
+(@Entry,     6,         2985,               3390), -- Elixir of Lesser Agility
+(@Entry,     6,         2985,               45621),-- Elixir of Minor Accuracy
+(@Entry,     6,         2985,               6373), -- Elixir of Firepower
 (@Entry,     6,         2985,               3383), -- Elixir of Wisdom
-(@Entry,     7,         2985,               3389), -- Elixir of Defense
-(@Entry,     8,         2985,               3825), -- Elixir of Fortitude
-(@Entry,     9,         2985,               3388), -- Strong Troll's Blood Elixir
-(@Entry,    10,         2985,               5996); -- Elixir of Water Breathing
+(@Entry,     6,         2985,               3389), -- Elixir of Defense
+(@Entry,     6,         2985,               3825), -- Elixir of Fortitude
+(@Entry,     6,         2985,               3388), -- Strong Troll's Blood Elixir
+(@Entry,     6,         2985,               5996); -- Elixir of Water Breathing

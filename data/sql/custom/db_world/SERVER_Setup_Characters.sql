@@ -45,8 +45,21 @@ INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES
 DELETE FROM `playercreateinfo_item` WHERE `itemid` IN (14529);
 INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES (0, 0, 14529, 1);
 
+-- Starting Mounts
+
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Stormwind Steed*/45125),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Ironforge Ram*/45586),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Gnomeregan Mechanostrider*/45589),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Exodar Elekk*/45590),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Darnassian Nightsaber*/45591),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Thunder Bluff Kodo*/45592),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Darkspear Raptor*/45593),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Orgrimmar Wolf*/45595),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Silvermoon Hawkstrider*/45596),
+(@MountVendor,      2,      @EmblemofValor_x15,     /*Forsaken Warhorse*/45597),
+
+
 -- Starting Spells
--- -----------------------------------
 DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell` IN (33391, 201, 202, 198, 199, 196, 197, 200, 674, 227, 264, 5011,266, 2764,2567,1180,3018,15590,71,750,8737,32233,65220,56222,355,7386,2458,20252,10324,5502,8071,3599,5394,697,712,691,1515,883,2641,6991,982,33391,56222,8737,750,48266,48263,34091);
 DELETE FROM `playercreateinfo_spell_custom` WHERE `Note` = 'Lvl80';
 REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES

@@ -1,6 +1,23 @@
 SET
 @MountVendor = 32216,
 
+SET
+@Emblem10   = 2484,
+@Emblem15   = 2525,
+@Emblem20   = 2706,
+@Emblem25   = 2523,
+@Emblem30   = 2529,
+@Emblem35   = 2531,
+@Emblem40   = 2524,
+@Emblem45   = 2528,
+@Emblem50   = 2532,
+@Emblem60   = 2526,
+@Emblem65   = 2551,
+@Emblem75   = 2527,
+@Emblem80   = 2533,
+@Emblem100  = 2530,
+@Emblem200  = 2550;
+
 @EmblemofValor_x1 = 2589,
 @EmblemofValor_x15 = 2638,
 @EmblemofValor_x25 = 2534,
@@ -54,17 +71,6 @@ DELETE FROM npc_vendor WHERE Entry=@MountVendor; INSERT INTO npc_vendor
 (@MountVendor,      1,      @EmblemofValor_x1,    /*Swift Green Hawkstrider*/29223),
 (@MountVendor,      1,      @EmblemofValor_x1,    /*Swift Purple Hawkstrider*/29224),
 
-/* Med Mounts */
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Stormwind Steed*/45125),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Ironforge Ram*/45586),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Gnomeregan Mechanostrider*/45589),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Exodar Elekk*/45590),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Darnassian Nightsaber*/45591),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Thunder Bluff Kodo*/45592),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Darkspear Raptor*/45593),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Orgrimmar Wolf*/45595),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Silvermoon Hawkstrider*/45596),
-(@MountVendor,      2,      @EmblemofValor_x15,     /*Forsaken Warhorse*/45597),
 
 /* Rare Mounts */
 (@MountVendor,      3,      @EmblemofValor_x30,   /*Argent Warhorse*/47180),

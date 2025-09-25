@@ -59,13 +59,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    1,          @600Arena,          44096), -- Battleworn Thrash Blade
 (@Entry,    1,          @600Arena,          48716), -- Venerable Mass of McGowan
 (@Entry,    1,          @600Arena,          48718), -- Repurposed Lava Dredger
--- Arcanums
-(@Entry,    5,          @1500Arena,         44149), -- Arcanum of Torment
-(@Entry,    5,          @1500Arena,         44150), -- Arcanum of the Stalwart Protector
-(@Entry,    5,          @1500Arena,         44152), -- Arcanum of Blissful Mending
-(@Entry,    5,          @1500Arena,         44159), -- Arcanum of Burning Mysteries
-(@Entry,    5,          @1500Arena,         44701), -- Arcanum of the Savage Gladiator
-(@Entry,    5,          @1500Arena,         44702), -- Arcanum of the Savage Gladiator
 -- 2000 Honor
 (@Entry,    2,          @400Arena,          45706), -- Commendation of Bravery
 -- Tabards

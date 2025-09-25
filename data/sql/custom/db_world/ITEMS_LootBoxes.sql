@@ -38,9 +38,10 @@ INSERT INTO `item_loot_template`
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
-(@Entry,    29434,      0,                  100,        1,          5,          5,          '5x Badge of Justice'), -- PvE Only Reward
+(@Entry,    40753,      0,                  100,        1,          1,          1,          '1x Emblem of Style'),
+(@Entry,    40752,      0,                  100,        1,          5,          5,          '5x Badge of Justice'), -- PvE Only Reward
 (@Entry,    43102,      0,                  100,        2,          1,          1,          '1x Frozen Orb'),
-(@Entry,    34052,      0,                  100,        3,          5,          5,          '5x Dream Shard'),
+(@Entry,    34052,      0,                  100,        3,          4,          4,          '4x Dream Shard'),
 (@Entry,    46849,      0,                  100,        4,          10,         10,         '10x Magic Dust'),
 (@Entry,        1,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,        2,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
@@ -71,11 +72,11 @@ INSERT INTO `item_loot_template`
 -- ---------------------------------------------------------------------------------------------------------------------------------
 (`Entry`,     `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ---------------------------------------------------------------------------------------------------------------------------------
-(@Entry,      29434,      0,                 100,        1,          1,          1,          '10x Honor Coin'), -- PvP Only Reward
+(@Entry,      40753,      0,                 100,        1,          5,          5,          '1x Emblem of Style'),
+(@Entry,      29434,      0,                 100,        1,          10,         10,         '10x Honor Coin'), -- PvP Only Reward
 (@Entry,      43102,      0,                 100,        2,          1,          1,          '1x Frozen Orb'),
-(@Entry,      34052,      0,                 100,        3,          5,          5,          '5x Dream Shard'),
 (@Entry,      46849,      0,                 100,        4,          10,         10,         '10x Magic Dust'),
-(@Entry,      10456,      0,                 100,        5,          1,          1,          'Big Bomg Bag'),  -- PvP Only Reward
+(@Entry,      10456,      0,                 100,        5,          1,          1,          'Big Bomg Bag'),
 (@Entry,          1,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,          2,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
 (@Entry,          3,      @Ref_PetToy,        25,        7,          1,          1,          'Pet/Toy'),
@@ -128,17 +129,13 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 10456,
 @Name           = 'Big Bomb Bag',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 2,
 @SellPrice      = 0,
 @Itemlevel      = 20,
 @MaxCount       = 0,
 @Stackable      = 1,
 @Description    = 'Warning: Contains explosives.';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+REPLACE INTO `item_template` (`entry`, `Name`, `Quality`, `SellPrice`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry,@Name,@Quality,@SellPrice,@Itemlevel,@MaxCount,@Stackable,@Description);
 
 -- Loot template - Big Bomb Bag
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;

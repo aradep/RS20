@@ -39,19 +39,21 @@ UPDATE `item_template` SET `sellprice` = 0 WHERE `entry` IN (6041, 23530);
 UPDATE `item_template` SET `quality`=1, `stackable`=5, `buyprice`=0, `sellprice`=0, `buycount`=5, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
 929,	-- Healing Potion
 3827,	-- Mana Potion
-2459,   -- Swiftness Potion
 7676,   -- Thistle Tea
 5631,   -- Rage Potion
+2459,   -- Swiftness Potion
 5634,   -- Free Action Potion
 6048,   -- Shadow Protection Potion
 6051,   -- Holy Protection Potion
 1450,   -- Potion of Fervor
-6372,   -- Swim Speed Potion
 3384   -- Minor Magic Resistance Potion
 );
 
+-- Easy sellback free potions
+UPDATE `item_template` SET `sellprice`=0 WHERE `entry` IN (929, 3827, 7676, 5631);
+
 -- Elixirs
-UPDATE `item_template` SET `quality`=2, `stackable`=10, `buyprice`=0, `sellprice`=0, `buycount`=3, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
+UPDATE `item_template` SET `quality`=1, `stackable`=10, `buyprice`=0, `sellprice`=0, `buycount`=3, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
 3391, -- Elixir of Ogre's Strength
 6373, -- Elixir of Firepower
 3390, -- Elixir of Lesser Agility
