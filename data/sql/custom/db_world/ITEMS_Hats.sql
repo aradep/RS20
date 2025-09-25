@@ -50,8 +50,5 @@ UPDATE `item_template` SET
 `spellid_3` = 0
 WHERE `requiredlevel` IN (60,70,80) AND `class` = 4 AND `inventorytype` = 1 AND `allowableclass` > 0 AND `itemset` > 0;
 
--- Turn plate items into mail
-UPDATE `item_template` SET `class`=3 WHERE `class`=4 AND `subclass`=4;
-
 -- Remove "Valorous" etc. from names
 UPDATE `item_template` SET `name` = REPLACE(REPLACE(REPLACE( REPLACE(REPLACE(`name`, 'Conqueror''s ', ''),'Valorous ', ''),'Heroes'' ', ''),'Sanctified ', ''),' of Conquest', '');

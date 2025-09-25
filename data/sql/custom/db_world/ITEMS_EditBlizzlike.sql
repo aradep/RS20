@@ -35,6 +35,9 @@ UPDATE `item_template` SET `flags`=`flags`|4096, `quality`=3, `spellcharges_1`=0
 -- Weapon Chain / Shield spike
 UPDATE `item_template` SET `sellprice` = 0 WHERE `entry` IN (6041, 23530);
 
+-- Turn plate items into mail
+UPDATE `item_template` SET `subclass`=3 WHERE `class`=4 AND `subclass`=4;
+
 -- Potions
 UPDATE `item_template` SET `quality`=1, `stackable`=5, `buyprice`=0, `sellprice`=0, `buycount`=5, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
 929,	-- Healing Potion

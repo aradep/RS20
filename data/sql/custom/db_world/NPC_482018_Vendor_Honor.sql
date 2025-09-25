@@ -48,46 +48,34 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
--- Tabards
-(@Entry,    0,          @500Honor,        15196), -- Private's Tabard
-(@Entry,    0,          @500Honor,        15197), -- Scout's Tabard
 -- Battle Standards
-(@Entry,    0,          @500Honor,        18606), -- Battle Standard
-(@Entry,    0,          @500Honor,        18607), -- Battle Standard
+(@Entry,    1,          @1250Honor,       18606), -- Battle Standard
+(@Entry,    1,          @1250Honor,       18607), -- Battle Standard
 -- Heirloom Trinkets
-(@Entry,    1,          @1250Honor,       44098), -- Inherited Insignia of the Alliance
-(@Entry,    1,          @1250Honor,       44097), -- Inherited Insignia of the Horde
-(@Entry,    1,          @1600Honor,       42991), -- Swift Hand of Justice
-(@Entry,    1,          @1600Honor,       42992), -- Discerning Eye of the Beast
-(@Entry,    1,          @1600Honor,       50255), -- Dread Pirate Ring
+(@Entry,    2,          @2400Honor,       44098), -- Inherited Insignia of the Alliance
+(@Entry,    2,          @2400Honor,       44097), -- Inherited Insignia of the Horde
+(@Entry,    3,          @6000Honor,       42991), -- Swift Hand of Justice
+(@Entry,    3,          @6000Honor,       42992), -- Discerning Eye of the Beast
+(@Entry,    3,          @6000Honor,       50255), -- Dread Pirate Ring
 -- Heirloom shoulders
-(@Entry,    2,          @2400Honor,       44099), -- Strengthened Stockade Pauldrons
-(@Entry,    2,          @2400Honor,       44100), -- Pristine Lightforge Spaulders
-(@Entry,    2,          @2400Honor,       44101), -- Prized Beastmaster's Mantle
-(@Entry,    2,          @2400Honor,       44102), -- Aged Pauldrons of The Five Thunders
-(@Entry,    2,          @2400Honor,       44103), -- Exceptional Stormshroud Shoulders
-(@Entry,    2,          @2400Honor,       44105), -- Lasting Feralheart Spaulders
-(@Entry,    2,          @2400Honor,       44107), -- Exquisite Sunderseer Mantle
-(@Entry,    2,          @2400Honor,       42949), -- Polished Spaulders of Valor
-(@Entry,    2,          @2400Honor,       42950), -- Champion Herod's Shoulder
-(@Entry,    2,          @2400Honor,       42951), -- Mystical Pauldrons of Elements
-(@Entry,    2,          @2400Honor,       42952), -- Stained Shadowcraft Spaulders
-(@Entry,    2,          @2400Honor,       42984), -- Preened Ironfeather Shoulders
-(@Entry,    2,          @2400Honor,       42985), -- Tattered Dreadmist Mantle
+(@Entry,    4,         @10000Honor,       44099), -- Strengthened Stockade Pauldrons
+(@Entry,    4,         @10000Honor,       44100), -- Pristine Lightforge Spaulders
+(@Entry,    4,         @10000Honor,       44101), -- Prized Beastmaster's Mantle
+(@Entry,    4,         @10000Honor,       44102), -- Aged Pauldrons of The Five Thunders
+(@Entry,    4,         @10000Honor,       44103), -- Exceptional Stormshroud Shoulders
+(@Entry,    4,         @10000Honor,       44105), -- Lasting Feralheart Spaulders
+(@Entry,    4,         @10000Honor,       44107), -- Exquisite Sunderseer Mantle
 -- Heirloom chest armor
-(@Entry,    3,          @3000Honor,       48677), -- Champion's Deathdealer Breastplate
-(@Entry,    3,          @3000Honor,       48683), -- Mystical Vest of Elements
-(@Entry,    3,          @3000Honor,       48685), -- Polished Breastplate of Valor
-(@Entry,    3,          @3000Honor,       48687), -- Preened Ironfeather Breastplate
-(@Entry,    3,          @3000Honor,       48689), -- Stained Shadowcraft Tunic
-(@Entry,    3,          @3000Honor,       48691), -- Tattered Dreadmist Robe
+(@Entry,    5,         @15000Honor,       48677), -- Champion's Deathdealer Breastplate
+(@Entry,    5,         @15000Honor,       48683), -- Mystical Vest of Elements
+(@Entry,    5,         @15000Honor,       48687), -- Preened Ironfeather Breastplate
 -- Heirloom Arcanums
-(@Entry,    5,          @6000Honor,       44149), -- Arcanum of Torment
-(@Entry,    5,          @6000Honor,       44150), -- Arcanum of the Stalwart Protector
-(@Entry,    5,          @6000Honor,       44152), -- Arcanum of Blissful Mending
-(@Entry,    5,          @6000Honor,       44159), -- Arcanum of Burning Mysteries
-(@Entry,    5,          @6000Honor,       44701), -- Arcanum of the Savage Gladiator
-(@Entry,    5,          @6000Honor,       44702); -- Arcanum of the Savage Gladiator
+(@Entry,    6,         @20000Honor,       44149), -- Arcanum of Torment
+(@Entry,    6,         @20000Honor,       44150), -- Arcanum of the Stalwart Protector
+(@Entry,    6,         @20000Honor,       44152), -- Arcanum of Blissful Mending
+(@Entry,    6,         @20000Honor,       44159), -- Arcanum of Burning Mysteries
+(@Entry,    6,         @20000Honor,       44701), -- Arcanum of the Savage Gladiator
+(@Entry,    6,         @20000Honor,       44702); -- Arcanum of the Savage Gladiator
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

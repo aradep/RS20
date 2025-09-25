@@ -38,11 +38,11 @@ INSERT INTO `item_loot_template`
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
-(@Entry,    40753,      0,                  100,        1,          1,          1,          '1x Emblem of Style'),
-(@Entry,    40752,      0,                  100,        1,          5,          5,          '5x Badge of Justice'), -- PvE Only Reward
-(@Entry,    43102,      0,                  100,        2,          1,          1,          '1x Frozen Orb'),
-(@Entry,    34052,      0,                  100,        3,          4,          4,          '4x Dream Shard'),
-(@Entry,    46849,      0,                  100,        4,          10,         10,         '10x Magic Dust'),
+(@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
+(@Entry,    40752,      0,                  100,        0,          5,          5,          '5x Badge of Justice'), -- PvE Only Reward
+(@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
+(@Entry,    34052,      0,                  100,        0,          4,          4,          '4x Dream Shard'),
+(@Entry,    46849,      0,                  100,        0,          10,         10,         '10x Magic Dust'),
 (@Entry,        1,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,        2,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
 (@Entry,        3,      @Ref_PetToy,         25,        7,          1,          1,          'Pet/Toy'),
@@ -54,17 +54,13 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 43346,
 @Name           = 'Spoils of War',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 4,
 @SellPrice      = 0,
 @Itemlevel      = 20,
 @MaxCount       = 0,
 @Stackable      = 1,
 @Description    = 'Contains random items!';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+REPLACE INTO `item_template` (`entry`, `Name`, `Quality`, `SellPrice`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry,@Name,@Quality,@SellPrice,@Itemlevel,@MaxCount,@Stackable,@Description);
 
 -- Loot template - Spoils of War
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -72,11 +68,11 @@ INSERT INTO `item_loot_template`
 -- ---------------------------------------------------------------------------------------------------------------------------------
 (`Entry`,     `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ---------------------------------------------------------------------------------------------------------------------------------
-(@Entry,      40753,      0,                 100,        1,          5,          5,          '1x Emblem of Style'),
-(@Entry,      29434,      0,                 100,        1,          10,         10,         '10x Honor Coin'), -- PvP Only Reward
-(@Entry,      43102,      0,                 100,        2,          1,          1,          '1x Frozen Orb'),
-(@Entry,      46849,      0,                 100,        4,          10,         10,         '10x Magic Dust'),
-(@Entry,      10456,      0,                 100,        5,          1,          1,          'Big Bomg Bag'),
+(@Entry,      40753,      0,                 100,        0,          5,          5,          '1x Emblem of Style'),
+(@Entry,      29434,      0,                 100,        0,          10,         10,         '10x Honor Coin'), -- PvP Only Reward
+(@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
+(@Entry,      46849,      0,                 100,        0,          10,         10,         '10x Magic Dust'),
+(@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
 (@Entry,          1,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,          2,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
 (@Entry,          3,      @Ref_PetToy,        25,        7,          1,          1,          'Pet/Toy'),
@@ -88,17 +84,13 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 20602,
 @Name           = 'Field Supplies',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 3,
 @SellPrice      = 0,
 @Itemlevel      = 20,
 @MaxCount       = 0,
 @Stackable      = 1,
 @Description    = 'An assortment of potions and elixirs.';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+REPLACE INTO `item_template` (`entry`, `Name`, `Quality`, `SellPrice`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry,@Name,@Quality,@SellPrice,@Itemlevel,@MaxCount,@Stackable,@Description);
 
 -- Loot template - Field Supplies
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;

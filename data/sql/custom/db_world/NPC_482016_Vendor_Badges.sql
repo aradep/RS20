@@ -54,13 +54,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    1,          @EmblemofHeroism_x15,       42992), -- Discerning Eye of the Beast
 (@Entry,    1,          @EmblemofHeroism_x15,       50255), -- Dread Pirate Ring
 -- Heirloom shoulders
-(@Entry,    2,          @EmblemofHeroism_x25,       44099), -- Strengthened Stockade Pauldrons
-(@Entry,    2,          @EmblemofHeroism_x25,       44100), -- Pristine Lightforge Spaulders
-(@Entry,    2,          @EmblemofHeroism_x25,       44101), -- Prized Beastmaster's Mantle
-(@Entry,    2,          @EmblemofHeroism_x25,       44102), -- Aged Pauldrons of The Five Thunders
-(@Entry,    2,          @EmblemofHeroism_x25,       44103), -- Exceptional Stormshroud Shoulders
-(@Entry,    2,          @EmblemofHeroism_x25,       44105), -- Lasting Feralheart Spaulders
-(@Entry,    2,          @EmblemofHeroism_x25,       44107), -- Exquisite Sunderseer Mantle
 (@Entry,    2,          @EmblemofHeroism_x25,       42949), -- Polished Spaulders of Valor
 (@Entry,    2,          @EmblemofHeroism_x25,       42950), -- Champion Herod's Shoulder
 (@Entry,    2,          @EmblemofHeroism_x25,       42951), -- Mystical Pauldrons of Elements
@@ -68,10 +61,7 @@ INSERT INTO `npc_vendor`
 (@Entry,    2,          @EmblemofHeroism_x25,       42984), -- Preened Ironfeather Shoulders
 (@Entry,    2,          @EmblemofHeroism_x25,       42985), -- Tattered Dreadmist Mantle
 -- Heirloom chest armor
-(@Entry,    3,          @EmblemofHeroism_x30,       48677), -- Champion's Deathdealer Breastplate
-(@Entry,    3,          @EmblemofHeroism_x30,       48683), -- Mystical Vest of Elements
 (@Entry,    3,          @EmblemofHeroism_x30,       48685), -- Polished Breastplate of Valor
-(@Entry,    3,          @EmblemofHeroism_x30,       48687), -- Preened Ironfeather Breastplate
 (@Entry,    3,          @EmblemofHeroism_x30,       48689), -- Stained Shadowcraft Tunic
 (@Entry,    3,          @EmblemofHeroism_x30,       48691), -- Tattered Dreadmist Robe
 -- Heirloom Inscriptions

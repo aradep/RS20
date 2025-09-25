@@ -30,35 +30,35 @@ REPLACE INTO `spell_dbc` VALUES (56242, 0, 0, 0, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell` IN (22812,18562,1543,5384,2139,42894,35395,20927,596,15473,2094,1856,1064,8512,11719,29722,18499,3411,37441,37185,47567,55683,38435,56242);
 REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES
 -- Druid
-(11, 22812, 'Barkskin'),
-(11, 18562, 'Swiftmend'),
+(1024, 22812, 'Barkskin'),
+(1024, 18562, 'Swiftmend'),
 -- Hunter
-(3, 1543, 'Flare'),
-(3, 5384, 'Feign Death'),
+(4, 1543, 'Flare'),
+(4, 5384, 'Feign Death'),
 -- Mage
-(8, 2139, 'Counterspell'),
-(8, 42894, 'Arcane Blast - nerfed'),
-(8, 37441, 'Improved Arcane Blast - damage reduced'),
+(128, 2139, 'Counterspell'),
+(128, 42894, 'Arcane Blast - nerfed'),
+(128, 37441, 'Improved Arcane Blast - damage reduced'),
 -- Paladin
 (2, 35395, 'Crusader Strike'),
 (2, 20927, 'Holy Shield - nerfed'),
 (2, 37185, 'Increased Holy Shield - damage reduced'),
 -- Priest
-(5, 596, 'Prayer of Healing - nerfed'),
-(5, 15473, 'Shadowform'),
-(5, 47567, 'Divine Providence - Prayer of Healing buff/nerf'),
-(5, 55683, 'Holy Nova - buffed to counter Prayer of Healing nerf'),
+(16, 596, 'Prayer of Healing - nerfed'),
+(16, 15473, 'Shadowform'),
+(16, 47567, 'Divine Providence - Prayer of Healing buff/nerf'),
+(16, 55683, 'Holy Nova - buffed to counter Prayer of Healing nerf'),
 -- Rogue
-(4, 2094, 'Blind'),
-(4, 1856, 'Vanish'),
+(8, 2094, 'Blind'),
+(8, 1856, 'Vanish'),
 -- Shaman
-(7, 1064, 'Chain Heal - nerfed'),
-(7, 8512, 'Windfury Totem'),
-(7, 38435, 'Improved Chain Heal - damage reduced'),
+(64, 1064, 'Chain Heal - nerfed'),
+(64, 8512, 'Windfury Totem'),
+(64, 38435, 'Improved Chain Heal - damage reduced'),
 -- Warlock
-(9, 11719, 'Curse of Tongues'),
-(9, 29722, 'Incinerate - nerfed'),
-(9, 56242, 'Glyph of Incinerate - damage reduced'),
+(256, 11719, 'Curse of Tongues'),
+(256, 29722, 'Incinerate - nerfed'),
+(256, 56242, 'Glyph of Incinerate - damage reduced'),
 -- Warrior
 (1, 18499, 'Berserker Rage'),
 (1, 3411, 'Intervene');
