@@ -25,5 +25,5 @@ UPDATE `item_template` SET `buycount` = 4, `bonding`=0, `quality` = 3, `stackabl
 -- Frozen Orb
 UPDATE `item_template` SET `buycount` = 1, `sellprice` = 0, `bonding`=0, `quality` = 3, `stackable` = 20, `description`='Can be exchanged for potions and elixirs.' WHERE `entry` = 43102;
 
--- Titanium Powder
-UPDATE `item_template` SET `buycount` = 1, `sellprice` = 0, `bonding`=0, `quality` = 3, `stackable` = 200, `name`='Magic Dust', description='Can be exchanged for enchantment scrolls.' WHERE `entry` = 46849;
+-- Magic Dust
+UPDATE `item_template` SET `buycount` = 1, `sellprice` = 0, `bonding`=0, `quality` = 2, `stackable` = 200, `name`='Magic Dust', description='Can be exchanged for enchantment scrolls.' WHERE `entry` = 46849;
