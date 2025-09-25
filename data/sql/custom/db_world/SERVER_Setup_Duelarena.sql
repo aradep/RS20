@@ -25,9 +25,10 @@ SET
 @Spectator5   = 30104,
 @Spectator6   = 32744,
 @Spectator7   = 32749,
-@OneVsOne1    = 482198,
-@OneVsOne2    = 482198,
-@Lichking     = 482199;
+@OneVsOne1    = 482020,
+@OneVsOne2    = 482021,
+@Lichking     = 482199, 
+@GUID         = 4820001;
 
 -- Lich King
 REPLACE INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `speed_swim`, `speed_flight`, `detection_range`, `scale`, `rank`, `dmgschool`, `DamageModifier`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `ExperienceModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `spell_school_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES (@Lichking, 0, 0, 0, 0, 0, 'The Lich King', '', '', 0, 83, 83, 2, 35, 0, 2, 1.71429, 1, 1, 18, 1, 3, 0, 139, 1500, 2000, 1, 1, 1, 512, 2048, 0, 0, 0, 0, 0, 0, 6, 268435564, 36597, 0, 0, 0, 0, 1300000, 1500000, '', 0, 1, 1250, 500, 1, 1, 0, 169, 1, 650854271, 0, 0, '', 11159);
@@ -35,8 +36,8 @@ REPLACE INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Lichking;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Lichking, 30721, 1, 1);
 DELETE FROM `creature` WHERE `id1` = @Lichking;
-INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES 
-(@Lichking, 0, 0, 571, 0, 0, 1, 1, 0, 8516.24, 867.364, 583.709, 4.70001, 300, 0, 0, 17431250, 0, 0, 0, 0, 0, '', 'CustomNPC');
+INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES 
+(@GUID, @Lichking, 0, 0, 571, 0, 0, 1, 1, 0, 8516.24, 867.364, 583.709, 4.70001, 300, 0, 0, 17431250, 0, 0, 0, 0, 0, '', 'CustomNPC');
 -- Sit aura
 REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `visibilityDistanceType`, `auras`) VALUES ((SELECT `guid` FROM `creature` WHERE `id1` = @Lichking LIMIT 1),0, 0, 1, 0, 0, 0, '73220');
 
@@ -55,27 +56,24 @@ UPDATE `creature_template` SET `name`='Sigrun', `subname`='Arena Battlemaster', 
 UPDATE `creature_template` SET `name`='Hilde', `subname`='Arena Team Organizer', `scale`=0.5,  `gossip_menu_id`=0, `npcflag`=262144, `faction`=35 WHERE `entry`= @ArenaTeam2;
 UPDATE `creature_template` SET `name`='Astrid', `subname`='Arena Battlemaster', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaQue1;
 UPDATE `creature_template` SET `name`='Eir', `subname`='Arena Team Organizer', `scale`=0.5, `faction`=35 WHERE `entry`= @ArenaTeam1;
-UPDATE `creature_template_model` SET `CreaturedisplayID` = 29267,`DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam2,@ArenaQue2);
-UPDATE `creature_template_model` SET `CreaturedisplayID` = 29240,`DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam1,@ArenaQue1);
+UPDATE `creature_template_model` SET `CreaturedisplayID` = 29267, `DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam2,@ArenaQue2);
+UPDATE `creature_template_model` SET `CreaturedisplayID` = 29240, `DisplayScale`= 0.5 WHERE `CreatureID` IN (@ArenaTeam1,@ArenaQue1);
 DELETE FROM `creature` WHERE `id1` IN (@ArenaQue1,@ArenaTeam1,@ArenaQue2,@ArenaTeam2,@OneVsOne1,@OneVsOne2) AND `Comment` = 'CustomNPC';
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
 (@ArenaQue1,  0, 0, 571, 0, 0, 1, 1, 0, 8480.12, 792.419, 559.69, 6.28238,  300, 0, 0, 10635, 0, 0, 0, 0, 0, '', 'CustomNPC'),
 (@ArenaTeam1, 0, 0, 571, 0, 0, 1, 1, 0, 8482.91, 787.78,  559.69, 0.285871, 300, 0, 0, 10635, 0, 0, 0, 0, 0, '', 'CustomNPC'),
 (@ArenaQue2,  0, 0, 571, 0, 0, 1, 1, 0, 8550.52, 792.058, 559.69, 3.14473,  300, 0, 0, 10635, 0, 0, 0, 0, 0, '', 'CustomNPC'),
-(@ArenaTeam2, 0, 0, 571, 0, 0, 1, 1, 0, 8547.77, 796.83,  559.69, 3.33321,  300, 0, 0, 10635, 0, 0, 0, 0, 0, '', 'CustomNPC');
--- (@OneVsOne1,  0, 0, 571, 0, 0, 1, 1, 0, 8482.95, 797.116, 559.69, 5.95251,  300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC'),
--- (@OneVsOne2,  0, 0, 571, 0, 0, 1, 1, 0, 8547.29, 787.237, 559.69, 2.79522,  300, 0, 0,  8982, 0, 0, 0, 0, 0, '', 'CustomNPC');
+(@ArenaTeam2, 0, 0, 571, 0, 0, 1, 1, 0, 8547.77, 796.83,  559.69, 3.33321,  300, 0, 0, 10635, 0, 0, 0, 0, 0, '', 'CustomNPC'),
+(@OneVsOne1,  0, 0, 571, 0, 0, 1, 1, 0, 8482.95, 797.116, 559.69, 5.95251,  300, 0, 0, 12600, 0, 0, 0, 0, 0, '', 'CustomNPC'),
+(@OneVsOne2,  0, 0, 571, 0, 0, 1, 1, 0, 8547.29, 787.237, 559.69, 2.79522,  300, 0, 0,  8982, 0, 0, 0, 0, 0, '', 'CustomNPC');
 
 -- Training Dummies
-DELETE FROM `creature` WHERE `id1` IN (@Dummy1,@Dummy2) AND `Comment` IN('AllianceDummy','HordeDummy');
-INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
-(@Dummy1, 0, 0, 571, 0, 0, 1, 1, 0, 8537.18, 770.458, 559.691, 2.33182, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'AllianceDummy'),
-(@Dummy2, 0, 0, 571, 0, 0, 1, 1, 0, 8492.35, 769.339, 559.691, 0.784596, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'HordeDummy');
+DELETE FROM `creature` WHERE `id1` IN (@Dummy1,@Dummy2) AND `Comment` IN ('AllianceDummy','HordeDummy');
+INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
+(@GUID+1, @Dummy1, 0, 0, 571, 0, 0, 1, 1, 0, 8537.18, 770.458, 559.691, 2.33182, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'AllianceDummy'),
+(@GUID+2, @Dummy2, 0, 0, 571, 0, 0, 1, 1, 0, 8492.35, 769.339, 559.691, 0.784596, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'HordeDummy');
 -- Add flag auras
-REPLACE INTO creature_addon (`guid`, `auras`)
-SELECT `guid`, '32609' FROM `creature` WHERE `Comment` = 'HordeDummy'
-UNION ALL
-SELECT `guid`, '32610' FROM `creature` WHERE `Comment` = 'AllianceDummy';
+REPLACE INTO `creature_addon` (`guid`, `auras`) VALUES (@GUID+1, 32609), /* Horde Dummy */ (@GUID+2, 32610); /* Alliance Dummy */
 
 -- Spectators
 DELETE FROM `creature` WHERE `id1` IN (@Spectator1,@Spectator2,@Spectator3,@Spectator4,@Spectator5,@Spectator6,@Spectator7) AND `Comment` = 'CustomNPC';

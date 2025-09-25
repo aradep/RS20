@@ -54,12 +54,10 @@ SET
 @Level      = 23,
 @Class      = 1,
 @Faction    = 35;
-
-DELETE FROM creature_template WHERE Entry = @Entry;
-INSERT INTO creature_template (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
-DELETE FROM creature_template_model WHERE CreatureID = @Entry;
-INSERT INTO creature_template_model (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) 
-VALUES (@Entry, @Model, @Scale, 1);
+DELETE FROM `creature_template` WHERE `entry` = @Entry;
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
+INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
 -- Vendor List
 DELETE FROM npc_vendor WHERE `Entry` = @Entry;
