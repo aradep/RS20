@@ -19,7 +19,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 1.1,
 @Rank       = 1,
 @Class      = 2,
@@ -47,7 +47,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 0.75,
 @Rank       = 1,
 @Class      = 2,
@@ -75,7 +75,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 0.78,
 @Rank       = 1,
 @Class      = 2,
@@ -106,7 +106,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 0.82,
 @Rank       = 1,
 @Class      = 2,
@@ -134,7 +134,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 1.05,
 @Rank       = 1,
 @Class      = 8,
@@ -162,7 +162,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 1.0,
 @Rank       = 1,
 @Class      = 2,
@@ -190,7 +190,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 0.6,
 @Rank       = 1,
 @Class      = 8,
@@ -221,7 +221,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 1.0,
 @Rank       = 1,
 @Class      = 8,
@@ -249,7 +249,7 @@ SET
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
-@NPCFlags   = 51,
+@NPCFlags   = 179,
 @Scale      = 1.4,
 @Rank       = 1,
 @Class      = 8,
@@ -329,6 +329,32 @@ UPDATE `broadcast_text` SET `maletext`='ERROR. You do not meet the requirements 
 UPDATE `npc_text` SET `text0_0` = 'ERROR. You do not meet the requirements to access this training program. Please seek help from a...$b$bSCANNING$b$b...$c trainer.' WHERE `id` = 561;
 UPDATE `broadcast_text` SET `maletext`='All things are connected, $r. If the beasts were gone from the land, our kind would die from a great loneliness of spirit, for whatever happens to the Azeroth befalls all those who inhabit her.', `femaletext`=`maletext` WHERE `id` = 7555;
 UPDATE `npc_text` SET `text0_0` = 'All things are connected, $r. If the beasts were gone from the land, our kind would die from a great loneliness of spirit, for whatever happens to the Azeroth befalls all those who inhabit her.' WHERE `id` = 4889;
+
+-- Add "I need reagents" to each trainer
+DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `OptionText` = 'I need some reagents.';
+INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontext`, `optionbroadcasttextid`, `optiontype`, `optionnpcflag`, `actionmenuid`) VALUES
+(6647, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4509, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4023, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4529, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4466, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4562, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(2384, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4687, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4552, 3, 1, 'I need some reagents.', 17574, 3, 128, 0);
+
+-- Add "I need reagents" to each trainer
+DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `OptionText` = 'I need some reagents.';
+INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontext`, `optionbroadcasttextid`, `optiontype`, `optionnpcflag`, `actionmenuid`) VALUES
+(6647, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4509, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4023, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4529, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4466, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4562, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(2384, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4687, 3, 1, 'I need some reagents.', 17574, 3, 128, 0),
+(4552, 3, 1, 'I need some reagents.', 17574, 3, 128, 0);
 
 -- Make emote talk when interacted with
 UPDATE `npc_text` SET `em0_0` = 1, `em0_1` = 1 WHERE `id` IN (@Paladin, @Priest, @Warrior, @Shaman, @Rogue);
