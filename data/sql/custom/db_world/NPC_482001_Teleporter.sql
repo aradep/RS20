@@ -73,7 +73,7 @@ SET
 
 -- Option 3 (Dungeons)
 @SelectIcon_Option3  = 7, 
-@Select_Option3      = 'Dungeons (Blizzlike PvE)',
+@Select_Option3      = 'Dungeons (5-Player PvE)',
 @Explain_Option3     = 'You will find Small Dream Shards on the corpses of your enemies while inside of dungeons. Disenchant items you don\'t need to acquire Magic Dust, a currency that can be traded for enchantment scrolls.',
 @ConfirmIcon_Dung    = 9,
 @Confirm_Dungeon1    = 'Teleport to the Deadmines.',
@@ -115,8 +115,8 @@ REPLACE INTO `broadcast_text` VALUES
 (@Broadcast+5, 0, @Select_Option2,      @Select_Option2,    0,0,0,0,0,0,0,0,1,18019),
 (@Broadcast+6, 0, @Confirm_Option2,     @Confirm_Option2,   0,0,0,0,0,0,0,0,1,18019),
 -- Option 3
-(@Broadcast+7, 0, @Explain_Option3,     @Explain_Option4,   1,0,0,0,0,0,0,0,1,18019),
-(@Broadcast+8, 0, @Select_Option3,      @Select_Option4,    0,0,0,0,0,0,0,0,1,18019),
+(@Broadcast+7, 0, @Explain_Option3,     @Explain_Option3,   1,0,0,0,0,0,0,0,1,18019),
+(@Broadcast+8, 0, @Select_Option3,      @Select_Option3,    0,0,0,0,0,0,0,0,1,18019),
 (@Broadcast+9, 0, @Confirm_Dungeon1,    @Confirm_Dungeon1,  0,0,0,0,0,0,0,0,1,18019),
 (@Broadcast+10,0, @Confirm_Dungeon2,    @Confirm_Dungeon2,  0,0,0,0,0,0,0,0,1,18019),
 (@Broadcast+11,0, @Confirm_Dungeon3,    @Confirm_Dungeon3,  0,0,0,0,0,0,0,0,1,18019),
@@ -149,22 +149,22 @@ INSERT INTO `gossip_menu` VALUES
 -- Gossip menu options
 DELETE FROM `gossip_menu_option` WHERE `menuID` BETWEEN @GossipMenu AND @GossipMenu+4;
 INSERT INTO `gossip_menu_option` VALUES 
--- New Option 1
+-- Option 1
 (@GossipMenu,   1, @SelectIcon_Option4,     @Select_Option4,      @Broadcast+15,  1,1,    @GossipMenu+4,    0,0,0,NULL,0,0),
 (@GossipMenu+4, 1, @ConfirmIcon_Option4,    @Confirm_Option4,     @Broadcast+16,  1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+4, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
 
--- New Option 2
+-- Option 2
 (@GossipMenu,   2, @SelectIcon_Option1,     @Select_Option1,      @Broadcast+2,   1,1,    @GossipMenu+1,    0,0,0,NULL,0,0),
 (@GossipMenu+1, 1, @ConfirmIcon_Option1,    @Confirm_Option1,     @Broadcast+3,   1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+1, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
 
--- New Option 3
+-- Option 3
 (@GossipMenu,   3, @SelectIcon_Option2,     @Select_Option2,      @Broadcast+5,   1,1,    @GossipMenu+2,    0,0,0,NULL,0,0),
 (@GossipMenu+2, 1, @ConfirmIcon_Option2,    @Confirm_Option2,     @Broadcast+6,   1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+2, 2, 0,                       @Back,                @Broadcast+17,  1,1,    @GossipMenu,      0,0,0,NULL,0,0),
 
--- New Option 4
+-- Option 4
 (@GossipMenu,   4, @SelectIcon_Option3,     @Select_Option3,      @Broadcast+8,   1,1,    @GossipMenu+3,    0,0,0,NULL,0,0),
 (@GossipMenu+3, 1, @ConfirmIcon_Dung,       @Confirm_Dungeon1,    @Broadcast+9,   1,1,    0,                0,0,0,NULL,0,0),
 (@GossipMenu+3, 2, @ConfirmIcon_Dung,       @Confirm_Dungeon2,    @Broadcast+10,  1,1,    0,                0,0,0,NULL,0,0),
