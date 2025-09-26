@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Cloth armor
+-- Mall - Weapons
 -- -----------------------------------
 
 -- Creature
@@ -13,7 +13,7 @@ SET
 @Model      = 27216,
 @Scale      = 2,
 @Name       = "Vendor NPC",
-@Title      = "Weapons",
+@Title      = "Weapon Vendor",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,

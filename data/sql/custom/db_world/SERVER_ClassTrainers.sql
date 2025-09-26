@@ -107,7 +107,7 @@ SET
 @MaxLevel   = 20,
 @Faction    = 35,
 @NPCFlags   = 179,
-@Scale      = 0.82,
+@Scale      = 0.78,
 @Rank       = 1,
 @Class      = 2,
 @UnitFlags  = 0,
@@ -182,7 +182,7 @@ INSERT INTO `creature_template_model` VALUES (@Rogue, 0, @Model, @Scale, 1, 1234
 SET
 @Warlock    = 3326,
 @Model      = 20877,
-@Name       = "Degenesis",
+@Name       = "Nemesis",
 @Title      = "Warlock Trainer",
 @TrainClass = 9,
 @Icon       = "",
@@ -205,6 +205,11 @@ DELETE FROM `creature_template` WHERE `entry` = @Warlock;
 INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Warlock, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Warlock;
 INSERT INTO `creature_template_model` VALUES (@Warlock, 0, @Model, @Scale, 1, 12340);
+
+-- Display model always male
+DELETE FROM `creature_model_info` WHERE `DisplayID`=20877;
+UPDATE `creature_template_model` SET `creaturedisplayid`=20852 WHERE `creaturedisplayid`=20877;
+UPDATE `creature_model_info` SET `DisplayID_Other_Gender`=20852 WHERE `DisplayID`=20852;
 
 -- Warlock Pet
 UPDATE `creature_template` SET `name`='Ziglop', `minlevel`=20, `maxlevel`=20, `faction` = 35, `unit_class`=8 WHERE `entry` = 5730; 
@@ -312,9 +317,26 @@ REPLACE INTO `creature_equip_template` VALUES
 DELETE FROM `creature_template_addon` WHERE `entry` IN (@Paladin, @Warrior, @Rogue, @Shaman, @Priest, @Warlock, @Mage, @Druid, @Hunter);
 INSERT INTO `creature_template_addon` (`entry`) VALUES (@Paladin), (@Warrior), (@Rogue), (@Shaman), (@Priest), (@Warlock), (@Mage), (@Druid), (@Hunter);
 
+-- Placement
+DELETE FROM `creature` WHERE `id1` IN (@Paladin, @Warrior, @Rogue, @Shaman, @Priest, @Warlock, 5730, @Mage, @MagePet, @Druid, @Hunter, 29994) AND `Comment` = 'CustomNPC';
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
+(5730, 0, 0, 189, 0, 0, 1, 1, 0, 1956.62, -443.652, 6.17777, 3.81307, 300, 0, 0, 466, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(18001, 0, 0, 189, 0, 0, 1, 1, 0, 1950.38, -434.046, 6.17746, 0.054909, 300, 0, 0, 405, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(5146, 0, 0, 189, 0, 0, 1, 1, 1, 1951.14, -436.287, 6.17746, 5.26603, 300, 0, 0, 405, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(12042, 0, 0, 189, 0, 0, 1, 1, 1, 1957.31, -418.644, 6.17754, 5.22286, 300, 0, 0, 405, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(3326, 0, 0, 189, 0, 0, 1, 1, 1, 1956.84, -443.88, 6.17777, 1.06025, 300, 0, 0, 405, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(4584, 0, 0, 189, 0, 0, 1, 1, 1, 1952.03, -438.507, 6.17749, 1.8535, 300, 0, 0, 433, 490, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(376, 0, 0, 189, 0, 0, 1, 1, 1, 1970.5, -439.131, 6.17762, 2.16373, 300, 0, 0, 405, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(3032, 0, 0, 189, 0, 0, 1, 1, 1, 1952.29, -424.053, 6.17756, 5.71767, 300, 0, 0, 433, 490, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(29994, 0, 0, 189, 0, 0, 1, 1, 0, 1970.14, -423.94, 6.17751, 2.49757, 300, 0, 0, 405, 1202, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(3039, 0, 0, 189, 0, 0, 1, 1, 1, 1972.24, -426.645, 6.1775, 3.46748, 300, 0, 0, 433, 490, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(3353, 0, 0, 189, 0, 0, 1, 1, 1, 1951.05, -426.536, 6.17756, 5.98863, 300, 0, 0, 433, 490, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(23128, 0, 0, 189, 0, 0, 1, 1, 1, 1972.37, -437.253, 6.17762, 2.48182, 300, 0, 0, 433, 490, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+
 -- Hunter pet sleeping visual
-DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = @HunterPet);
-INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 3, 0, 0, 0, '55474' FROM `creature` WHERE `id1` = @HunterPet;
+DELETE FROM `creature_addon` WHERE `auras` = 55474;
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = 29994);
+INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 3, 0, 0, 0, '55474' FROM `creature` WHERE `id1` = 29994 AND `guid` > 100000;
 
 -- Class trainer gossip
 UPDATE `npc_text` SET `lang0`=0 WHERE `lang0`>0;
@@ -329,15 +351,7 @@ UPDATE `npc_text` SET `text0_0` = 'ERROR. You do not meet the requirements to ac
 UPDATE `broadcast_text` SET `maletext`='All things are connected, $r. If the beasts were gone from the land, our kind would die from a great loneliness of spirit, for whatever happens to the Azeroth befalls all those who inhabit her.', `femaletext`=`maletext` WHERE `id` = 7555;
 UPDATE `npc_text` SET `text0_0` = 'All things are connected, $r. If the beasts were gone from the land, our kind would die from a great loneliness of spirit, for whatever happens to the Azeroth befalls all those who inhabit her.' WHERE `id` = 4889;
 
--- -----------------------------------
--- Dragonshrine Instant-20 Funserver
--- Made for AzerothCore 3.3.5a
--- Discord: @Degen
--- 2025
--- -----------------------------------
--- Class Trainers - Vending
--- -----------------------------------
-
+-- Glyphs
 DELETE FROM `npc_vendor` WHERE `Entry` = @Paladin;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Paladin, 0, 0, 41092), -- Glyph of Judgement
@@ -367,7 +381,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Paladin, 1, 0, 43367), -- Glyph of Lay on Hands
 (@Paladin, 1, 0, 43368), -- Glyph of Sense Undead
 (@Paladin, 1, 0, 43369); -- Glyph of the Wise
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Warrior;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Warrior, 0, 0, 43413), -- Glyph of Rapid Charge
@@ -392,7 +405,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Warrior, 1, 0, 43398), -- Glyph of Mocking Blow
 (@Warrior, 1, 0, 43399), -- Glyph of Thunder Clap
 (@Warrior, 1, 0, 49084); -- Glyph of Command
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Hunter;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Hunter, 0, 0, 42897), -- Glyph of Aimed Shot
@@ -421,7 +433,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Hunter, 1, 0, 43354), -- Glyph of Possessed Strength
 (@Hunter, 1, 0, 43355), -- Glyph of the Pack
 (@Hunter, 1, 0, 43356); -- Glyph of Scare Beast
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Rogue;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Rogue, 0, 0, 42955), -- Glyph of Ambush
@@ -447,7 +458,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Rogue, 1, 0, 43378), -- Glyph of Safe Fall
 (@Rogue, 1, 0, 43379), -- Glyph of Blurred Speed
 (@Rogue, 1, 0, 43380); -- Glyph of Vanish
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Priest;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Priest, 0, 0, 42397), -- Glyph of Dispel Magic
@@ -473,7 +483,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Priest, 1, 0, 43372), -- Glyph of Shadow Protection
 (@Priest, 1, 0, 43373), -- Glyph of Shackle Undead
 (@Priest, 1, 0, 43374); -- Glyph of Shadowfiend
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Shaman;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Shaman, 0, 0, 41517), -- Glyph of Chain Heal
@@ -511,7 +520,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Shaman, 1, 0, 43388), -- Glyph of Water Walking
 (@Shaman, 1, 0, 43725), -- Glyph of Ghost Wolf
 (@Shaman, 1, 0, 44923); -- Glyph of Thunderstorm
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Mage;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Mage, 0, 0, 42734), -- Glyph of Arcane Explosion
@@ -551,7 +559,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Mage, 1, 0, 43362), -- Glyph of the Bear Cub
 (@Mage, 1, 0, 43364), -- Glyph of Slow Fall
 (@Mage, 1, 0, 44920); -- Glyph of Blast Wave
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Warlock;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Warlock, 0, 0, 42453), -- Glyph of Incinerate
@@ -589,7 +596,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Warlock, 1, 0, 43392), -- Glyph of Curse of Exhaustion
 (@Warlock, 1, 0, 43393), -- Glyph of Enslave Demon
 (@Warlock, 1, 0, 43394); -- Glyph of Souls
-
 DELETE FROM `npc_vendor` WHERE `Entry` = @Druid;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Druid, 0, 0, 40896), -- Glyph of Frenzied Regeneration
@@ -631,6 +637,11 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Druid, 1, 0, 43674), -- Glyph of Dash
 (@Druid, 1, 0, 44922); -- Glyph of Typhoon
 
+-- Reduce prices to buy 0 / sell 1
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` 
+SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 
+WHERE `npc_vendor`.`entry` IN (@Paladin, @Warrior, @Rogue, @Shaman, @Priest, @Warlock, @Mage, @Druid, @Hunter);
+
 -- Glyph/Reagent gossip option
 UPDATE `broadcast_text` SET `maletext`='Purchase Glyphs and Reagents', `femaletext`=`maletext` WHERE `id`=17574;
 DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `OptionText` = 'Purchase Glyphs and Reagents.';
@@ -644,19 +655,6 @@ INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontex
 (2384, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Warlock
 (4687, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Druid
 (4552, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0); -- Mage
-
--- Restrict vendors to class only
-DELETE FROM `conditions` WHERE `sourcetypeorreferenceid` = 15 AND `sourcegroup` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552);
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`,`ConditionTypeOrReference`, `ConditionTarget`,`ConditionValue1`, `ConditionValue2`, `ConditionValue3`,`NegativeCondition`, `ElseGroup`, `Comment`) VALUES
-(15, 6647, 3, 15, 0, 2, 0, 0, 0, 0, "Paladin vendor gossip class only"),
-(15, 4509, 3, 15, 0, 1, 0, 0, 0, 0, "Warrior vendor gossip class only"),
-(15, 4023, 3, 15, 0, 3, 0, 0, 0, 0, "Hunter vendor gossip class only"),
-(15, 4529, 3, 15, 0, 7, 0, 0, 0, 0, "Shaman vendor gossip class only"),
-(15, 4466, 3, 15, 0, 5, 0, 0, 0, 0, "Priest vendor gossip class only"),
-(15, 4562, 3, 15, 0, 4, 0, 0, 0, 0, "Rogue vendor gossip class only"),
-(15, 2384, 3, 15, 0, 9, 0, 0, 0, 0, "Warlock vendor gossip class only"),
-(15, 4687, 3, 15, 0, 11, 0, 0, 0, 0, "Druid vendor gossip class only"),
-(15, 4552, 3, 15, 0, 8, 0, 0, 0, 0, "Mage vendor gossip class only");
 
 -- Make emote talk when interacted with
 UPDATE `npc_text` SET `em0_0` = 1, `em0_1` = 1 WHERE `id` IN (@Paladin, @Priest, @Warrior, @Shaman, @Rogue);

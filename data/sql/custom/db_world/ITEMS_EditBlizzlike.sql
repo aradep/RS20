@@ -8,8 +8,8 @@
 -- -----------------------------------
 
 -- Ammo
-UPDATE `item_template` SET `name`='Sharp Arrows', `dmg_min1`=5, `dmg_max1`=7, `buycount` = 1, `stackable` = 1, `maxcount` = 1, `sellprice`=0 WHERE entry IN (3030);
-UPDATE `item_template` SET `name`='Heavy Shot', `dmg_min1`=5, `dmg_max1`=7, `buycount` = 1, `stackable` = 1, `maxcount` = 1, `sellprice`=0 WHERE entry IN (3033);
+UPDATE `item_template` SET `name`='Sharp Arrows', `dmg_min1`=5, `dmg_max1`=7, `buycount` = 1, `stackable` = 1, `maxcount` = 1, `sellprice`=0, `requiredlevel`=0, `itemlevel`=25  WHERE entry IN (3030);
+UPDATE `item_template` SET `name`='Heavy Shot', `dmg_min1`=5, `dmg_max1`=7, `buycount` = 1, `stackable` = 1, `maxcount` = 1, `sellprice`=0, `requiredlevel`=0, `itemlevel`=25  WHERE entry IN (3033);
 
 -- Infinite Bandage
 UPDATE `item_template` SET `stackable`=1,  name='Endless Runecloth Bandage', `quality`=3, `buycount` = 1, `bonding`=0, `maxcount`=1, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellcharges_1`=0 WHERE `entry`=14529;
@@ -53,7 +53,7 @@ UPDATE `item_template` SET `quality`=1, `stackable`=5, `buyprice`=0, `sellprice`
 );
 
 -- Easy sellback free potions
-UPDATE `item_template` SET `sellprice`=0 WHERE `entry` IN (929, 3827, 7676, 5631);
+UPDATE `item_template` SET `sellprice`=1 WHERE `entry` IN (929, 3827, 7676, 5631);
 
 -- Elixirs
 UPDATE `item_template` SET `quality`=1, `stackable`=10, `buyprice`=0, `sellprice`=0, `buycount`=3, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (

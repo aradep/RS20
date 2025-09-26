@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- 1v1 Arena battlemaster
+-- Coliseum - 1v1 Arena battlemaster
 -- -----------------------------------
 
 -- Creature template 1

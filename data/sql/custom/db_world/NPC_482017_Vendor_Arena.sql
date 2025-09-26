@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Cloth armor
+-- Coliseum - Arena point vendor
 -- -----------------------------------
 
 -- Creature
@@ -43,28 +43,20 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,    `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- AGM
-(@Entry,    0,          @1500Arena,         19024), -- Arena Grand Master
--- Heirloom weapons
-(@Entry,    1,          @1500Arena,         42943), -- Bloodied Arcanite Reaper
-(@Entry,    1,          @800Arena,          42944), -- Balanced Heartseeker
-(@Entry,    1,          @800Arena,          42945), -- Venerable Dal'Rend's Sacred Charge
-(@Entry,    1,          @1500Arena,         42946), -- Charmed Ancient Bone Bow
-(@Entry,    1,          @1500Arena,         42947), -- Dignified Headmaster's Charge
-(@Entry,    1,          @800Arena,          42948), -- Devout Aurastone Hammer
-(@Entry,    1,          @800Arena,          44091), -- Sharpened Scarlet Kris
-(@Entry,    1,          @1500Arena,         44092), -- Reforged Truesilver Champion
-(@Entry,    1,          @1500Arena,         44093), -- Upgraded Dwarven Hand Cannon
-(@Entry,    1,          @800Arena,          44094), -- The Blessed Hammer of Grace
-(@Entry,    1,          @1500Arena,         44095), -- Grand Staff of Jordan
-(@Entry,    1,          @800Arena,          44096), -- Battleworn Thrash Blade
-(@Entry,    1,          @800Arena,          48716), -- Venerable Mass of McGowan
-(@Entry,    1,          @800Arena,          48718), -- Repurposed Lava Dredger
+(@Entry,    1,          @800Arena,          19024), -- Arena Grand Master
 -- 2000 Honor
 (@Entry,    2,          @400Arena,          45706), -- Commendation of Bravery
+-- Heirloom Arcanums
+(@Entry,    3,          @1500Arena,         44149), -- Arcanum of Torment
+(@Entry,    3,          @1500Arena,         44150), -- Arcanum of the Stalwart Protector
+(@Entry,    3,          @1500Arena,         44152), -- Arcanum of Blissful Mending
+(@Entry,    3,          @1500Arena,         44159), -- Arcanum of Burning Mysteries
+(@Entry,    3,          @1500Arena,         44701), -- Arcanum of the Savage Gladiator
+(@Entry,    3,          @1500Arena,         44702), -- Arcanum of the Savage Gladiator
 -- Tabards
-(@Entry,    4,       @1500Arena1800Rating,  45983), -- Furious Tabard
-(@Entry,    4,       @1500Arena2000Rating,  49086), -- Relentless Tabard
-(@Entry,    4,       @1500Arena2200Rating,  51534); -- Wrathful Tabard
+(@Entry,    4,          @1500Arena1800Rating,  45983), -- Furious Tabard
+(@Entry,    4,          @1500Arena2000Rating,  49086), -- Relentless Tabard
+(@Entry,    4,          @1500Arena2200Rating,  51534); -- Wrathful Tabard
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

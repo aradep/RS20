@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Beastmaster auto pet taming NPC
+-- Mall - Beastmaster auto taming NPC
 -- -----------------------------------
 
 -- Creature template

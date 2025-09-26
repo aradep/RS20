@@ -4,26 +4,25 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Cloth armor
+-- Mall - Badge of Justice vendor
 -- -----------------------------------
 
 -- Creature
 SET
 @Entry      = 482016,
-@Model      = 29240,
-@Scale      = 0.55,
-@HoverHeight= 2.5,
-@Name       = "Keeper Sif",
-@Title      = "Badge of Justice vendor",
-@Icon       = "Buy",
-@Rank       = 3,
+@Model      = 27216,
+@Scale      = 2,
+@Name       = "Vendor NPC",
+@Title      = "Heirloom Vendor",
+@Icon       = "Buy", -- Buy/Repair --
+@Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
 @Class      = 1,
-@Flags      = 130,
+@Flags      = 128, -- 128: Normal vendor, 4224: Repair vendor
 @Level      = 20,
 @Faction    = 35;
 DELETE FROM `creature_template` WHERE `Entry` = @Entry;
-INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`, `unit_flags`, `MovementType`, `hoverHeight`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class, 32768, 0, @HoverHeight, 'npc_pet_gen_valkyr_guardian');
+INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
@@ -47,28 +46,18 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,              `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
--- Heirloom Trinkets
-(@Entry,    1,          @EmblemofHeroism_x10,       44098), -- Inherited Insignia of the Alliance
-(@Entry,    1,          @EmblemofHeroism_x10,       44097), -- Inherited Insignia of the Horde
-(@Entry,    1,          @EmblemofHeroism_x15,       42991), -- Swift Hand of Justice
-(@Entry,    1,          @EmblemofHeroism_x15,       42992), -- Discerning Eye of the Beast
-(@Entry,    1,          @EmblemofHeroism_x15,       50255), -- Dread Pirate Ring
--- Heirloom shoulders
-(@Entry,    2,          @EmblemofHeroism_x25,       42949), -- Polished Spaulders of Valor
-(@Entry,    2,          @EmblemofHeroism_x25,       42950), -- Champion Herod's Shoulder
-(@Entry,    2,          @EmblemofHeroism_x25,       42951), -- Mystical Pauldrons of Elements
-(@Entry,    2,          @EmblemofHeroism_x25,       42952), -- Stained Shadowcraft Spaulders
-(@Entry,    2,          @EmblemofHeroism_x25,       42984), -- Preened Ironfeather Shoulders
-(@Entry,    2,          @EmblemofHeroism_x25,       42985), -- Tattered Dreadmist Mantle
--- Heirloom chest armor
-(@Entry,    3,          @EmblemofHeroism_x30,       48685), -- Polished Breastplate of Valor
-(@Entry,    3,          @EmblemofHeroism_x30,       48689), -- Stained Shadowcraft Tunic
-(@Entry,    3,          @EmblemofHeroism_x30,       48691), -- Tattered Dreadmist Robe
 -- Heirloom Inscriptions
-(@Entry,    4,          @EmblemofHeroism_x60,       44133), -- Greater Inscription of the Axe
-(@Entry,    4,          @EmblemofHeroism_x60,       44134), -- Greater Inscription of the Crag
-(@Entry,    4,          @EmblemofHeroism_x60,       44135), -- Greater Inscription of the Storm
-(@Entry,    4,          @EmblemofHeroism_x60,       44136); -- Greater Inscription of the Pinnacle;
-
+(@Entry,    4,          @EmblemofHeroism_x10,       44133), -- Greater Inscription of the Axe
+(@Entry,    4,          @EmblemofHeroism_x10,       44134), -- Greater Inscription of the Crag
+(@Entry,    4,          @EmblemofHeroism_x10,       44135), -- Greater Inscription of the Storm
+(@Entry,    4,          @EmblemofHeroism_x10,       44136), -- Greater Inscription of the Pinnacle
+-- Heirlooms weapons
+(@Entry,    6,          @EmblemofHeroism_x25,       42943), -- Bloodied Arcanite Reaper
+(@Entry,    6,          @EmblemofHeroism_x15,       42944), -- Balanced Heartseeker
+(@Entry,    6,          @EmblemofHeroism_x15,       42945), -- Venerable Dal'Rend's Sacred Charge
+(@Entry,    6,          @EmblemofHeroism_x25,       42946), -- Charmed Ancient Bone Bow
+(@Entry,    6,          @EmblemofHeroism_x25,       42947), -- Dignified Headmaster's Charge
+(@Entry,    6,          @EmblemofHeroism_x15,       42948), -- Devout Aurastone Hammer
+(@Entry,    6,          @EmblemofHeroism_x15,       44091); -- Sharpened Scarlet Kris
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

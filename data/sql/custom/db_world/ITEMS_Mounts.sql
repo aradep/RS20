@@ -31,7 +31,7 @@ WHERE `entry` IN (
 54811); -- Celestial Steed --
 
 -- Horde-only Mounts
-UPDATE `item_template` SET `maxcount`=0, `allowablerace`=-1, `flagsextra`=1, `itemlevel`=20, `buyprice`=0, `sellprice`=0, `allowableclass`=-1, `item_template`.`quality`=4, `item_template`.`bonding`=1, `item_template`.`requiredlevel`=0, `item_template`.`requiredskillrank`=0, `requiredskill`=0, `item_template`.`flags`=4096
+UPDATE `item_template` SET `maxcount`=0, `allowablerace`=-1, `flagsextra`=1, `itemlevel`=20, `buyprice`=0, `sellprice`=0, `allowableclass`=-1, `item_template`.`quality`=4, `item_template`.`bonding`=1, `item_template`.`requiredreputationfaction`=0, `item_template`.`requiredreputationrank`=0, `item_template`.`requiredlevel`=0, `item_template`.`requiredskillrank`=0, `requiredskill`=0, `item_template`.`flags`=4096
 WHERE `entry` IN (
 18788, -- Swift Blue Raptor --
 18789, -- Swift Olive Raptor --
@@ -63,7 +63,7 @@ WHERE `entry` IN (
 49098); -- Crusaders Black Warhorse --
 
 -- Alliance-only Mounts
-UPDATE `item_template` SET `maxcount`=0, `allowablerace`=-1, `flagsextra`=2, `itemlevel`=20, `buyprice`=0, `sellprice`=0, `allowableclass`=-1, `item_template`.`quality`=4, `item_template`.`bonding`=1, `item_template`.`requiredlevel`=0, `item_template`.`requiredskillrank`=0, `requiredskill`=0, `item_template`.`flags`=4096
+UPDATE `item_template` SET `maxcount`=0, `allowablerace`=-1, `flagsextra`=2, `itemlevel`=20, `buyprice`=0, `sellprice`=0, `allowableclass`=-1, `item_template`.`quality`=4, `item_template`.`bonding`=1, `item_template`.`requiredlevel`=0, `item_template`.`requiredskillrank`=0, `requiredskill`=0, `item_template`.`requiredreputationfaction`=0, `item_template`.`requiredreputationrank`=0, `item_template`.`flags`=4096
 WHERE `entry` IN (
 18766, -- Reins of the Swift Frostsaber --,
 18767, -- Reins of the Swift Mistsaber --,

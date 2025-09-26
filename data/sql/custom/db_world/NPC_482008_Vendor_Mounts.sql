@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Enchants
+-- Mall - Mounts
 -- -----------------------------------
 
 -- Creature
@@ -13,7 +13,7 @@ SET
 @Model      = 27216,
 @Scale      = 2,
 @Name       = "Vendor NPC",
-@Title      = "Mounts",
+@Title      = "Mount Vendor",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
@@ -34,7 +34,6 @@ SET
 @EmblemofValor_x45 = 2539,
 @EmblemofValor_x60 = 2535,
 @EmblemofValor_x75 = 2538,
-
 @Champions_Writ_x1 = 2639,
 @20000_Honor       = 1006,
 @40000_Honor       = 2403,
@@ -46,32 +45,32 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
--- Starter mounts
-(@Entry,      1,      @EmblemofValor_x1,    /*Reins of the Swift Frostsaber*/18766),
-(@Entry,      1,      @EmblemofValor_x1,    /*Reins of the Swift Mistsaber*/18767),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Green Mechanostrider*/18772),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift White Mechanostrider*/18773),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Yellow Mechanostrider*/18774),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Palomino*/18776),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Brown Steed*/18777),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift White Steed*/18778),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift White Ram*/18785),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Brown Ram*/18786),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Gray Ram*/18787),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Blue Raptor*/18788),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Olive Raptor*/18789),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Orange Raptor*/18790),
-(@Entry,      1,      @EmblemofValor_x1,    /*Purple Skeletal Warhorse*/18791),
-(@Entry,      1,      @EmblemofValor_x1,    /*Great White Kodo*/18793),
-(@Entry,      1,      @EmblemofValor_x1,    /*Great Brown Kodo*/18794),
-(@Entry,      1,      @EmblemofValor_x1,    /*Great Gray Kodo*/18795),
-(@Entry,      1,      @EmblemofValor_x1,    /*Horn of the Swift Brown Wolf*/18796),
-(@Entry,      1,      @EmblemofValor_x1,    /*Horn of the Swift Timber Wolf*/18797),
-(@Entry,      1,      @EmblemofValor_x1,    /*Horn of the Swift Gray Wolf*/18798),
-(@Entry,      1,      @EmblemofValor_x1,    /*Reins of the Swift Stormsaber*/18902),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Pink Hawkstrider*/28936),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Green Hawkstrider*/29223),
-(@Entry,      1,      @EmblemofValor_x1,    /*Swift Purple Hawkstrider*/29224),
+-- Basic mounts
+(@Entry,      1,      @EmblemofValor_x15,    /*Reins of the Swift Frostsaber*/18766),
+(@Entry,      1,      @EmblemofValor_x15,    /*Reins of the Swift Mistsaber*/18767),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Green Mechanostrider*/18772),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift White Mechanostrider*/18773),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Yellow Mechanostrider*/18774),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Palomino*/18776),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Brown Steed*/18777),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift White Steed*/18778),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift White Ram*/18785),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Brown Ram*/18786),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Gray Ram*/18787),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Blue Raptor*/18788),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Olive Raptor*/18789),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Orange Raptor*/18790),
+(@Entry,      1,      @EmblemofValor_x15,    /*Purple Skeletal Warhorse*/18791),
+(@Entry,      1,      @EmblemofValor_x15,    /*Great White Kodo*/18793),
+(@Entry,      1,      @EmblemofValor_x15,    /*Great Brown Kodo*/18794),
+(@Entry,      1,      @EmblemofValor_x15,    /*Great Gray Kodo*/18795),
+(@Entry,      1,      @EmblemofValor_x15,    /*Horn of the Swift Brown Wolf*/18796),
+(@Entry,      1,      @EmblemofValor_x15,    /*Horn of the Swift Timber Wolf*/18797),
+(@Entry,      1,      @EmblemofValor_x15,    /*Horn of the Swift Gray Wolf*/18798),
+(@Entry,      1,      @EmblemofValor_x15,    /*Reins of the Swift Stormsaber*/18902),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Pink Hawkstrider*/28936),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Green Hawkstrider*/29223),
+(@Entry,      1,      @EmblemofValor_x15,    /*Swift Purple Hawkstrider*/29224),
 -- PvE mounts
 (@Entry,      3,      @EmblemofValor_x30,   /*Argent Warhorse*/47180),
 (@Entry,      3,      @EmblemofValor_x30,   /*The Horsemans Reins*/37012),

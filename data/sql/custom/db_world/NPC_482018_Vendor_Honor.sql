@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Cloth armor
+-- Coliseum - Honor vendor
 -- -----------------------------------
 
 -- Creature
@@ -52,30 +52,21 @@ INSERT INTO `npc_vendor`
 (@Entry,    1,          @1250Honor,       18606), -- Battle Standard
 (@Entry,    1,          @1250Honor,       18607), -- Battle Standard
 -- Heirloom Trinkets
-(@Entry,    2,          @2400Honor,       44098), -- Inherited Insignia of the Alliance
-(@Entry,    2,          @2400Honor,       44097), -- Inherited Insignia of the Horde
-(@Entry,    3,          @6000Honor,       42991), -- Swift Hand of Justice
-(@Entry,    3,          @6000Honor,       42992), -- Discerning Eye of the Beast
-(@Entry,    3,          @6000Honor,       50255), -- Dread Pirate Ring
--- Heirloom shoulders
-(@Entry,    4,         @10000Honor,       44099), -- Strengthened Stockade Pauldrons
-(@Entry,    4,         @10000Honor,       44100), -- Pristine Lightforge Spaulders
-(@Entry,    4,         @10000Honor,       44101), -- Prized Beastmaster's Mantle
-(@Entry,    4,         @10000Honor,       44102), -- Aged Pauldrons of The Five Thunders
-(@Entry,    4,         @10000Honor,       44103), -- Exceptional Stormshroud Shoulders
-(@Entry,    4,         @10000Honor,       44105), -- Lasting Feralheart Spaulders
-(@Entry,    4,         @10000Honor,       44107), -- Exquisite Sunderseer Mantle
--- Heirloom chest armor
-(@Entry,    5,         @15000Honor,       48677), -- Champion's Deathdealer Breastplate
-(@Entry,    5,         @15000Honor,       48683), -- Mystical Vest of Elements
-(@Entry,    5,         @15000Honor,       48687), -- Preened Ironfeather Breastplate
--- Heirloom Arcanums
-(@Entry,    6,         @20000Honor,       44149), -- Arcanum of Torment
-(@Entry,    6,         @20000Honor,       44150), -- Arcanum of the Stalwart Protector
-(@Entry,    6,         @20000Honor,       44152), -- Arcanum of Blissful Mending
-(@Entry,    6,         @20000Honor,       44159), -- Arcanum of Burning Mysteries
-(@Entry,    6,         @20000Honor,       44701), -- Arcanum of the Savage Gladiator
-(@Entry,    6,         @20000Honor,       44702); -- Arcanum of the Savage Gladiator
+(@Entry,    2,          @1600Honor,       44098), -- Inherited Insignia of the Alliance
+(@Entry,    2,          @1600Honor,       44097), -- Inherited Insignia of the Horde
+-- Heirloom Inscriptions
+(@Entry,    4,          @3000Honor,       44133), -- Greater Inscription of the Axe
+(@Entry,    4,          @3000Honor,       44134), -- Greater Inscription of the Crag
+(@Entry,    4,          @3000Honor,       44135), -- Greater Inscription of the Storm
+(@Entry,    4,          @3000Honor,       44136), -- Greater Inscription of the Pinnacle
+-- Heirloom weapons
+(@Entry,    6,          @8000Honor,       44092), -- Reforged Truesilver Champion
+(@Entry,    6,          @8000Honor,       44093), -- Upgraded Dwarven Hand Cannon
+(@Entry,    6,          @5000Honor,       44094), -- The Blessed Hammer of Grace
+(@Entry,    6,          @8000Honor,       44095), -- Grand Staff of Jordan
+(@Entry,    6,          @5000Honor,       44096), -- Battleworn Thrash Blade
+(@Entry,    6,          @5000Honor,       48716), -- Venerable Mass of McGowan
+(@Entry,    6,          @5000Honor,       48718); -- Repurposed Lava Dredger
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
