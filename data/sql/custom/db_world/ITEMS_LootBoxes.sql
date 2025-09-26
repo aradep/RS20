@@ -54,13 +54,17 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 43346,
 @Name           = 'Spoils of War',
+@Class          = 15,
+@Subclass       = 0,
+@Flags          = 4,
+@InventoryType  = 0,
 @Quality        = 4,
 @SellPrice      = 0,
 @Itemlevel      = 20,
 @MaxCount       = 0,
 @Stackable      = 1,
 @Description    = 'Contains random items!';
-REPLACE INTO `item_template` (`entry`, `Name`, `Quality`, `SellPrice`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry,@Name,@Quality,@SellPrice,@Itemlevel,@MaxCount,@Stackable,@Description);
+REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
 
 -- Loot template - Spoils of War
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -84,13 +88,17 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 20602,
 @Name           = 'Field Supplies',
+@Class          = 15,
+@Subclass       = 0,
+@Flags          = 4,
+@InventoryType  = 0,
 @Quality        = 3,
 @SellPrice      = 0,
 @Itemlevel      = 20,
 @MaxCount       = 0,
 @Stackable      = 1,
 @Description    = 'An assortment of potions and elixirs.';
-REPLACE INTO `item_template` (`entry`, `Name`, `Quality`, `SellPrice`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry,@Name,@Quality,@SellPrice,@Itemlevel,@MaxCount,@Stackable,@Description);
+REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
 
 -- Loot template - Field Supplies
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -121,13 +129,17 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 10456,
 @Name           = 'Big Bomb Bag',
+@Class          = 15,
+@Subclass       = 0,
+@Flags          = 4,
+@InventoryType  = 0,
 @Quality        = 2,
 @SellPrice      = 0,
 @Itemlevel      = 20,
 @MaxCount       = 0,
 @Stackable      = 1,
 @Description    = 'Warning: Contains explosives.';
-REPLACE INTO `item_template` (`entry`, `Name`, `Quality`, `SellPrice`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry,@Name,@Quality,@SellPrice,@Itemlevel,@MaxCount,@Stackable,@Description);
+REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
 
 -- Loot template - Big Bomb Bag
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;

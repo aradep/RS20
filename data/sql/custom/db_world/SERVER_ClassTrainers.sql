@@ -13,8 +13,9 @@ SET
 @Model      = 16066,
 @Name       = "Wing Commander Brighton",
 @Title      = "Paladin Trainer",
+@TrainClass = 2,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 6647,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -30,7 +31,7 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Paladin;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Paladin, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Paladin, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Paladin;
 INSERT INTO `creature_template_model` VALUES (@Paladin, 0, @Model, @Scale, 1, 12340);
 
@@ -40,8 +41,9 @@ SET
 @Model      = 18686,
 @Name       = "Warlord Felcarez",
 @Title      = "Warrior Trainer",
+@TrainClass = 1,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 4509,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -57,7 +59,7 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Warrior;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Warrior, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Warrior, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Warrior;
 INSERT INTO `creature_template_model` VALUES (@Warrior, 0, @Model, @Scale, 1, 12340);
 
@@ -67,8 +69,9 @@ SET
 @Model      = 21519,
 @Name       = "Santhus the Wanderer",
 @Title      = "Hunter Trainer",
+@TrainClass = 3,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 4023,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -84,12 +87,12 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Hunter;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Hunter, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Hunter, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Hunter;
 INSERT INTO `creature_template_model` VALUES (@Hunter, 0, @Model, @Scale, 1, 12340);
 
 -- Hunter Pet
-UPDATE `creature_template` SET `name`='Nova', `subname`='Santhus\'s Companion', `faction` = 35, `unit_class`=8 WHERE `entry`=29994;
+UPDATE `creature_template` SET `name`='Nova', `subname`='Santhus\'s Companion', `minlevel`=20, `maxlevel`=20, `faction` = 35, `unit_class`=8 WHERE `entry`=29994;
 
 -- Shaman
 SET
@@ -97,8 +100,9 @@ SET
 @Model      = 23197,
 @Name       = "King Hailex",
 @Title      = "Shaman Trainer",
+@TrainClass = 7,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 4529,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -114,7 +118,7 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Shaman;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Shaman, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Shaman, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Shaman;
 INSERT INTO `creature_template_model` VALUES (@Shaman, 0, @Model, @Scale, 1, 12340);
 
@@ -124,8 +128,9 @@ SET
 @Model      = 24965,
 @Name       = "Battle-Priest Pandora",
 @Title      = "Priest Trainer",
+@TrainClass = 5,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 4466,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -135,13 +140,13 @@ SET
 @Class      = 8,
 @UnitFlags  = 0,
 @UnitFlags2 = 0,
-@Type       = 0,
-@TypeFlags  = 0,
+@Type       = 7,
+@TypeFlags  = 2,
 @FlagsExtra = 0,
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Priest;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Priest, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Priest, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Priest;
 INSERT INTO `creature_template_model` VALUES (@Priest, 0, @Model, @Scale, 1, 12340);
 
@@ -151,6 +156,7 @@ SET
 @Model      = 21711,
 @Name       = "Sapper Morton",
 @Title      = "Rogue Trainer",
+@TrainClass = 4,
 @Icon       = "",
 @GossipMenu = 4562,
 @MinLevel   = 20,
@@ -168,7 +174,7 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Rogue;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Rogue, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Rogue, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Rogue;
 INSERT INTO `creature_template_model` VALUES (@Rogue, 0, @Model, @Scale, 1, 12340);
 
@@ -178,13 +184,14 @@ SET
 @Model      = 20877,
 @Name       = "Degenesis",
 @Title      = "Warlock Trainer",
+@TrainClass = 9,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 2384,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
 @NPCFlags   = 51,
-@Scale      = 1.1,
+@Scale      = 0.6,
 @Rank       = 1,
 @Class      = 8,
 @UnitFlags  = 0,
@@ -195,21 +202,22 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Warlock;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Warlock, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Warlock, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Warlock;
 INSERT INTO `creature_template_model` VALUES (@Warlock, 0, @Model, @Scale, 1, 12340);
 
 -- Warlock Pet
-UPDATE `creature_template` SET `name`='Wild Imp', `faction` = 35, `unit_class`=8 WHERE `entry` = 5730; 
+UPDATE `creature_template` SET `name`='Ziglop', `minlevel`=20, `maxlevel`=20, `faction` = 35, `unit_class`=8 WHERE `entry` = 5730; 
 
 -- Druid
 SET
 @Druid      = 12042,
-@Model      = 17783,
+@Model      = 17783, 
 @Name       = "Warden Grylls",
 @Title      = "Druid Trainer",
+@TrainClass = 11,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 4687,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -225,7 +233,7 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Druid;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Druid, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Druid, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Druid;
 INSERT INTO `creature_template_model` VALUES (@Druid, 0, @Model, @Scale, 1, 12340);
 
@@ -235,8 +243,9 @@ SET
 @Model      = 24121,
 @Name       = "Prototype 18",
 @Title      = "Mage Trainer",
+@TrainClass = 8,
 @Icon       = "",
-@GossipMenu = 0,
+@GossipMenu = 4552,
 @MinLevel   = 20,
 @MaxLevel   = 20,
 @Faction    = 35,
@@ -252,7 +261,7 @@ SET
 @AIName     = "",
 @Script     = "";
 DELETE FROM `creature_template` WHERE `entry` = @Mage;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Mage, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `trainer_class`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Mage, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @TrainClass, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Mage;
 INSERT INTO `creature_template_model` VALUES (@Mage, 0, @Model, @Scale, 1, 12340);
 
@@ -304,10 +313,11 @@ DELETE FROM `creature_template_addon` WHERE `entry` IN (@Paladin, @Warrior, @Rog
 INSERT INTO `creature_template_addon` (`entry`) VALUES (@Paladin), (@Warrior), (@Rogue), (@Shaman), (@Priest), (@Warlock), (@Mage), (@Druid), (@Hunter);
 
 -- Hunter pet sleeping visual
-DELETE FROM `creature_addon`WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = @HunterPet);
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = @HunterPet);
 INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 3, 0, 0, 0, '55474' FROM `creature` WHERE `id1` = @HunterPet;
 
 -- Class trainer gossip
+UPDATE `npc_text` SET `lang1`=0, `lang2`=0, `lang3`=0, `lang4`=0 WHERE `lang1`>0 OR `lang2`>1 OR `lang3`>1 OR `lang4`>1;
 UPDATE `broadcast_text` SET `maletext`='I need some reagents.', `femaletext`=`maletext` WHERE `id`=17574;
 UPDATE `broadcast_text` SET `maletext`='Can''t help ya, $r. I only train rogues.', `femaletext`=`maletext` WHERE `id` = 7482;
 UPDATE `npc_text` SET `text0_0` = 'Can''t help ya, $r. I only train rogues.', `text0_1` = 'Can''t help ya, $r. I only train rogues.' WHERE `id` = 4833;

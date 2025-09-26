@@ -37,14 +37,14 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (4, 5384, 'Feign Death'),
 -- Mage
 (128, 2139, 'Counterspell'),
-(128, 42894, 'Arcane Blast - nerfed'),
+(128, 30451, 'Arcane Blast - Bonus'),
 (128, 37441, 'Improved Arcane Blast - damage reduced'),
 -- Paladin
 (2, 35395, 'Crusader Strike'),
-(2, 20927, 'Holy Shield - nerfed'),
+(2, 20925, 'Holy Shield - Bonus'),
 (2, 37185, 'Increased Holy Shield - damage reduced'),
 -- Priest
-(16, 596, 'Prayer of Healing - nerfed'),
+(16, 596, 'Prayer of Healing - Bonus'),
 (16, 15473, 'Shadowform'),
 (16, 47567, 'Divine Providence - Prayer of Healing buff/nerf'),
 (16, 55683, 'Holy Nova - buffed to counter Prayer of Healing nerf'),
@@ -52,12 +52,12 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (8, 2094, 'Blind'),
 (8, 1856, 'Vanish'),
 -- Shaman
-(64, 1064, 'Chain Heal - nerfed'),
+(64, 1064, 'Chain Heal - Bonus'),
 (64, 8512, 'Windfury Totem'),
 (64, 38435, 'Improved Chain Heal - damage reduced'),
 -- Warlock
 (256, 11719, 'Curse of Tongues'),
-(256, 29722, 'Incinerate - nerfed'),
+(256, 29722, 'Incinerate - Bonus'),
 (256, 56242, 'Glyph of Incinerate - damage reduced'),
 -- Warrior
 (1, 18499, 'Berserker Rage'),
