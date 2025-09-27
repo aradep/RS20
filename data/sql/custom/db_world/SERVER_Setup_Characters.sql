@@ -17,10 +17,6 @@ UPDATE `npc_trainer` SET `MoneyCost` = 0 WHERE `ReqLevel` > 0;
 -- Free stable slots
 REPLACE INTO `stableslotprices_dbc` (`ID`, `Cost`) VALUES (1,0),(2,0),(3,0),(4,0);
 
--- Everyone gets Disenchanting
-DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell`= 13262;
-INSERT INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES ('0', '13262', 'Disenchant');
-
 -- Account command permissions
 UPDATE `command` SET `security`='0' WHERE `name` IN ('character','character customize','character changefaction','character changerace','account','account password','account lock ip');
 

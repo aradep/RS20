@@ -39,10 +39,10 @@ INSERT INTO `item_loot_template`
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,    40752,      0,                  100,        0,          5,          5,          '5x Badge of Justice'), -- PvE Only Reward
+(@Entry,    47241,      0,                  100,        0,          1,          1,          '1x Emblem of Valor'), -- PvE Only Reward
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,    34052,      0,                  100,        0,          4,          4,          '4x Dream Shard'),
-(@Entry,    46849,      0,                  100,        0,          10,         10,         '10x Magic Dust'),
+(@Entry,    34052,      0,                  100,        0,          5,          5,          '5x Dream Shard'),
+(@Entry,    10456,      0,                  100,        0,          1,          1,          'Big Bomg Bag'),
 (@Entry,        1,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,        2,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
 (@Entry,        3,      @Ref_PetToy,         25,        7,          1,          1,          'Pet/Toy'),
@@ -72,10 +72,10 @@ INSERT INTO `item_loot_template`
 -- ---------------------------------------------------------------------------------------------------------------------------------
 (`Entry`,     `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ---------------------------------------------------------------------------------------------------------------------------------
-(@Entry,      40753,      0,                 100,        0,          5,          5,          '1x Emblem of Style'),
+(@Entry,      40753,      0,                 100,        0,          1,          1,          '1x Emblem of Style'),
 (@Entry,      29434,      0,                 100,        0,          10,         10,         '10x Honor Coin'), -- PvP Only Reward
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,      46849,      0,                 100,        0,          10,         10,         '10x Magic Dust'),
+(@Entry,      34052,      0,                 100,        0,          10,         10,         '10x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
 (@Entry,          1,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,          2,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward

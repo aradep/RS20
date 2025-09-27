@@ -61,3 +61,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`, `slot`) VALUES
 (@Entry,8932, 5),
 -- Cert. of Ownership
 (@Entry,43850, 6);
+
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1973.18, -428.76, 6.17772, 3.34956, 300, 0, 0, 1524, 0, 0, 0, 0, 0, '', NULL, 0, NULL);

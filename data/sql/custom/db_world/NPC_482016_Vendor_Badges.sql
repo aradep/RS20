@@ -26,19 +26,15 @@ INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlev
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
--- Emblem of Heroism
+-- Emblem
 SET
-@EmblemofHeroism_x10   = 2484,
-@EmblemofHeroism_x15   = 2525,
-@EmblemofHeroism_x25   = 2523,
-@EmblemofHeroism_x30   = 2529,
-@EmblemofHeroism_x50   = 2532,
-@EmblemofHeroism_x60   = 2526,
-@EmblemofHeroism_x65   = 2551,
-@EmblemofHeroism_x75   = 2527,
-@EmblemofHeroism_x80   = 2533,
-@EmblemofHeroism_x100  = 2530,
-@EmblemofHeroism_x200  = 2550;
+@EmblemofTriumph_x1    = 2734,
+@EmblemofTriumph_x15   = 2723,
+@EmblemofTriumph_x22   = 2997,
+@EmblemofTriumph_x25   = 2682,
+@EmblemofTriumph_x30   = 2687,
+@EmblemofTriumph_x35   = 2685,
+@EmblemofTriumph_x45   = 2709;
 
 -- Item List
 DELETE FROM `npc_vendor` WHERE `Entry` = @Entry;
@@ -47,17 +43,22 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,              `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Heirloom Inscriptions
-(@Entry,    4,          @EmblemofHeroism_x10,       44133), -- Greater Inscription of the Axe
-(@Entry,    4,          @EmblemofHeroism_x10,       44134), -- Greater Inscription of the Crag
-(@Entry,    4,          @EmblemofHeroism_x10,       44135), -- Greater Inscription of the Storm
-(@Entry,    4,          @EmblemofHeroism_x10,       44136), -- Greater Inscription of the Pinnacle
+(@Entry,    4,          @EmblemofTriumph_x15,       44133), -- Greater Inscription of the Axe
+(@Entry,    4,          @EmblemofTriumph_x15,       44134), -- Greater Inscription of the Crag
+(@Entry,    4,          @EmblemofTriumph_x15,       44135), -- Greater Inscription of the Storm
+(@Entry,    4,          @EmblemofTriumph_x15,       44136), -- Greater Inscription of the Pinnacle
 -- Heirlooms weapons
-(@Entry,    6,          @EmblemofHeroism_x25,       42943), -- Bloodied Arcanite Reaper
-(@Entry,    6,          @EmblemofHeroism_x15,       42944), -- Balanced Heartseeker
-(@Entry,    6,          @EmblemofHeroism_x15,       42945), -- Venerable Dal'Rend's Sacred Charge
-(@Entry,    6,          @EmblemofHeroism_x25,       42946), -- Charmed Ancient Bone Bow
-(@Entry,    6,          @EmblemofHeroism_x25,       42947), -- Dignified Headmaster's Charge
-(@Entry,    6,          @EmblemofHeroism_x15,       42948), -- Devout Aurastone Hammer
-(@Entry,    6,          @EmblemofHeroism_x15,       44091); -- Sharpened Scarlet Kris
+(@Entry,    6,          @EmblemofTriumph_x25,       42943), -- Bloodied Arcanite Reaper
+(@Entry,    6,          @EmblemofTriumph_x15,       42944), -- Balanced Heartseeker
+(@Entry,    6,          @EmblemofTriumph_x15,       42945), -- Venerable Dal'Rend's Sacred Charge
+(@Entry,    6,          @EmblemofTriumph_x25,       42946), -- Charmed Ancient Bone Bow
+(@Entry,    6,          @EmblemofTriumph_x25,       42947), -- Dignified Headmaster's Charge
+(@Entry,    6,          @EmblemofTriumph_x15,       42948), -- Devout Aurastone Hammer
+(@Entry,    6,          @EmblemofTriumph_x15,       44091); -- Sharpened Scarlet Kris
+
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
+
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1985.21, -425.322, 11.2724, 3.42825, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, NULL);

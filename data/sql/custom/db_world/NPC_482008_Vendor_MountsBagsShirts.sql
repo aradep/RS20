@@ -13,7 +13,7 @@ SET
 @Model      = 27216,
 @Scale      = 2,
 @Name       = "Vendor NPC",
-@Title      = "Mount Vendor",
+@Title      = "Style Specialist",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
@@ -112,7 +112,42 @@ INSERT INTO `npc_vendor`
 (@Entry,      8,      @Champions_Writ_x1,     /*Big Blizzard Bear*/43599),
 (@Entry,      8,      @Champions_Writ_x1,     /*Invincibles Reins*/50818),
 (@Entry,      8,      @Champions_Writ_x1,     /*Reins of the Travelers Tundra Mammoth*/44234),
-(@Entry,      8,      @Champions_Writ_x1,     /*Reins of the Travelers Tundra Mammoth*/44235);
+(@Entry,      8,      @Champions_Writ_x1,     /*Reins of the Travelers Tundra Mammoth*/44235),
+-- Bags
+(@Entry,    9,         0,                      14046),
+(@Entry,    9,         @EmblemofValor_x15,     41599),
+(@Entry,    9,         @EmblemofValor_x30,     41600),
+(@Entry,    9,         @EmblemofValor_x60,     51809),
+-- Shirts
+(@Entry,    10,        @EmblemofValor_x1,      42360),
+(@Entry,    10,        @EmblemofValor_x1,      42361),
+(@Entry,    10,        @EmblemofValor_x1,      42363),
+(@Entry,    10,        @EmblemofValor_x1,      42365),
+(@Entry,    10,        @EmblemofValor_x1,      42368),
+(@Entry,    10,        @EmblemofValor_x1,      42369),
+(@Entry,    10,        @EmblemofValor_x1,      42370),
+(@Entry,    10,        @EmblemofValor_x1,      42371),
+(@Entry,    10,        @EmblemofValor_x1,      42372),
+(@Entry,    10,        @EmblemofValor_x1,      42373),
+(@Entry,    10,        @EmblemofValor_x1,      42374),
+(@Entry,    10,        @EmblemofValor_x1,      42375),
+(@Entry,    10,        @EmblemofValor_x1,      42376),
+(@Entry,    10,        @EmblemofValor_x1,      42377),
+(@Entry,    10,        @EmblemofValor_x1,      42378),
+(@Entry,    10,        @EmblemofValor_x1,      45664),
+(@Entry,    10,        @EmblemofValor_x1,      45666),
+(@Entry,    10,        @EmblemofValor_x1,      45667),
+(@Entry,    10,        @EmblemofValor_x1,      45668),
+(@Entry,    10,        @EmblemofValor_x1,      45669),
+(@Entry,    10,        @EmblemofValor_x1,      45670),
+(@Entry,    10,        @EmblemofValor_x1,      45671),
+(@Entry,    10,        @EmblemofValor_x1,      45672),
+(@Entry,    10,        @EmblemofValor_x1,      45673),
+(@Entry,    10,        @EmblemofValor_x1,      45674);
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
+
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.14, -448.728, 11.2723, 2.21484, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, NULL);

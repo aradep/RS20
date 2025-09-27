@@ -66,7 +66,7 @@ SET
 -- Option 2 (Azshara Crater)
 @SelectIcon_Option2  = 7, 
 @Select_Option2      = 'Azshara Crater (Open-world PvP)',
-@Explain_Option2     = 'Azshara Crater is an open-world PvP zone full of daily quests that reward Honor Coins and other useful items. You will also find Small Dream Shards on the corpses of your enemies while inside of Azshara Crater.$b$bAre you sure you wish to enter?',
+@Explain_Option2     = 'Azshara Crater is an open-world PvP zone full of daily quests that reward Honor Coins and other useful items. You will find Small Dream Shards on the corpses of enemies inside Azshara Crater.$b$bAre you sure you wish to enter?',
 @ConfirmIcon_Option2 = 9, 
 @Confirm_Option2     = 'Enter Azshara Crater.',
 @Map_Option2 = 37, @X_Option2 = 444.971, @Y_Option2 = 141.985, @Z_Option2 = 305.964, @O_Option2 = 2.232,
@@ -74,7 +74,7 @@ SET
 -- Option 3 (Dungeons)
 @SelectIcon_Option3  = 7, 
 @Select_Option3      = 'Dungeons (5-Player PvE)',
-@Explain_Option3     = 'You will find Small Dream Shards on the corpses of your enemies while inside of dungeons. Disenchant items you don\'t need to acquire Magic Dust, a currency that can be traded for enchantment scrolls.',
+@Explain_Option3     = 'You will find Small Dream Shards on the corpses of enemies inside dungeons and each boss killed awards 1x Emblem of Valor.',
 @ConfirmIcon_Dung    = 9,
 @Confirm_Dungeon1    = 'Teleport to the Deadmines.',
 @Confirm_Dungeon2    = 'Teleport to Wailing Caverns.',
