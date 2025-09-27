@@ -32,3 +32,6 @@ UPDATE `gameobject_template` SET `type`= 10 WHERE `entry` IN (101854);
     
 -- All dungeon portals lead back to hub
 UPDATE `areatrigger_teleport` SET `target_map`=189, `target_position_x`=1945.74, `target_position_y`=-431.596, `target_position_z`=16.368, `target_orientation`=0 WHERE `target_map` IN (0,1);
+
+-- RGB Lighting
+UPDATE `gameobject_template` SET `type`= 10, `size`='0.5' WHERE `entry`=189305;

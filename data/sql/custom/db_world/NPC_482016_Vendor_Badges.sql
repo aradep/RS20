@@ -10,10 +10,10 @@
 -- Creature
 SET
 @Entry      = 482016,
-@Model      = 27216,
-@Scale      = 2,
-@Name       = "Vendor NPC",
-@Title      = "Heirloom Vendor",
+@Model      = 23732,
+@Scale      = 1.5,
+@Name       = "Vendor",
+@Title      = "Heirlooms",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,

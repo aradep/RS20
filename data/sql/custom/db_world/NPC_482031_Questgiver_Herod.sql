@@ -14,7 +14,7 @@ SET
 @Scale      = 0.5,
 @HoverHeight= 2.5,
 @Name       = "Herod",
-@Title      = "",
+@Title      = "The Custodian",
 @Icon       = "Speak",
 @Rank       = 3,
 @Type       = 7,
@@ -45,4 +45,4 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 
 -- Ghost visual
 DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = @Entry);
-INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 3, 0, 0, 0, '16713' FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 0, 0, 0, 0, '57932' FROM `creature` WHERE `id1` = @Entry;

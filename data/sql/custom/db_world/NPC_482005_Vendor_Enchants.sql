@@ -10,10 +10,10 @@
 -- Creature
 SET
 @Entry      = 482005,
-@Model      = 27216,
-@Scale      = 2,
-@Name       = "Vendor NPC",
-@Title      = "Enchantment Scrolls",
+@Model      = 23732,
+@Scale      = 1.5,
+@Name       = "Vendor",
+@Title      = "Enchants",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,

@@ -10,9 +10,9 @@
 -- Creature
 SET
 @Entry      = 482004,
-@Model      = 27216,
-@Scale      = 2,
-@Name       = "Vendor NPC",
+@Model      = 23732,
+@Scale      = 1.5,
+@Name       = "Vendor",
 @Title      = "Consumables",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
