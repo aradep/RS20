@@ -23,6 +23,9 @@ UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` =
 -- Lucky Fishing Hat
 UPDATE `item_template` SET `RequiredSkill`=0, `RequiredSkillRank`=0 WHERE `entry`=19972;
 
+-- No durability
+UPDATE `item_template` SET `maxdurability`=0 WHERE `maxdurability`>0;
+
 -- Remove XP spells from heirlooms
 UPDATE `item_template`SET `spellid_1` = 0 WHERE `spellid_1` IN (57353,71354);
 

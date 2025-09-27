@@ -12,7 +12,7 @@ SET
 @Entry      = 482004,
 @Model      = 23732,
 @Scale      = 1.5,
-@Name       = "Vendor",
+@Name       = "Spirit of Competition",
 @Title      = "Consumables",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --

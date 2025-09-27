@@ -643,18 +643,18 @@ SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1
 WHERE `npc_vendor`.`entry` IN (@Paladin, @Warrior, @Rogue, @Shaman, @Priest, @Warlock, @Mage, @Druid, @Hunter);
 
 -- Glyph/Reagent gossip option
-UPDATE `broadcast_text` SET `maletext`='Purchase Glyphs and Reagents', `femaletext`=`maletext` WHERE `id`=17574;
-DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `OptionText` = 'Purchase Glyphs and Reagents.';
+UPDATE `broadcast_text` SET `maletext`='I need Glyphs and Reagents.', `femaletext`=`maletext` WHERE `id`=17574;
+DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `OptionText` = 'I need Glyphs and Reagents.';
 INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontext`, `optionbroadcasttextid`, `optiontype`, `optionnpcflag`, `actionmenuid`) VALUES
-(6647, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Paladin
-(4509, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Warrior
-(4023, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Hunter
-(4529, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Shaman
-(4466, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Priest
-(4562, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Rogue
-(2384, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Warlock
-(4687, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0), -- Druid
-(4552, 3, 1, 'Purchase Glyphs and Reagents.', 17574, 3, 128, 0); -- Mage
+(6647, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Paladin
+(4509, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Warrior
+(4023, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Hunter
+(4529, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Shaman
+(4466, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Priest
+(4562, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Rogue
+(2384, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Warlock
+(4687, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0), -- Druid
+(4552, 3, 1, 'I need Glyphs and Reagents.', 17574, 3, 128, 0); -- Mage
 
 -- Make emote talk when interacted with
 UPDATE `npc_text` SET `em0_0` = 1, `em0_1` = 1 WHERE `id` IN (@Paladin, @Priest, @Warrior, @Shaman, @Rogue);

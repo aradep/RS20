@@ -12,7 +12,7 @@ SET
 @Entry      = 482011,
 @Model      = 23732,
 @Scale      = 1.5,
-@Name       = "Vendor",
+@Name       = "Spirit of Competition",
 @Title      = "Armor",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
@@ -130,7 +130,7 @@ INSERT INTO `npc_vendor`
 (@Entry,   11,          @EmblemofTriumph_x1,             50255); -- Dread Pirate Ring
 
 -- Edit items
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`bonding`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=0, `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=0, `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
 
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
