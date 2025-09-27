@@ -8,7 +8,7 @@
 -- -----------------------------------
 
 -- Disable unused NPCs
-UPDATE `creature` SET `spawnmask` = 0 WHERE `map` = 189 AND `id1` < 480000;
+UPDATE `creature` SET `spawnmask` = 0 WHERE `map` = 189 AND `guid` < 2000000;
 UPDATE `creature` SET `spawnmask` = 0 WHERE `map` NOT IN (
 36,43,33,48,34, -- Dungeons
 189, -- SM

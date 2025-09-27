@@ -20,6 +20,9 @@ UPDATE `item_template` SET `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHER
 -- Heirloom Arcanums/Inscriptions
 UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` = 7 AND `class` = 12;
 
+-- Lucky Fishing Hat
+UPDATE `item_template` SET `RequiredSkill`=0, `RequiredSkillRank`=0 WHERE `entry`=19972;
+
 -- Remove XP spells from heirlooms
 UPDATE `item_template`SET `spellid_1` = 0 WHERE `spellid_1` IN (57353,71354);
 
