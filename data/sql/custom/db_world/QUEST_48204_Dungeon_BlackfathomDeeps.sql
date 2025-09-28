@@ -4,21 +4,21 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Quest - Daily Deadmines
+-- Quest - Daily Blackfathom Deeps
 -- -----------------------------------
 
 SET
-@QuestID                    = 48201,
+@QuestID                    = 48204,
 @PreviousQuest              = 0,
 
-@QuestStarterID             = 482035,
-@QuestEnderID               = 482035,
+@QuestStarterID             = 482037,
+@QuestEnderID               = 482037,
 
 @QuestType                  = 2, -- 0:Autocomplete, 2:Normal --
 @QuestLevel                 = 20,
 @MinLevel                   = 20,
 
-@QuestSortID                = 1581, -- Area ID --
+@QuestSortID                = 719, -- Area ID --
 @QuestInfoID                = 81,
 @SuggestedGroupNum          = 0,
 @Flags                      = 4106, -- 512:Hide rewards, 4096:Daily, 131072:Show item in quest tracker --

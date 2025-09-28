@@ -7,23 +7,23 @@
 -- Dungeon loot templates
 -- -----------------------------------
 
--- Add 1x Emblem of Style to end bosses
-DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Emblem of Style';
+-- Add 1x extra random BoP to end bosses
+DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Random BoP';
 REPLACE INTO `creature_loot_template` VALUES
-(639, 40753, 0, 100, 0, 1, 0, 1, 1, 'Edwin VanCleef - Emblem of Style'),
-(1716, 40753, 0, 100, 0, 1, 0, 1, 1, 'Bazil Thredd - Emblem of Style'),
-(3654, 40753, 0, 100, 0, 1, 0, 1, 1, 'Mutanus the Devourer - Emblem of Style'),
-(4275, 40753, 0, 100, 0, 1, 0, 1, 1, 'Archmage Arugal - Emblem of Style'),
-(4829, 40753, 0, 100, 0, 1, 0, 1, 1, 'Akumai - Emblem of Style');
+(639,  48208, 48208, 100, 0, 1, 5, 1, 1, 'Edwin VanCleef - Random BoP'),
+(1716, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Bazil Thredd - Random BoP'),
+(3654, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Mutanus the Devourer - Random BoP'),
+(4275, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Archmage Arugal - Random BoP'),
+(4829, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Akumai - Random BoP');
 
 -- Add 1x Darkmoon Card to end bosses
 DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Darkmoon Card';
 REPLACE INTO `creature_loot_template` VALUES
-(639, 1, 48207, 100, 6, 1, 0, 1, 1, 'Edwin VanCleef - Darkmoon Card'),
-(1716, 1, 48207, 100, 6, 1, 0, 1, 1, 'Bazil Thredd - Darkmoon Card'),
-(3654, 1, 48207, 100, 6, 1, 0, 1, 1, 'Mutanus the Devourer - Darkmoon Card'),
-(4275, 1, 48207, 100, 6, 1, 0, 1, 1, 'Archmage Arugal - Darkmoon Card'),
-(4829, 1, 48207, 100, 6, 1, 0, 1, 1, 'Akumai - Darkmoon Card');
+(639, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Edwin VanCleef - Darkmoon Card'),
+(1716, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Bazil Thredd - Darkmoon Card'),
+(3654, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Mutanus the Devourer - Darkmoon Card'),
+(4275, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Archmage Arugal - Darkmoon Card'),
+(4829, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Akumai - Darkmoon Card');
 
 -- Add 1x Emblem of Heroism to all bosses (2x to end bosses)
 DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Emblem of Heroism';
@@ -101,44 +101,6 @@ REPLACE INTO `creature_loot_template` VALUES
 (6243, 43102, 0, 100, 0, 1, 0, 1, 1, 'Gelihast - Frozen Orb'),
 (12902, 43102, 0, 100, 0, 1, 0, 1, 1, 'Lorgus Jett - Frozen Orb');
 
--- Add 1x random BoP to all bosses
-DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Random BoP';
-REPLACE INTO `creature_loot_template` VALUES
-(639,  48208, 0, 100, 0, 1, 0, 1, 1, 'Edwin VanCleef - Random BoP'),
-(644,  48208, 0, 100, 0, 1, 0, 1, 1, 'RhahkZor - Random BoP'),
-(645,  48208, 0, 100, 0, 1, 0, 1, 1, 'Cookie - Random BoP'),
-(646,  48208, 0, 100, 0, 1, 0, 1, 1, 'Mr. Smite - Random BoP'),
-(647,  48208, 0, 100, 0, 1, 0, 1, 1, 'Captain Greenskin - Random BoP'),
-(1663, 48208, 0, 100, 0, 1, 0, 1, 1, 'Dextren Ward - Random BoP'),
-(1666, 48208, 0, 100, 0, 1, 0, 1, 1, 'Kam Deepfury - Random BoP'),
-(1696, 48208, 0, 100, 0, 1, 0, 1, 1, 'Targorr the Dread - Random BoP'),
-(1716, 48208, 0, 100, 0, 1, 0, 1, 1, 'Bazil Thredd - Random BoP'),
-(1717, 48208, 0, 100, 0, 1, 0, 1, 1, 'Hamhock - Random BoP'),
-(1763, 48208, 0, 100, 0, 1, 0, 1, 1, 'Gilnid - Random BoP'),
-(3653, 48208, 0, 100, 0, 1, 0, 1, 1, 'Kresh - Random BoP'),
-(3654, 48208, 0, 100, 0, 1, 0, 1, 1, 'Mutanus the Devourer - Random BoP'),
-(3669, 48208, 0, 100, 0, 1, 0, 1, 1, 'Lord Cobrahn - Random BoP'),
-(3670, 48208, 0, 100, 0, 1, 0, 1, 1, 'Lord Pythas - Random BoP'),
-(3671, 48208, 0, 100, 0, 1, 0, 1, 1, 'Lady Anacondra - Random BoP'),
-(3673, 48208, 0, 100, 0, 1, 0, 1, 1, 'Lord Serpentis - Random BoP'),
-(3674, 48208, 0, 100, 0, 1, 0, 1, 1, 'Skum - Random BoP'),
-(3886, 48208, 0, 100, 0, 1, 0, 1, 1, 'Razorclaw the Butcher - Random BoP'),
-(3887, 48208, 0, 100, 0, 1, 0, 1, 1, 'Baron Silverlaine - Random BoP'),
-(3914, 48208, 0, 100, 0, 1, 0, 1, 1, 'Rethilgore - Random BoP'),
-(3927, 48208, 0, 100, 0, 1, 0, 1, 1, 'Wolf Master Nandos - Random BoP'),
-(4274, 48208, 0, 100, 0, 1, 0, 1, 1, 'Fenrus the Devourer - Random BoP'),
-(4275, 48208, 0, 100, 0, 1, 0, 1, 1, 'Archmage Arugal - Random BoP'),
-(4278, 48208, 0, 100, 0, 1, 0, 1, 1, 'Commander Springvale - Random BoP'),
-(4279, 48208, 0, 100, 0, 1, 0, 1, 1, 'Odo the Blindwatcher - Random BoP'),
-(4829, 48208, 0, 100, 0, 1, 0, 1, 1, 'Akumai - Random BoP'),
-(4830, 48208, 0, 100, 0, 1, 0, 1, 1, 'Old Serrakis - Random BoP'),
-(4831, 48208, 0, 100, 0, 1, 0, 1, 1, 'Lady Sarevess - Random BoP'),
-(4832, 48208, 0, 100, 0, 1, 0, 1, 1, 'Twilight Lord Kelris - Random BoP'),
-(4887, 48208, 0, 100, 0, 1, 0, 1, 1, 'Ghamoo-ra - Random BoP'),
-(5775, 48208, 0, 100, 0, 1, 0, 1, 1, 'Verdan the Everliving - Random BoP'),
-(6243, 48208, 0, 100, 0, 1, 0, 1, 1, 'Gelihast - Random BoP'),
-(12902, 48208, 0, 100, 0, 1, 0, 1, 1, 'Lorgus Jett - Random BoP');
-
 -- Add Small Dream Shard to all trash mobs
 -- Shadowfang Keep
 DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Small Dream Shard';
@@ -211,7 +173,6 @@ REPLACE INTO `creature_loot_template` VALUES
 (3671, 34053, 0, 20, 0, 1, 0, 1, 2, 'Lady Anacondra - Small Dream Shard'),
 (3673, 34053, 0, 20, 0, 1, 0, 1, 2, 'Lord Serpentis - Small Dream Shard'),
 (3674, 34053, 0, 20, 0, 1, 0, 1, 2, 'Skum - Small Dream Shard'),
-(3678, 34053, 0, 20, 0, 1, 0, 1, 2, 'Disciple of Naralex - Small Dream Shard'),
 (3840, 34053, 0, 20, 0, 1, 0, 1, 2, 'Druid of the Fang - Small Dream Shard'),
 (5048, 34053, 0, 20, 0, 1, 0, 1, 2, 'Deviate Adder - Small Dream Shard'),
 (5056, 34053, 0, 20, 0, 1, 0, 1, 2, 'Deviate Dreadfang - Small Dream Shard'),
