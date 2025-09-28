@@ -43,5 +43,8 @@ REPLACE INTO `creature_questender` VALUES
 (482031, 11342),
 (482031, 11339);
 
+-- Delete exclusive group
+UPDATE `quest_template_addon` SET `exclusivegroup` = 0 WHERE `ID` IN (11339,11342,11335,11338);
+
 -- Re-enable Call to Arms quest
 DELETE FROM `disables` WHERE `comment` LIKE '%Call to Arms:%'

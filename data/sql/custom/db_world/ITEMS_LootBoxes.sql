@@ -38,7 +38,6 @@ INSERT INTO `item_loot_template`
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,    34052,      0,                  100,        0,          5,          5,          '5x Dream Shard'),
 (@Entry,    10456,      0,                  100,        0,          1,          1,          'Bombs'),
-(@Entry,        1,      @Ref_BoPBlue,       100,        5,          1,          1,          'BoP Blue'),
 (@Entry,        2,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,        3,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
 (@Entry,        4,      @Ref_PetToy,         25,        7,          1,          1,          'Pet/Toy'),
@@ -66,7 +65,7 @@ INSERT INTO `item_loot_template`
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,      34052,      0,                 100,        0,          5,          5,          '5x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
-(@Entry,          1,      @Ref_BoPBlue,      100,        5,          1,          1,          'BoP Blue'),
+(@Entry,          1,      @Ref_BoPBlue,      100,        5,          1,          1,          'BoP Blue'), -- PvP Only Reward
 (@Entry,          2,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,          3,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
 (@Entry,          4,      @Ref_PetToy,        25,        7,          1,          1,          'Pet/Toy'),
@@ -219,8 +218,8 @@ INSERT INTO `reference_loot_template`
 (@Ref_BoPBlue,    20442,       0,        5,          1,           1,       'Scout''s Medallion'),
 (@Ref_BoPBlue,    20444,       0,        5,          1,           1,       'Sentinel''s Medallion');
 -- ----------------------------------------------------------------------------------------------------------
--- Make these items BoE
-UPDATE `item_template` it INNER JOIN `reference_loot_template` rt ON it.`entry` = rt.`item` SET it.`bonding` = 2, it.`maxcount`=0 WHERE rt.`entry` = @Ref_BoPBlue;
+-- Make these items BoP
+UPDATE `item_template` it INNER JOIN `reference_loot_template` rt ON it.`entry` = rt.`item` SET it.`bonding` = 1, it.`maxcount`=0 WHERE rt.`entry` = @Ref_BoPBlue;
 -- ----------------------------------------------------------------------------------------------------------
 
 -- Reference template - PvE Hat

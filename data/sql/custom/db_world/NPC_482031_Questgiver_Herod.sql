@@ -11,19 +11,19 @@
 SET
 @Entry      = 482031,
 @Model      = 29537,
-@Scale      = 0.5,
+@Scale      = 0.45,
 @HoverHeight= 2.5,
 @Name       = "Herod",
 @Title      = "The Custodian",
 @Icon       = "Speak",
-@Rank       = 3,
+@Rank       = 1,
 @Type       = 7,
 @Class      = 1,
 @Flags      = 4227,
 @Level      = 20,
 @Faction    = 35;
 DELETE FROM `creature_template` WHERE `Entry` = @Entry;
-INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`, `unit_flags`, `MovementType`, `hoverHeight`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class, 32768, 0, @HoverHeight, 'npc_pet_gen_valkyr_guardian');
+INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`, `unit_flags`, `MovementType`, `hoverHeight`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class, 0, 0, @HoverHeight, '');
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
@@ -42,10 +42,6 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
 (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1986.17, -431.643, 11.2724, 3.15336, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
-
--- Ghost visual
-DELETE FROM `creature_addon` WHERE `auras`=57932;
-INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 0, 0, 0, 0, '57932' FROM `creature` WHERE `id1` = @Entry;
 
 -- Extended costs
 SET

@@ -20,7 +20,7 @@ UPDATE `item_template` SET
 `frost_res`=0, 
 `shadow_res`=0, 
 `arcane_res`=0, 
-`allowableclass`=0,
+`allowableclass`=-1,
 `socketcolor_1`=0, 
 `socketcolor_2`=0, 
 `socketcolor_3`=0, 
