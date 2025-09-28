@@ -34,7 +34,7 @@ INSERT INTO `item_loot_template`
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,    40752,      0,                  100,        0,          10,         10,         '10x Emblem of Heroism'), -- PvE Only Reward
+(@Entry,    40752,      0,                  100,        0,          5,          5,          '5x Emblem of Heroism'), -- PvE Only Reward
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,    34052,      0,                  100,        0,          10,         10,         '10x Dream Shard'),
 (@Entry,    10456,      0,                  100,        0,          1,          1,          'Bombs'),

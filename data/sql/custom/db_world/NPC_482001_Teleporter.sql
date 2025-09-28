@@ -74,7 +74,7 @@ SET
 -- Option 3 (Dungeons)
 @SelectIcon_Option3  = 7, 
 @Select_Option3      = 'Dungeons (5-Player PvE)',
-@Explain_Option3     = 'Each dungeon boss awards 1 Emblem of Heroism and the last boss of each dungeon awards 5.$b$bYou will find Small Dream Shards on the corpses of enemies inside dungeons and the drop rate of random rare items has been increased.',
+@Explain_Option3     = 'Each dungeon boss awards 1 Emblem of Heroism and the last boss of each dungeon awards 2.$b$bYou will find Small Dream Shards on the corpses of enemies inside dungeons and the drop rate of random rare items has been increased.',
 @ConfirmIcon_Dung    = 9,
 @Confirm_Dungeon1    = 'Teleport to the Deadmines.',
 @Confirm_Dungeon2    = 'Teleport to Wailing Caverns.',

@@ -43,7 +43,7 @@ INSERT INTO `npc_vendor`
 -- 2000x Honor Points
 (@Entry,    1,          @VentureCoinx30,  45706), -- Commendation of Bravery
 -- 20x Emblem of Heroism
-(@Entry,    2,          @VentureCoinx30, 40752); -- Bag of Emblems
+(@Entry,    2,          @VentureCoinx50, 40752); -- Bag of Emblems
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

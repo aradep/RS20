@@ -23,7 +23,7 @@ UPDATE `creature` SET `spawnmask` = 0 WHERE `map` NOT IN (
 );
 
 -- Disable unused gameobjects
-UPDATE `gameobject` SET `spawnmask` = 0 WHERE `map` = 189 AND `id` != 101854; -- Herod's Door
+UPDATE `gameobject` SET `spawnmask` = 0 WHERE `map` = 189 AND `id` NOT IN (189305,101854); -- Lighting and Herod's Door
 UPDATE `gameobject` SET `spawnmask` = 0 WHERE `map` NOT IN (
 36,43,33,48,34, -- Dungeons
 189, -- SM

@@ -33,6 +33,10 @@ INSERT INTO `achievement_reward` VALUES
 (869, 13, 27, 0, 0, '', '', 0),
 (870, 14, 28, 0, 0, '', '', 0);
 
+-- Everyone gets Disenchanting
+DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell`= 13262;
+INSERT INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES ('0', '13262', 'Disenchant');
+
 -- Start with 4x Runecloth Bag
 DELETE FROM `playercreateinfo_item` WHERE `itemid`=14046;
 INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES (0, 0, 14046, 4);
