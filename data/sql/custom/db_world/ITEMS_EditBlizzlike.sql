@@ -29,6 +29,8 @@ UPDATE `item_template` SET `maxdurability`=0 WHERE `maxdurability`>0;
 -- Remove XP spells from heirlooms
 UPDATE `item_template`SET `spellid_1` = 0 WHERE `spellid_1` IN (57353,71354);
 
+-- Engi items no engi req
+UPDATE `item_template` SET `requiredskill`=0, `requiredskillrank`=0 WHERE `entry` IN (10586,10646,4395, 10514,40768,49040,41508,44413); 
 -- No CD Hearthstone
 REPLACE INTO `spell_dbc` VALUES (8690, 1176, 0, 0, 134283264, 1024, 0, 536870912, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 31, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 5, 77, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 1, 1, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 0, 776, 0, 0, 'Hearthstone', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 'Returns you to $z.  Speak to an Innkeeper in a different place to change your home location.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 133, 1500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0);
 

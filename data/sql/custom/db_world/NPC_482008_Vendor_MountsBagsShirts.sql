@@ -108,8 +108,8 @@ INSERT INTO `npc_vendor`
 (@Entry,      7,      @20000_Honor,     /*Reins of the Black War Bear,*/44224),
 (@Entry,      7,      @20000_Honor,     /*Swift Warstrider*/34129),
 (@Entry,      7,      @20000_Honor,     /*Black Battlestrider*/29465),
-(@Entry,      7,      @40000_Honor,     /*Reins of the Black War Mammoth,*/44077),
-(@Entry,      7,      @40000_Honor,     /*Reins of the Black War Mammoth,*/43956),
+(@Entry,      7,      @20000_Honor,     /*Reins of the Black War Mammoth,*/44077),
+(@Entry,      7,      @20000_Honor,     /*Reins of the Black War Mammoth,*/43956),
 -- Golden ticket mounts
 (@Entry,      8,      @Champions_Writ_x1,     /*Black Qiraji Resonating Crystal*/21176),
 (@Entry,      8,      @Champions_Writ_x1,     /*Reins of the Swift Spectral Tiger*/33225),

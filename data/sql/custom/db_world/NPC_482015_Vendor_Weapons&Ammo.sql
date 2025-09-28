@@ -80,5 +80,5 @@ INSERT INTO `npc_vendor`
 (@Entry,   14,          0,           15972), -- Ritual Stein
 (@Entry,   14,          0,           38579); -- Venomous Tome
 
--- Edit items
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=0, `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
+-- Sells for 1
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;

@@ -41,6 +41,7 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Cloth
+(@Entry,    0,          0,     19972), -- Lucky Fishing Hat
 (@Entry,    3,          0,     4315), -- Reinforced Woolen Shoulders
 (@Entry,    5,          0,     6567), -- Shimmering Armor
 (@Entry,    5,          0,     14133), -- Ritual Tunic
@@ -124,8 +125,7 @@ INSERT INTO `npc_vendor`
 (@Entry,    11,         0,     12054),   -- Demon Band
 (@Entry,    23,         0,     15972),   -- Ritual Stein
 (@Entry,    11,         0,     20823),   -- Gloom Band
-(@Entry,    2,          0,     30419),    -- Brilliant Necklace
-(@Entry,    23,         0,     38579);   -- Venomous Tome
+(@Entry,    2,          0,     30419);    -- Brilliant Necklace
 
--- Edit items
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=0, `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
+-- Sells for 1
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;

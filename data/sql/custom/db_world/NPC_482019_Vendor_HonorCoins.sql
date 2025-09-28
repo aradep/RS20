@@ -9,7 +9,7 @@
 
 -- Creature
 SET
-@Entry      = 482005,
+@Entry      = 482019,
 @Model      = 23732,
 @Scale      = 1.5,
 @Name       = "Spirit of Competition",

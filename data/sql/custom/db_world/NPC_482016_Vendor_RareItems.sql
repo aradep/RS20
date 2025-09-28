@@ -13,7 +13,7 @@ SET
 @Model      = 23732,
 @Scale      = 1.5,
 @Name       = "Spirit of Competition",
-@Title      = "Heirlooms",
+@Title      = "Rare Equipment",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
@@ -56,7 +56,6 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,              `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Cloth
-(@Entry,    0,          @EmblemofHeroism_x10,         19972), -- Lucky Fishing Hat
 (@Entry,    3,          @EmblemofHeroism_x10,          4320), -- Spidersilk Boots
 (@Entry,    8,          @EmblemofHeroism_x10,         45626), -- Spidersilk Drape
 (@Entry,    6,          @EmblemofHeroism_x10,         12998), -- Magician's Mantle
@@ -111,24 +110,10 @@ INSERT INTO `npc_vendor`
 (@Entry,   13,          @EmblemofHeroism_x10,         5183), -- Pulsating Hydra Heart
 -- Shield
 (@Entry,   13,          @EmblemofHeroism_x10,         12997), -- Redbeard Crest
-(@Entry,   13,          @EmblemofHeroism_x10,         13079), -- Shield of Thorsen
 -- Offhand
 (@Entry,   13,          @EmblemofHeroism_x10,         43654), -- Tome of the Dawn
 (@Entry,   13,          @EmblemofHeroism_x10,         43655), -- Book of Survival
-(@Entry,   13,          @EmblemofHeroism_x10,         43515), -- Mystic Tome
--- Heirlooms weapons
-(@Entry,    14,         @EmblemofHeroism_x30,         42944), -- Balanced Heartseeker
-(@Entry,    14,         @EmblemofHeroism_x30,         42948), -- Devout Aurastone Hammer
-(@Entry,    14,         @EmblemofHeroism_x30,         44091), -- Sharpened Scarlet Kris
-(@Entry,    14,         @EmblemofHeroism_x30,         42945), -- Venerable Dal'Rend's Sacred Charge
-(@Entry,    14,         @EmblemofHeroism_x50,         42946), -- Charmed Ancient Bone Bow
-(@Entry,    14,         @EmblemofHeroism_x50,         42947), -- Dignified Headmaster's Charge
-(@Entry,    14,         @EmblemofHeroism_x50,         42943), -- Bloodied Arcanite Reaper
--- Heirloom Inscriptions
-(@Entry,    15,         @EmblemofHeroism_x100,        44133), -- Greater Inscription of the Axe
-(@Entry,    15,         @EmblemofHeroism_x100,        44134), -- Greater Inscription of the Crag
-(@Entry,    15,         @EmblemofHeroism_x100,        44135), -- Greater Inscription of the Storm
-(@Entry,    15,         @EmblemofHeroism_x100,        44136); -- Greater Inscription of the Pinnacle
+(@Entry,   13,          @EmblemofHeroism_x10,         43515); -- Mystic Tome
 
--- Refundable
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
+-- Refundable / BoP
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`bonding`=1, `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

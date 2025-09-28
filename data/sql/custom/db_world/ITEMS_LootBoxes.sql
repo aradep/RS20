@@ -19,19 +19,12 @@ SET
 
 -- Mystery Box
 SET
-@Entry          = 17302,
-@Name           = 'Magic Mystery Box',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
+@Entry          = 34426,
 @Quality        = 4,
-@SellPrice      = 0,
-@Itemlevel      = 20,
-@MaxCount       = 0,
-@Stackable      = 1,
+@Money          = 100000,
+@Name           = 'Magic Mystery Box',
 @Description    = 'Contains random items!';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Mystery Box
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -43,7 +36,7 @@ INSERT INTO `item_loot_template`
 (@Entry,    40752,      0,                  100,        0,          10,         10,         '10x Emblem of Heroism'), -- PvE Only Reward
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,    34052,      0,                  100,        0,          10,         10,         '10x Dream Shard'),
-(@Entry,    10456,      0,                  100,        0,          1,          1,          'Big Bomg Bag'),
+(@Entry,    10456,      0,                  100,        0,          1,          1,          'Bombs'),
 (@Entry,        1,      @Ref_BoPBlue,       100,        5,          1,          1,          'BoP Blue'),
 (@Entry,        2,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
 (@Entry,        3,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
@@ -55,18 +48,11 @@ INSERT INTO `item_loot_template`
 -- Spoils of War
 SET
 @Entry          = 43346,
-@Name           = 'Spoils of War',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 4,
-@SellPrice      = 0,
-@Itemlevel      = 20,
-@MaxCount       = 0,
-@Stackable      = 1,
+@Money          = 100000,
+@Name           = 'Spoils of War',
 @Description    = 'Contains random items!';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Spoils of War
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -90,18 +76,11 @@ INSERT INTO `item_loot_template`
 -- Field Supplies
 SET
 @Entry          = 20602,
-@Name           = 'Field Supplies',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 3,
-@SellPrice      = 0,
-@Itemlevel      = 20,
-@MaxCount       = 0,
-@Stackable      = 1,
+@Money          = 0,
+@Name           = 'Field Supplies',
 @Description    = 'An assortment of potions and elixirs.';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Field Supplies
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -131,18 +110,11 @@ INSERT INTO `item_loot_template`
 -- Big Bomb Bag
 SET
 @Entry          = 10456,
-@Name           = 'Big Bomb Bag',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 2,
-@SellPrice      = 0,
-@Itemlevel      = 20,
-@MaxCount       = 0,
-@Stackable      = 1,
-@Description    = 'Warning: Contains explosives.';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+@Money          = 0,
+@Name           = 'Big Bomb Bag',
+@Description    = 'WARNING: Contains explosives!';
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Big Bomb Bag
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -172,18 +144,11 @@ INSERT INTO `reference_loot_template`
 -- Bag of Emblems
 SET
 @Entry          = 41888,
-@Name           = 'Bag of Emblems',
-@Class          = 15,
-@Subclass       = 0,
-@Flags          = 4,
-@InventoryType  = 0,
 @Quality        = 4,
-@SellPrice      = 0,
-@Itemlevel      = 20,
-@MaxCount       = 0,
-@Stackable      = 1,
+@Money          = 0,
+@Name           = 'Bag of Emblems',
 @Description    = 'Contains 20 Emblems of Heroism.';
-REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Bag of Emblems
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -194,7 +159,7 @@ INSERT INTO `item_loot_template`
 (@Entry,    40752,      0,              0,          1,          20,         20,         '20x Emblem of Heroism');
 -- ----------------------------------------------------------------------------------------------------------------------
 
--- Reference template - BoP blues that aren't available in dungeons
+-- Reference template - BoP blues
 DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_BoPBlue;
 INSERT INTO `reference_loot_template` 
 -- ----------------------------------------------------------------------------------------------------------
