@@ -33,6 +33,11 @@ INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1967.83, -422.796, 6.17751, 4.21763, 300, 0, 0, 1524, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+
 -- Gossip text
 DELETE FROM `npc_text` WHERE `ID`=601026;
 INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (601026, 'Greetings $N!$b$bIf you\'re looking for a trustful companion to take into the battlefield, you\'ve come to the right place!');
@@ -42,9 +47,15 @@ DELETE FROM `npc_text` WHERE `ID`=601028;
 INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (601028, 'Sorry, these pets are for Hunters only.');
 
 -- Pet food
-UPDATE `item_template` SET `buyprice` = 0, `sellprice` = 0, `buycount` = 200, `stackable` = 200, `spellid_1` = 0, `spellcategory_1` = 0, `spellcategorycooldown_1` = 0, `requiredlevel` = 0, `itemlevel` = 45 WHERE `entry` IN (3770,4605,4544,4602,21552,8932);
+UPDATE `item_template` SET `buyprice` = 0, `sellprice` = 0, `buycount` = 200, `stackable` = 200, `spellid_1` = 0, `spellcategory_1` = 0, `spellcategorycooldown_1` = 0, `requiredlevel` = 0, `itemlevel` = 20 WHERE `entry` IN (3770,4605,4544,4602,21552,8932);
+UPDATE `item_template` SET `name`='Pet Food',`description`='Meat flavored.' WHERE `entry` = 3770;
+UPDATE `item_template` SET `name`='Pet Food',`description`='Fungus flavored.' WHERE `entry` = 4605;
+UPDATE `item_template` SET `name`='Pet Food',`description`='Bread flavored.' WHERE `entry` = 4544;
+UPDATE `item_template` SET `name`='Pet Food',`description`='Fruit flavored.' WHERE `entry` = 4602;
+UPDATE `item_template` SET `name`='Pet Food',`description`='Fish flavored.' WHERE `entry` = 21552;
+UPDATE `item_template` SET `name`='Pet Food',`description`='Cheese flavored.' WHERE `entry` = 8932;
 
--- Pet food vending template
+-- Pet food vendor
 DELETE FROM `npc_vendor` WHERE entry = @Entry;
 INSERT INTO `npc_vendor` (`entry`, `item`, `slot`) VALUES 
 -- Meat
@@ -61,18 +72,6 @@ INSERT INTO `npc_vendor` (`entry`, `item`, `slot`) VALUES
 (@Entry,8932, 5),
 -- Cert. of Ownership
 (@Entry,43850, 6);
-
-UPDATE `item_template` SET `name`='Pet Food',`description`='Meat flavored.' WHERE `entry` = 3770;
-UPDATE `item_template` SET `name`='Pet Food',`description`='Fungus flavored.' WHERE `entry` = 4605;
-UPDATE `item_template` SET `name`='Pet Food',`description`='Bread flavored.' WHERE `entry` = 4544;
-UPDATE `item_template` SET `name`='Pet Food',`description`='Fruit flavored.' WHERE `entry` = 4602;
-UPDATE `item_template` SET `name`='Pet Food',`description`='Fish flavored.' WHERE `entry` = 21552;
-UPDATE `item_template` SET `name`='Pet Food',`description`='Cheese flavored.' WHERE `entry` = 8932;
-
--- Placement
-DELETE FROM `creature` WHERE `id1` = @Entry;
-INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1967.83, -422.796, 6.17751, 4.21763, 300, 0, 0, 1524, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Stable Master
 UPDATE `creature_template` SET `faction` = 35 WHERE `entry` = 21518;

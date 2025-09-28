@@ -12,6 +12,7 @@ SET
 @Ref_PetToy          = 48205,
 @Ref_EngiItem        = 48206,
 @Ref_Darkmoon        = 48207,
+@Ref_BoPBlue         = 48208,
 @Ref_PvEHat          = 48209,
 @Ref_PvPHat          = 48210,
 @Ref_Rings           = 48211;
@@ -39,14 +40,15 @@ INSERT INTO `item_loot_template`
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,    47241,      0,                  100,        0,          1,          1,          '1x Emblem of Valor'), -- PvE Only Reward
+(@Entry,    40752,      0,                  100,        0,          10,         10,         '10x Emblem of Heroism'), -- PvE Only Reward
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,    34052,      0,                  100,        0,          5,          5,          '5x Dream Shard'),
+(@Entry,    34052,      0,                  100,        0,          10,         10,         '10x Dream Shard'),
 (@Entry,    10456,      0,                  100,        0,          1,          1,          'Big Bomg Bag'),
-(@Entry,        1,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
-(@Entry,        2,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
-(@Entry,        3,      @Ref_PetToy,         25,        7,          1,          1,          'Pet/Toy'),
-(@Entry,        4,      @Ref_Rings,           5,       10,          1,          1,          'Ring of Power'),
+(@Entry,        1,      @Ref_BoPBlue,       100,        5,          1,          1,          'BoP Blue'),
+(@Entry,        2,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
+(@Entry,        3,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
+(@Entry,        4,      @Ref_PetToy,         25,        7,          1,          1,          'Pet/Toy'),
+(@Entry,        5,      @Ref_Rings,           5,       10,          1,          1,          'Ring of Power'),
 (@Entry,    46114,      0,                    1,       11,          1,          1,          'Mount Certificate');
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -77,10 +79,11 @@ INSERT INTO `item_loot_template`
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,      34052,      0,                 100,        0,          10,         10,         '10x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
-(@Entry,          1,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
-(@Entry,          2,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
-(@Entry,          3,      @Ref_PetToy,        25,        7,          1,          1,          'Pet/Toy'),
-(@Entry,          4,      @Ref_Rings,          5,       10,          1,          1,          'Ring of Power'),
+(@Entry,          1,      @Ref_BoPBlue,      100,        5,          1,          1,          'BoP Blue'),
+(@Entry,          2,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
+(@Entry,          3,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
+(@Entry,          4,      @Ref_PetToy,        25,        7,          1,          1,          'Pet/Toy'),
+(@Entry,          5,      @Ref_Rings,          5,       10,          1,          1,          'Ring of Power'),
 (@Entry,      46114,      0,                   1,       11,          1,          1,          'Mount Certificate');
 -- ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -164,6 +167,85 @@ INSERT INTO `reference_loot_template`
 (@Ref_EngiItem,  49040,      30,        2,          1,           1,          'Jeeves'),
 (@Ref_EngiItem,  41508,      10,        2,          1,           1,          'Mechano Hog'),
 (@Ref_EngiItem,  44413,      10,        2,          1,           1,          'Mekgineers Chopper');
+-- ----------------------------------------------------------------------------------------------------------
+
+-- Bag of Emblems
+SET
+@Entry          = 41888,
+@Name           = 'Bag of Emblems',
+@Class          = 15,
+@Subclass       = 0,
+@Flags          = 4,
+@InventoryType  = 0,
+@Quality        = 4,
+@SellPrice      = 0,
+@Itemlevel      = 20,
+@MaxCount       = 0,
+@Stackable      = 1,
+@Description    = 'Contains 20 Emblems of Heroism.';
+REPLACE INTO `item_template` (`entry`, `class`, `subclass`, `Name`, `Quality`, `Flags`, `SellPrice`, `InventoryType`, `ItemLevel`, `MaxCount`, `Stackable`, `Description`) VALUES (@Entry, @Class, @Subclass, @Name, @Quality, @Flags, @SellPrice, @InventoryType, @Itemlevel, @MaxCount, @Stackable, @Description);
+
+-- Loot template - Bag of Emblems
+DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
+INSERT INTO `item_loot_template` 
+-- ----------------------------------------------------------------------------------------------------------------------
+(`Entry`,   `Item`,     `reference`,    `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
+-- ----------------------------------------------------------------------------------------------------------------------
+(@Entry,    40752,      0,              0,          1,          20,         20,         '20x Emblem of Heroism');
+-- ----------------------------------------------------------------------------------------------------------------------
+
+-- Reference template - BoP blues that aren't available in dungeons
+DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_BoPBlue;
+INSERT INTO `reference_loot_template` 
+-- ----------------------------------------------------------------------------------------------------------
+(`Entry`,       `Item`,     `Chance`,  `groupid`,  `mincount`,  `maxcount`, `comment`) VALUES
+-- ----------------------------------------------------------------------------------------------------------
+-- Weapon
+(@Ref_BoPBlue,    7001,       0,         5,          1,           1,       'Gravestone Scepter'),
+(@Ref_BoPBlue,   25464,       0,         5,          1,           1,       'Blood-Tempered Sanseur'),
+(@Ref_BoPBlue,   23171,       0,         5,          1,           1,       'The Axe of Severing'),
+(@Ref_BoPBlue,    2042,       0,         5,          1,           1,       'Staff of Westfall'),
+(@Ref_BoPBlue,    6504,       0,         5,          1,           1,       'Wingblade'),
+(@Ref_BoPBlue,    6505,       0,         5,          1,           1,       'Crescent Staff'),
+(@Ref_BoPBlue,   20425,       0,         5,          1,           1,       'Advisors Gnarled Staff'),
+(@Ref_BoPBlue,   20434,       0,         5,          1,           1,       'Lorekeep ers Staff'),
+(@Ref_BoPBlue,   20430,       0,         5,          1,           1,       'Legionnaires Sword'),
+(@Ref_BoPBlue,   20440,       0,         5,          1,           1,       'Protectors Sword'),
+(@Ref_BoPBlue,   20437,       0,         5,          1,           1,       'Outriders Bow'),
+(@Ref_BoPBlue,   20438,       0,         5,          1,           1,       'Outrunners Bow'),
+(@Ref_BoPBlue,   20441,       0,         5,          1,           1,       'Scouts Blade'),
+(@Ref_BoPBlue,   20443,       0,         5,          1,           1,       'Sentinels Blade'),
+(@Ref_BoPBlue,   22980,       0,         5,          1,           1,       'Staff of the Sun'),
+(@Ref_BoPBlue,   22982,       0,         5,          1,           1,       'Farstriders Longbow'),
+(@Ref_BoPBlue,   22984,       0,         5,          1,           1,       'Dawnblade'),
+(@Ref_BoPBlue,   22995,       0,         5,          1,           1,       'Sindorei Warblade'),
+-- Cloth
+(@Ref_BoPBlue,    23173,       0,        5,          1,           1,       'Abomination Skin Leggings'),
+(@Ref_BoPBlue,    34107,       0,        5,          1,           1,       'Tattered Shoulderpads'),
+(@Ref_BoPBlue,    20427,       0,        5,          1,           1,       'Battle Healer''s Cloak'),
+(@Ref_BoPBlue,    20428,       0,        5,          1,           1,       'Caretaker''s Cape'),
+-- Leather
+(@Ref_BoPBlue,     7348,       0,        5,          1,           1,       'Fletcher''s Gloves'),
+(@Ref_BoPBlue,     2041,       0,        5,          1,           1,       'Tunic of Westfall'),
+-- Mail
+(@Ref_BoPBlue,     7133,       0,        5,          1,           1,       'Brutal Hauberk'),
+(@Ref_BoPBlue,     5943,       0,        5,          1,           1,       'Rift Bracers'),
+(@Ref_BoPBlue,     6087,       0,        5,          1,           1,       'Chausses of Westfall'),
+-- Shield
+(@Ref_BoPBlue,     7002,       0,        5,          1,           1,       'Arctic Buckler'),
+-- Accessory
+(@Ref_BoPBlue,     6414,       0,        5,          1,           1,       'Seal of Sylvanas'),
+(@Ref_BoPBlue,    21568,       0,        5,          1,           1,       'Rune of Duty'),
+(@Ref_BoPBlue,    21566,       0,        5,          1,           1,       'Rune of Perfection'),
+(@Ref_BoPBlue,    20426,       0,        5,          1,           1,       'Advisor''s Ring'),
+(@Ref_BoPBlue,    20429,       0,        5,          1,           1,       'Legionnaire''s Band'),
+(@Ref_BoPBlue,    20431,       0,        5,          1,           1,       'Lorekeeper''s Ring'),
+(@Ref_BoPBlue,    20439,       0,        5,          1,           1,       'Protector''s Band'),
+(@Ref_BoPBlue,    20442,       0,        5,          1,           1,       'Scout''s Medallion'),
+(@Ref_BoPBlue,    20444,       0,        5,          1,           1,       'Sentinel''s Medallion');
+-- ----------------------------------------------------------------------------------------------------------
+-- Make these items BoE
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`bonding` = 2 WHERE `npc_vendor`.`entry` = @Ref_BoPBlue;
 -- ----------------------------------------------------------------------------------------------------------
 
 -- Reference template - PvE Hat

@@ -7,7 +7,7 @@
 -- Coliseum - 1v1 Arena battlemaster
 -- -----------------------------------
 
--- Creature template 1
+-- Creature 1
 SET
 @Entry      = 482020,
 @Model      = 29267,
@@ -36,7 +36,7 @@ INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
--- Creature template 2
+-- Creature 2
 SET
 @Entry      = 482021,
 @Model      = 29267,
@@ -64,7 +64,6 @@ DELETE FROM `creature_template` WHERE `entry` = @Entry;
 INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlags, 1, 1.14286, @Scale, @Rank, @Class, @UnitFlags, @Type, @TypeFlags, 1, @FlagsExtra, @AIName, @Script);
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
-
 
 -- Gossip text
 DELETE FROM `npc_text` WHERE `ID`=23000;

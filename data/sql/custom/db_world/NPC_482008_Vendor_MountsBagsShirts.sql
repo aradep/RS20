@@ -13,7 +13,7 @@ SET
 @Model      = 23732,
 @Scale      = 1.5,
 @Name       = "Spirit of Competition",
-@Title      = "Style",
+@Title      = "Mounts and Bags",
 @Icon       = "Buy", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
@@ -25,6 +25,11 @@ DELETE FROM `creature_template` WHERE `Entry` = @Entry;
 INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
+
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.14, -448.728, 11.2723, 2.21484, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Extended costs
 SET
@@ -147,8 +152,3 @@ INSERT INTO `npc_vendor`
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
-
--- Placement
-DELETE FROM `creature` WHERE `id1` = @Entry;
-INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.14, -448.728, 11.2723, 2.21484, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');

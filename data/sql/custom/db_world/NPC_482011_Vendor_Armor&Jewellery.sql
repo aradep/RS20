@@ -26,6 +26,11 @@ INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlev
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.1, -414.548, 11.2724, 3.97804, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+
+-- Extended Costs
 SET
 @EmblemofTriumph_x1    = 2734;
 
@@ -36,103 +41,91 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Cloth
-(@Entry,    0,          @EmblemofTriumph_x1,             19972), -- Lucky Fishing Hat
-(@Entry,    1,          @EmblemofTriumph_x1,             1486), -- Tree Bark Jacket
-(@Entry,    1,          @EmblemofTriumph_x1,             5202), -- Corsair's Overshirt
-(@Entry,    2,          @EmblemofTriumph_x1,             12987), -- Darkweave Breeches
-(@Entry,    2,          @EmblemofTriumph_x1,             23173), -- Abomination Skin Leggings
-(@Entry,    2,          @EmblemofTriumph_x1,             42951), -- Mystical Pauldrons of Elements
-(@Entry,    3,          @EmblemofTriumph_x1,             4320), -- Spidersilk Boots
-(@Entry,    3,          @EmblemofTriumph_x1,             48691), -- Tattered Dreadmist Robe
-(@Entry,    4,          @EmblemofTriumph_x1,             1974), -- Mindthrust Bracers
-(@Entry,    4,          @EmblemofTriumph_x1,             44107), -- Exquisite Sunderseer Mantle
-(@Entry,    5,          @EmblemofTriumph_x1,             5195), -- Gold-flecked Gloves
-(@Entry,    5,          @EmblemofTriumph_x1,             5970), -- Serpent Gloves
-(@Entry,    5,          @EmblemofTriumph_x1,             12977), -- Magefist Gloves
-(@Entry,    5,          @EmblemofTriumph_x1,             48683), -- Mystical Vest of Elements
-(@Entry,    6,          @EmblemofTriumph_x1,             12998), -- Magician's Mantle
-(@Entry,    6,          @EmblemofTriumph_x1,             34107), -- Tattered Shoulderpads
-(@Entry,    6,          @EmblemofTriumph_x1,             39894), -- Darkcloth Shoulders
-(@Entry,    6,          @EmblemofTriumph_x1,             42985), -- Tattered Dreadmist Mantle
-(@Entry,    7,          @EmblemofTriumph_x1,             2292), -- Necrology Robes
-(@Entry,    7,          @EmblemofTriumph_x1,             6226), -- Bloody Apron
-(@Entry,    7,          @EmblemofTriumph_x1,             6465), -- Robe of the Moccasin
-(@Entry,    8,          @EmblemofTriumph_x1,             2059), -- Sentry Cloak
-(@Entry,    8,          @EmblemofTriumph_x1,             5193), -- Cape of the Brotherhood
-(@Entry,    8,          @EmblemofTriumph_x1,             6449), -- Glowing Lizardscale Cloak
-(@Entry,    8,          @EmblemofTriumph_x1,             6629), -- Sporid Cape
-(@Entry,    8,          @EmblemofTriumph_x1,             6632), -- Feyscale Cloak
-(@Entry,    8,          @EmblemofTriumph_x1,             12979), -- Firebane Cloak
-(@Entry,    8,          @EmblemofTriumph_x1,             20427), -- Battle Healer's Cloak
-(@Entry,    8,          @EmblemofTriumph_x1,             20428), -- Caretaker's Cape
-(@Entry,    8,          @EmblemofTriumph_x1,             22990), -- Tranquillien Champion's Cloak
-(@Entry,    8,          @EmblemofTriumph_x1,             45626), -- Spidersilk Drape
-(@Entry,    8,          @EmblemofTriumph_x1,             51994), -- Tumultuous Cloak
+(@Entry,    3,          0,     4315), -- Reinforced Woolen Shoulders
+(@Entry,    5,          0,     6567), -- Shimmering Armor
+(@Entry,    5,          0,     14133), -- Ritual Tunic
+(@Entry,    6,          0,     4708), -- Bright Belt
+(@Entry,    6,          0,     4785), -- Brimstone Belt
+(@Entry,    6,          0,     14373), -- Sanguine Belt
+(@Entry,    7,          0,     4317), -- Phoenix Pants
+(@Entry,    7,          0,     6568), -- Shimmering Trousers
+(@Entry,    7,          0,     14165), -- Pagan Britches
+(@Entry,    8,          0,     2232), -- Dark Runner Boots
+(@Entry,    8,          0,     9792), -- Ivycloth Boots
+(@Entry,    8,          0,     14374), -- Sanguine Sandals
+(@Entry,    9,          0,     9793), -- Ivycloth Bracelets
+(@Entry,    9,          0,     14375), -- Sanguine Cuffs
+(@Entry,    10,         0,     3066), -- Bright Gloves
+(@Entry,    10,         0,     3074), -- Smoldering Gloves
+(@Entry,    10,         0,     4331), -- Phoenix Gloves
+(@Entry,    10,         0,     9771), -- Greenweave Gloves
+(@Entry,    16,         0,     4706), -- Lambent Scale Cloak
+(@Entry,    16,         0,     4790), -- Inferno Cloak
+(@Entry,    16,         0,     4793), -- Sylvan Cloak
+(@Entry,    16,         0,     4797), -- Fiery Cloak
+(@Entry,    16,         0,     4798), -- Heavy Runed Cloak
+(@Entry,    16,         0,     5751), -- Webwing Cloak
+(@Entry,    16,         0,     9794), -- Ivycloth Cloak
+(@Entry,    16,         0,     9805), -- Superior Cloak
+(@Entry,    16,         0,     14179), -- Watcher's Cape
+(@Entry,    16,         0,     15124), -- Robust Cloak
+(@Entry,    16,         0,     15526), -- Sentry's Cape
+(@Entry,    20,         0,     2034), -- Scholarly Robes
+(@Entry,    20,         0,     6569), -- Shimmering Robe
+(@Entry,    20,         0,     14127), -- Ritual Shroud
 -- Leather
-(@Entry,    1,          @EmblemofTriumph_x1,             1489), -- Gloomshroud Armor
-(@Entry,    1,          @EmblemofTriumph_x1,             2041), -- Tunic of Westfall
-(@Entry,    1,          @EmblemofTriumph_x1,             2314), -- Toughened Leather Armor
-(@Entry,    1,          @EmblemofTriumph_x1,             6473), -- Armor of the Fang
-(@Entry,    1,          @EmblemofTriumph_x1,             10399), -- Blackened Defias Armor
-(@Entry,    1,          @EmblemofTriumph_x1,             12988), -- Starsight Tunic
-(@Entry,    2,          @EmblemofTriumph_x1,             5199), -- Smelting Pants
-(@Entry,    2,          @EmblemofTriumph_x1,             10410), -- Leggings of the Fang
-(@Entry,    2,          @EmblemofTriumph_x1,             42952), -- Stained Shadowcraft Spaulders
-(@Entry,    2,          @EmblemofTriumph_x1,             42984), -- Preened Ironfeather Shoulders
-(@Entry,    3,          @EmblemofTriumph_x1,             1121), -- Feet of the Lynx
-(@Entry,    3,          @EmblemofTriumph_x1,             7187), -- VanCleef's Boots
-(@Entry,    3,          @EmblemofTriumph_x1,             10411), -- Footpads of the Fang
-(@Entry,    3,          @EmblemofTriumph_x1,             48689), -- Stained Shadowcraft Tunic
-(@Entry,    3,          @EmblemofTriumph_x1,             48687), -- Preened Ironfeather Breastplate
-(@Entry,    4,          @EmblemofTriumph_x1,             12999), -- Drakewing Bands
-(@Entry,    4,          @EmblemofTriumph_x1,             44103), -- Exceptional Stormshroud Shoulders
-(@Entry,    4,          @EmblemofTriumph_x1,             44105), -- Lasting Feralheart Spaulders
-(@Entry,    5,          @EmblemofTriumph_x1,             7348), -- Fletcher's Gloves
-(@Entry,    6,          @EmblemofTriumph_x1,             5404), -- Serpent's Shoulders
-(@Entry,    6,          @EmblemofTriumph_x1,             39895), -- Cloaked Shoulderpads
+(@Entry,    8,          0,     3057), -- Forest Leather Boots
+(@Entry,    10,         0,     3058), -- Forest Leather Gloves
+(@Entry,    9,          0,     3202), -- Forest Leather Bracers
+(@Entry,    6,          0,     3429), -- Guardsman Belt
+(@Entry,    6,          0,     4249), -- Dark Leather Belt
+(@Entry,    6,          0,     4250), -- Hillman's Belt
+(@Entry,    3,          0,     4709), -- Forest Leather Mantle
+(@Entry,    9,          0,     4794), -- Wolf Bracers
+(@Entry,    9,          0,     4795), -- Bear Bracers
+(@Entry,    9,          0,     4796), -- Owl Bracers
+(@Entry,    5,          0,     6584), -- Scouting Tunic
+(@Entry,    7,          0,     6587), -- Scouting Trousers
+(@Entry,    10,         0,     7284), -- Red Whelp Gloves
+(@Entry,    10,         0,     7285), -- Nimble Leather Gloves
+(@Entry,    6,          0,     9801), -- Superior Belt
+(@Entry,    3,          0,     14566), -- Prospector's Pads
+(@Entry,    10,         0,     14572), -- Bristlebark Gloves
+(@Entry,    7,          0,     15117), -- Rigid Leggings
+(@Entry,    9,          0,     15122), -- Robust Bracers
+(@Entry,    6,          0,     15329), -- Wrangler's Belt
+(@Entry,    8,          0,     15330), -- Wrangler's Boots
 -- Mail
-(@Entry,    2,          @EmblemofTriumph_x1,             5425), -- Runescale Girdle
-(@Entry,    2,          @EmblemofTriumph_x1,             6460), -- Cobrahn's Grasp
-(@Entry,    2,          @EmblemofTriumph_x1,             51978), -- Earthbound Girdle
-(@Entry,    2,          @EmblemofTriumph_x1,             42950), -- Champion Herod's Shoulder
-(@Entry,    2,          @EmblemofTriumph_x1,             42949), -- Polished Spaulders of Valor
-(@Entry,    2,          @EmblemofTriumph_x1,             48685), -- Polished Breastplate of Valor
-(@Entry,    2,          @EmblemofTriumph_x1,             44099), -- Strengthened Stockade Pauldrons
-(@Entry,    2,          @EmblemofTriumph_x1,             44100), -- Pristine Lightforge Spaulders
-(@Entry,    3,          @EmblemofTriumph_x1,             6087), -- Chausses of Westfall
-(@Entry,    3,          @EmblemofTriumph_x1,             6459), -- Savage Trodders
-(@Entry,    3,          @EmblemofTriumph_x1,             12982), -- Silver-linked Footguards
-(@Entry,    4,          @EmblemofTriumph_x1,             5943), -- Rift Bracers
-(@Entry,    4,          @EmblemofTriumph_x1,             44101), -- Prized Beastmaster's Mantle
-(@Entry,    4,          @EmblemofTriumph_x1,             44102), -- Aged Pauldrons of The Five Thunders
-(@Entry,    5,          @EmblemofTriumph_x1,             12994), -- Thorbia's Gauntlets
-(@Entry,    5,          @EmblemofTriumph_x1,             48677), -- Champion's Deathdealer Breastplate
-(@Entry,    6,          @EmblemofTriumph_x1,             39897), -- Azure Shoulderguards
-(@Entry,    6,          @EmblemofTriumph_x1,             6642), -- Phantom Armor
-(@Entry,    6,          @EmblemofTriumph_x1,             6907), -- Tortoise Armor
--- Jewellery
-(@Entry,    9,          @EmblemofTriumph_x1,             20426), -- Advisor's Ring
-(@Entry,    9,          @EmblemofTriumph_x1,             12996), -- Band of Purification
-(@Entry,    9,          @EmblemofTriumph_x1,             6332), -- Black Pearl Ring
-(@Entry,    9,          @EmblemofTriumph_x1,             30804), -- Bronze Band of Force
-(@Entry,    9,          @EmblemofTriumph_x1,             1156), -- Lavishly Jeweled Ring
-(@Entry,    9,          @EmblemofTriumph_x1,             20429), -- Legionnaire's Band
-(@Entry,    9,          @EmblemofTriumph_x1,             20431), -- Lorekeeper's Ring
-(@Entry,    9,          @EmblemofTriumph_x1,             20439), -- Protector's Band
-(@Entry,    9,          @EmblemofTriumph_x1,             12985), -- Ring of Defense
-(@Entry,    9,          @EmblemofTriumph_x1,             1491), -- Ring of Precision
-(@Entry,   10,          @EmblemofTriumph_x1,             20442), -- Scout's Medallion
-(@Entry,   10,          @EmblemofTriumph_x1,             20444), -- Sentinel's Medallion
-(@Entry,   10,          @EmblemofTriumph_x1,             21568), -- Rune of Duty
-(@Entry,   10,          @EmblemofTriumph_x1,             21566), -- Rune of Perfection
-(@Entry,   11,          @EmblemofTriumph_x1,             42991), -- Swift Hand of Justice
-(@Entry,   11,          @EmblemofTriumph_x1,             42992), -- Discerning Eye of the Beast
-(@Entry,   11,          @EmblemofTriumph_x1,             50255); -- Dread Pirate Ring
+(@Entry,    9,          0,     2868),    -- Patterned Bronze Bracers
+(@Entry,    3,          0,     3231),    -- Cutthroat Pauldrons
+(@Entry,    3,          0,     3481),    -- Silvered Bronze Shoulders
+(@Entry,    7,          0,     4816),    -- Legionnaire's Leggings
+(@Entry,    8,          0,     9810),    -- Fortified Boots
+(@Entry,    9,          0,     9811),    -- Fortified Bracers
+(@Entry,    10,         0,     9813),   -- Fortified Gauntlets
+(@Entry,    6,          0,     9814),    -- Fortified Belt
+(@Entry,    7,          0,     9815),    -- Fortified Leggings
+(@Entry,    5,          0,     9818),    -- Fortified Chain
+(@Entry,    8,          0,     14742),   -- Hulking Boots
+(@Entry,    7,          0,     14748),   -- Hulking Leggings
+(@Entry,    5,          0,     15500),   -- Outrunner's Chestguard
+(@Entry,    7,          0,     15511),   -- Grunt's Legguards
+(@Entry,    3,          0,     15513),   -- Grunt's Pauldrons
+(@Entry,    6,          0,     15515),   -- Spiked Chain Belt
+(@Entry,    9,          0,     15517),   -- Spiked Chain Wristbands
+-- Accessory
+(@Entry,    11,         0,     1076),    -- Defias Renegade Ring
+(@Entry,    11,         0,     1462),    -- Ring of the Shadow
+(@Entry,    11,         0,     4998),    -- Blood Ring
+(@Entry,    11,         0,     6199),    -- Black Widow Band
+(@Entry,    23,         0,     7558),    -- Shimmering Stave
+(@Entry,    11,         0,     11994),   -- Coral Band
+(@Entry,    11,         0,     12007),   -- Prairie Ring
+(@Entry,    11,         0,     12054),   -- Demon Band
+(@Entry,    23,         0,     15972),   -- Ritual Stein
+(@Entry,    11,         0,     20823),   -- Gloom Band
+(@Entry,    2,          0,     30419),    -- Brilliant Necklace
+(@Entry,    23,         0,     38579);   -- Venomous Tome
 
 -- Edit items
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=0, `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
-
--- Placement
-DELETE FROM `creature` WHERE `id1` = @Entry;
-INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.1, -414.548, 11.2724, 3.97804, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');

@@ -27,6 +27,9 @@ INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlev
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
+-- Placement handled in SERVER_Setup_Duelarena.sql
+
+-- Extended costs
 SET 
 @400Arena = 2432,
 @600Arena = 2374,

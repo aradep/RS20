@@ -1,0 +1,8 @@
+-- -----------------------------------
+-- Dragonshrine Instant-20 Funserver
+-- Made for AzerothCore 3.3.5a
+-- Discord: @Degen
+-- 2025
+-- -----------------------------------
+-- Dungeon loot templates
+-- -----------------------------------
