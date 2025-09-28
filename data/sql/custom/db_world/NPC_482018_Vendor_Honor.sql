@@ -54,9 +54,9 @@ INSERT INTO `npc_vendor`
 -- Battle Standards
 (@Entry,    1,          @1250Honor,       18606), -- Battle Standard
 (@Entry,    1,          @1250Honor,       18607), -- Battle Standard
--- Heirloom Trinket
-(@Entry,    2,          @1600Honor,       44098), -- Inherited Insignia of the Alliance
-(@Entry,    2,          @1600Honor,       44097), -- Inherited Insignia of the Horde
+-- 2-minute Trinket
+(@Entry,    2,          @2400Honor,       42123), -- Medallion the Alliance
+(@Entry,    2,          @2400Honor,       42122), -- Medallion the Horde
 -- Heirloom shoulder
 (@Entry,    3,          @3000Honor,       44099), -- Strengthened Stockade Pauldrons
 (@Entry,    3,          @3000Honor,       44107), -- Exquisite Sunderseer Mantle

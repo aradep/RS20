@@ -20,6 +20,9 @@ REPLACE INTO `stableslotprices_dbc` (`ID`, `Cost`) VALUES (1,0),(2,0),(3,0),(4,0
 -- Account command permissions
 UPDATE `command` SET `security`='0' WHERE `name` IN ('character','character customize','character changefaction','character changerace','account','account password','account lock ip');
 
+-- No mounts in Warsong Gulch
+UPDATE `instance_template` SET `allowMount`=0 WHERE `map`=489;
+
 -- Vanilla title rewards for honorable kills
 DELETE FROM `achievement_reward` WHERE `ID` IN (238,513,515,516,512,509,239,869,870);
 INSERT INTO `achievement_reward` VALUES 
@@ -44,6 +47,20 @@ INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES
 -- Start with 1x Endless Runecloth Bandage
 DELETE FROM `playercreateinfo_item` WHERE `itemid` IN (14529);
 INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES (0, 0, 14529, 1);
+
+-- Starting PvP trinkets
+DELETE FROM `playercreateinfo_item` WHERE `itemid` IN (44098,44098,44098,44098,44098,44097,44097,44097,44097,44097);
+INSERT INTO `playercreateinfo_item` (`race`, `itemid`, `note`) VALUES
+(1,  44098, 'Inherited Insignia of the Alliance'),
+(3,  44098, 'Inherited Insignia of the Alliance'),
+(7,  44098, 'Inherited Insignia of the Alliance'),
+(4,  44098, 'Inherited Insignia of the Alliance'),
+(11, 44098, 'Inherited Insignia of the Alliance'),
+(2,  44097, 'Inherited Insignia of the Horde'),
+(8,  44097, 'Inherited Insignia of the Horde'),
+(5,  44097, 'Inherited Insignia of the Horde'),
+(6,  44097, 'Inherited Insignia of the Horde'),
+(10, 44097, 'Inherited Insignia of the Horde');
 
 -- Starting Tabards
 DELETE FROM `playercreateinfo_item` WHERE `itemid` IN (15196,15197,45574,45577,45578,45579,45580,45581,45582,45583,45584,45585);

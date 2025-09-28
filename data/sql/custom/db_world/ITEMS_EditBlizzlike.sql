@@ -17,6 +17,10 @@ UPDATE `item_template` SET `stackable`=1,  name='Endless Runecloth Bandage', `qu
 -- Commendation of Bravery honor token
 UPDATE `item_template` SET `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHERE `entry` = 45706;
 
+-- Custom 2-minute PvP Trinket
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=10 WHERE `entry` = 42123; -- Alliance
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=10 WHERE `entry` = 42122; -- Horde
+
 -- Heirloom Arcanums/Inscriptions
 UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` = 7 AND `class` = 12;
 

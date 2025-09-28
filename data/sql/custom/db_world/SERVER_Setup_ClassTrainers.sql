@@ -246,7 +246,7 @@ INSERT INTO `creature_template_model` VALUES (@Druid, 0, @Model, @Scale, 1, 1234
 SET
 @Mage       = 5146,
 @Model      = 24121,
-@Name       = "Prototype 18",
+@Name       = "Prototype 20",
 @Title      = "Mage Trainer",
 @TrainClass = 8,
 @Icon       = "",
@@ -658,7 +658,7 @@ WHERE `npc_vendor`.`entry` IN (@Paladin, @Warrior, @Rogue, @Shaman, @Priest, @Wa
 -- Glyph/Reagent gossip option
 UPDATE `broadcast_text` SET `maletext`='I need Glyphs and Reagents.', `femaletext`=`maletext` WHERE `id`=17573;
 UPDATE `broadcast_text` SET `maletext`='I need Glyphs and Reagents.', `femaletext`=`maletext` WHERE `id`=17574;
-DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `OptionText` = 'I need Glyphs and Reagents.';
+DELETE FROM `gossip_menu_option` WHERE `menuid` IN (6647,4509,4023,4529,4466,4562,2384,4687,4552) AND `optionid` = 3;
 INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontext`, `optionbroadcasttextid`, `optiontype`, `optionnpcflag`, `actionmenuid`) VALUES
 (6647, 3, 1, 'I need Glyphs.', 17573, 3, 128, 0), -- Paladin
 (4509, 3, 1, 'I need Glyphs.', 17573, 3, 128, 0), -- Warrior
