@@ -102,5 +102,7 @@ INSERT INTO `npc_vendor`
 (@Entry,     10,          0,                20823), -- Gloom Band
 (@Entry,     12,          0,                30419); -- Brilliant Necklace
 
--- Buys for 0 / Sells for 1 / BoP
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1, `item_template`.`bonding`=1 WHERE `npc_vendor`.`entry` = @Entry;
+-- Buys for 0 / Sells for 1 / BoP / No DE
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1, `item_template`.`bonding`=1, `item_template`.`disenchantID`=0 WHERE `npc_vendor`.`entry` = @Entry;
+-- Fix broken DE links
+DELETE dlt FROM `disenchant_loot_template` dlt LEFT JOIN `item_template` it ON dlt.`Entry` = it.`disenchantID` WHERE it.`disenchantID` IS NULL;

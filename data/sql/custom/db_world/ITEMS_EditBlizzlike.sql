@@ -92,11 +92,13 @@ UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice
 );
 
 -- Disenchanting blues yields 1x Dream Shard
-REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (100, 34052, 0, 100, 0, 1, 1, 2, 3, 'Dream Shard');
+REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (100, 34052, 0, 100, 0, 1, 0, 1, 2, 'Dream Shard');
 UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 100 WHERE `class` IN (2,4) AND `quality`=3 AND `disenchantID` > 0;
+-- Disenchanting greens yields 1x Small Dream Shard
+REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (101, 34053, 0, 100, 0, 1, 0, 1, 2, 'Small Dream Shard');
+UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 101 WHERE `class` IN (2,4) AND `quality`=2 AND `disenchantID` > 0;
+-- Fix broken links
 DELETE dlt FROM `disenchant_loot_template` dlt LEFT JOIN `item_template` it ON dlt.`Entry` = it.`disenchantID` WHERE it.`disenchantID` IS NULL;
--- Don't allow DEing greens, no point
-UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 0 WHERE `class` IN (2,4) AND `quality`=2 AND `disenchantID` > 0;
 
 -- Nerf cool gems so we can use them without being OP
 -- Dreadstones / Shadow Crystals
