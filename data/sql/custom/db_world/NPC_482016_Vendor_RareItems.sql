@@ -85,7 +85,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    5,          @DreamShard_x10,         12992), -- Searing Blade
 (@Entry,    5,          @DreamShard_x10,         12989), -- Gargoyle's Bite
 (@Entry,    5,          @DreamShard_x10,         12983), -- Rakzur Club
-(@Entry,    5,          @DreamShard_x10,         12984), -- Skycaller
 (@Entry,    5,          @DreamShard_x10,         13136), -- Lil Timmy's Peashooter
 (@Entry,    5,          @DreamShard_x10,         935), -- Night Watch Shortsword
 (@Entry,    5,          @DreamShard_x10,         5423), -- Boahn's Fang

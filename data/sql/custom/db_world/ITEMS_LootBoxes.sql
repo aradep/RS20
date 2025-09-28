@@ -24,7 +24,7 @@ SET
 @Quality        = 4,
 @Money          = 100000,
 @Name           = 'Magic Mystery Box',
-@Description    = 'Contains random items!';
+@Description    = 'Contains random items.';
 UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Mystery Box
@@ -52,7 +52,7 @@ SET
 @Quality        = 4,
 @Money          = 100000,
 @Name           = 'Spoils of War',
-@Description    = 'Contains random items!';
+@Description    = 'Contains random items.';
 UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Spoils of War

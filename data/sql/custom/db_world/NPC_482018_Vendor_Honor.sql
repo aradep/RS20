@@ -58,25 +58,25 @@ INSERT INTO `npc_vendor`
 (@Entry,    2,          @1600Honor,       44098), -- Inherited Insignia of the Alliance
 (@Entry,    2,          @1600Honor,       44097), -- Inherited Insignia of the Horde
 -- Heirloom shoulder
-(@Entry,    2,          @3000Honor,       44099), -- Strengthened Stockade Pauldrons
-(@Entry,    4,          @3000Honor,       44107), -- Exquisite Sunderseer Mantle
-(@Entry,    2,          @3000Honor,       44100), -- Pristine Lightforge Spaulders
-(@Entry,    4,          @3000Honor,       44102), -- Aged Pauldrons of The Five Thunders
-(@Entry,    4,          @3000Honor,       44105), -- Lasting Feralheart Spaulders
-(@Entry,    4,          @3000Honor,       44101), -- Prized Beastmaster's Mantle
+(@Entry,    3,          @3000Honor,       44099), -- Strengthened Stockade Pauldrons
+(@Entry,    3,          @3000Honor,       44107), -- Exquisite Sunderseer Mantle
+(@Entry,    3,          @3000Honor,       44100), -- Pristine Lightforge Spaulders
+(@Entry,    3,          @3000Honor,       44102), -- Aged Pauldrons of The Five Thunders
+(@Entry,    3,          @3000Honor,       44105), -- Lasting Feralheart Spaulders
+(@Entry,    3,          @3000Honor,       44101), -- Prized Beastmaster's Mantle
 -- Heirloom weapons
-(@Entry,    3,          @5000Honor,       44094), -- The Blessed Hammer of Grace
-(@Entry,    3,          @5000Honor,       44096), -- Battleworn Thrash Blade
-(@Entry,    3,          @5000Honor,       48716), -- Venerable Mass of McGowan
-(@Entry,    3,          @5000Honor,       48718), -- Repurposed Lava Dredger
-(@Entry,    3,          @8000Honor,       44092), -- Reforged Truesilver Champion
-(@Entry,    3,          @8000Honor,       44093), -- Upgraded Dwarven Hand Cannon
-(@Entry,    3,          @8000Honor,       44095), -- Grand Staff of Jordan
+(@Entry,    4,          @5000Honor,       44094), -- The Blessed Hammer of Grace
+(@Entry,    4,          @5000Honor,       44096), -- Battleworn Thrash Blade
+(@Entry,    4,          @5000Honor,       48716), -- Venerable Mass of McGowan
+(@Entry,    4,          @5000Honor,       48718), -- Repurposed Lava Dredger
+(@Entry,    4,          @8000Honor,       44092), -- Reforged Truesilver Champion
+(@Entry,    4,          @8000Honor,       44093), -- Upgraded Dwarven Hand Cannon
+(@Entry,    4,          @8000Honor,       44095), -- Grand Staff of Jordan
 -- Heirloom Inscriptions
-(@Entry,    9,          @20000Honor,      44133), -- Greater Inscription of the Axe
-(@Entry,    9,          @20000Honor,      44134), -- Greater Inscription of the Crag
-(@Entry,    9,          @20000Honor,      44135), -- Greater Inscription of the Storm
-(@Entry,    9,          @20000Honor,      44136); -- Greater Inscription of the Pinnacle
+(@Entry,    5,          @20000Honor,      44133), -- Greater Inscription of the Axe
+(@Entry,    5,          @20000Honor,      44134), -- Greater Inscription of the Crag
+(@Entry,    5,          @20000Honor,      44135), -- Greater Inscription of the Storm
+(@Entry,    5,          @20000Honor,      44136); -- Greater Inscription of the Pinnacle
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

@@ -42,82 +42,44 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
-(@Entry,       1,      @10xDreamShard,   /*Scroll of Enchant 2H Weapon - Major Agility*/38922),
-(@Entry,       1,      @10xDreamShard,   /*Scroll of Enchant 2H Weapon - Massacre*/44463),
-(@Entry,       1,      @10xDreamShard,   /*Scroll of Enchant 2H Weapon - Scourgebane*/38981),
-
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Accuracy*/44497),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Battlemaster*/38927),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Berserking*/44493),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Black Magic*/43987),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Blade Ward*/46026),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Blood Draining*/46098),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Deathfrost*/38998),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Exceptional Agility*/38995),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Exceptional Spirit*/38963),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Executioner*/38948),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Giant Slayer*/38988),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Icebreaker*/38965),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Lifeward*/38972),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Mighty Spellpower*/44467),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Mongoose*/38925),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Spellsurge*/38926),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Superior Potency*/44466),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Titanguard*/44946),
-(@Entry,       2,      @10xDreamShard,   /*Scroll of Enchant Weapon - Fiery*/38838),
-
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Defense*/38954),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Greater Intellect*/44455),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Intellect*/38905),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Major Stamina*/38945),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Resilience*/38949),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Resistance*/38907),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Shield Block*/38906),
-(@Entry,       3,      @4xDreamShard,    /*Scroll of Enchant Shield - Tough Shield*/38904),
-
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Greater Assault*/44469),
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Greater Fortitude*/38966),
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Greater Spirit*/38961),
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Greater Vitality*/38974),
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Icewalker*/38986),
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Superior Agility*/38976),
-(@Entry,       4,      @4xDreamShard,    /*Scroll of Enchant Boots - Tuskarr's Vitality*/39006),
-
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Expertise*/38984),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Major Defense*/38899),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Major Stamina*/44947),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Restore Mana Prime*/38901),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Superior Spellpower*/44470),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Exceptional Intellect*/38968),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Greater Assault*/44815),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Greater Stats*/38987),
-(@Entry,       5,      @4xDreamShard,    /*Scroll of Enchant Bracer - Major Spirit*/38980),
-
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Defense*/38999),
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Exceptional Mana*/38912),
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Exceptional Resilience*/38975),
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Greater Defense*/39002),
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Greater Mana Restoration*/38962),
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Powerful Stats*/44465),
-(@Entry,       6,      @4xDreamShard,    /*Scroll of Enchant Chest - Super Health*/39005),
-
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Dodge*/38895),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Greater Speed*/39003),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Mighty Armor*/39001),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Shadow Armor*/38993),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Spell Piercing*/38973),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Superior Agility*/38959),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Titanweave*/38978),
-(@Entry,       7,      @4xDreamShard,    /*Scroll of Enchant Cloak - Wisdom*/39004),
-
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Armsman*/38990),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Crusher*/44458),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Exceptional Spellpower*/38979),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Expertise*/38951),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Greater Blasting*/38985),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Major Agility*/38967),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Precision*/38953),
-(@Entry,       8,      @4xDreamShard,    /*Scroll of Enchant Gloves - Threat*/38885),
-
-(@Entry,       9,      @4xDreamShard,    /*Steel Weapon Chain*/6041),
-(@Entry,       9,      @4xDreamShard,    /*Felsteel Shield Spike*/23530);
+(@Entry,       1,      @4xDreamShard,     38851), -- Enchant Gloves - Minor Haste
+(@Entry,       1,      @4xDreamShard,     38857), -- Enchant Gloves - Greater Strength
+(@Entry,       1,      @4xDreamShard,     38886), -- Enchant Gloves - Shadow Power
+(@Entry,       1,      @4xDreamShard,     38887), -- Enchant Gloves - Frost Power
+(@Entry,       1,      @4xDreamShard,     38888), -- Enchant Gloves - Fire Power
+(@Entry,       1,      @4xDreamShard,     38889), -- Enchant Gloves - Healing Power
+(@Entry,       1,      @4xDreamShard,     38890), -- Enchant Gloves - Superior Agility
+(@Entry,       2,      @4xDreamShard,     38837), -- Enchant Boots - Minor Speed
+(@Entry,       2,      @4xDreamShard,     38862), -- Enchant Boots - Greater Stamina
+(@Entry,       2,      @4xDreamShard,     38863), -- Enchant Boots - Greater Agility
+(@Entry,       2,      @4xDreamShard,     38864), -- Enchant Boots - Spirit
+(@Entry,       8,      @4xDreamShard,     7969), -- Mithril Spurs
+(@Entry,       3,      @4xDreamShard,     38798), -- Enchant Chest - Lesser Absorption
+(@Entry,       3,      @4xDreamShard,     38799), -- Enchant Chest - Mana
+(@Entry,       3,      @4xDreamShard,     38865), -- Enchant Chest - Greater Stats
+(@Entry,       3,      @4xDreamShard,     38866), -- Enchant Chest - Major Health
+(@Entry,       4,      @4xDreamShard,     23530), -- Felsteel Shield Spike
+(@Entry,       4,      @4xDreamShard,     38791), -- Enchant Shield - Lesser Protection
+(@Entry,       4,      @4xDreamShard,     38820), -- Enchant Shield - Lesser Block
+(@Entry,       4,      @4xDreamShard,     38861), -- Enchant Shield - Greater Stamina
+(@Entry,       5,      @4xDreamShard,     38835), -- Enchant Cloak - Lesser Agility
+(@Entry,       5,      @4xDreamShard,     38858), -- Enchant Cloak - Greater Resistance
+(@Entry,       5,      @4xDreamShard,     38859), -- Enchant Cloak - Superior Defense
+(@Entry,       5,      @4xDreamShard,     38895), -- Enchant Cloak - Dodge
+(@Entry,       6,      @10xDreamShard,     38838), -- Enchant Weapon - Fiery Weapon
+(@Entry,       6,      @10xDreamShard,     38840), -- Enchant Weapon - Demonslaying
+(@Entry,       6,      @10xDreamShard,     38868), -- Enchant Weapon - Icy Chill
+(@Entry,       6,      @10xDreamShard,     38870), -- Enchant Weapon - Superior Striking
+(@Entry,       6,      @10xDreamShard,     38871), -- Enchant Weapon - Lifestealing
+(@Entry,       6,      @10xDreamShard,     38872), -- Enchant Weapon - Unholy Weapon
+(@Entry,       6,      @10xDreamShard,     38873), -- Enchant Weapon - Crusader
+(@Entry,       6,      @10xDreamShard,     38878), -- Enchant Weapon - Healing Power
+(@Entry,       6,      @10xDreamShard,     38879), -- Enchant Weapon - Strength
+(@Entry,       6,      @10xDreamShard,     38880), -- Enchant Weapon - Agility
+(@Entry,       6,      @10xDreamShard,     38883), -- Enchant Weapon - Mighty Spirit
+(@Entry,       7,      @10xDreamShard,     38869), -- Enchant 2H Weapon - Superior Impact
+(@Entry,       7,      @10xDreamShard,     38874), -- Enchant 2H Weapon - Major Spirit
+(@Entry,       7,      @10xDreamShard,     38875), -- Enchant 2H Weapon - Major Intellect
+(@Entry,       7,      @10xDreamShard,     38896), -- Enchant 2H Weapon - Agility
+(@Entry,       8,      @10xDreamShard,     6041), -- Steel Weapon Chain
+(@Entry,       8,      @4xDreamShard,      4407); -- Sniper Scope

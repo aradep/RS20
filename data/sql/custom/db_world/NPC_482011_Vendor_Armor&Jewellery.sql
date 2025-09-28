@@ -36,92 +36,71 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
--- Cloth
-(@Entry,    1,          0,     19972), -- Lucky Fishing Hat
-(@Entry,    1,          0,     4315), -- Reinforced Woolen Shoulders
-(@Entry,    1,          0,     6567), -- Shimmering Armor
-(@Entry,    1,          0,     14133), -- Ritual Tunic
-(@Entry,    1,          0,     4708), -- Bright Belt
-(@Entry,    1,          0,     4785), -- Brimstone Belt
-(@Entry,    1,          0,     14373), -- Sanguine Belt
-(@Entry,    1,          0,     4317), -- Phoenix Pants
-(@Entry,    1,          0,     6568), -- Shimmering Trousers
-(@Entry,    1,          0,     14165), -- Pagan Britches
-(@Entry,    1,          0,     2232), -- Dark Runner Boots
-(@Entry,    1,          0,     9792), -- Ivycloth Boots
-(@Entry,    1,          0,     14374), -- Sanguine Sandals
-(@Entry,    1,          0,     9793), -- Ivycloth Bracelets
-(@Entry,    1,          0,     14375), -- Sanguine Cuffs
-(@Entry,    1,          0,     3066), -- Bright Gloves
-(@Entry,    1,          0,     3074), -- Smoldering Gloves
-(@Entry,    1,          0,     4331), -- Phoenix Gloves
-(@Entry,    1,          0,     9771), -- Greenweave Gloves
-(@Entry,    1,          0,     4706), -- Lambent Scale Cloak
-(@Entry,    1,          0,     4790), -- Inferno Cloak
-(@Entry,    1,          0,     4793), -- Sylvan Cloak
-(@Entry,    1,          0,     4797), -- Fiery Cloak
-(@Entry,    1,          0,     4798), -- Heavy Runed Cloak
-(@Entry,    1,          0,     5751), -- Webwing Cloak
-(@Entry,    1,          0,     9794), -- Ivycloth Cloak
-(@Entry,    1,          0,     9805), -- Superior Cloak
-(@Entry,    1,          0,     14179), -- Watcher's Cape
-(@Entry,    1,          0,     15124), -- Robust Cloak
-(@Entry,    1,          0,     15526), -- Sentry's Cape
-(@Entry,    1,          0,     2034), -- Scholarly Robes
-(@Entry,    1,          0,     6569), -- Shimmering Robe
-(@Entry,    1,          0,     14127), -- Ritual Shroud
--- Leather
-(@Entry,    2,          0,     3057), -- Forest Leather Boots
-(@Entry,    2,          0,     3058), -- Forest Leather Gloves
-(@Entry,    2,          0,     3202), -- Forest Leather Bracers
-(@Entry,    2,          0,     3429), -- Guardsman Belt
-(@Entry,    2,          0,     4249), -- Dark Leather Belt
-(@Entry,    2,          0,     4250), -- Hillman's Belt
-(@Entry,    2,          0,     4709), -- Forest Leather Mantle
-(@Entry,    2,          0,     4794), -- Wolf Bracers
-(@Entry,    2,          0,     4795), -- Bear Bracers
-(@Entry,    2,          0,     4796), -- Owl Bracers
-(@Entry,    2,          0,     6584), -- Scouting Tunic
-(@Entry,    2,          0,     6587), -- Scouting Trousers
-(@Entry,    2,          0,     7284), -- Red Whelp Gloves
-(@Entry,    2,          0,     7285), -- Nimble Leather Gloves
-(@Entry,    2,          0,     9801), -- Superior Belt
-(@Entry,    2,          0,     14566), -- Prospector's Pads
-(@Entry,    2,          0,     14572), -- Bristlebark Gloves
-(@Entry,    2,          0,     15117), -- Rigid Leggings
-(@Entry,    2,          0,     15122), -- Robust Bracers
-(@Entry,    2,          0,     15329), -- Wrangler's Belt
-(@Entry,    2,          0,     15330), -- Wrangler's Boots
--- Mail
-(@Entry,    3,          0,     2868),    -- Patterned Bronze Bracers
-(@Entry,    3,          0,     3231),    -- Cutthroat Pauldrons
-(@Entry,    3,          0,     3481),    -- Silvered Bronze Shoulders
-(@Entry,    3,          0,     4816),    -- Legionnaire's Leggings
-(@Entry,    3,          0,     9810),    -- Fortified Boots
-(@Entry,    3,          0,     9811),    -- Fortified Bracers
-(@Entry,    3,          0,     9813),   -- Fortified Gauntlets
-(@Entry,    3,          0,     9814),    -- Fortified Belt
-(@Entry,    3,          0,     9815),    -- Fortified Leggings
-(@Entry,    3,          0,     9818),    -- Fortified Chain
-(@Entry,    3,          0,     14742),   -- Hulking Boots
-(@Entry,    3,          0,     14748),   -- Hulking Leggings
-(@Entry,    3,          0,     15500),   -- Outrunner's Chestguard
-(@Entry,    3,          0,     15511),   -- Grunt's Legguards
-(@Entry,    3,          0,     15513),   -- Grunt's Pauldrons
-(@Entry,    3,          0,     15515),   -- Spiked Chain Belt
-(@Entry,    3,          0,     15517),   -- Spiked Chain Wristbands
--- Accessory
-(@Entry,    4,          0,     1076),    -- Defias Renegade Ring
-(@Entry,    4,          0,     1462),    -- Ring of the Shadow
-(@Entry,    4,          0,     4998),    -- Blood Ring
-(@Entry,    4,          0,     6199),    -- Black Widow Band
-(@Entry,    4,          0,     7558),    -- Shimmering Stave
-(@Entry,    4,          0,     11994),   -- Coral Band
-(@Entry,    4,          0,     12007),   -- Prairie Ring
-(@Entry,    4,          0,     12054),   -- Demon Band
-(@Entry,    4,          0,     15972),   -- Ritual Stein
-(@Entry,    4,          0,     20823),   -- Gloom Band
-(@Entry,    4,          0,     30419);    -- Brilliant Necklace
+(@Entry,     1,          0,                19972), -- Lucky Fishing Hat
+(@Entry,     2,          0,                3231), -- Cutthroat Pauldrons
+(@Entry,     2,          0,                3481), -- Silvered Bronze Shoulders
+(@Entry,     2,          0,                4315), -- Reinforced Woolen Shoulders
+(@Entry,     2,          0,                4709), -- Forest Leather Mantle
+(@Entry,     2,          0,                15513), -- Grunts Pauldrons
+(@Entry,     3,          0,                2034), -- Scholarly Robes
+(@Entry,     3,          0,                6567), -- Shimmering Armor
+(@Entry,     3,          0,                6569), -- Shimmering Robe
+(@Entry,     3,          0,                6584), -- Scouting Tunic
+(@Entry,     3,          0,                9818), -- Fortified Chain
+(@Entry,     4,          0,                4249), -- Dark Leather Belt
+(@Entry,     4,          0,                4250), -- Hillmans Belt
+(@Entry,     4,          0,                4708), -- Bright Belt
+(@Entry,     4,          0,                4785), -- Brimstone Belt
+(@Entry,     4,          0,                9801), -- Superior Belt
+(@Entry,     4,          0,                9814), -- Fortified Belt
+(@Entry,     4,          0,                15329), -- Wranglers Belt
+(@Entry,     5,          0,                4317), -- Phoenix Pants
+(@Entry,     5,          0,                4816), -- Legionnaires Leggings
+(@Entry,     5,          0,                6568), -- Shimmering Trousers
+(@Entry,     5,          0,                9815), -- Fortified Leggings
+(@Entry,     5,          0,                14748), -- Hulking Leggings
+(@Entry,     6,          0,                2232), -- Dark Runner Boots
+(@Entry,     6,          0,                3057), -- Forest Leather Boots
+(@Entry,     6,          0,                9792), -- Ivycloth Boots
+(@Entry,     6,          0,                9810), -- Fortified Boots
+(@Entry,     6,          0,                14374), -- Sanguine Sandals
+(@Entry,     6,          0,                14742), -- Hulking Boots
+(@Entry,     6,          0,                15330), -- Wranglers Boots
+(@Entry,     7,          0,                2868), -- Patterned Bronze Bracers
+(@Entry,     7,          0,                3202), -- Forest Leather Bracers
+(@Entry,     7,          0,                4794), -- Wolf Bracers
+(@Entry,     7,          0,                4795), -- Bear Bracers
+(@Entry,     7,          0,                4796), -- Owl Bracers
+(@Entry,     7,          0,                9793), -- Ivycloth Bracelets
+(@Entry,     7,          0,                14375), -- Sanguine Cuffs
+(@Entry,     7,          0,                15122), -- Robust Bracers
+(@Entry,     7,          0,                15517), -- Spiked Chain Wristbands
+(@Entry,     8,          0,                3058), -- Forest Leather Gloves
+(@Entry,     8,          0,                3066), -- Bright Gloves
+(@Entry,     8,          0,                3074), -- Smoldering Gloves
+(@Entry,     8,          0,                4331), -- Phoenix Gloves
+(@Entry,     8,          0,                7284), -- Red Whelp Gloves
+(@Entry,     8,          0,                7285), -- Nimble Leather Gloves
+(@Entry,     8,          0,                9771), -- Greenweave Gloves
+(@Entry,     8,          0,                9813), -- Fortified Gauntlets
+(@Entry,     8,          0,                14572), -- Bristlebark Gloves
+(@Entry,     9,          0,                4706), -- Lambent Scale Cloak
+(@Entry,     9,          0,                4793), -- Sylvan Cloak
+(@Entry,     9,          0,                4797), -- Fiery Cloak
+(@Entry,     9,          0,                4798), -- Heavy Runed Cloak
+(@Entry,     9,          0,                5751), -- Webwing Cloak
+(@Entry,     9,          0,                9794), -- Ivycloth Cloak
+(@Entry,     9,          0,                9805), -- Superior Cloak
+(@Entry,     9,          0,                15124), -- Robust Cloak
+(@Entry,     9,          0,                15526), -- Sentrys Cape
+(@Entry,     10,          0,                1076), -- Defias Renegade Ring
+(@Entry,     10,          0,                1462), -- Ring of the Shadow
+(@Entry,     10,          0,                4998), -- Blood Ring
+(@Entry,     10,          0,                6199), -- Black Widow Band
+(@Entry,     10,          0,                11994), -- Coral Band
+(@Entry,     10,          0,                12054), -- Demon Band
+(@Entry,     10,          0,                20823), -- Gloom Band
+(@Entry,     12,          0,                30419); -- Brilliant Necklace
 
--- Buys for 0 / Sells for 1
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;
+-- Buys for 0 / Sells for 1 / BoP
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1, `item_template`.`bonding`=1 WHERE `npc_vendor`.`entry` = @Entry;

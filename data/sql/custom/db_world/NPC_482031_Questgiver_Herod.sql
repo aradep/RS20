@@ -19,7 +19,7 @@ SET
 @Rank       = 3,
 @Type       = 7,
 @Class      = 1,
-@Flags      = 131,
+@Flags      = 4227,
 @Level      = 20,
 @Faction    = 35;
 DELETE FROM `creature_template` WHERE `Entry` = @Entry;
@@ -28,7 +28,7 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
 -- Gossip text
-SET @text = 'May we all live on in the immortal stone.';
+SET @text = 'May we all live on in immortal stone.';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -72,34 +72,34 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,              `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Heirloom trinkets
-(@Entry,    11,         @EmblemofHeroism_x10,         42991), -- Swift Hand of Justice
-(@Entry,    11,         @EmblemofHeroism_x10,         42992), -- Discerning Eye of the Beast
-(@Entry,    11,         @EmblemofHeroism_x10,         50255), -- Dread Pirate Ring
+(@Entry,    1,          @EmblemofHeroism_x10,         42991), -- Swift Hand of Justice
+(@Entry,    1,          @EmblemofHeroism_x10,         42992), -- Discerning Eye of the Beast
+(@Entry,    1,          @EmblemofHeroism_x10,         50255), -- Dread Pirate Ring
 -- Heirloom shoulder
 (@Entry,    2,          @EmblemofHeroism_x15,         42952), -- Stained Shadowcraft Spaulders
 (@Entry,    2,          @EmblemofHeroism_x15,         42984), -- Preened Ironfeather Shoulders
 (@Entry,    2,          @EmblemofHeroism_x15,         42951), -- Mystical Pauldrons of Elements
-(@Entry,    6,          @EmblemofHeroism_x15,         42985), -- Tattered Dreadmist Mantle
+(@Entry,    2,          @EmblemofHeroism_x15,         42985), -- Tattered Dreadmist Mantle
 (@Entry,    2,          @EmblemofHeroism_x15,         42949), -- Polished Spaulders of Valor
 (@Entry,    2,          @EmblemofHeroism_x15,         42950), -- Champion Herod's Shoulder
-(@Entry,    4,          @EmblemofHeroism_x15,         44103), -- Exceptional Stormshroud Shoulders
+(@Entry,    2,          @EmblemofHeroism_x15,         44103), -- Exceptional Stormshroud Shoulders
 -- Heirloom chest
 (@Entry,    3,          @EmblemofHeroism_x20,         48689), -- Stained Shadowcraft Tunic
 (@Entry,    3,          @EmblemofHeroism_x20,         48687), -- Preened Ironfeather Breastplate
-(@Entry,    5,          @EmblemofHeroism_x20,         48677), -- Champion's Deathdealer Breastplate
-(@Entry,    2,          @EmblemofHeroism_x20,         48685), -- Polished Breastplate of Valor
+(@Entry,    3,          @EmblemofHeroism_x20,         48677), -- Champion's Deathdealer Breastplate
+(@Entry,    3,          @EmblemofHeroism_x20,         48685), -- Polished Breastplate of Valor
 (@Entry,    3,          @EmblemofHeroism_x20,         48691), -- Tattered Dreadmist Robe
-(@Entry,    5,          @EmblemofHeroism_x20,         48683), -- Mystical Vest of Elements
+(@Entry,    3,          @EmblemofHeroism_x20,         48683), -- Mystical Vest of Elements
 -- Heirlooms weapons
-(@Entry,    14,         @EmblemofHeroism_x25,         42944), -- Balanced Heartseeker
-(@Entry,    14,         @EmblemofHeroism_x25,         42948), -- Devout Aurastone Hammer
-(@Entry,    14,         @EmblemofHeroism_x25,         44091), -- Sharpened Scarlet Kris
-(@Entry,    14,         @EmblemofHeroism_x25,         42945), -- Venerable Dal'Rend's Sacred Charge
-(@Entry,    14,         @EmblemofHeroism_x35,         42946), -- Charmed Ancient Bone Bow
-(@Entry,    14,         @EmblemofHeroism_x35,         42947), -- Dignified Headmaster's Charge
-(@Entry,    14,         @EmblemofHeroism_x35,         42943), -- Bloodied Arcanite Reaper
+(@Entry,    4,          @EmblemofHeroism_x25,         42944), -- Balanced Heartseeker
+(@Entry,    4,          @EmblemofHeroism_x25,         42948), -- Devout Aurastone Hammer
+(@Entry,    4,          @EmblemofHeroism_x25,         44091), -- Sharpened Scarlet Kris
+(@Entry,    4,          @EmblemofHeroism_x25,         42945), -- Venerable Dal'Rend's Sacred Charge
+(@Entry,    4,          @EmblemofHeroism_x35,         42946), -- Charmed Ancient Bone Bow
+(@Entry,    4,          @EmblemofHeroism_x35,         42947), -- Dignified Headmaster's Charge
+(@Entry,    4,          @EmblemofHeroism_x35,         42943), -- Bloodied Arcanite Reaper
 -- Heirloom Inscriptions
-(@Entry,    15,         @EmblemofHeroism_x100,        44133), -- Greater Inscription of the Axe
-(@Entry,    15,         @EmblemofHeroism_x100,        44134), -- Greater Inscription of the Crag
-(@Entry,    15,         @EmblemofHeroism_x100,        44135), -- Greater Inscription of the Storm
-(@Entry,    15,         @EmblemofHeroism_x100,        44136); -- Greater Inscription of the Pinnacle
+(@Entry,    5,          @EmblemofHeroism_x100,        44133), -- Greater Inscription of the Axe
+(@Entry,    5,          @EmblemofHeroism_x100,        44134), -- Greater Inscription of the Crag
+(@Entry,    5,          @EmblemofHeroism_x100,        44135), -- Greater Inscription of the Storm
+(@Entry,    5,          @EmblemofHeroism_x100,        44136); -- Greater Inscription of the Pinnacle
