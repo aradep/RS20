@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Herod
+-- BFD Daily Questgiver
 -- -----------------------------------
 
 -- Creature

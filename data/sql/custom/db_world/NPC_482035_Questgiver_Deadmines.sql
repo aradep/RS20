@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Herod
+-- Deadmines Daily Questgiver
 -- -----------------------------------
 
 -- Creature

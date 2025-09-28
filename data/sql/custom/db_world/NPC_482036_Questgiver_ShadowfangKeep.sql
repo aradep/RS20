@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Herod
+-- SFK Daily Questgiver
 -- -----------------------------------
 
 -- Creature
