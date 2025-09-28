@@ -61,7 +61,7 @@ INSERT INTO `item_loot_template`
 (`Entry`,     `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ---------------------------------------------------------------------------------------------------------------------------------
 (@Entry,      40753,      0,                 100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,      29434,      0,                 100,        0,          10,         10,         '10x Honor Coin'), -- PvP Only Reward
+(@Entry,      29434,      0,                 100,        0,          25,         25,         '25x Honor Coin'), -- PvP Only Reward
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,      34052,      0,                 100,        0,          10,         10,         '10x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),

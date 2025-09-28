@@ -44,7 +44,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1986.17, -431.643, 11.2724, 3.15336, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Ghost visual
-DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = @Entry);
+DELETE FROM `creature_addon` WHERE `auras`=57932;
 INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 0, 0, 0, 0, '57932' FROM `creature` WHERE `id1` = @Entry;
 
 -- Extended costs
