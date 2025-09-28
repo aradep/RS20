@@ -22,7 +22,7 @@ SET
 SET
 @Entry          = 34426,
 @Quality        = 4,
-@Money          = 100000,
+@Money          = 0,
 @Name           = 'Magic Mystery Box',
 @Description    = 'Contains random items.';
 UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
@@ -34,9 +34,9 @@ INSERT INTO `item_loot_template`
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,    40752,      0,                  100,        0,          5,          5,          '5x Emblem of Heroism'), -- PvE Only Reward
+(@Entry,    40752,      0,                  100,        0,          3,          3,          '3x Emblem of Heroism'), -- PvE Only Reward
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,    34052,      0,                  100,        0,          10,         10,         '10x Dream Shard'),
+(@Entry,    34052,      0,                  100,        0,          5,          5,          '5x Dream Shard'),
 (@Entry,    10456,      0,                  100,        0,          1,          1,          'Bombs'),
 (@Entry,        1,      @Ref_BoPBlue,       100,        5,          1,          1,          'BoP Blue'),
 (@Entry,        2,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
@@ -50,7 +50,7 @@ INSERT INTO `item_loot_template`
 SET
 @Entry          = 43346,
 @Quality        = 4,
-@Money          = 100000,
+@Money          = 0,
 @Name           = 'Spoils of War',
 @Description    = 'Contains random items.';
 UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
@@ -62,9 +62,9 @@ INSERT INTO `item_loot_template`
 (`Entry`,     `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ---------------------------------------------------------------------------------------------------------------------------------
 (@Entry,      40753,      0,                 100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,      29434,      0,                 100,        0,          25,         25,         '25x Honor Coin'), -- PvP Only Reward
+(@Entry,      29434,      0,                 100,        0,          20,         20,         '20x Honor Coin'), -- PvP Only Reward
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,      34052,      0,                 100,        0,          10,         10,         '10x Dream Shard'),
+(@Entry,      34052,      0,                 100,        0,          5,          5,          '5x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
 (@Entry,          1,      @Ref_BoPBlue,      100,        5,          1,          1,          'BoP Blue'),
 (@Entry,          2,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
@@ -123,7 +123,7 @@ INSERT INTO `item_loot_template`
 -- ----------------------------------------------------------------------------------------------------------------------
 (`Entry`,   `Item`,     `reference`,    `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------
-(@Entry,    1,          @Ref_Bombs,     100,        1,          2,          2,          'Engineering Bomb'),
+(@Entry,    1,          @Ref_Bombs,     100,        1,          4,          4,          'Engineering Bomb'),
 (@Entry,    2,          @Ref_EngiItem,  5,          2,          1,          1,          'Engineering Item');
 -- ----------------------------------------------------------------------------------------------------------------------
 
@@ -133,10 +133,10 @@ INSERT INTO `reference_loot_template`
 -- ----------------------------------------------------------------------------------------------------------
 (`Entry`,       `Item`,     `Chance`,  `groupid`,  `mincount`,  `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------
-(@Ref_Bombs,    10586,      0,          1,          2,          3,          'The Big One'),
-(@Ref_Bombs,    10646,      0,          1,          3,          4,          'Goblin Sapper Charge'),
+(@Ref_Bombs,    10586,      0,          1,          1,          1,          'The Big One'),
+(@Ref_Bombs,    10646,      0,          1,          1,          1,          'Goblin Sapper Charge'),
 (@Ref_Bombs,    4395,       0,          1,          1,          1,          'Goblin Land Mine'),
-(@Ref_Bombs,    10514,      0,          1,          4,          5,          'Mithril Frag Bomb');
+(@Ref_Bombs,    10514,      0,          1,          1,          1,          'Mithril Frag Bomb');
 -- ----------------------------------------------------------------------------------------------------------
 
 -- Reference template - Engineering Item
