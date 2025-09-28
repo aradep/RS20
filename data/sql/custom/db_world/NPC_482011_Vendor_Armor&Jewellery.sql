@@ -30,10 +30,6 @@ INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Displ
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES (@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.1, -414.548, 11.2724, 3.97804, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
--- Extended Costs
-SET
-@EmblemofTriumph_x1    = 2734;
-
 -- Item List
 DELETE FROM `npc_vendor` WHERE `Entry` = @Entry;
 INSERT INTO `npc_vendor` 
@@ -127,5 +123,5 @@ INSERT INTO `npc_vendor`
 (@Entry,    11,         0,     20823),   -- Gloom Band
 (@Entry,    2,          0,     30419);    -- Brilliant Necklace
 
--- Sells for 1
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;
+-- Buys for 0 / Sells for 1
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;
