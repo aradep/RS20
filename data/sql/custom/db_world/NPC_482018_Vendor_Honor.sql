@@ -58,13 +58,12 @@ INSERT INTO `npc_vendor`
 (@Entry,    2,          @1600Honor,       44098), -- Inherited Insignia of the Alliance
 (@Entry,    2,          @1600Honor,       44097), -- Inherited Insignia of the Horde
 -- Heirloom shoulder
-(@Entry,    2,          @3000Honor,       42952), -- Stained Shadowcraft Spaulders
-(@Entry,    2,          @3000Honor,       42984), -- Preened Ironfeather Shoulders
-(@Entry,    2,          @3000Honor,       42951), -- Mystical Pauldrons of Elements
-(@Entry,    6,          @3000Honor,       42985), -- Tattered Dreadmist Mantle
-(@Entry,    2,          @3000Honor,       42949), -- Polished Spaulders of Valor
-(@Entry,    2,          @3000Honor,       42950), -- Champion Herod's Shoulder
-(@Entry,    4,          @3000Honor,       44103), -- Exceptional Stormshroud Shoulders
+(@Entry,    2,          @3000Honor,       44099), -- Strengthened Stockade Pauldrons
+(@Entry,    4,          @3000Honor,       44107), -- Exquisite Sunderseer Mantle
+(@Entry,    2,          @3000Honor,       44100), -- Pristine Lightforge Spaulders
+(@Entry,    4,          @3000Honor,       44102), -- Aged Pauldrons of The Five Thunders
+(@Entry,    4,          @3000Honor,       44105), -- Lasting Feralheart Spaulders
+(@Entry,    4,          @3000Honor,       44101), -- Prized Beastmaster's Mantle
 -- Heirloom weapons
 (@Entry,    3,          @5000Honor,       44094), -- The Blessed Hammer of Grace
 (@Entry,    3,          @5000Honor,       44096), -- Battleworn Thrash Blade

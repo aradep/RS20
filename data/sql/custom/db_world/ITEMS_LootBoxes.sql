@@ -9,6 +9,7 @@
 
 -- Loot Table IDs
 SET
+@Ref_Bombs           = 48204,
 @Ref_PetToy          = 48205,
 @Ref_EngiItem        = 48206,
 @Ref_Darkmoon        = 48207,
@@ -122,12 +123,21 @@ INSERT INTO `item_loot_template`
 -- ----------------------------------------------------------------------------------------------------------------------
 (`Entry`,   `Item`,     `reference`,    `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------
-(@Entry,    10586,      0,              0,          1,          2,          3,          'The Big One'),
-(@Entry,    10646,      0,              0,          1,          3,          4,          'Goblin Sapper Charge'),
-(@Entry,    4395,       0,              0,          1,          1,          1,          'Goblin Land Mine'),
-(@Entry,    10514,      0,              0,          1,          4,          5,          'Mithril Frag Bomb'),
-(@Entry,    1,          @Ref_EngiItem,  5,          2,          1,          1,          'Engineering Item');
+(@Entry,    1,          @Ref_Bombs,     100,        1,          2,          2,          'Engineering Bomb'),
+(@Entry,    2,          @Ref_EngiItem,  5,          2,          1,          1,          'Engineering Item');
 -- ----------------------------------------------------------------------------------------------------------------------
+
+-- Reference template - Bombs
+DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_Bombs;
+INSERT INTO `reference_loot_template` 
+-- ----------------------------------------------------------------------------------------------------------
+(`Entry`,       `Item`,     `Chance`,  `groupid`,  `mincount`,  `maxcount`, `comment`) VALUES
+-- ----------------------------------------------------------------------------------------------------------
+(@Ref_Bombs,    10586,      0,          1,          2,          3,          'The Big One'),
+(@Ref_Bombs,    10646,      0,          1,          3,          4,          'Goblin Sapper Charge'),
+(@Ref_Bombs,    4395,       0,          1,          1,          1,          'Goblin Land Mine'),
+(@Ref_Bombs,    10514,      0,          1,          4,          5,          'Mithril Frag Bomb');
+-- ----------------------------------------------------------------------------------------------------------
 
 -- Reference template - Engineering Item
 DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_EngiItem;
@@ -135,8 +145,8 @@ INSERT INTO `reference_loot_template`
 -- ----------------------------------------------------------------------------------------------------------
 (`Entry`,       `Item`,     `Chance`,  `groupid`,  `mincount`,  `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------
-(@Ref_EngiItem,  40768,      50,        2,          1,           1,          'MOLL_E'),
-(@Ref_EngiItem,  49040,      30,        2,          1,           1,          'Jeeves'),
+(@Ref_EngiItem,  40768,      40,        2,          1,           1,          'MOLL_E'),
+(@Ref_EngiItem,  49040,      40,        2,          1,           1,          'Jeeves'),
 (@Ref_EngiItem,  41508,      10,        2,          1,           1,          'Mechano Hog'),
 (@Ref_EngiItem,  44413,      10,        2,          1,           1,          'Mekgineers Chopper');
 -- ----------------------------------------------------------------------------------------------------------

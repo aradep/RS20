@@ -33,7 +33,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 
 -- Extended costs
 SET
-@DreamShard_x4   = 2553;
+@DreamShard_x4   = 2553,
 @DreamShard_x10  = 2554;
 
 -- Item List
@@ -43,63 +43,63 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,              `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Cloth
-(@Entry,    3,          @DreamShard_x4,          4320), -- Spidersilk Boots
-(@Entry,    8,          @DreamShard_x4,         45626), -- Spidersilk Drape
-(@Entry,    6,          @DreamShard_x4,         12998), -- Magician's Mantle
+(@Entry,    1,          @DreamShard_x4,          4320), -- Spidersilk Boots
+(@Entry,    1,          @DreamShard_x4,         45626), -- Spidersilk Drape
+(@Entry,    1,          @DreamShard_x4,         12998), -- Magician's Mantle
 (@Entry,    1,          @DreamShard_x4,          1486), -- Tree Bark Jacket
 (@Entry,    1,          @DreamShard_x4,          2911), -- Keller's Girdle
-(@Entry,    2,          @DreamShard_x4,         12987), -- Darkweave Breeches
-(@Entry,    5,          @DreamShard_x4,         12977), -- Magefist Gloves
-(@Entry,    8,          @DreamShard_x4,          2059), -- Sentry Cloak
-(@Entry,    4,          @DreamShard_x4,          1974), -- Mindthrust Bracers
-(@Entry,    7,          @DreamShard_x4,          2292), -- Necrology Robes
-(@Entry,    8,          @DreamShard_x4,         12979), -- Firebane Cloak
+(@Entry,    1,          @DreamShard_x4,         12987), -- Darkweave Breeches
+(@Entry,    1,          @DreamShard_x4,         12977), -- Magefist Gloves
+(@Entry,    1,          @DreamShard_x4,          2059), -- Sentry Cloak
+(@Entry,    1,          @DreamShard_x4,          1974), -- Mindthrust Bracers
+(@Entry,    1,          @DreamShard_x4,          2292), -- Necrology Robes
+(@Entry,    1,          @DreamShard_x4,         12979), -- Firebane Cloak
 -- Leather
-(@Entry,    3,          @DreamShard_x4,          1121), -- Feet of the Lynx
-(@Entry,    1,          @DreamShard_x4,          1489), -- Gloomshroud Armor
-(@Entry,    1,          @DreamShard_x4,          2314), -- Toughened Leather Armor
-(@Entry,    1,          @DreamShard_x4,         12988), -- Starsight Tunic
-(@Entry,    4,          @DreamShard_x4,         12999), -- Drakewing Bands
+(@Entry,    2,          @DreamShard_x4,          1121), -- Feet of the Lynx
+(@Entry,    2,          @DreamShard_x4,          1489), -- Gloomshroud Armor
+(@Entry,    2,          @DreamShard_x4,          2314), -- Toughened Leather Armor
+(@Entry,    2,          @DreamShard_x4,         12988), -- Starsight Tunic
+(@Entry,    2,          @DreamShard_x4,         12999), -- Drakewing Bands
 -- Mail
 (@Entry,    3,          @DreamShard_x4,         12982), -- Silver-linked Footguards
-(@Entry,    5,          @DreamShard_x4,         12994), -- Thorbia's Gauntlets
-(@Entry,    6,          @DreamShard_x4,         39897), -- Azure Shoulderguards
+(@Entry,    3,          @DreamShard_x4,         12994), -- Thorbia's Gauntlets
+(@Entry,    3,          @DreamShard_x4,         39897), -- Azure Shoulderguards
 (@Entry,    3,          @DreamShard_x4,         12978), -- Stormbringer Belt
 (@Entry,    3,          @DreamShard_x4,         5425), -- Runescale Girdle
 -- Accessory
-(@Entry,    9,          @DreamShard_x4,         6332), -- Black Pearl Ring
-(@Entry,    9,          @DreamShard_x4,         12985), -- Ring of Defense
-(@Entry,    9,          @DreamShard_x4,         12996), -- Band of Purification
-(@Entry,    9,          @DreamShard_x4,         30804), -- Bronze Band of Force
+(@Entry,    4,          @DreamShard_x4,         6332), -- Black Pearl Ring
+(@Entry,    4,          @DreamShard_x4,         12985), -- Ring of Defense
+(@Entry,    4,          @DreamShard_x4,         12996), -- Band of Purification
+(@Entry,    4,          @DreamShard_x4,         30804), -- Bronze Band of Force
 -- Weapons
-(@Entry,    1,          @DreamShard_x10,         1481), -- Grimclaw
+(@Entry,    5,          @DreamShard_x10,         1481), -- Grimclaw
 (@Entry,    5,          @DreamShard_x10,         2194), -- Diamond Hammer
-(@Entry,   11,          @DreamShard_x10,         2236), -- Blackfang
-(@Entry,   11,          @DreamShard_x10,         3413), -- Doomspike
-(@Entry,    2,          @DreamShard_x10,         3021), -- Ranger Bow
-(@Entry,   10,          @DreamShard_x10,         890), -- Twisted Chanter's Staff
-(@Entry,   10,          @DreamShard_x10,         3415), -- Staff of the Friar
-(@Entry,   10,          @DreamShard_x10,         2271), -- Staff of the Blessed Seer
-(@Entry,   11,          @DreamShard_x10,         2567), -- Evocator's Blade
-(@Entry,    1,          @DreamShard_x10,         12990), -- Razor's Edge
-(@Entry,    9,          @DreamShard_x10,         12992), -- Searing Blade
-(@Entry,    7,          @DreamShard_x10,         12989), -- Gargoyle's Bite
-(@Entry,    6,          @DreamShard_x10,         12983), -- Rakzur Club
-(@Entry,   12,          @DreamShard_x10,         12984), -- Skycaller
-(@Entry,    4,          @DreamShard_x10,         13136), -- Lil Timmy's Peashooter
-(@Entry,    8,          @DreamShard_x10,         935), -- Night Watch Shortsword
-(@Entry,    2,          @DreamShard_x10,         5423), -- Boahn's Fang
-(@Entry,    1,          @DreamShard_x10,         5426), -- Serpent's Kiss
-(@Entry,    2,          @DreamShard_x10,         12975), -- Prospector Axe
-(@Entry,    8,          @DreamShard_x10,         12976), -- Ironpatch Blade
-(@Entry,   13,          @DreamShard_x10,         2879), -- Antipodean Rod
-(@Entry,   13,          @DreamShard_x10,         5183), -- Pulsating Hydra Heart
+(@Entry,    5,          @DreamShard_x10,         2236), -- Blackfang
+(@Entry,    5,          @DreamShard_x10,         3413), -- Doomspike
+(@Entry,    5,          @DreamShard_x10,         3021), -- Ranger Bow
+(@Entry,    5,          @DreamShard_x10,         890), -- Twisted Chanter's Staff
+(@Entry,    5,          @DreamShard_x10,         3415), -- Staff of the Friar
+(@Entry,    5,          @DreamShard_x10,         2271), -- Staff of the Blessed Seer
+(@Entry,    5,          @DreamShard_x10,         2567), -- Evocator's Blade
+(@Entry,    5,          @DreamShard_x10,         12990), -- Razor's Edge
+(@Entry,    5,          @DreamShard_x10,         12992), -- Searing Blade
+(@Entry,    5,          @DreamShard_x10,         12989), -- Gargoyle's Bite
+(@Entry,    5,          @DreamShard_x10,         12983), -- Rakzur Club
+(@Entry,    5,          @DreamShard_x10,         12984), -- Skycaller
+(@Entry,    5,          @DreamShard_x10,         13136), -- Lil Timmy's Peashooter
+(@Entry,    5,          @DreamShard_x10,         935), -- Night Watch Shortsword
+(@Entry,    5,          @DreamShard_x10,         5423), -- Boahn's Fang
+(@Entry,    5,          @DreamShard_x10,         5426), -- Serpent's Kiss
+(@Entry,    5,          @DreamShard_x10,         12975), -- Prospector Axe
+(@Entry,    5,          @DreamShard_x10,         12976), -- Ironpatch Blade
+(@Entry,    5,          @DreamShard_x10,         2879), -- Antipodean Rod
+(@Entry,    5,          @DreamShard_x10,         5183), -- Pulsating Hydra Heart
 -- Shield
-(@Entry,   13,          @DreamShard_x10,         12997), -- Redbeard Crest
+(@Entry,    6,          @DreamShard_x10,         12997), -- Redbeard Crest
 -- Offhand
-(@Entry,   13,          @DreamShard_x10,         43654), -- Tome of the Dawn
-(@Entry,   13,          @DreamShard_x10,         43655), -- Book of Survival
-(@Entry,   13,          @DreamShard_x10,         43515); -- Mystic Tome
+(@Entry,    7,          @DreamShard_x10,         43654), -- Tome of the Dawn
+(@Entry,    7,          @DreamShard_x10,         43655), -- Book of Survival
+(@Entry,    7,          @DreamShard_x10,         43515); -- Mystic Tome
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
