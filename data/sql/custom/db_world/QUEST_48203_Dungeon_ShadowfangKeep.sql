@@ -27,17 +27,17 @@ SET
 @AllowableRaces             = 0,
 @SpecialFlags               = 1, -- 1:Repeatable --
 
-@LogTitle                   = 'Change of Ownership',
-@QuestDescription           = 'That good for nothin\' rogue and his band of brigands tossed me overboard in the Veiled Sea, stole my ship, then tried to erase my name from the ledgers. People even think the Defias built the Ironclad - Hah! I\'ll show them... and by that I mean you\'ll show them.$b$bI want them dead, you hear? Dead! Then toss Edwin\'s body to the sharks like he tried on me. We\'ll regroup by the secret tunnel when you\'re done.',
-@LogDescription             = 'Long Lost John wants you to settle an old score with VanCleef.',
+@LogTitle                   = 'These Old Bones',
+@QuestDescription           = 'I came here to retrieve Vincent\'s body but it looks like I\'ll be staying for dinner.$b$bYou need to finish what I started, $R. Find the Archmage and bring him down. Avenge the Deathstalkers!',
+@LogDescription             = 'Deathstalker Rafuse wants you to slay Archmage Arugal.',
 @AreaDescription            = '',
 @ObjectiveText1             = 'Archmage Arugal slain.',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Meet John by the exit tunnel.',
-@RequestItems               = 'Did you do it? Is he dead?',
-@OfferReward                = 'I wish I could have been there, I really do... but it felt safer to watch from here.$b$bI swiped this from their stash while you were wrecking the place. Now if you\'ll excuse me I have a ship to repossess.',
+@QuestCompletionLog         = 'Return to Deathstalker Rafuse.',
+@RequestItems               = 'How\'d it go? Did you take the shortcut?',
+@OfferReward                = 'Thank you, $R. I can rest easy knowing that sorcerer\'s evil has been put to an end.$b$bTake this, I won\'t get much use out of it now.',
 
 @RequiredNpcOrGo1           = 4275,
 @RequiredNpcOrGoCount1      = 1,

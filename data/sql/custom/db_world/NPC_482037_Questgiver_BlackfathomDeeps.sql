@@ -11,7 +11,7 @@
 SET
 @Entry      = 482037,
 @Model      = 21723,
-@Scale      = 1.2,
+@Scale      = 1,
 @Name       = "Mergle the Murloc",
 @Title      = "",
 @Icon       = "Speak", -- Buy/Repair --
@@ -40,4 +40,5 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 48, 0, 0, 1, 1, 0, -166.47, 80.712, -45.9293, 5.80627, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+(@Entry, 0, 0, 48, 0, 0, 1, 1, 0, -166.47, 80.712, -45.9293, 5.80627, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC'),
+(@Entry, 0, 0, 48, 0, 0, 1, 1, 0, -837.991, -474.803, -34.0446, 2.20517, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');

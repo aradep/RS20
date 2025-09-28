@@ -10,7 +10,7 @@
 -- Rewards
 SET 
 @Item   = 43346, -- Spoils of War
-@Honor  = 100,
+@Honor  = 150,
 @Arena  = 50,
 @Gold   = 250000;
 

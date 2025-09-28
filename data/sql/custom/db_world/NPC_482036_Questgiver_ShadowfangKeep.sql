@@ -10,10 +10,10 @@
 -- Creature
 SET
 @Entry      = 482036,
-@Model      = 4620,
+@Model      = 16100,
 @Scale      = 1.2,
-@Name       = "Long Lost John",
-@Title      = "",
+@Name       = "Deathstalker Rafuse",
+@Title      = "Crazy Climber",
 @Icon       = "Speak", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
@@ -27,7 +27,7 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
 -- Gossip text
-SET @text = 'Who are you?';
+SET @text = 'I was trying to climb the parapet to get around some wargs and lost my grip, now look at me... just a pile of bones.';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE `entry`=@entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -40,4 +40,8 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 33, 0, 0, 1, 1, 0, -231.282, 2114.76, 76.8898, 5.88906, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+(@Entry, 0, 0, 33, 0, 0, 1, 1, 0, -224.236, 2107.75, 76.8893, 1.36517, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+
+-- Sitting
+DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id1` = @Entry);
+INSERT INTO `creature_addon` SELECT `guid`, 0, 0, 1, 0, 0, 0, '' FROM `creature` WHERE `id1` = @Entry;

@@ -246,7 +246,7 @@ INSERT INTO `creature_template_model` VALUES (@Druid, 0, @Model, @Scale, 1, 1234
 SET
 @Mage       = 5146,
 @Model      = 24121,
-@Name       = "Prototype 20",
+@Name       = "Prototype #20",
 @Title      = "Mage Trainer",
 @TrainClass = 8,
 @Icon       = "",
@@ -278,7 +278,7 @@ SET
 @MagePet    = 18001,
 @Model      = 15438,
 @Name       = "Conjured Arcane Wraith",
-@Title      = "Prototype 18's Guardian",
+@Title      = "Prototype #20's Guardian",
 @Icon       = "",
 @GossipMenu = 0,
 @MinLevel   = 20,

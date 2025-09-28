@@ -27,17 +27,17 @@ SET
 @AllowableRaces             = 0,
 @SpecialFlags               = 1, -- 1:Repeatable --
 
-@LogTitle                   = 'Change of Ownership',
-@QuestDescription           = '',
-@LogDescription             = 'Long Lost John wants you to settle an old score with VanCleef.',
+@LogTitle                   = 'Waking the Dreamer',
+@QuestDescription           = 'You must defeat the Fanglords so that I may perform the awakening ritual and save Naralex from the Dream. The fate of this land hangs in the balance.',
+@LogDescription             = 'The Disciple of Naralex wants you to help him cleanse the corruption in the Wailing Caverns.',
 @AreaDescription            = '',
 @ObjectiveText1             = 'Mutanus the Deovurer slain.',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Meet John by the exit tunnel.',
-@RequestItems               = 'Did you do it? Is he dead?',
-@OfferReward                = 'Gj',
+@QuestCompletionLog         = 'Return to the Disciple of Naralex.',
+@RequestItems               = 'We must awaken the dreamer.',
+@OfferReward                = 'You have done a great deed, $R. Naralex recovered this from the Dream, maybe you can make some use out of it.',
 
 @RequiredNpcOrGo1           = 3654,
 @RequiredNpcOrGoCount1      = 1,
