@@ -50,11 +50,10 @@ UPDATE `quest_template_addon` SET `exclusivegroup` = 0 WHERE `ID` IN (11339,1134
 DELETE FROM `disables` WHERE `comment` LIKE '%Call to Arms:%';
 
 -- Pool Dungeon quests
+REPLACE INTO `pool_template` VALUES (48200, 2, 'Dungeon Daily');
 REPLACE INTO `pool_quest` VALUES
 (48201, 48200, 'Dungeon Daily'),
 (48202, 48200, 'Dungeon Daily'),
 (48203, 48200, 'Dungeon Daily'),
 (48204, 48200, 'Dungeon Daily'),
 (48205, 48200, 'Dungeon Daily');
-
-REPLACE INTO `pool_template` VALUES (48200, 2, 'Dungeon Daily');
