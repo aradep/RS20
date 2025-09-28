@@ -28,18 +28,18 @@ SET
 @SpecialFlags               = 1, -- 1:Repeatable --
 
 @LogTitle                   = 'Change of Ownership',
-@QuestDescription           = 'That good for nothin\' rogue and his band of brigands tossed me overboard in the Veiled Sea, stole my ship, then tried to erase my name from the ledgers. People even think the Defias built the Ironclad - Hah! I\'ll show them... and by that I mean you\'ll show them.$b$bI want them dead, you hear? Dead! Then toss Edwin\'s body to the sharks like he tried on me. We\'ll regroup by the secret tunnel when you\'re done.',
+@QuestDescription           = '',
 @LogDescription             = 'Long Lost John wants you to settle an old score with VanCleef.',
 @AreaDescription            = '',
-@ObjectiveText1             = 'VanCleef killed.',
+@ObjectiveText1             = 'Mutanus the Deovurer slain.',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
 @QuestCompletionLog         = 'Meet John by the exit tunnel.',
 @RequestItems               = 'Did you do it? Is he dead?',
-@OfferReward                = 'I wish I could have been there, I really do... but it felt safer to watch from here.$b$bI swiped this from their stash while you were wrecking the place. Now if you\'ll excuse me I have a ship to repossess.',
+@OfferReward                = 'Gj',
 
-@RequiredNpcOrGo1           = 639,
+@RequiredNpcOrGo1           = 3654,
 @RequiredNpcOrGoCount1      = 1,
 @RequiredNpcOrGo2           = 0,
 @RequiredNpcOrGoCount2      = 0,

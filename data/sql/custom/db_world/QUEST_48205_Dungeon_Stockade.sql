@@ -7,6 +7,14 @@
 -- Quest - Daily Stormwind Stockade
 -- -----------------------------------
 
+-- Quest item
+UPDATE `item_template` SET `name`='Engraved Pocket Watch', `class`=12, `bonding`=4, `quality`=1 WHERE `entry` = 5374;
+
+-- Boss loot
+DELETE FROM `creature_loot_template` WHERE `entry`=1716 AND `item`=5374;
+REPLACE INTO `creature_loot_template` VALUES
+(1716, 5374, 0, 100, 1, 1, 0, 1, 1, 'Bazil Thredd - Engraved Pocket Watch');
+
 SET
 @QuestID                    = 48205,
 @PreviousQuest              = 0,
@@ -27,28 +35,28 @@ SET
 @AllowableRaces             = 0,
 @SpecialFlags               = 1, -- 1:Repeatable --
 
-@LogTitle                   = 'Change of Ownership',
-@QuestDescription           = 'That good for nothin\' rogue and his band of brigands tossed me overboard in the Veiled Sea, stole my ship, then tried to erase my name from the ledgers. People even think the Defias built the Ironclad - Hah! I\'ll show them... and by that I mean you\'ll show them.$b$bI want them dead, you hear? Dead! Then toss Edwin\'s body to the sharks like he tried on me. We\'ll regroup by the secret tunnel when you\'re done.',
-@LogDescription             = 'Long Lost John wants you to settle an old score with VanCleef.',
+@LogTitle                   = 'Loose Thredds',
+@QuestDescription           = 'Hey, uh... listen. We all know ol\' Baz has his head on the chopping block and I bet you\'re here to swing the axe for Stormwind, huh? Well I have a favor to ask...$b$bThredd stole something from me and I\'ve never had the guts to try and get it back. When you do the deed, before you let them take his corpse away check his pockets. He always carrys it on him.$b$bIf you find it bring it back, there\'s something in it for you.',
+@LogDescription             = 'Squeaky Pete wants you to retrieve an heirloom from Bazil Thredd.',
 @AreaDescription            = '',
-@ObjectiveText1             = 'VanCleef killed.',
+@ObjectiveText1             = 'Heirloom retrieved.',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Meet John by the exit tunnel.',
-@RequestItems               = 'Did you do it? Is he dead?',
-@OfferReward                = 'I wish I could have been there, I really do... but it felt safer to watch from here.$b$bI swiped this from their stash while you were wrecking the place. Now if you\'ll excuse me I have a ship to repossess.',
+@QuestCompletionLog         = 'Return to Squeaky Pete\'s cell.',
+@RequestItems               = 'Did you get it?',
+@OfferReward                = 'As promised, my end of the bargain.',
 
-@RequiredNpcOrGo1           = 639,
-@RequiredNpcOrGoCount1      = 1,
+@RequiredNpcOrGo1           = 0,
+@RequiredNpcOrGoCount1      = 0,
 @RequiredNpcOrGo2           = 0,
 @RequiredNpcOrGoCount2      = 0,
 @RequiredNpcOrGo3           = 0,
 @RequiredNpcOrGoCount3      = 0,
 @RequiredNpcOrGo4           = 0,
 @RequiredNpcOrGoCount4      = 0,
-@RequiredItemId1            = 0,
-@RequiredItemCount1         = 0,
+@RequiredItemId1            = 5374,
+@RequiredItemCount1         = 1,
 @RequiredItemId2            = 0,
 @RequiredItemCount2         = 0,
 @RequiredItemId3            = 0,
