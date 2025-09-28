@@ -4,16 +4,16 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- SFK Daily Questgiver
+-- Stockade Daily Questgiver
 -- -----------------------------------
 
 -- Creature
 SET
-@Entry      = 482036,
-@Model      = 16100,
+@Entry      = 482038,
+@Model      = 2144,
 @Scale      = 1.2,
-@Name       = "Deathstalker Rafuse",
-@Title      = "Crazy Climber",
+@Name       = "Squeaky Pete",
+@Title      = "",
 @Icon       = "Speak", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,
@@ -27,7 +27,7 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
 -- Gossip text
-SET @text = 'I was trying to climb the parapet to get around some wargs when I lost my grip. Now look at me... just a pile of bones.';
+SET @text = 'Whoa whoa, don\'t kill me!';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE `entry`=@entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -40,7 +40,4 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 33, 0, 0, 1, 1, 0, -224.236, 2107.75, 76.8893, 1.36517, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
-
--- Sitting
-REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 1, 0, 0, 0, NULL);
+(@Entry, 0, 0, 34, 0, 0, 1, 1, 0, 80.33839, -29.035, -26.523, 1.34, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');

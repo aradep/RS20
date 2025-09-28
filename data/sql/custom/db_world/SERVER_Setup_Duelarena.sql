@@ -37,8 +37,8 @@ INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Displ
 DELETE FROM `creature` WHERE `id1` = @Lichking;
 INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES 
 (@GUID, @Lichking, 0, 0, 571, 0, 0, 1, 1, 0, 8516.24, 867.364, 583.709, 4.70001, 300, 0, 0, 17431250, 0, 0, 0, 0, 0, '', 'CustomNPC');
--- Sit aura
-REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `visibilityDistanceType`, `auras`) VALUES ((SELECT `guid` FROM `creature` WHERE `id1` = @Lichking LIMIT 1),0, 0, 1, 0, 0, 0, '73220');
+-- Sitting
+REPLACE INTO `creature_template_addon` VALUES (@Lichking, 0, 0, 1, 0, 0, 0, '73220');
 
 -- Vendor Val'kyrs
 DELETE FROM `creature` WHERE `id1` IN (@HonorVend,@ArenaVend) AND `Comment` = 'CustomNPC';
@@ -64,7 +64,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 
 -- Training Dummies
 UPDATE `creature_template` SET `minlevel` = 20, `maxlevel` = 20 WHERE `entry` = @Dummy;
-DELETE FROM `creature` WHERE `id1` = @Dummy AND `Comment` IN ('AllianceDummy','HordeDummy');
+DELETE FROM `creature` WHERE `id1` = @Dummy AND `Comment` = 'CustomNPC';
 INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `Comment`) VALUES
 (@GUID+1, @Dummy, 0, 0, 571, 0, 0, 1, 1, 0, 8537.18, 770.458, 559.691, 2.33182, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'CustomNPC'),
 (@GUID+2, @Dummy, 0, 0, 571, 0, 0, 1, 1, 0, 8492.35, 769.339, 559.691, 0.784596, 300, 0, 0, 352800000, 0, 0, 0, 0, 0, '', 'CustomNPC'),

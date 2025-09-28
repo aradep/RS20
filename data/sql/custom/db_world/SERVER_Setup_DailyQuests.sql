@@ -11,7 +11,7 @@
 SET 
 @Item   = 43346, -- Spoils of War
 @Honor  = 150,
-@Arena  = 50,
+@Arena  = 25,
 @Gold   = 250000;
 
 -- PvP Daily Quests

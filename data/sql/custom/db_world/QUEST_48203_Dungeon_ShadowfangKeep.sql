@@ -28,7 +28,7 @@ SET
 @SpecialFlags               = 1, -- 1:Repeatable --
 
 @LogTitle                   = 'These Old Bones',
-@QuestDescription           = 'I came here to retrieve Vincent\'s body but it looks like I\'ll be staying for dinner.$b$bYou need to finish what I started, $R. Find the Archmage and bring him down. Avenge the Deathstalkers!',
+@QuestDescription           = 'I came here to retrieve Vincent\'s body but now it looks like I\'ll be staying for dinner.$b$bYou need to finish what I started, $R. Find the Archmage and bring him down. Avenge the Deathstalkers!',
 @LogDescription             = 'Deathstalker Rafuse wants you to slay Archmage Arugal.',
 @AreaDescription            = '',
 @ObjectiveText1             = 'Archmage Arugal slain.',
