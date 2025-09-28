@@ -23,14 +23,24 @@ UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` =
 -- Lucky Fishing Hat
 UPDATE `item_template` SET `RequiredSkill`=0, `RequiredSkillRank`=0 WHERE `entry`=19972;
 
+-- Wymling pet remove rep requirement
+UPDATE `item_template` SET `requiredreputationfaction`=0, `requiredreputationrank`=0 WHERE `entry` IN (46820,46821);
+
 -- No durability
 UPDATE `item_template` SET `maxdurability`=0 WHERE `maxdurability`>0;
+
+-- Rogue poisons unlimited use
+UPDATE `item_template` SET `maxcount`= 1, `spellcharges_1`= 0 WHERE `entry` IN (6947,3775);
+
+-- Reagent prices
+UPDATE `item_template` SET `buyprice`=0, `sellprice`=0 WHERE `entry` IN (17057,17058,17056,17034,6947,3775,5060,5175,5176,5177,5178);
 
 -- Remove XP spells from heirlooms
 UPDATE `item_template`SET `spellid_1` = 0 WHERE `spellid_1` IN (57353,71354);
 
 -- Engi items no engi req
 UPDATE `item_template` SET `requiredskill`=0, `requiredskillrank`=0 WHERE `entry` IN (10586,10646,4395, 10514,40768,49040,41508,44413); 
+
 -- No CD Hearthstone
 REPLACE INTO `spell_dbc` VALUES (8690, 1176, 0, 0, 134283264, 1024, 0, 536870912, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 31, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 5, 77, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 1, 1, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 0, 776, 0, 0, 'Hearthstone', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 'Returns you to $z.  Speak to an Innkeeper in a different place to change your home location.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 133, 1500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0);
 
@@ -76,6 +86,13 @@ UPDATE `item_template` SET `quality`=1, `stackable`=10, `buyprice`=0, `sellprice
 5996, -- Elixir of Water Breathing
 3825 -- Elixir of Fortitude
 );
+
+-- Disenchanting blues yields 1x Dream Shard
+REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (100, 34052, 0, 100, 0, 1, 1, 2, 3, 'Dream Shard');
+UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 100 WHERE `class` IN (2,4) AND `quality`=3 AND `disenchantID` > 0;
+DELETE FROM `disenchant_loot_template` dlt WHERE dlt.`Entry` NOT IN (SELECT DISTINCT it.`disenchantID` FROM `item_template` it WHERE it.`disenchantID` IS NOT NULL AND it.`disenchantID` <> 0);
+-- Don't allow DEing greens, no point
+UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 0 WHERE `class` IN (2,4) AND `quality`=2 AND `disenchantID` > 0;
 
 -- Nerf cool gems so we can use them without being OP
 -- Dreadstones / Shadow Crystals
