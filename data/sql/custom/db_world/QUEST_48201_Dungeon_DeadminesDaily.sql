@@ -29,7 +29,7 @@ SET
 @AllowableRaces             = 0,
 @SpecialFlags               = 1, -- 1:Repeatable --
 
-@LogTitle                   = 'Change of Leadership',
+@LogTitle                   = 'Change of Ownership',
 @QuestDescription           = 'That good for nothin\' rogue and his band of brigands tossed me overboard in the Veiled Sea, stole my ship, then tried to erase my name from the ledgers. People even think the Defias built the Ironclad - Hah! I\'ll show them... and by that I mean you\'ll show them.$b$bI want them dead, you hear? Dead! Then toss Edwin\'s body to the sharks like he tried on me. We\'ll regroup by the secret tunnel when you\'re done.',
 @LogDescription             = 'Long Lost John wants you to settle an old score with VanCleef.',
 @AreaDescription            = '',
@@ -39,7 +39,7 @@ SET
 @ObjectiveText4             = '', 
 @QuestCompletionLog         = 'Meet John by the exit tunnel.',
 @RequestItems               = 'Did you do it? Is he dead?',
-@OfferReward                = 'I wish I could have seen the look on his face!$b$bHere, I swiped this from their stash while you were wrecking the place. Now if you\'ll excuse me I have a ship to repossess...',
+@OfferReward                = 'I wish I could have been there, I really do... but it felt safer to watch from here.$b$bI swiped this from their stash while you were wrecking the place. Now if you\'ll excuse me I have a ship to repossess.',
 
 @RequiredNpcOrGo1           = 639,
 @RequiredNpcOrGoCount1      = 1,
@@ -67,7 +67,7 @@ SET
 @RequiredFactionValue2      = 0,
 @RequiredPlayerKills        = 0,
 
-@RewardItem1                = 34426,
+@RewardItem1                = 41426,
 @RewardAmount1              = 1,
 @RewardItem2                = 0,
 @RewardAmount2              = 0,

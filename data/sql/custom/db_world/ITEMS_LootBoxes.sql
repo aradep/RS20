@@ -20,7 +20,7 @@ SET
 
 -- Mystery Box
 SET
-@Entry          = 34426,
+@Entry          = 41426,
 @Quality        = 4,
 @Money          = 0,
 @Name           = 'Magic Mystery Box',
@@ -34,7 +34,7 @@ INSERT INTO `item_loot_template`
 (`Entry`,   `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
 (@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,    40752,      0,                  100,        0,          3,          3,          '3x Emblem of Heroism'), -- PvE Only Reward
+(@Entry,    40752,      0,                  100,        0,          3,          3,          '3x Emblem of Heroism'),
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,    34052,      0,                  100,        0,          5,          5,          '5x Dream Shard'),
 (@Entry,    10456,      0,                  100,        0,          1,          1,          'Bombs'),
@@ -62,7 +62,7 @@ INSERT INTO `item_loot_template`
 (`Entry`,     `Item`,     `reference`,        `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ---------------------------------------------------------------------------------------------------------------------------------
 (@Entry,      40753,      0,                 100,        0,          1,          1,          '1x Emblem of Style'),
-(@Entry,      29434,      0,                 100,        0,          20,         20,         '20x Honor Coin'), -- PvP Only Reward
+(@Entry,      40752,      0,                 100,        0,          3,          3,          '3x Emblem of Heroism'),
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,      34052,      0,                 100,        0,          5,          5,          '5x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
@@ -123,7 +123,7 @@ INSERT INTO `item_loot_template`
 -- ----------------------------------------------------------------------------------------------------------------------
 (`Entry`,   `Item`,     `reference`,    `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------
-(@Entry,    1,          @Ref_Bombs,     100,        1,          4,          4,          'Engineering Bomb'),
+(@Entry,    1,          @Ref_Bombs,     100,        1,          2,          2,          'Engineering Bomb'),
 (@Entry,    2,          @Ref_EngiItem,  5,          2,          1,          1,          'Engineering Item');
 -- ----------------------------------------------------------------------------------------------------------------------
 
@@ -133,10 +133,10 @@ INSERT INTO `reference_loot_template`
 -- ----------------------------------------------------------------------------------------------------------
 (`Entry`,       `Item`,     `Chance`,  `groupid`,  `mincount`,  `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------
-(@Ref_Bombs,    10586,      0,          1,          1,          1,          'The Big One'),
-(@Ref_Bombs,    10646,      0,          1,          1,          1,          'Goblin Sapper Charge'),
-(@Ref_Bombs,    4395,       0,          1,          1,          1,          'Goblin Land Mine'),
-(@Ref_Bombs,    10514,      0,          1,          1,          1,          'Mithril Frag Bomb');
+(@Ref_Bombs,    10586,      0,          1,          2,          2,          'The Big One'),
+(@Ref_Bombs,    10646,      0,          1,          2,          2,          'Goblin Sapper Charge'),
+(@Ref_Bombs,    4395,       0,          1,          2,          2,          'Goblin Land Mine'),
+(@Ref_Bombs,    10514,      0,          1,          2,          2,          'Mithril Frag Bomb');
 -- ----------------------------------------------------------------------------------------------------------
 
 -- Reference template - Engineering Item
@@ -220,7 +220,7 @@ INSERT INTO `reference_loot_template`
 (@Ref_BoPBlue,    20444,       0,        5,          1,           1,       'Sentinel''s Medallion');
 -- ----------------------------------------------------------------------------------------------------------
 -- Make these items BoE
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`bonding` = 2 WHERE `npc_vendor`.`entry` = @Ref_BoPBlue;
+UPDATE `item_template` it INNER JOIN `reference_loot_template` rt ON it.`entry` = rt.`item` SET it.`bonding` = 2, it.`maxcount`=0 WHERE rt.`entry` = @Ref_BoPBlue;
 -- ----------------------------------------------------------------------------------------------------------
 
 -- Reference template - PvE Hat
