@@ -7,64 +7,6 @@
 -- Azshara Crater central area creatures
 -- -----------------------------------
 
--- Naga
-SET @Naga_Engineer = 17721;
-SET @Naga_Sorceress = 17722;
-SET @Naga_Myrmidon = 17800;
-SET @Naga_Siren = 17801;
-SET @Naga_Warrior = 17802;
-SET @Naga_Oracle = 17803;
-SET @Naga_Slavemaster = 17805;
-SET @Naga_WaterElemental = 17917;
-SET @Naga_Ambusher = 21865;
-SET @Naga_Guardian = 21873;
-SET @Naga_Defender = 17958;
-SET @Naga_Soothsayer = 17960;
-SET @Naga_Enchantress = 17961;
-SET @Naga_Champion = 17957;
-SET @Naga_Emissary = 18681;
--- Murlocs
-SET @Murloc_Coastrunner = 126;
-SET @Murloc_Tidehunter = 127;
-SET @Murloc_Flesheater = 422;
-SET @Murloc_Hunter = 458;
-SET @Murloc_Netter = 513;
-SET @Murloc_Oracle = 517;
-SET @Murloc_Nightcrawler = 544;
-SET @Murloc_Tidecaller = 545;
-SET @Murloc_Scout = 578;
-SET @Crawler = 6250;
--- Fields
-SET @Grovestalker_Lynx = 21022;
-SET @Wandering_Ancient = 12836;
--- Wreckage
-SET @Buzzard = 2830;
-SET @Giant_Buzzard = 2831;
-SET @Wandering_Skeleton = 10816;
--- Furbolg Hold
-SET @Furbolg_Hunter = 26356;
-SET @Furbolg_Warrior = 26357;
-SET @Furbolg_Shaman = 26428;
-SET @Furbolg_Trapper = 26434;
-SET @Furbolg_Elder = 26436;
-SET @Furbolg_Ursa = 46437;
-SET @Furbolg_Den_Watcher = 46438;
-SET @Lupine_Delusion = 5097;
-SET @Water_Terror = 30633;
-SET @Tamed_Bear = 5433;
--- Satyr camp
-SET @FelSatyr_Satyr = 7105;
-SET @FelSatyr_Rogue = 7106;
-SET @FelSatyr_Trickster = 7107;
-SET @FelSatyr_Betrayer = 7108;
-SET @FelSatyr_Felsworn = 7109;
-SET @FelSatyr_Shadowstalker = 7110;
-SET @FelSatyr_Hellcaller = 7111;
-SET @Felhound = 6010;
--- Elites
-SET @Xavaric = 10648;
-SET @Snarlax_Snowpelt = 46439;
-
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Central';
 INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
@@ -255,9 +197,9 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Furbolg_Shaman, 37, 1, 1, 150.215, -340.423, 244.287, 3.46801, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 160.789, -351.538, 244.753, 4.08298, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 178.287, -361.315, 244.579, 3.85128, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 261.387, -369.306, 258.876, 3.92515, 300, 5, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 261.387, -369.306, 258.876, 3.92515, 300, 5, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 278.012, -349.5, 259.415, 1.47471, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 302.377, -346.111, 259.842, 3.3793, 300, 5, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 302.377, -346.111, 259.842, 3.3793, 300, 5, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 302.966, -363.017, 261.157, 3.86625, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Warrior, 37, 1, 1, 298.618, -366.744, 260.589, 0.752146, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 272.413, -340.038, 259.268, 4.88177, 300, 0, 0, 'Crater_Central'),
@@ -267,7 +209,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Furbolg_Warrior, 37, 1, 1, 327.434, -333.424, 267.579, 3.04787, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 320.503, -337.534, 267.394, 0.915512, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 315.893, -332.174, 267.521, 0.200799, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 341.807, -326.558, 266.895, 1.44721, 300, 5, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 341.807, -326.558, 266.895, 1.44721, 300, 5, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 314.044, -360.135, 261.827, 0.69167, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Warrior, 37, 1, 1, 286.687, -375.677, 259.293, 3.27563, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 279.192, -374.915, 259.171, 5.91849, 300, 0, 0, 'Crater_Central'),
@@ -279,7 +221,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Furbolg_Ursa, 37, 1, 1, 231.971, -406.295, 252.227, 2.11717, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 205.346, -383.778, 249.247, 2.51216, 300, 5, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 181.879, -428.148, 249.968, 3.19709, 300, 5, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 165.752, -414.619, 249.283, 0.04373, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 165.752, -414.619, 249.283, 0.04373, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 163.111, -398.113, 248.923, 0.287196, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 171.028, -394.929, 248.97, 3.67619, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 198.721, -421.464, 247.252, 1.73861, 300, 0, 0, 'Crater_Central'),
@@ -287,20 +229,20 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Furbolg_Elder, 37, 1, 1, 199.851, -411.542, 247.372, 4.92732, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 190.811, -421.792, 247.668, 0.75686, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 205.948, -417.348, 248.233, 2.92061, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 191.803, -439.193, 250.588, 1.3184, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 191.803, -439.193, 250.588, 1.3184, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 215.658, -436.962, 251.597, 2.35907, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 222.244, -424.242, 251.847, 3.29368, 300, 0, 0, 'Crater_Central'),
 (@Snarlax_Snowpelt, 37, 1, 1, 206.922, -442.662, 251.375, 1.89174, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 234.464, -349.671, 244.392, 2.00251, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 230.64, -342.751, 244.575, 5.19515, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 230.64, -342.751, 244.575, 5.19515, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 257.107, -312.726, 262.693, 1.8651, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 243.69, -301.911, 262.444, 0.0272651, 300, 5, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 309.948, -303.682, 258.287, 0.600609, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 308.964, -298.869, 259.496, 0.0429761, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 243.69, -301.911, 262.444, 0.0272651, 300, 5, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 309.948, -303.682, 258.287, 0.600609, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 308.964, -298.869, 259.496, 0.0429761, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 341.815, -288.817, 257.804, 2.40704, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 335.342, -289.122, 257.986, 1.07579, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 337.99, -283.231, 257.775, 4.93209, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 380.538, -274.66, 265.336, 2.41097, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 380.538, -274.66, 265.336, 2.41097, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 386.83, -255.278, 270.376, 1.18967, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 389.416, -249.338, 270.491, 4.34304, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 228.165, -284.746, 263.068, 5.55021, 300, 0, 0, 'Crater_Central'),
@@ -310,13 +252,13 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Furbolg_Warrior, 37, 1, 1, 271.267, -284.848, 272.688, 1.99706, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 262.337, -284.913, 272.625, 0.705082, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Ursa, 37, 1, 1, 235.41, -323.607, 260.147, 1.26967, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 226.008, -298.092, 262.048, 5.99237, 300, 5, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 226.008, -298.092, 262.048, 5.99237, 300, 5, 0, 'Crater_Central'),
 (@Furbolg_Warrior, 37, 1, 1, 295.134, -303.668, 267.317, 5.20934, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 301.719, -307.215, 267.242, 3.24192, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 296.998, -312.687, 266.459, 1.59259, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Trapper, 37, 1, 1, 350.833, -183.978, 270.924, 1.42373, 300, 5, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 405.507, -219.953, 271.761, 1.98529, 300, 0, 0, 'Crater_Central'),
-(@Furbolg_Den_Watcher, 37, 1, 1, 384.366, -211.65, 271.76, 0.748289, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 405.507, -219.953, 271.761, 1.98529, 300, 0, 0, 'Crater_Central'),
+(@Furbolg_Pathfinder, 37, 1, 1, 384.366, -211.65, 271.76, 0.748289, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Shaman, 37, 1, 1, 492.793, -78.3921, 260.896, 4.05089, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Elder, 37, 1, 1, 488.836, -83.4873, 260.419, 1.04673, 300, 0, 0, 'Crater_Central'),
 (@Furbolg_Hunter, 37, 1, 1, 529.715, -8.07329, 269.963, 3.83098, 300, 0, 0, 'Crater_Central'),

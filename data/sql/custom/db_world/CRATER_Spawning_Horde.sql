@@ -7,34 +7,6 @@
 -- Azshara Crater Horde area creatures
 -- -----------------------------------
 
--- Giants
-SET @Rock_Giant = 7765;
-SET @Stone_Giant = 23725;
--- Raptors
-SET @Raptor_Raptor = 20734;
-SET @Raptor_Lashtail = 20751;
-SET @Raptor_Devourer = 20754;
--- Serpent
-SET @Serpent_Serpent = 20749;
--- Croc
-SET @Mangal_Crocolisk = 28002;
--- Tiki warrior
-SET @Enchanted_Tiki_Warrior = 28927;
--- Dragonspawn
-SET @Dragonspawn_Dragonspawn = 7042;
-SET @Dragonspawn_Wyrmkin = 7043;
-SET @Dragonspawn_Broodling = 7049;
--- Gnolls
-SET @Gnoll_Alpha = 11840;
-SET @Gnoll_Mystic = 11838;
-SET @Gnoll_Brute = 11839;
-SET @Gnoll_Shaman = 11837;
-SET @Gnoll_Gnoll = 10991;
--- Elites
-SET @Earthshaker = 12203;
-SET @Hexxer = 7995;
-SET @Shirek = 32485;
-
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Horde';
 INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES

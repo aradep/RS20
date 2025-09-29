@@ -7,7 +7,7 @@
 -- Azshara Crater creature_template changes
 -- -----------------------------------
 
--- Central area
+-- Creature IDs
 
 -- Naga
 SET @Naga_Engineer = 17721;
@@ -49,8 +49,8 @@ SET @Furbolg_Warrior = 26357;
 SET @Furbolg_Shaman = 26428;
 SET @Furbolg_Trapper = 26434;
 SET @Furbolg_Elder = 26436;
-SET @Furbolg_Ursa = 46437;
-SET @Furbolg_Den_Watcher = 46438;
+SET @Furbolg_Ursa = 2170;
+SET @Furbolg_Pathfinder = 2167;
 SET @Lupine_Delusion = 5097;
 SET @Water_Terror = 30633;
 SET @Tamed_Bear = 5433;
@@ -97,8 +97,10 @@ SET @Goblin_Worker = 674;
 SET @Goblin_Miner = 1094;
 SET @Goblin_Foreman = 1095;
 SET @Goblin_Geologist = 1096;
-SET @Glassweb_Spider = 4456;
 SET @Crystal_Spider = 5856;
+-- Ancients
+SET @Wandering_Protector = 12836;
+SET @Withered_Protector = 7149;
 -- Ogres
 SET @Ogre_Enforcer = 11440;
 SET @Ogre_Mauler = 11442;
@@ -120,6 +122,7 @@ SET @Gorloc_Hunter = 25700;
 SET @Gorloc_Dredger = 25701;
 SET @Gorloc_Hatchling = 28140;
 SET @Gorloc_Oracle = 25688;
+SET @Water_Elemental = 17917;
 -- Outside wolvar hold
 SET @Wolvar_Tracker = 28077;
 SET @Wolvar_Hunter = 28079;
@@ -174,6 +177,7 @@ SET @Voidshrieker = 18870;
 SET @Shadowfiend = 27834;
 SET @Void_Lord = 32230;
 SET @Void_Beast = 33806;
+
 -- Elites
 SET @Tanak_Ragepaw = 31911;
 SET @Xavaric = 10648;
@@ -190,6 +194,8 @@ SET @Snarlax_Snowpelt = 46439;
 SET @Shirek = 32485;
 SET @King_Gordok = 11501;
 SET @Dark_Illidan = 71000;
+
+-- Creature template changes
 
 -- Naga
 UPDATE `creature_template` SET `name`='Naga Ambusher' WHERE `entry`=@Naga_Ambusher;
@@ -220,7 +226,7 @@ UPDATE `creature_template` SET `name`='Redfang Shaman' WHERE `entry`=@Furbolg_Sh
 UPDATE `creature_template` SET `name`='Redfang Trapper' WHERE `entry`=@Furbolg_Trapper;
 UPDATE `creature_template` SET `name`='Redfang Elder' WHERE `entry`=@Furbolg_Elder;
 UPDATE `creature_template` SET `name`='Redfang Ursa' WHERE `entry`=@Furbolg_Ursa;
-UPDATE `creature_template` SET `name`='Redfang Den Watcher' WHERE `entry`=@Furbolg_Den_Watcher;
+UPDATE `creature_template` SET `name`='Redfang Den Watcher' WHERE `entry`=@Furbolg_Pathfinder;
 -- Satyr camp
 UPDATE `creature_template` SET `name`='Darkfire Satyr' WHERE `entry`=@FelSatyr_Satyr;
 UPDATE `creature_template` SET `name`='Darkfire Rogue' WHERE `entry`=@FelSatyr_Rogue;
@@ -286,19 +292,21 @@ UPDATE `creature_template` SET `name`='Wolvar Pup' WHERE `entry`=@Wolvar_Pup;
 UPDATE `creature_template` SET `name`='Ragepaw Spearbearer' WHERE `entry`=@Wolvar_Spearbearer;
 UPDATE `creature_template` SET `name`='Ragepaw Ravager' WHERE `entry`=@Wolvar_Ravager;
 UPDATE `creature_template` SET `name`='Ragepaw Berserker' WHERE `entry`=@Wolvar_Berserker;
--- Highborne/Caves/Phytobeasts
+-- Undead
 UPDATE `creature_template` SET `name`='Rotting Highborne' WHERE `entry`=@Rotting_Highborne;
 UPDATE `creature_template` SET `name`='Skeletal Highborne' WHERE `entry`=@Skeletal_Highborne;
 UPDATE `creature_template` SET `name`='Restless Highborne' WHERE `entry`=@Anguished_Highborne;
 UPDATE `creature_template` SET `name`='Suffering Spectre' WHERE `entry`=@Suffering_Highborne;
 UPDATE `creature_template` SET `name`='Lost Soul' WHERE `entry`=@Highborne_Lichling;
+-- Moss Beasts
 UPDATE `creature_template` SET `name`='Cave Beast' WHERE `entry`=@Cave_Beast;
 UPDATE `creature_template` SET `name`='Cave Creeper' WHERE `entry`=@Cave_Creeper;
 UPDATE `creature_template` SET `name`='Cave Rager' WHERE `entry`=@Cave_Rager;
 UPDATE `creature_template` SET `name`='Animated Sap' WHERE `entry`=@Sap_Beast;
--- Burning Trees / Elementals / Turtle-- Burning Trees / Elementals / Turtles
+-- Ancients
 UPDATE `creature_template` SET `name`='Withered Treant' WHERE `entry`=@WitheredAncient_Treant;
 UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry`=@WitheredAncient_Protector;
+-- Harpies
 UPDATE `creature_template` SET `name`='Harpy Matriarch' WHERE `entry`=@Harpy_Ripper;
 UPDATE `creature_template` SET `name`='Harpy Scout' WHERE `entry`=@Harpy_Harpy;
 UPDATE `creature_template` SET `name`='Harpy Rogue' WHERE `entry`=@Harpy_Roguefeather;
@@ -306,9 +314,11 @@ UPDATE `creature_template` SET `name`='Harpy Soldier' WHERE `entry`=@Harpy_Slaye
 UPDATE `creature_template` SET `name`='Harpy Ambusher' WHERE `entry`=@Harpy_Ambusher;
 UPDATE `creature_template` SET `name`='Harpy Windcaller' WHERE `entry`=@Harpy_Windcaller;
 UPDATE `creature_template` SET `name`='Harpy Storm Witch' WHERE `entry`=@Harpy_Storm_Witch;
+-- Turtles
 UPDATE `creature_template` SET `name`='Steelshell Tortoise' WHERE `entry`=@Turtle_Tortoise;
 UPDATE `creature_template` SET `name`='Steelshell Snapper' WHERE `entry`=@Turtle_Snapper;
 UPDATE `creature_template` SET `name`='Steelshell Borer' WHERE `entry`=@Turtle_Borer;
+-- Elementals
 UPDATE `creature_template` SET `name`='Fire Elemental' WHERE `entry`=@Fire_Elemental;
 UPDATE `creature_template` SET `name`='Air Elemental' WHERE `entry`=@Air_Elemental;
 -- Temple Ruins Satyr
@@ -328,7 +338,6 @@ UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry`=@Voidshrieker;
 UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry`=@Shadowfiend;
 UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry`=@Void_Lord;
 -- Elites
-
 UPDATE `creature_template` SET `name`='Tanak Ragepaw' WHERE `entry`=@Tanak_Ragepaw;
 UPDATE `creature_template` SET `name`='Xavaric' WHERE `entry`=@Xavaric;
 UPDATE `creature_template` SET `name`='King Gorloc' WHERE `entry`=@King_Gorloc;
@@ -345,35 +354,171 @@ UPDATE `creature_template` SET `name`='Shi\'rek' WHERE `entry`=@Shirek;
 UPDATE `creature_template` SET `name`='Warlord Skullcrush' WHERE `entry`=@King_Gordok;
 UPDATE `creature_template` SET `name`='Shadow of the Betrayer' WHERE `entry`=@Dark_Illidan;
 
--- Custom NPCs
+-- Custom creatures
 REPLACE INTO `creature_template` 
-(`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `unit_flags2`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES 
--- Giant fighting elementals
-(51502, 'Firelord',  '','', 0, 83, 83,  795, 131, 1, 1.14286, 2.1, 3, 1, 33587200, 2048, 7, 0, 1, 2, 'SmartAI', ''),
-(54435, 'Windseeker','','', 0, 83, 83,  290, 0, 1, 1, 1.6, 3, 1, 33587200, 2048, 4, 4, 1, 2, 'SmartAI', ''),
--- Elites
-(31911, 'Tanak Ragepaw', '', '', 0, 82, 82, 16, 0, 0.8, 1.1, 2, 3, 1, 32768, 2048, 7, 4, 1, 0, '', ''),
-(7995, 'Hexlord Rashiki', '', '', 0, 82, 82, 7, 0, 0.8, 1.1, 1, 3, 8, 32768, 2048, 7, 4, 1, 0, 'SmartAI', ''),
-(10648, 'Xavaric', NULL, NULL, 0, 81, 82, 90, 0, 0.9, 1.1, 1, 1, 2, 0, 2048, 3, 0, 1, 0, 'SmartAI', ''),
-(11501, 'Warlord Skullcrush', NULL, NULL, 0, 82, 82, 45, 0, 0.8, 1.1, 1, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
-(12203, 'Earthshaker', 'The Evergreen', NULL, 0, 82, 82, 91, 0, 0.8, 1.1, 2, 3, 1, 64, 2048, 5, 12, 1, 0, 'SmartAI', ''),
-(12800, 'Chimaereon', NULL, NULL, 0, 82, 82, 16, 0, 0.8, 1.1, 2, 3, 1, 64, 2048, 1, 65541, 1, 0, 'SmartAI', ''),
-(14321, 'Watcher One-Eye', NULL, NULL, 5734, 82, 82, 45, 1, 0.8, 1.1, 0.65, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
-(14323, 'Grimgut', NULL, NULL, 5733, 82, 82, 45, 1, 0.8, 1.1, 1, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
-(14324, 'Mokor the Tactician', NULL, NULL, 5742, 82, 82, 45, 1, 0.8, 1.1, 0.8, 3, 2, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
-(14326, 'Guard-Captain Clogg', NULL, NULL, 5735, 82, 82, 45, 1, 0.8, 1.1, 1, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
-(25693, 'King Gorloc', '', '', 0, 82, 82, 18, 0, 0.8, 1.1, 2.5, 3, 1, 0, 2048, 7, 4, 1, 0, '', ''),
-(46439, 'Snarlax Snowpelt', '', '', 0, 82, 82, 2001, 0, 0.8, 1.1, 1, 3, 2, 32768, 2048, 7, 4, 1, 0, 'SmartAI', ''),
-(32485, 'Shi\'rek', 'The Devourer', '', 0, 83, 83, 14, 0, 1, 1.14286, 1, 3, 1, 0, 2048, 1, 4, 1, 0, 'SmartAI', ''),
-(50329, 'Phytos', 'The Glowing One', '', 0, 82, 82, 16, 0, 0.8, 1.1, 0.55, 3, 1, 32832, 2048, 4, 332, 1, 0, 'SmartAI', ''),
-(71000, 'Shadow of the Betrayer', '', '', 0, 82, 82, 16, 0, 0.8, 1.1, 2, 3, 1, 514, 2048, 3, 76, 1, 1, 'SmartAI', ''),
--- Peacekeepers
-(4624, 'Kirin Tor Guardian', NULL, NULL, 0, 80, 80, 2008, 0, 1, 1, 1.15, 1, 8, 32768, 2048, 7, 0, 1, 0, 'SmartAI', ''),
-(64624, 'Orc Bruiser', NULL, NULL, 0, 80, 80, 2008, 0, 1, 1, 1.15, 1, 1, 32768, 2048, 7, 0, 1, 0, 'SmartAI', '');
+(`entry`, `name`,                   `subname`,              `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
+-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(51502, 'Firelord',                 '',                     83,         83,         795,        131,        1,              1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
+(54435, 'Windseeker',               '',                     83,         83,         290,        0,          1,              1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
+(32565, 'Commander Gara',           'Azsharan Expedition',  82,         82,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
+(33642, 'Purveyor Delryn',          'Azsharan Expedition',  82,         82,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
+(39283, 'Farseer Serena',           'Azsharan Expedition',  82,         82,         2007,       3,          1,              1,              1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(52291, 'Spymaster Jarre',          'Azsharan Expedition',  82,         82,         2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(30469, 'Forward Scout Razza',      'Azsharan Expedition',  82,         82,         2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(30436, 'Trixy the Fixer',          'Supplies',             80,         80,         2007,       131,        1,              1.14286,        1.5,        0,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(5153,  'Packmaster Stonebrow',     'Supplies',             80,         80,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(22442, 'Malik Stillblade',         'Supplies',             80,         80,         2007,       131,        1,              1.14286,        1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(4624,  'Tower Guardian',           '',                     23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(64624, 'Orc Bruiser',              '',                     23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(31911, 'Tanak Ragepaw',            '',                     23,         23,         16,         0,          0.8,            1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(7995,  'Hexlord Rashiki',          '',                     23,         23,         7,          0,          0.8,            1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(10648, 'Xavaric',                  '',                     23,         23,         90,         0,          0.9,            1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
+(11501, 'Warlord Skullcrush',       '',                     23,         23,         45,         0,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(12203, 'Earthshaker',              'The Evergreen',        23,         23,         91,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
+(12800, 'Chimaereon',               '',                     23,         23,         16,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
+(14321, 'Watcher One-Eye',          '',                     23,         23,         45,         1,          0.8,            1.1,            0.65,       3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(14323, 'Grimgut',                  '',                     23,         23,         45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(14324, 'Mokor the Tactician',      '',                     23,         23,         45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
+(14326, 'Guard-Captain Clogg',      '',                     23,         23,         45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(25693, 'King Gorloc',              '',                     23,         23,         18,         0,          0.8,            1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(46439, 'Snarlax Snowpelt',         '',                     23,         23,         2001,       0,          0.8,            1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(32485, 'Shirek',                   'The Devourer',         23,         23,         14,         0,          1,              1.1,            1,          3,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
+(50329, 'Phytos',                   'The Glowing One',      23,         23,         16,         0,          0.8,            1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
+(71000, 'Shadow of the Betrayer',   '',                     23,         23,         16,         0,          0.8,            1.1,            2,          3,      1,              514,            2048,           3,      76,             1,              'SmartAI');
+-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-- Models
 REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES 
-(51502, 11121, 1, 2, 1),
-(54435, 14992, 1, 2, 1);
+(51502, 11121, 1, 2, 1), -- Firelord
+(54435, 14992, 1, 2, 1), -- Windseeker
+(4624, 28780, 1, 2, 1), -- Kirin Tor Guardian
+(64624, 4261, 1, 2, 1), -- Orc Bruiser
+(31911, 25376, 1, 2, 1), -- Tanak Ragepaw
+(7995, 7803, 1, 2, 1), -- Hexlord
+(10648, 2879, 1, 2, 1), -- Xavaric
+(11501, 11583, 1, 2, 1), -- Warlord Skullcrush
+(12203, 23356, 1, 2, 1), -- Earthshaker
+(12800, 4269, 1, 2, 1), -- Chimaereon
+(14321, 11561, 1, 2, 1), -- Watcher One-Eye
+(14323, 11561, 1, 2, 1), -- Grimgut
+(14324, 11537, 1, 2, 1), -- Mokor the Tactician
+(14326, 11561, 1, 2, 1), -- Guard-Captain Clogg
+(25693, 22607, 1, 2, 1), -- King Gorloc
+(46439, 23774, 1, 2, 1), -- Snarlax Snowpelt
+(32485, 28052, 1, 2, 1), -- Shirek
+(50329, 28133, 1, 2, 1), -- Phytos
+(71000, 26348, 1, 2, 1), -- Shadow of the Betrayer
+(32565, 28059, 1, 2, 1), -- Commander Gara
+(33642, 28770, 1, 2, 1), -- Purveyor Delryn
+(39283, 31391, 1, 2, 1), -- Farseer Serena
+(52291, 30465, 1, 2, 1), -- Spymaster Jarre
+(30469, 15577, 1, 2, 1), -- Forward Scout Razza
+(30436, 23080, 1, 2, 1), -- Trixy the Fixer
+(5153, 3072, 1, 2, 1),   -- Packmaster Stonebrow
+(22442, 27888, 1, 2, 1); -- Malik Stillblade
+
+-- Gossip
+
+-- Purveyor Delryn
+SET @entry = 33642;
+SET @text = 'Welcome to the Crater, $N. I hope you brought some potions...';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text` WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Farseer Serena
+SET @entry = 39283;
+SET @text = 'Most children of Azeroth will never get to see this place.';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text` WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Forward Scout Razza
+SET @entry = 30469;
+SET @text = 'What can Razza do for ye, mon?';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text` WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Camp Commander Gara
+SET @entry = 32565;
+SET @text = 'Don\'t be startin\' any fights in my camp, got it?';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text`              WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Spymaster Jarre
+SET @entry = 52291;
+SET @text = 'Stay on yer toes, $R. It may be pretty \'round here but beauty attracts danger.';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text`              WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Packmaster Stonebrow
+SET @entry = 5153;
+SET @text = 'What kin I do for ye?';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text`              WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+-- Emoting interact
+REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 1, 69, 0, NULL);
+
+-- Malik Stillblade
+SET @entry = 22442;
+SET @text = 'How may I assist you?';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text`              WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Trixy the Fixer
+SET @entry = 30436;
+SET @text = 'Got something that needs fixin\'?';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text`              WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Not a trainer anymore
+DELETE FROM `npc_trainer` WHERE `id` IN (5153,30436,22442);
 
 -- Turn into critters
 UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `speed_walk`=0.7, `speed_run`=1.1,`damagemodifier`=1, `healthmodifier`=1.2, `lootid`=0, `minlevel`=1, `maxlevel`=1, `type`=8, `flags_extra`=0 WHERE `entry` IN (

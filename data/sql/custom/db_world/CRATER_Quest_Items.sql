@@ -7,12 +7,12 @@
 -- Azshara Crater quest items
 -- -----------------------------------
 
+-- Clear blizzlike
 UPDATE `item_template` SET `stackable`=50, `buyprice`=0, `sellprice`=0, `itemlevel`=1, `bonding`=4,`startquest`=0,`requiredlevel`=0,`class`=12,`subclass`=0,`Flags`=2048 WHERE `entry` IN (33351,15416,20935,3553,41557,10714,5784,3716,5064,34692,12923,38512,20741,4758,4753,21982,36786,44921,3348,22578,21885,22572,22451,22573,22452,22574,21884,22577,22456,43670);
 UPDATE `item_template` SET `description`='' WHERE  `entry` IN (38512,20741,10714,43670);
 
--- Reports
-UPDATE `item_template` SET `quality`=1, `maxcount`=  1, `spellid_1`=0, `name`='Razza\'s Report',            `description`='' WHERE `entry`=3721;
 -- Normal quests
+UPDATE `item_template` SET `quality`=1, `maxcount`=  1, `spellid_1`=0, `name`='Razza\'s Report',            `description`='' WHERE `entry`=3721;
 UPDATE `item_template` SET `quality`=2, `maxcount`= 20, `spellid_1`=0, `name`='Gorloc Fin',                 `description`='' WHERE `entry`=5784;
 UPDATE `item_template` SET `quality`=3, `maxcount`=  5, `spellid_1`=0, `name`='Pristine Lynx Pelt',         `description`='' WHERE `entry`=4742;
 UPDATE `item_template` SET `quality`=2, `maxcount`=  8, `spellid_1`=0, `name`='Vulture Talon',              `description`='' WHERE `entry`=5064;
@@ -25,7 +25,6 @@ UPDATE `item_template` SET `quality`=2, `maxcount`= 20, `spellid_1`=0, `name`='O
 UPDATE `item_template` SET `quality`=2, `maxcount`=  6, `spellid_1`=0, `name`='Raptor Egg',                 `description`='' WHERE `entry`=46364;
 UPDATE `item_template` SET `quality`=2, `maxcount`= 12, `spellid_1`=0, `name`='Thick Crocolisk Hide',       `description`='' WHERE `entry`=3348;
 UPDATE `item_template` SET `quality`=2, `maxcount`= 5,  `spellid_1`=0, `name`='Enchanted Tiki Mask',        `description`='' WHERE `entry`=43670;
--- Motes
 UPDATE `item_template` SET `quality`=2, `maxcount`= 10, `duration`=1800, `flagscustom`=1, `description`='It\'s slowly fizzling out of existence..', `name`='Mote of Water'  WHERE `entry`=22578;
 UPDATE `item_template` SET `quality`=2, `maxcount`= 10, `duration`=1800, `flagscustom`=1, `description`='It\'s slowly fizzling out of existence..', `name`='Mote of Air'    WHERE `entry`=22572;
 UPDATE `item_template` SET `quality`=2, `maxcount`= 10, `duration`=1800, `flagscustom`=1, `description`='It\'s slowly fizzling out of existence..', `name`='Mote of Fire'   WHERE `entry`=22574;

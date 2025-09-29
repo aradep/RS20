@@ -7,68 +7,6 @@
 -- Azshara Crater Alliance area creatures
 -- -----------------------------------
 
--- Goblin mine
-SET @Goblin_Worker = 674;
-SET @Goblin_Miner = 1094;
-SET @Goblin_Foreman = 1095;
-SET @Goblin_Geologist = 1096;
-SET @Glassweb_Spider = 4456;
-SET @Crystal_Spider = 5856;
--- Ancients
-SET @Wandering_Protector = 12836;
-SET @Withered_Protector = 7149;
--- Ogres
-SET @Ogre_Enforcer = 11440;
-SET @Ogre_Mauler = 11442;
-SET @Ogre_Mage = 11443;
-SET @Ogre_Hyena = 12418;
-SET @Ogre_Brute = 11441;
-SET @Ogre_Reaver = 11450;
-SET @Ogre_Mage_Lord = 11444;
-SET @Ogre_Captain = 11445;
-SET @Ogre_Warlock = 11448;
-SET @Doomguard = 11859;
-SET @Hyena_alpha = 13036;
--- Moonwell Gorlocs
-SET @Gorloc_Waddler = 25685;
-SET @Gorloc_Gibberer = 25686;
-SET @Gorloc_Steam_Belcher = 25687;
-SET @Gorloc_Mud_Splasher = 25699;
-SET @Gorloc_Hunter = 25700;
-SET @Gorloc_Dredger = 25701;
-SET @Gorloc_Hatchling = 28140;
-SET @Gorloc_Oracle = 25688;
-SET @Water_Elemental = 17917;
--- Wolvar hold exterior
-SET @Wolvar_Tracker = 28077;
-SET @Wolvar_Hunter = 28079;
-SET @Wolvar_Scavenger = 28081;
-SET @Wolvar_Spearbearer = 28080;
-SET @Wolvar_Ravager = 28078;
-SET @Wolvar_Berserker = 28076;
-SET @Wolvar_Pup = 28139;
--- Wolvar hold undead
-SET @Rotting_Highborne = 11477;
-SET @Skeletal_Highborne = 11476;
-SET @Anguished_Highborne = 7524;
-SET @Suffering_Highborne = 7523;
-SET @Highborne_Lichling = 6117;
-SET @Highborne_Apparition = 6116;
-SET @Cave_Beast = 4387;
-SET @Cave_Creeper = 4382;
-SET @Cave_Rager = 4385;
-SET @Sap_Beast = 4020;
--- Elites
-SET @Tanak_Ragepaw = 31911;
-SET @King_Gorloc = 25693;
-SET @Phytos = 50329;
-SET @Guard_Fengus = 14321;
-SET @Guard_Slipkik = 14323;
-SET @Guard_Moldar = 14326;
-SET @Chorush_the_Observer = 14324;
-SET @Chimaeeon = 12800;
-SET @King_Gordok = 11501;
-
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Alliance';
 INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
@@ -90,10 +28,10 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (22442, 37, 1, 1, 727.335, 296.277, 281.78, 6.17935, 300, 0, 0, 'Crater_Alliance'),
 -- -------------------------------------------------------------------------------------
 -- Wandering Ancient
-(@Wandering_Protector, 37, 1, 1, 748.324, 216.923, 275.715, 3.99918, 300, 5, 0, 'Crater_Alliance'),
-(@Wandering_Protector, 37, 1, 1, 760.143, 365.819, 271.12, 4.66284, 300, 5, 0, 'Crater_Alliance'),
-(@Wandering_Protector, 37, 1, 1, 922.264, 347.807, 269.943, 3.257, 300, 5, 0, 'Crater_Alliance'),
-(@Withered_Protector, 37, 1, 1, -366.382, -221.903, 297.206, 1.95417, 300, 10, 0, 'Crater_Alliance'),
+(@Wandering_Ancient, 37, 1, 1, 748.324, 216.923, 275.715, 3.99918, 300, 5, 0, 'Crater_Alliance'),
+(@Wandering_Ancient, 37, 1, 1, 760.143, 365.819, 271.12, 4.66284, 300, 5, 0, 'Crater_Alliance'),
+(@Wandering_Ancient, 37, 1, 1, 922.264, 347.807, 269.943, 3.257, 300, 5, 0, 'Crater_Alliance'),
+(@Withered_Ancient, 37, 1, 1, -366.382, -221.903, 297.206, 1.95417, 300, 10, 0, 'Crater_Alliance'),
 (@Chimaeeon, 37, 1, 1, 733.843, 445.529, 273.653, 3.19491, 300, 15, 0, 'Crater_Alliance'), -- Chimareon (Elite)
 -- Goblin miners
 (@Goblin_Miner, 37, 1, 1, 1091.39, -72.6326, 317.767, 3.57184, 300, 0, 0, 'Crater_Alliance'),
