@@ -17,7 +17,7 @@ SET @Naga_Siren = 17801;
 SET @Naga_Warrior = 17802;
 SET @Naga_Oracle = 17803;
 SET @Naga_Slavemaster = 17805;
-SET @Naga_Water_Elemental = 17917;
+SET @Naga_WaterElemental = 17917;
 SET @Naga_Ambusher = 21865;
 SET @Naga_Guardian = 21873;
 SET @Naga_Defender = 17958;
@@ -39,6 +39,7 @@ SET @Crawler = 6250;
 -- Fields
 SET @Grovestalker_Lynx = 21022;
 SET @Wandering_Ancient = 12836;
+SET @Withered_Ancient = 7149;
 -- Wreckage
 SET @Buzzard = 2830;
 SET @Giant_Buzzard = 2831;
@@ -99,8 +100,8 @@ SET @Goblin_Foreman = 1095;
 SET @Goblin_Geologist = 1096;
 SET @Crystal_Spider = 5856;
 -- Ancients
-SET @Wandering_Protector = 12836;
-SET @Withered_Protector = 7149;
+SET @Wandering_Ancient = 12836;
+SET @Withered_Ancient = 7149;
 -- Ogres
 SET @Ogre_Enforcer = 11440;
 SET @Ogre_Mauler = 11442;
@@ -146,8 +147,8 @@ SET @Sap_Beast = 4020;
 -- Temple side
 
 -- Burning trees
-SET @WitheredAncient_Treant = 7144;
-SET @WitheredAncient_Protector = 7149;
+SET @Withered_Treant = 7144;
+SET @Withered_Ancient = 7149;
 SET @Harpy_Ripper = 12579;
 SET @Harpy_Harpy = 4022;
 SET @Harpy_Roguefeather = 4023;
@@ -188,7 +189,7 @@ SET @Guard_Fengus = 14321;
 SET @Guard_Slipkik = 14323;
 SET @Guard_Moldar = 14326;
 SET @Chorush_the_Observer = 14324;
-SET @Chimaeeon = 12800;
+SET @Chimaeron = 12800;
 SET @Hexxer = 7995;
 SET @Snarlax_Snowpelt = 46439;
 SET @Shirek = 32485;
@@ -215,6 +216,7 @@ UPDATE `creature_template` SET `name`='Murloc Scout' WHERE `entry`=@Murloc_Scout
 -- Fields
 UPDATE `creature_template` SET `name`='Grovestalker Lynx' WHERE `entry`=@Grovestalker_Lynx;
 UPDATE `creature_template` SET `name`='Wandering Ancient' WHERE `entry`=@Wandering_Ancient;
+UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry`=@Withered_Ancient;
 -- Wreckage
 UPDATE `creature_template` SET `name`='Buzzard' WHERE `entry`=@Buzzard;
 UPDATE `creature_template` SET `name`='Giant Buzzard' WHERE `entry`=@Giant_Buzzard;
@@ -304,8 +306,8 @@ UPDATE `creature_template` SET `name`='Cave Creeper' WHERE `entry`=@Cave_Creeper
 UPDATE `creature_template` SET `name`='Cave Rager' WHERE `entry`=@Cave_Rager;
 UPDATE `creature_template` SET `name`='Animated Sap' WHERE `entry`=@Sap_Beast;
 -- Ancients
-UPDATE `creature_template` SET `name`='Withered Treant' WHERE `entry`=@WitheredAncient_Treant;
-UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry`=@WitheredAncient_Protector;
+UPDATE `creature_template` SET `name`='Withered Treant' WHERE `entry`=@Withered_Treant;
+UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry`=@Withered_Ancient;
 -- Harpies
 UPDATE `creature_template` SET `name`='Harpy Matriarch' WHERE `entry`=@Harpy_Ripper;
 UPDATE `creature_template` SET `name`='Harpy Scout' WHERE `entry`=@Harpy_Harpy;
@@ -347,7 +349,7 @@ UPDATE `creature_template` SET `name`='Watcher One-Eye' WHERE `entry`=@Guard_Fen
 UPDATE `creature_template` SET `name`='Grimgut' WHERE `entry`=@Guard_Slipkik;
 UPDATE `creature_template` SET `name`='Guard-Captain Clogg' WHERE `entry`=@Guard_Moldar;
 UPDATE `creature_template` SET `name`='Mokor the Tactician' WHERE `entry`=@Chorush_the_Observer;
-UPDATE `creature_template` SET `name`='Chimaereon' WHERE `entry`=@Chimaeeon;
+UPDATE `creature_template` SET `name`='Chimaereon' WHERE `entry`=@Chimaeron;
 UPDATE `creature_template` SET `name`='Hexlord Rashiki' WHERE `entry`=@Hexxer;
 UPDATE `creature_template` SET `name`='Snarlax Snowpelt' WHERE `entry`=@Snarlax_Snowpelt;
 UPDATE `creature_template` SET `name`='Shi\'rek' WHERE `entry`=@Shirek;

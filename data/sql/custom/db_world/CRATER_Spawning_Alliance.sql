@@ -31,8 +31,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Wandering_Ancient, 37, 1, 1, 748.324, 216.923, 275.715, 3.99918, 300, 5, 0, 'Crater_Alliance'),
 (@Wandering_Ancient, 37, 1, 1, 760.143, 365.819, 271.12, 4.66284, 300, 5, 0, 'Crater_Alliance'),
 (@Wandering_Ancient, 37, 1, 1, 922.264, 347.807, 269.943, 3.257, 300, 5, 0, 'Crater_Alliance'),
-(@Withered_Ancient, 37, 1, 1, -366.382, -221.903, 297.206, 1.95417, 300, 10, 0, 'Crater_Alliance'),
-(@Chimaeeon, 37, 1, 1, 733.843, 445.529, 273.653, 3.19491, 300, 15, 0, 'Crater_Alliance'), -- Chimareon (Elite)
+(@Chimaeron, 37, 1, 1, 733.843, 445.529, 273.653, 3.19491, 300, 15, 0, 'Crater_Alliance'), -- Chimareon (Elite)
 -- Goblin miners
 (@Goblin_Miner, 37, 1, 1, 1091.39, -72.6326, 317.767, 3.57184, 300, 0, 0, 'Crater_Alliance'),
 (@Goblin_Foreman, 37, 1, 1, 1123.55, -155.671, 312.365, 5.74927, 300, 0, 0, 'Crater_Alliance'),
