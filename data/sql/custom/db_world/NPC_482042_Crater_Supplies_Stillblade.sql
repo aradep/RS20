@@ -9,10 +9,10 @@
 
 -- Creature
 SET
-@Entry      = 482038,
-@Model      = 23080,
+@Entry      = 482042,
+@Model      = 27888,
 @Scale      = 1.1,
-@Name       = "Trixy the Fixer",
+@Name       = "Malik Stillblade",
 @Title      = "",
 @Icon       = "Repair", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --

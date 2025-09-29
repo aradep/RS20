@@ -29,13 +29,13 @@ SET
 
 @LogTitle                   = 'These Old Bones',
 @QuestDescription           = 'I came here to retrieve Vincent\'s body but now it looks like I\'ll be staying for dinner.$b$bYou need to finish what I started, $R. Find the Archmage and bring him down. Avenge the Deathstalkers!',
-@LogDescription             = 'Deathstalker Rafuse wants you to slay Archmage Arugal.',
+@LogDescription             = 'Deathstalker Jordan wants you to slay Archmage Arugal.',
 @AreaDescription            = '',
 @ObjectiveText1             = 'Archmage Arugal slain.',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Return to Deathstalker Rafuse.',
+@QuestCompletionLog         = 'Return to Deathstalker Jordan.',
 @RequestItems               = 'How\'d it go? Did you take the shortcut?',
 @OfferReward                = 'Thank you, $R. I can rest easy knowing that sorcerer\'s evil has been put to an end.$b$bTake this, I won\'t get much use out of it now.',
 

@@ -9,10 +9,10 @@
 
 -- Creature
 SET
-@Entry      = 482038,
-@Model      = 3072,
+@Entry      = 482043,
+@Model      = 23080,
 @Scale      = 1.1,
-@Name       = "Packmaster Stonebrow",
+@Name       = "Trixy the Fixer",
 @Title      = "",
 @Icon       = "Repair", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
@@ -27,7 +27,7 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
 -- Gossip text
-SET @text = 'What kin\' I do fer ye?';
+SET @text = 'Whoa whoa, don\'t kill me!';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE `entry`=@entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -38,6 +38,3 @@ DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Placement
-
--- Emoting interact
-REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 1, 69, 0, NULL);

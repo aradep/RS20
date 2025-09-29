@@ -12,8 +12,8 @@ SET
 @Entry      = 482036,
 @Model      = 16100,
 @Scale      = 1.2,
-@Name       = "Deathstalker Rafuse",
-@Title      = "Crazy Climber",
+@Name       = "Deathstalker Jordan",
+@Title      = "",
 @Icon       = "Speak", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7,

@@ -9,7 +9,7 @@
 
 -- Creature
 SET
-@Entry      = 482044,
+@Entry      = 482053,
 @Model      = 28770,
 @Scale      = 1.1,
 @Name       = "Purveyor Vernin",
