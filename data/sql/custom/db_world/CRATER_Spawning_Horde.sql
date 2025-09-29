@@ -169,7 +169,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Hexxer, 37, 1, 1, 282.025, 770.038, 263.773, 4.8804, 300, 0, 0, 'Crater_Horde');
 
 -- Fix wander
-UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0;
-UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0;
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0 AND `comment` = 'Crater_Horde';
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0 AND `comment` = 'Crater_Horde';
 -- Turn off equipment_id for NPCs with no creature_equip_template
 UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FROM `creature_equip_template` WHERE `creature`.`id1` = `creature_equip_template`.`creatureid`);

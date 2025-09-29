@@ -541,7 +541,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Phytos, 37, 1, 1, 979.455, 560.639, 208.858, 4.36288, 300, 0, 0, 'Crater_Alliance'); -- Phytos (Elite)
 
 -- Fix wander
-UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0;
-UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0;
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0 AND `comment` = 'Crater_Alliance';
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0 AND `comment` = 'Crater_Alliance';
 -- Turn off equipment_id for NPCs with no creature_equip_template
 UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FROM `creature_equip_template` WHERE `creature`.`id1` = `creature_equip_template`.`creatureid`);
