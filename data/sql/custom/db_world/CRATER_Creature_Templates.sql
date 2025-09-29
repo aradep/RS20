@@ -128,7 +128,7 @@ SET @Wolvar_Pup = 28139;
 -- Inside wolvar hold
 SET @Wolvar_Spearbearer = 28080;
 SET @Wolvar_Ravager = 28078;
-SET @Wolvar_Berserker = 28076
+SET @Wolvar_Berserker = 28076;
 SET @Rotting_Highborne = 11477;
 SET @Skeletal_Highborne = 11476;
 SET @Anguished_Highborne = 7524;
@@ -191,9 +191,6 @@ SET @Shirek = 32485;
 SET @King_Gordok = 11501;
 SET @Dark_Illidan = 71000;
 
--- Setting creature attributes
-UPDATE `creature_template`
-SET `name` = CASE `entry`
 -- Naga
 UPDATE `creature_template` SET `name`='Naga Ambusher' WHERE `entry`=@Naga_Ambusher;
 UPDATE `creature_template` SET `name`='Naga Defender' WHERE `entry`=@Naga_Defender;
