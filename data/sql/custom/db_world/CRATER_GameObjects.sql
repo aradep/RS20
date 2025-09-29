@@ -130,4 +130,3 @@ INSERT INTO `gameobject` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMa
 -- Temple interior translocator
 (184502, 37, 0, 0, 1, 1, -640.078, -259.508, 352.58, 3.77, -0, -0, -0.32157, -0.946886, 300, 0, 1, '', 0, 'CustomGOB');
 UPDATE `gameobject_template` SET `name`='Exit Portal', `size`=1.5, `displayid`=8046, `Data10`=25143 WHERE `entry`=184502;
-UPDATE `gameobject_template` SET `Data1`='0' WHERE  `entry`=185557;
