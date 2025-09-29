@@ -9,7 +9,7 @@
 
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Temple';
-INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`,`currentwaypoint`,`movementtype`) VALUES
+INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
 -- Harpies/Ancients
 (7149, 37, 1, 1, -363.481, -128.933, 296.009, 3.95981, 300, 10, 0, 'Crater_Temple'),
 (4022, 37, 1, 1, -343.811, -5.37716, 300.673, 2.73457, 300, 5, 0, 'Crater_Temple'),
@@ -161,3 +161,7 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 -- Fighting Elemental Lords
 (54435, 37, 1, 1, -576.471, -151.895, 332.449, 5.29497, 300, 0, 0, 'Crater_Temple'),
 (51502, 37, 1, 1, -538.987, -213.684, 318.972, 2.12589, 300, 0, 0, 'Crater_Temple');
+
+-- Fix wander
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0;
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0;

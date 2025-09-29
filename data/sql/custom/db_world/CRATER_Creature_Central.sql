@@ -9,7 +9,7 @@
 
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Central';
-INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`,`currentwaypoint`,`movementtype`) VALUES
+INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
 
 -- Spirit Healer
 (29259, 37, 0, 1, 441.81, 145.932, 308.12, 5.361, 300, 0, 0, 'Crater_Central'),
@@ -235,6 +235,7 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (46438, 37, 1, 1, 191.803, -439.193, 250.588, 1.3184, 300, 0, 0, 'Crater_Central'),
 (46437, 37, 1, 1, 215.658, -436.962, 251.597, 2.35907, 300, 0, 0, 'Crater_Central'),
 (46437, 37, 1, 1, 222.244, -424.242, 251.847, 3.29368, 300, 0, 0, 'Crater_Central'),
+-- Snarlax Snowpelt (Elite)
 (46439, 37, 1, 1, 206.922, -442.662, 251.375, 1.89174, 300, 0, 0, 'Crater_Central'),
 (46437, 37, 1, 1, 234.464, -349.671, 244.392, 2.00251, 300, 0, 0, 'Crater_Central'),
 (46438, 37, 1, 1, 230.64, -342.751, 244.575, 5.19515, 300, 0, 0, 'Crater_Central'),
@@ -361,5 +362,8 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (7111, 37, 1, 1, -94.476, 342.559, 293.283, 0.998142, 300, 5, 0, 'Crater_Central'),
 (7111, 37, 1, 1, -50.6106, 237.652, 295.084, 1.91706, 300, 5, 0, 'Crater_Central'),
 (7111, 37, 1, 1, -39.817, 198.805, 293.48, 6.1158, 300, 5, 0, 'Crater_Central'),
--- Xavaric (Elite)
-(10648, 37, 1, 1, -107.353, 285.099, 293.688, 1.0688, 300, 5, 0, 'Crater_Central');
+(10648, 37, 1, 1, -107.353, 285.099, 293.688, 1.0688, 300, 5, 0, 'Crater_Central'); -- Xavaric (Elite)
+
+-- Fix wander
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0;
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0;

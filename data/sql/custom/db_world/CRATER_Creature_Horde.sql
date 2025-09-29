@@ -9,7 +9,7 @@
 
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Horde';
-INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`,`currentwaypoint`,`movementtype`) VALUES
+INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
 -- HUB
 -- -------------------------------------------------------------------------------------
 -- Guardians
@@ -131,10 +131,8 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (7765, 37, 1, 1, -63.5723, 696.281, 267.216, 4.57635, 300, 10, 0, 'Crater_Horde'),
 (7765, 37, 1, 1, -55.6511, 735.892, 268.111, 2.60894, 300, 8, 0, 'Crater_Horde'),
 (7765, 37, 1, 1, -22.6716, 720.419, 260.978, 0.888914, 300, 5, 0, 'Crater_Horde'),
--- Earthshaker (Elite)
-(12203, 37, 1, 1, -137.364, 686.362, 277.392, 6.14007, 300, 0, 0, 'Crater_Horde'),
--- Hexxer (Elite)
-(7995, 37, 1, 1, 282.025, 770.038, 263.773, 4.8804, 300, 0, 0, 'Crater_Horde'),
+(12203, 37, 1, 1, -137.364, 686.362, 277.392, 6.14007, 300, 0, 0, 'Crater_Horde'), -- Earthshaker (Elite)
+(7995, 37, 1, 1, 282.025, 770.038, 263.773, 4.8804, 300, 0, 0, 'Crater_Horde'), -- Hexxer (Elite)
 -- Tiki Warriors
 (28927, 37, 1, 1, 268.429, 772.032, 259.628, 5.31549, 300, 5, 0, 'Crater_Horde'),
 (28927, 37, 1, 1, 271.826, 790.851, 259.705, 3.24597, 300, 5, 0, 'Crater_Horde'),
@@ -142,3 +140,7 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (28927, 37, 1, 1, 310.002, 765.283, 259.663, 1.14503, 300, 5, 0, 'Crater_Horde'),
 (28927, 37, 1, 1, 292.141, 755.42, 259.81, 3.04962, 300, 5, 0, 'Crater_Horde'),
 (28927, 37, 1, 1, 276.937, 757.506, 259.805, 1.61783, 300, 5, 0, 'Crater_Horde');
+
+-- Fix wander
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0;
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0;

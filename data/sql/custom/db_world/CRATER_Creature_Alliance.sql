@@ -9,7 +9,7 @@
 
 -- Creature placement
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Alliance';
-INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`,`currentwaypoint`,`movementtype`) VALUES
+INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
 -- HUB
 -- -------------------------------------------------------------------------------------
 -- Kirin Tor Mages
@@ -33,8 +33,7 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (12836, 37, 1, 1, 760.143, 365.819, 271.12, 4.66284, 300, 5, 0, 'Crater_Alliance'),
 (12836, 37, 1, 1, 922.264, 347.807, 269.943, 3.257, 300, 5, 0, 'Crater_Alliance'),
 (7149, 37, 1, 1, -366.382, -221.903, 297.206, 1.95417, 300, 10, 0, 'Crater_Alliance'),
--- Chimareon (Elite)
-(12800, 37, 1, 1, 733.843, 445.529, 273.653, 3.19491, 300, 15, 0, 'Crater_Alliance'),
+(12800, 37, 1, 1, 733.843, 445.529, 273.653, 3.19491, 300, 15, 0, 'Crater_Alliance'), -- Chimareon (Elite)
 -- Goblin miners
 (1094, 37, 1, 1, 1091.39, -72.6326, 317.767, 3.57184, 300, 0, 0, 'Crater_Alliance'),
 (1095, 37, 1, 1, 1123.55, -155.671, 312.365, 5.74927, 300, 0, 0, 'Crater_Alliance'),
@@ -106,7 +105,6 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (11442, 37, 1, 1, 909.018, 20.3121, 305.815, 5.27824, 300, 0, 0, 'Crater_Alliance'),
 (11443, 37, 1, 1, 915.71, 19.9023, 305.164, 3.96271, 300, 0, 0, 'Crater_Alliance'),
 (11445, 37, 1, 1, 915.943, 8.97524, 305.647, 2.0267, 300, 0, 0, 'Crater_Alliance'),
-(14323, 37, 1, 1, 887.746, 4.24569, 307.63, 5.22249, 300, 0, 0, 'Crater_Alliance'),
 (11440, 37, 1, 1, 851.708, 44.4169, 298.683, 1.64498, 300, 0, 0, 'Crater_Alliance'),
 (13036, 37, 1, 1, 785.141, 35.6307, 293.795, 5.78402, 300, 0, 0, 'Crater_Alliance'),
 (12418, 37, 1, 1, 779.37, 75.1176, 292.805, 2.10679, 300, 5, 0, 'Crater_Alliance'),
@@ -146,7 +144,6 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (11442, 37, 1, 1, 669.867, 105.817, 298.563, 1.62712, 300, 0, 0, 'Crater_Alliance'),
 (11441, 37, 1, 1, 649.032, 120.411, 298.563, 4.89261, 300, 0, 0, 'Crater_Alliance'),
 (11441, 37, 1, 1, 649.799, 114.983, 298.563, 1.6607, 300, 0, 0, 'Crater_Alliance'),
-(14321, 37, 1, 1, 638.516, 109.456, 300.584, 3.13516, 300, 0, 0, 'Crater_Alliance'),
 (12418, 37, 1, 1, 718.678, 196.27, 278.836, 0.834738, 300, 5, 0, 'Crater_Alliance'),
 (12418, 37, 1, 1, 709.909, 144.84, 276.258, 4.59418, 300, 5, 0, 'Crater_Alliance'),
 (12418, 37, 1, 1, 693.369, 55.6116, 281.61, 2.87207, 300, 5, 0, 'Crater_Alliance'),
@@ -164,12 +161,11 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (11444, 37, 1, 1, 871.931, 25.0791, 322.751, 0.47756, 300, 0, 0, 'Crater_Alliance'),
 (11448, 37, 1, 1, 862.019, -5.70088, 303.463, 4.68744, 300, 0, 0, 'Crater_Alliance'),
 (11448, 37, 1, 1, 861.96, -14.5759, 303.961, 1.55763, 300, 0, 0, 'Crater_Alliance'),
--- Cho'rush (Elite)
-(14324, 37, 1, 1, 888.579, 3.25164, 322.742, 5.25043, 300, 0, 0, 'Crater_Alliance'),
--- King Gordok (Elite)
-(11501, 37, 1, 1, 1112.99, 34.8596, 319.516, 1.98269, 300, 0, 0, 'Crater_Alliance'),
--- Clogg (Elite)
-(14326, 37, 1, 1, 1060.74, 17.098, 313.249, 3.42368, 300, 0, 0, 'Crater_Alliance'),
+(14324, 37, 1, 1, 888.579, 3.25164, 322.742, 5.25043, 300, 0, 0, 'Crater_Alliance'), -- Cho'rush (Elite)
+(11501, 37, 1, 1, 1112.99, 34.8596, 319.516, 1.98269, 300, 0, 0, 'Crater_Alliance'), -- King Gordok (Elite)
+(14326, 37, 1, 1, 1060.74, 17.098, 313.249, 3.42368, 300, 0, 0, 'Crater_Alliance'), -- Clogg (Elite)
+(14321, 37, 1, 1, 638.516, 109.456, 300.584, 3.13516, 300, 0, 0, 'Crater_Alliance'), -- Watcher One-Eye (Elite)
+(14323, 37, 1, 1, 887.746, 4.24569, 307.63, 5.22249, 300, 0, 0, 'Crater_Alliance'), -- Grimgut (Elite)
 -- Murlocs
 (25687, 37, 1, 1, 824.859, 225.931, 264.359, 1.25192, 300, 5, 0, 'Crater_Alliance'),
 (25699, 37, 1, 1, 829.359, 180.492, 263.372, 2.33576, 300, 5, 0, 'Crater_Alliance'),
@@ -312,8 +308,7 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (25688, 37, 1, 1, 1128.75, 139.961, 269.121, 3.47697, 300, 0, 0, 'Crater_Alliance'),
 (25688, 37, 1, 1, 1079.96, 173.991, 273.141, 5.56612, 300, 0, 0, 'Crater_Alliance'),
 (25688, 37, 1, 1, 843.925, 325.432, 268.404, 0.993529, 300, 0, 0, 'Crater_Alliance'),
--- King Gorloc (Elite)
-(25693, 37, 1, 1, 851.896, 338.961, 269.539, 4.16961, 300, 0, 0, 'Crater_Alliance'),
+(25693, 37, 1, 1, 851.896, 338.961, 269.539, 4.16961, 300, 0, 0, 'Crater_Alliance'), -- King Gorloc (Elite)
 -- Water Elementals
 (17917, 37, 1, 1, 821.892, 132.244, 270.337, 5.35712, 300, 5, 0, 'Crater_Alliance'),
 (17917, 37, 1, 1, 800.925, 324.579, 267.99, 0.500998, 300, 5, 0, 'Crater_Alliance'),
@@ -439,8 +434,7 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (28077, 37, 1, 1, 997.559, 466.843, 290.225, 0.737388, 300, 5, 0, 'Crater_Alliance'),
 (28081, 37, 1, 1, 938.618, 476.232, 283.358, 4.45625, 300, 0, 0, 'Crater_Alliance'),
 (28077, 37, 1, 1, 966.354, 477.315, 283.751, 1.27057, 300, 0, 0, 'Crater_Alliance'),
--- Tanak Ragepaw (Elite)
-(31911, 37, 1, 1, 816.887, 476.988, 233.525, 0.140285, 300, 0, 0, 'Crater_Alliance'),
+(31911, 37, 1, 1, 816.887, 476.988, 233.525, 0.140285, 300, 0, 0, 'Crater_Alliance'), -- Tanak Ragepaw (Elite)
 -- Highborne/LivingSap/Phytobeast
 (4387, 37, 1, 1, 945.767, 508.732, 220.958, 2.28758, 300, 0, 0, 'Crater_Alliance'),
 (7523, 37, 1, 1, 935.886, 540.997, 233.388, 5.37027, 300, 0, 0, 'Crater_Alliance'),
@@ -483,5 +477,8 @@ INSERT INTO `creature` (,`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`po
 (11477, 37, 1, 1, 941.593, 548.707, 235.091, 0.704285, 300, 5, 0, 'Crater_Alliance'),
 (11476, 37, 1, 1, 882.139, 477.936, 212.084, 3.43512, 300, 5, 0, 'Crater_Alliance'),
 (11476, 37, 1, 1, 888.167, 476.527, 212.201, 1.36952, 300, 5, 0, 'Crater_Alliance'),
--- Phytos (Elite)
-(50329, 37, 1, 1, 979.455, 560.639, 208.858, 4.36288, 300, 0, 0, 'Crater_Alliance');
+(50329, 37, 1, 1, 979.455, 560.639, 208.858, 4.36288, 300, 0, 0, 'Crater_Alliance'); -- Phytos (Elite)
+
+-- Fix wander
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0;
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0;
