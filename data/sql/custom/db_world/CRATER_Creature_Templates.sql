@@ -328,6 +328,7 @@ UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry`=@Voidshrieker;
 UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry`=@Shadowfiend;
 UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry`=@Void_Lord;
 -- Elites
+
 UPDATE `creature_template` SET `name`='Tanak Ragepaw' WHERE `entry`=@Tanak_Ragepaw;
 UPDATE `creature_template` SET `name`='Xavaric' WHERE `entry`=@Xavaric;
 UPDATE `creature_template` SET `name`='King Gorloc' WHERE `entry`=@King_Gorloc;
@@ -344,12 +345,35 @@ UPDATE `creature_template` SET `name`='Shi\'rek' WHERE `entry`=@Shirek;
 UPDATE `creature_template` SET `name`='Warlord Skullcrush' WHERE `entry`=@King_Gordok;
 UPDATE `creature_template` SET `name`='Shadow of the Betrayer' WHERE `entry`=@Dark_Illidan;
 
--- Giant fighting elementals
+-- Custom NPCs
 REPLACE INTO `creature_template` 
 (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `unit_flags2`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `AiName`, `ScriptName`) VALUES 
 -- Giant fighting elementals
-(51502, 'Firelord',                 '',                 '', 0, 83, 83,  795, 131, 1, 1.14286, 2.1, 3, 1, 33587200, 2048, 7, 0, 1, 2, 'SmartAI', ''),
-(54435, 'Windseeker',               '',                 '', 0, 83, 83,  290, 0, 1, 1, 1.6, 3, 1, 33587200, 2048, 4, 4, 1, 2, 'SmartAI', '');
+(51502, 'Firelord',  '','', 0, 83, 83,  795, 131, 1, 1.14286, 2.1, 3, 1, 33587200, 2048, 7, 0, 1, 2, 'SmartAI', ''),
+(54435, 'Windseeker','','', 0, 83, 83,  290, 0, 1, 1, 1.6, 3, 1, 33587200, 2048, 4, 4, 1, 2, 'SmartAI', ''),
+-- Elites
+(31911, 'Tanak Ragepaw', '', '', 0, 82, 82, 16, 0, 0.8, 1.1, 2, 3, 1, 32768, 2048, 7, 4, 1, 0, '', ''),
+(7995, 'Hexlord Rashiki', '', '', 0, 82, 82, 7, 0, 0.8, 1.1, 1, 3, 8, 32768, 2048, 7, 4, 1, 0, 'SmartAI', ''),
+(10648, 'Xavaric', NULL, NULL, 0, 81, 82, 90, 0, 0.9, 1.1, 1, 1, 2, 0, 2048, 3, 0, 1, 0, 'SmartAI', ''),
+(11501, 'Warlord Skullcrush', NULL, NULL, 0, 82, 82, 45, 0, 0.8, 1.1, 1, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
+(12203, 'Earthshaker', 'The Evergreen', NULL, 0, 82, 82, 91, 0, 0.8, 1.1, 2, 3, 1, 64, 2048, 5, 12, 1, 0, 'SmartAI', ''),
+(12800, 'Chimaereon', NULL, NULL, 0, 82, 82, 16, 0, 0.8, 1.1, 2, 3, 1, 64, 2048, 1, 65541, 1, 0, 'SmartAI', ''),
+(14321, 'Watcher One-Eye', NULL, NULL, 5734, 82, 82, 45, 1, 0.8, 1.1, 0.65, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
+(14323, 'Grimgut', NULL, NULL, 5733, 82, 82, 45, 1, 0.8, 1.1, 1, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
+(14324, 'Mokor the Tactician', NULL, NULL, 5742, 82, 82, 45, 1, 0.8, 1.1, 0.8, 3, 2, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
+(14326, 'Guard-Captain Clogg', NULL, NULL, 5735, 82, 82, 45, 1, 0.8, 1.1, 1, 3, 1, 0, 2048, 7, 4, 1, 1, 'SmartAI', ''),
+(25693, 'King Gorloc', '', '', 0, 82, 82, 18, 0, 0.8, 1.1, 2.5, 3, 1, 0, 2048, 7, 4, 1, 0, '', ''),
+(46439, 'Snarlax Snowpelt', '', '', 0, 82, 82, 2001, 0, 0.8, 1.1, 1, 3, 2, 32768, 2048, 7, 4, 1, 0, 'SmartAI', ''),
+(32485, 'Shi\'rek', 'The Devourer', '', 0, 83, 83, 14, 0, 1, 1.14286, 1, 3, 1, 0, 2048, 1, 4, 1, 0, 'SmartAI', ''),
+(50329, 'Phytos', 'The Glowing One', '', 0, 82, 82, 16, 0, 0.8, 1.1, 0.55, 3, 1, 32832, 2048, 4, 332, 1, 0, 'SmartAI', ''),
+(71000, 'Shadow of the Betrayer', '', '', 0, 82, 82, 16, 0, 0.8, 1.1, 2, 3, 1, 514, 2048, 3, 76, 1, 1, 'SmartAI', ''),
+-- Peacekeepers
+(4624, 'Kirin Tor Guardian', NULL, NULL, 0, 80, 80, 2008, 0, 1, 1, 1.15, 1, 8, 32768, 2048, 7, 0, 1, 0, 'SmartAI', ''),
+(64624, 'Orc Bruiser', NULL, NULL, 0, 80, 80, 2008, 0, 1, 1, 1.15, 1, 1, 32768, 2048, 7, 0, 1, 0, 'SmartAI', '');
+
+REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES 
+(51502, 11121, 1, 2, 1),
+(54435, 14992, 1, 2, 1);
 
 -- Turn into critters
 UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `speed_walk`=0.7, `speed_run`=1.1,`damagemodifier`=1, `healthmodifier`=1.2, `lootid`=0, `minlevel`=1, `maxlevel`=1, `type`=8, `flags_extra`=0 WHERE `entry` IN (

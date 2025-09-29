@@ -40,7 +40,7 @@ INSERT INTO `gameobject_loot_template` VALUES (2691, 46364, 0, 100, 1, 1, 0, 1, 
 -- -----------------------------------
 
 -- Gameobject placement
-DELETE FROM `gameobject` WHERE `map` = 37;
+DELETE FROM `gameobject` WHERE `map` = 37 AND `Comment` = 'CustomGOB';
 INSERT INTO `gameobject` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES 
 -- Forcefield
 (420900, 37, 0, 0, 1, 1, -605.071, -210.02, 300.747, 0.477274, -0, -0, -0.236379, -0.971661, 300, 0, 1, '', 0, 'CustomGOB'),
