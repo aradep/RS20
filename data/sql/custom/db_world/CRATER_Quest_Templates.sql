@@ -45,11 +45,11 @@ SET
 @FieldSupplies          = 20602,
 @MysteryBox             = 41426,
 
-@NormalQuest_Gold       = 50000,
-@NormalQuest_HonorCoins = 4,
+@NormalQuest_Gold       = 60000,
+@NormalQuest_HonorCoins = 5,
 
 @EliteQuest_Gold        = 250000,
-@EliteQuest_HonorCoins  = 12;
+@EliteQuest_HonorCoins  = 15;
 
 -- Quest templates
 SET
@@ -81,7 +81,7 @@ SET
 @ObjectiveText4             = '', 
 @QuestCompletionLog         = '',
 @RequestItems               = '',
-@OfferReward                = 'The law cannot not protect you here. It would be wise to prepare before venturing forth.$b$b(This is a FFA PvP area.)',
+@OfferReward                = 'Welcome to the crater, $R.$b$bMy companions and I are here on orders from Dalaran to survey and establish a foothold in the area, but we didn\'t expect this kind of resistance from the local wildlife. If you can aid us in keeping this position secure until reinforcements arrive the Kirin\'tor will make it worth your while.$b$bYou can find more members of the expedition team in the vale to the north and the swamp to the west, I\'m sure they are just as eager for assistance.',
 
 @RewardItem1                = 0,                @RequiredNpcOrGo1           = 0,                @POIContinent               = 0,
 @RewardAmount1              = 0,                @RequiredNpcOrGoCount1      = 0,                @POIx                       = 0,
@@ -380,7 +380,7 @@ SET
 @SpecialFlags               = 1,
 
 @LogTitle                   = 'The Serpent Shrine',
-@LogDescription             = 'Naga scalemail isn\'t the hardest armor, but it is some of the most profitable. As it happens, the vicious serpents have been swarming around the ruins to the south and I would like to know why.$b$bBring me a generous amount of their scales, $n, and I will see to it that you are rewarded.',
+@LogDescription             = 'Naga scalemail isn\'t the hardest armor, but it is valuable. As luck would have it, the vicious serpents seem to be been swarming around the ruins to the south.$b$bBring me a generous amount of their scales, $n, and I will see to it that you are rewarded.',
 @QuestDescription           = 'Surveyor Delryn wants you to collect Polished Naga Scales from the naga around the ruins in the central field of Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',

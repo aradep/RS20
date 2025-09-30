@@ -458,7 +458,7 @@ UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
 
 -- Surveyor Delryn
 SET @entry = @Surveyor_Delryn;
-SET @text = 'Welcome to the Crater, $N. I hope you brought some potions...';
+SET @text = 'The law can\'t protect you here. It would be wise to prepare before venturing forth.';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;

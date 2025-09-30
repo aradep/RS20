@@ -12,7 +12,7 @@ SET
 @Entry      = 482035,
 @Model      = 4620,
 @Scale      = 1.2,
-@Name       = "Long Lost John",
+@Name       = "Long-Lost John",
 @Title      = "",
 @Icon       = "Speak", -- Buy/Repair --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --

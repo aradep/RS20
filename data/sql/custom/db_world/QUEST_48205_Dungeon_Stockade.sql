@@ -39,7 +39,7 @@ SET
 @QuestDescription           = 'Hey, uh... listen. We all know ol\' Baz has his head on the chopping block and I bet you\'re here to swing the axe for Stormwind, huh? Well I have a favor to ask...$b$bThredd stole something from me and I\'ve never had the guts to try and get it back. When you do the deed, before you let them take his corpse away check his pockets. He always carrys it on him.$b$bIf you find it bring it back, there\'s something in it for you.',
 @LogDescription             = 'Squeaky Pete wants you to retrieve an heirloom from Bazil Thredd.',
 @AreaDescription            = '',
-@ObjectiveText1             = 'Heirloom retrieved.',
+@ObjectiveText1             = 'Heirloom retrieved',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 

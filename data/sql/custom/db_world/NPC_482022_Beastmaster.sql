@@ -11,7 +11,7 @@
 SET
 @Entry      := 482022,
 @Model      := 22360,
-@Name       := "Breanni",
+@Name       := "Anya",
 @Title      := "Pet Adoptions",
 @Icon       := "Speak",
 @GossipMenu := 0,

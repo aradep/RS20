@@ -28,10 +28,10 @@ SET
 @SpecialFlags               = 1, -- 1:Repeatable --
 
 @LogTitle                   = 'Change of Ownership',
-@QuestDescription           = 'That good for nothin\' Vancleef and his band of brigands tossed me overboard in the Veiled Sea, stole my ship, then tried to erase my name from the ledgers. People even think the Defias built the Ironclad - Hah! I\'ll show them... and by that I mean you\'ll show them.$b$bI want them dead, you hear? Dead! Then toss Edwin\'s body to the sharks like he did for me. We\'ll regroup by the secret tunnel when you\'ve finished.',
+@QuestDescription           = 'That good for nothin\' Vancleef and his band of brigands tossed me overboard in the Veiled Sea, stole my ship, and then tried to erase my name from the ledgers. People even think the Defias built the Ironclad - Hah! I\'ll show them... and by that I mean you\'ll show them.$b$bI want them dead, you hear? Dead! Then toss Edwin\'s body to the sharks like he did for me. Meet me by the secret tunnel when you\'ve finished.',
 @LogDescription             = 'Long Lost John wants you to settle an old score with VanCleef.',
 @AreaDescription            = '',
-@ObjectiveText1             = 'Edwin VanCleef slain.',
+@ObjectiveText1             = 'Edwin VanCleef slain',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 

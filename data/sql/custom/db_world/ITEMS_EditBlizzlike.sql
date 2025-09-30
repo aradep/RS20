@@ -15,7 +15,7 @@ UPDATE `item_template` SET `name`='Heavy Shot', `dmg_min1`=5, `dmg_max1`=7, `buy
 UPDATE `item_template` SET `stackable`=1,  name='Endless Runecloth Bandage', `quality`=3, `buycount` = 1, `bonding`=0, `maxcount`=1, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=10839, `spellcharges_1`=0 WHERE `entry`=14529;
 
 -- Azshara Crater Bandage
-UPDATE `item_template` SET `stackable`=1,  name='Expedition Bandage', `description`='', `quality`=4, `map`=37, `buycount` = 20, `bonding`=1, `maxcount`=20, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=18608, `spellcharges_1`=0 WHERE `entry`=14530;
+UPDATE `item_template` SET `stackable`=1,  name='Expedition Bandage', `description`='', `quality`=1, `map`=37, `buycount` = 20, `bonding`=1, `maxcount`=20, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=18608, `spellcharges_1`=0 WHERE `entry`=14530;
 
 -- Commendation of Bravery honor token
 UPDATE `item_template` SET `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHERE `entry` = 45706;

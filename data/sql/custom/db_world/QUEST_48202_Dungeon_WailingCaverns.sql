@@ -31,7 +31,7 @@ SET
 @QuestDescription           = 'You must defeat the Fanglords so that I may perform the awakening ritual and save Naralex from the Dream. The fate of this land hangs in the balance.',
 @LogDescription             = 'The Disciple of Naralex wants you to help him cleanse the corruption in the Wailing Caverns.',
 @AreaDescription            = '',
-@ObjectiveText1             = 'Mutanus the Devourer slain.',
+@ObjectiveText1             = 'Mutanus the Devourer slain',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
