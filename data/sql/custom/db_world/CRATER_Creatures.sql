@@ -427,21 +427,25 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Disp
 (@Packmaster_Stonebrow, 3072, 1, 2, 1), -- Packmaster Stonebrow
 (@Malik_Stillblade, 27888, 1, 2, 1); -- Malik Stillblade
 
-DELETE FROM `npc_vendor` WHERE  `entry` IN (5153,30436,22442);
-DELETE FROM `npc_trainer` WHERE `id` IN (5153,30436,22442);
+-- Supply vendors
+DELETE FROM `npc_vendor` WHERE  `entry` IN (@Packmaster_Stonebrow,@Trixy_the_Fixer,@Malik_Stillblade);
+DELETE FROM `npc_trainer` WHERE `id` IN (@Packmaster_Stonebrow,@Trixy_the_Fixer,@Malik_Stillblade);
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES 
-(5153,  1, 34722,  0, 0, 0, 0), /* Bandage */
-(30436, 1, 34722,  0, 0, 0, 0), /* Bandage */
-(22442, 1, 34722,  0, 0, 0, 0), /* Bandage */
-(5153,  1, 33447,  0, 0, 0, 0), /* Potion */
-(30436, 1, 33447,  0, 0, 0, 0), /* Potion */
-(22442, 1, 33447,  0, 0, 0, 0), /* Potion */
-(5153,  1, 33448,  0, 0, 0, 0), /* Potion */
-(30436, 1, 33448,  0, 0, 0, 0), /* Potion */
-(22442, 1, 33448,  0, 0, 0, 0), /* Potion */
-(5153,  1, 40087,  0, 0, 0, 0), /* Potion */
-(30436, 1, 40087,  0, 0, 0, 0), /* Potion */
-(22442, 1, 40087,  0, 0, 0, 0); /* Potion */
+(@Packmaster_Stonebrow,     1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Malik_Stillblade,         1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          1, 929,  0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 3827,  0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 7676,  0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 5631,  0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 929,  0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 3827,  0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 7676,  0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 5631,  0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 929,  0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 3827,  0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 7676,  0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 5631,  0, 0, 0, 0), -- Free Potions from hub
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
