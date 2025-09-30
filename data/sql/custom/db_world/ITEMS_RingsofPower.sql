@@ -13,73 +13,73 @@ SET
 -- Red socket
 @Ring1ID       = 46010,
 @Ring1Spell    = 51463, -- Your auto attacks deal an additional 12% Shadow damage.
-@Ring1Name     = 'Whispering Ring', @Ring1Subname = '',
+@Ring1Name     = 'Whispering Ring', @Ring1Subname = 'One of the 20 Rings of Power',
 @Ring2ID       = 50424,
 @Ring2Spell    = 51885, -- Increases your Attack Power by 100% of your Intellect.
-@Ring2Name     = 'Twist of Fate', @Ring2Subname = '',
+@Ring2Name     = 'Twist of Fate', @Ring2Subname = 'One of the 20 Rings of Power',
 @Ring3ID       = 51558,
 @Ring3Spell    = 31841, -- Increases your spell power by 20% of your total Intellect.
-@Ring3Name     = 'Mind\'s Eye', @Ring3Subname = '',
+@Ring3Name     = 'Mind\'s Eye', @Ring3Subname = 'One of the 20 Rings of Power',
 @Ring4ID       = 31921,
 @Ring4Spell    = 15031, -- Increases your spell power by 25% of your total Spirit.
-@Ring4Name     = 'Hand of the Prophet', @Ring4Subname = '',
+@Ring4Name     = 'Hand of the Prophet', @Ring4Subname = 'One of the 20 Rings of Power',
 @Ring5ID       = 47224,
 @Ring5Spell    = 13964, -- Gives you a 5% chance to get an extra attack on the same target after hitting your target with your Sword or Axe.
-@Ring5Name     = 'Blademaster\'s Band', @Ring5Subname = '',
+@Ring5Name     = 'Blademaster\'s Band', @Ring5Subname = 'One of the 20 Rings of Power',
 @Ring6ID       = 33496,
 @Ring6Spell    = 16284, -- Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.
-@Ring6Name     = 'Infinite Loop', @Ring6Subname = '',
+@Ring6Name     = 'Infinite Loop', @Ring6Subname = 'One of the 20 Rings of Power',
 @Ring7ID       = 50398,
 @Ring7Spell    = 51688, -- Your critical strike damage is increased by 16% when the target has less health than you (as a percentage of total health).
-@Ring7Name     = 'Mortal Coil', @Ring7Subname = '',
+@Ring7Name     = 'Mortal Coil', @Ring7Subname = 'One of the 20 Rings of Power',
 @Ring8ID       = 50614,
 @Ring8Spell    = 20180, -- Gives you a 8% chance after being hit by any damaging attack that the next 4 weapon swings within 8 sec will generate an additional attack.
-@Ring8Name     = 'Grand Executioner', @Ring8Subname = '',
+@Ring8Name     = 'Grand Executioner', @Ring8Subname = 'One of the 20 Rings of Power',
 -- Yellow socket
 @Ring9ID       = 45608,
 @Ring9Spell    = 31823, -- Reduces the duration of Curse, Disease and Poison effects by 30%.
-@Ring9Name     = 'Pure Platinum Band', @Ring9Subname = '',
+@Ring9Name     = 'Pure Platinum Band', @Ring9Subname = 'One of the 20 Rings of Power',
 @Ring10ID      = 45871,
 @Ring10Spell   = 31131, -- Reduces damage taken while affected by Stun and Fear effects by 30%.
-@Ring10Name    = 'Unbreakable Will', @Ring10Subname = '',
+@Ring10Name    = 'Unbreakable Will', @Ring10Subname = 'One of the 20 Rings of Power',
 @Ring11ID      = 45471,
 @Ring11Spell   = 13789, -- Increases your Dodge chance by 6% and gives you 10% melee haste.
-@Ring11Name    = 'Ring of the Maelstrom', @Ring11Subname = '',
+@Ring11Name    = 'Ring of the Maelstrom', @Ring11Subname = 'One of the 20 Rings of Power',
 @Ring12ID      = 45297,
 @Ring12Spell   = 31830, -- All attacks against you have a 10% chance to cause half damage.
-@Ring12Name    = 'Glimpse of Immortality', @Ring12Subname = '',
+@Ring12Name    = 'Glimpse of Immortality', @Ring12Subname = 'One of the 20 Rings of Power',
 @Ring13ID      = 51001,
 @Ring13Spell   = 58874, -- Whenever you take damage from or block a melee attack you cause damage equal to 20% of your block value.
-@Ring13Name    = 'Pins and Needles', @Ring13Subname = '',
+@Ring13Name    = 'Pins and Needles', @Ring13Subname = 'One of the 20 Rings of Power',
 @Ring14ID      = 34230,
 @Ring14Spell   = 50151, -- When you are hit by a spell, you have a 20% chance to boost your resistance to that type of magic for 18 sec. Stacks up to 3 times.
-@Ring14Name    = 'Ring of Safe Havens', @Ring14Subname = '',
+@Ring14Name    = 'Ring of Safe Havens', @Ring14Subname = 'One of the 20 Rings of Power',
 -- Blue socket
 @Ring15ID      = 34837,
 @Ring15Spell   = 33956, -- Regenerate mana equal to 10% of your Intellect every 5 sec, even while casting.
-@Ring15Name    = 'Lifestream Band', @Ring15Subname = '',
+@Ring15Name    = 'Lifestream Band', @Ring15Subname = 'One of the 20 Rings of Power',
 @Ring16ID      = 33498,
 @Ring16Spell   = 29076, -- Your spell criticals will refund 30% of their base mana cost.
-@Ring16Name    = 'Emerald Dreamcatcher', @Ring16Subname = '',
+@Ring16Name    = 'Emerald Dreamcatcher', @Ring16Subname = 'One of the 20 Rings of Power',
 @Ring17ID      = 45326,
 @Ring17Spell   = 47511, -- Critical heals create a protective shield on the target, absorbing 20% of the amount healed. Lasts 12 sec.
-@Ring17Name    = 'Guiding Light', @Ring17Subname = '',
+@Ring17Name    = 'Guiding Light', @Ring17Subname = 'One of the 20 Rings of Power',
 @Ring18ID      = 47700,
 @Ring18Spell   = 47560, -- Increases healing by 12% on friendly targets at or below 50% health.
-@Ring18Name    = 'Saving Grace', @Ring18Subname = '',
+@Ring18Name    = 'Saving Grace', @Ring18Subname = 'One of the 20 Rings of Power',
 @Ring19ID      = 34625,
 @Ring19Spell   = 26169, -- 20% chance that your heals on others will also heal you 10% of the amount healed.
-@Ring19Name    = 'Hope\'s Diamond', @Ring19Subname = '',
+@Ring19Name    = 'Hope\'s Diamond', @Ring19Subname = 'One of the 20 Rings of Power',
 @Ring20ID      = 45157,
 @Ring20Spell   = 16492, -- Regenerates 6% of your total Health over 6 sec after being the victim of a critical strike.
-@Ring20Name    = 'Broken Promise', @Ring20Subname = '';
+@Ring20Name    = 'Broken Promise', @Ring20Subname = 'One of the 20 Rings of Power';
 
 -- Clear blizzlike stats
 UPDATE `item_template` 
 SET 
 `itemlevel` = 35,
-`requiredlevel` = 0,
-`bonding` = 0, 
+`requiredlevel` = 20,
+`bonding` = 2, 
 `maxcount` = 1,
 `flags` = 524288,
 `flagsextra`= 0,

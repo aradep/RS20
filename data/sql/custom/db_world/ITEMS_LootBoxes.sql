@@ -9,6 +9,8 @@
 
 -- Loot Table IDs
 SET
+@Ref_Potions         = 48202,
+@Ref_Elixirs         = 48203,
 @Ref_Bombs           = 48204,
 @Ref_PetToy          = 48205,
 @Ref_EngiItem        = 48206,
@@ -36,11 +38,11 @@ INSERT INTO `item_loot_template`
 (@Entry,    40753,      0,                  100,        0,          1,          1,          '1x Emblem of Style'),
 (@Entry,    40752,      0,                  100,        0,          3,          3,          '3x Emblem of Heroism'),
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,    34052,      0,                  100,        0,          5,          5,          '5x Dream Shard'),
+(@Entry,    34052,      0,                  100,        0,          4,          4,          '45x Dream Shard'),
 (@Entry,    10456,      0,                  100,        0,          1,          1,          'Bombs'),
 (@Entry,        2,      @Ref_Darkmoon,      100,        6,          1,          1,          'Darkmoon Card'),
-(@Entry,        3,      @Ref_PvEHat,        100,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
-(@Entry,        4,      @Ref_PetToy,         25,        7,          1,          1,          'Pet/Toy'),
+(@Entry,        3,      @Ref_PvEHat,         50,        8,          1,          1,          'PvE Hat'), -- PvE Only Reward
+(@Entry,        4,      @Ref_PetToy,         15,        7,          1,          1,          'Pet/Toy'),
 (@Entry,        5,      @Ref_Rings,           5,       10,          1,          1,          'Ring of Power'),
 (@Entry,    46114,      0,                    1,       11,          1,          1,          'Mount Certificate');
 -- ----------------------------------------------------------------------------------------------------------------------------------------------
@@ -63,12 +65,12 @@ INSERT INTO `item_loot_template`
 (@Entry,      40753,      0,                 100,        0,          1,          1,          '1x Emblem of Style'),
 (@Entry,      40752,      0,                 100,        0,          3,          3,          '3x Emblem of Heroism'),
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
-(@Entry,      34052,      0,                 100,        0,          5,          5,          '5x Dream Shard'),
+(@Entry,      34052,      0,                 100,        0,          4,          4,          '4x Dream Shard'),
 (@Entry,      10456,      0,                 100,        0,          1,          1,          'Big Bomg Bag'),
 (@Entry,          1,      @Ref_BoPBlue,      100,        5,          1,          1,          'BoP Blue'), -- PvP Only Reward
 (@Entry,          2,      @Ref_Darkmoon,     100,        6,          1,          1,          'Darkmoon Card'),
-(@Entry,          3,      @Ref_PvPHat,       100,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
-(@Entry,          4,      @Ref_PetToy,        25,        7,          1,          1,          'Pet/Toy'),
+(@Entry,          3,      @Ref_PvPHat,        50,        9,          1,          1,          'PvP Hat'), -- PvP Only Reward
+(@Entry,          4,      @Ref_PetToy,        15,        7,          1,          1,          'Pet/Toy'),
 (@Entry,          5,      @Ref_Rings,          5,       10,          1,          1,          'Ring of Power'),
 (@Entry,      46114,      0,                   1,       11,          1,          1,          'Mount Certificate');
 -- ---------------------------------------------------------------------------------------------------------------------------------
@@ -86,25 +88,43 @@ UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Q
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
 INSERT INTO `item_loot_template` 
 -- ----------------------------------------------------------------------------------------------------------------------
-(`Entry`,   `Item`,     `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
+(`Entry`,   `Item`,         `reference`,    `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------
-(@Entry,    2459,       0,          1,          3,          3,          'Swiftness Potion'),
-(@Entry,    5634,       0,          1,          3,          3,          'Free Action Potion'),
-(@Entry,    6048,       0,          1,          3,          3,          'Shadow Protection Potion'),
-(@Entry,    6051,       0,          1,          3,          3,          'Holy Protection Potion'),
-(@Entry,    1450,       0,          1,          3,          3,          'Potion of Fervor'),
-(@Entry,    6372,       0,          1,          3,          3,          'Swim Speed Potion'),
-(@Entry,    3384,       0,          1,          3,          3,          'Minor Magic Resistance Potion'),
-(@Entry,    3391,       0,          2,          2,          2,          'Elixir of Ogres Strength'),
-(@Entry,    6373,       0,          2,          2,          2,          'Elixir of Firepower'),
-(@Entry,    3390,       0,          2,          2,          2,          'Elixir of Lesser Agility'),
-(@Entry,    3389,       0,          2,          2,          2,          'Elixir of Defense'),
-(@Entry,    3388,       0,          2,          2,          2,          'Strong Trolls Blood Elixir'),
-(@Entry,    45621,      0,          2,          2,          2,          'Elixir of Minor Accuracy'),
-(@Entry,    3383,       0,          2,          2,          2,          'Elixir of Wisdom'),
-(@Entry,    6662,       0,          2,          2,          2,          'Elixir of Giant Growth'),
-(@Entry,    5996,       0,          2,          2,          2,          'Elixir of Water Breathing'),
-(@Entry,    3825,       0,          2,          2,          2,          'Elixir of Fortitude');
+(@Entry,    @Ref_Potions,   @Ref_Potions,   100,        1,          2,          2,          'Random Potion'),
+(@Entry,    @Ref_Elixirs,   @Ref_Elixirs,   100,        2,          1,          1,          'Random Elixir');
+-- ----------------------------------------------------------------------------------------------------------------------
+
+-- Reference template - Field supplies potions
+DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_Potions;
+INSERT INTO `reference_loot_template` 
+-- ----------------------------------------------------------------------------------------------------------------------
+(`Entry`,         `Item`,     `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
+-- ----------------------------------------------------------------------------------------------------------------------
+(@Ref_Potions,    2459,       0,          1,          2,          2,          'Swiftness Potion'),
+(@Ref_Potions,    5634,       0,          1,          2,          2,          'Free Action Potion'),
+(@Ref_Potions,    6048,       0,          1,          2,          2,          'Shadow Protection Potion'),
+(@Ref_Potions,    6051,       0,          1,          2,          2,          'Holy Protection Potion'),
+(@Ref_Potions,    1450,       0,          1,          2,          2,          'Potion of Fervor'),
+(@Ref_Potions,    6372,       0,          1,          2,          2,          'Swim Speed Potion'),
+(@Ref_Potions,    3384,       0,          1,          2,          2,          'Minor Magic Resistance Potion');
+-- ----------------------------------------------------------------------------------------------------------------------
+
+-- Reference template - Field supplies elixirs
+DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_Elixirs;
+INSERT INTO `reference_loot_template` 
+-- ----------------------------------------------------------------------------------------------------------------------
+(`Entry`,         `Item`,     `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
+-- ----------------------------------------------------------------------------------------------------------------------
+(@Ref_Elixirs,    3391,       0,          2,          1,          1,          'Elixir of Ogres Strength'),
+(@Ref_Elixirs,    6373,       0,          2,          1,          1,          'Elixir of Firepower'),
+(@Ref_Elixirs,    3390,       0,          2,          1,          1,          'Elixir of Lesser Agility'),
+(@Ref_Elixirs,    3389,       0,          2,          1,          1,          'Elixir of Defense'),
+(@Ref_Elixirs,    3388,       0,          2,          1,          1,          'Strong Trolls Blood Elixir'),
+(@Ref_Elixirs,    45621,      0,          2,          1,          1,          'Elixir of Minor Accuracy'),
+(@Ref_Elixirs,    3383,       0,          2,          1,          1,          'Elixir of Wisdom'),
+(@Ref_Elixirs,    6662,       0,          2,          1,          1,          'Elixir of Giant Growth'),
+(@Ref_Elixirs,    5996,       0,          2,          1,          1,          'Elixir of Water Breathing'),
+(@Ref_Elixirs,    3825,       0,          2,          1,          1,          'Elixir of Fortitude');
 -- ----------------------------------------------------------------------------------------------------------------------
 
 -- Big Bomb Bag
@@ -126,7 +146,7 @@ INSERT INTO `item_loot_template`
 (@Entry,    2,          @Ref_EngiItem,  5,          2,          1,          1,          'Engineering Item');
 -- ----------------------------------------------------------------------------------------------------------------------
 
--- Reference template - Bombs
+-- Reference template - Big Bomb Bag Bombs
 DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_Bombs;
 INSERT INTO `reference_loot_template` 
 -- ----------------------------------------------------------------------------------------------------------
@@ -138,7 +158,7 @@ INSERT INTO `reference_loot_template`
 (@Ref_Bombs,    10514,      0,          1,          2,          2,          'Mithril Frag Bomb');
 -- ----------------------------------------------------------------------------------------------------------
 
--- Reference template - Engineering Item
+-- Reference template - Big Bomb Bag Engi Items
 DELETE FROM `reference_loot_template` WHERE `entry` = @Ref_EngiItem;
 INSERT INTO `reference_loot_template` 
 -- ----------------------------------------------------------------------------------------------------------

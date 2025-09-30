@@ -26,7 +26,7 @@ REPLACE INTO `quest_offer_reward` VALUES
 (11339, 1, 0, 0, 0, 0, 0, 0, 0, 'Well done, $C. In time maybe even you may have a statue in these halls.', 12340),
 (11342, 1, 0, 0, 0, 0, 0, 0, 0, 'Well done, $C. In time maybe even you may have a statue in these halls.', 12340);
 
--- Questgiver Herod
+-- Herod starts Call to Arms quests
 REPLACE INTO `creature_queststarter` VALUES
 -- Alliance --
 (482031, 11335),
@@ -35,6 +35,7 @@ REPLACE INTO `creature_queststarter` VALUES
 (482031, 11342),
 (482031, 11339);
 
+-- Herod ends Call to Arms quests
 REPLACE INTO `creature_questender` VALUES
 -- Alliance --
 (482031, 11335),
@@ -43,13 +44,13 @@ REPLACE INTO `creature_questender` VALUES
 (482031, 11342),
 (482031, 11339);
 
--- Delete exclusive group
+-- Delete exclusive group, both quests can be done
 UPDATE `quest_template_addon` SET `exclusivegroup` = 0 WHERE `ID` IN (11339,11342,11335,11338);
 
--- Re-enable Call to Arms quest
+-- Remove disable for Call to Arms quests
 DELETE FROM `disables` WHERE `comment` LIKE '%Call to Arms:%';
 
--- Pool Dungeon quests
+-- Pool Dungeon quests together and only have 2 active per day, same as the PvP quests
 REPLACE INTO `pool_template` VALUES (48200, 2, 'Dungeon Daily');
 REPLACE INTO `pool_quest` VALUES
 (48201, 48200, 'Dungeon Daily'),

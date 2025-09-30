@@ -39,14 +39,17 @@ SET
 @Farseer_Serena         = 482203,
 @Spymaster_Jarre        = 482204,
 @Forward_Scout_Razza    = 482205,
+
 -- Quest rewards
 @HonorCoin              = 37836,
 @FieldSupplies          = 20602,
 @MysteryBox             = 41426,
+
 @NormalQuest_Gold       = 50000,
-@NormalQuest_HonorCoins = 3,
+@NormalQuest_HonorCoins = 4,
+
 @EliteQuest_Gold        = 250000,
-@EliteQuest_HonorCoins  = 10;
+@EliteQuest_HonorCoins  = 12;
 
 -- Quest templates
 SET
@@ -223,7 +226,7 @@ SET
 @SpecialFlags               = 1,
 
 @LogTitle                   = 'Stalking the Stalkers',
-@LogDescription           = 'The giant cats prowling this crater have a wonderfuly soft and exotic fur. A bundle of their pelts would demand a high price on the open market.$b$bAre you brave enough to stalk the stalkers, $N? Bring me some and I will reward you handsomely for your efforts.',
+@LogDescription           = 'The giant cats prowling this crater have a wonderfuly soft and exotic fur. A bundle of their pelts would demand a high price on the open market.$b$bAre you brave enough to stalk the stalkers, $N? Fetch me some pelts and I will reward you handsomely for your efforts.',
 @QuestDescription             = 'Surveyor Delryn wants you to collect 5 Pristine Lynx Pelts from the Grovestalker Lynx inhabiting Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
@@ -531,7 +534,7 @@ SET
 @SpecialFlags               = 0,
 
 @LogTitle                   = 'Unnatural Selection',
-@LogDescription           = 'Have you seen the furbolgs nearby? They\'re unusually aggressive and I noticed a few carrying totems that do not resemble their usual tribal artifacts.$b$bI need you to collect a few of those totems for me to study. With any luck we can figure out what\'s going on.',
+@LogDescription           = 'The furbolgs nearby are unusually aggressive and yesterday I noticed a group carrying totems that didn\'t look... normal, let\'s just put it that way.$b$bI need you to collect a few of those totems for me to study. With any luck we can figure out what\'s going on.',
 @QuestDescription          = 'Farseer Serena wants you to collect totems from the Redfang furbolg of central Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
@@ -1147,7 +1150,7 @@ SET
 @SpecialFlags               = 1,
 
 @LogTitle                   = 'Quelling the Elements: Earth',
-@LogDescription            = 'Do you feel it, $c? The balance of nature is disrupted in this place. Something has changed but I cannot determine what.$b$bIf the spirits will not commune with me willingly, then we must study them by force. Gather Motes of Earth from the giants in the swamp of Azshara Crater and combine them into a Primal Earth before the motes fade away.',
+@LogDescription            = 'Do you feel it, $c? The balance of nature has been disturbed in this place. Something has changed here but I can\'t tell what it is.$b$bIf the spirits will not commune with me willingly, then we must study them by force. Gather Motes of Earth from the giants in the swamp and combine them into a Primal Earth before the motes fade away.',
 @QuestDescription           = 'Farseer Serena wants you to collect Motes of Earth and form them into a Primal Earth before returning to her.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
@@ -1378,7 +1381,7 @@ SET
 @SpecialFlags               = 1,
 
 @LogTitle                   = 'Enchanted Tiki Masks',
-@LogDescription            = 'There\'s a witchdoctor in this swamp, $c, but I don\'t want you to kill him.$b$bWhat I want are his magic little puppets; the Enchanted Tiki Masks that guard his tent. If I had a few dozen of those things, I wouldn\'t have to drag these brainless oafs around.$b$bCollect a few and bring them back, would ya? I\'ll make it worth your while.',
+@LogDescription            = 'There\'s a witchdoctor in this swamp, but I don\'t want you to kill him.$b$bWhat I want are his magic little puppets; the Enchanted Tiki Masks that guard his tent. If I had a few dozen of those things, I wouldn\'t have to drag these brainless oafs around.$b$bCollect a few and bring them back, would ya? I\'ll make it worth your while.',
 @QuestDescription           = 'Commander Gara wants you to collect Enchanted Tiki Masks from around the witchdoctor\'s tent in the swamp.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',

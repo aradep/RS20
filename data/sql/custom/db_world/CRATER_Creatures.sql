@@ -187,7 +187,7 @@ SET @Grimgut                = 482107;
 SET @Captain_Clogg          = 482108;
 SET @Mokor_the_Tactician    = 482109;
 SET @Chimaeron              = 482110;
-SET @Hexxer                 = 482111;
+SET @Hexxed                 = 482111;
 SET @Snarlax_Snowpelt       = 482112;
 SET @Shirek                 = 482113;
 SET @Warlord_Skullcrush     = 482114;
@@ -366,8 +366,8 @@ UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemen
 REPLACE INTO `creature_template` 
 (`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-(@Firelord,             'Firelord',                 'Cosmetic',             0,                      20,         20,         795,        131,        1,              1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
-(@Windseeker,           'Windseeker',               'Cosmetic',             0,                      20,         20,         290,        0,          1,              1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
+(@Firelord,             'Firelord',                 'Cosmetic',             0,                      20,         20,         795,        131,        1,              1.14286,        2,          3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
+(@Windseeker,           'Windseeker',               'Cosmetic',             0,                      20,         20,         290,        0,          1,              1,              2,          3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
 -- NPCs
 (@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              ''),
 (@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              ''),
@@ -377,11 +377,12 @@ REPLACE INTO `creature_template`
 (@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             0,                      20,         20,         2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              ''),
 (@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              ''),
 (@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              ''),
-(@Mage_Bruiser,         'Tower Guardian',           'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
+-- Peacekeepers
+(@Mage_Bruiser,         'Mage Guardian',            'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
 (@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              ''),
 -- Elites
 (@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Hexxer,               'Hexlord Rashiki',          '',                     @Hexxer,                23,         23,         7,          0,          0.8,            1.1,            1,          1,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Hexxed,               'Grimtooth the Hexxed',     '',                     @Hexxed,                23,         23,         7,          0,          0.8,            1.1,            1,          1,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         90,         0,          0.9,            1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
 (@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         45,         0,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
 (@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         91,         0,          0.8,            1.1,            2,          1,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
@@ -396,56 +397,59 @@ REPLACE INTO `creature_template`
 (@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         16,         0,          0.8,            1.1,            0.55,       1,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
 (@Dark_Illidan,         'Shadow of the Betrayer',   '',                     @Dark_Illidan,          23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              514,            2048,           3,      76,             1,              'SmartAI');
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES 
+REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Probability`, `DisplayScale`, `VerifiedBuild`) VALUES 
 (@Firelord, 11121, 1, 2, 1), -- Firelord
 (@Windseeker, 14992, 1, 2, 1), -- Windseeker
 -- Elites
-(@Mage_Bruiser, 28780, 1, 2, 1), -- Kirin Tor Guardian
-(@Orc_Bruiser, 4261, 1, 2, 1), -- Orc Bruiser
-(@Tanak_Ragepaw, 25376, 1, 2, 1), -- Tanak Ragepaw
-(@Hexxer, 7803, 1, 2, 1), -- Hexlord Rashiki
-(@Ravazic, 2879, 1, 2, 1), -- Ravazic
-(@Warlord_Skullcrush, 11583, 1, 2, 1), -- Warlord Skullcrush
-(@Earthshaker, 23356, 1, 2, 1), -- Earthshaker
-(@Chimaeron, 4269, 1, 2, 1), -- Chimaereon
-(@Watcher_OneEye, 11561, 1, 2, 1), -- Watcher One-Eye
-(@Grimgut, 11561, 1, 2, 1), -- Grimgut
-(@Mokor_the_Tactician, 11537, 1, 2, 1), -- Mokor the Tactician
-(@Captain_Clogg, 11561, 1, 2, 1), -- Guard-Captain Clogg
-(@King_Gorloc, 22607, 1, 2, 1), -- King Gorloc
-(@Snarlax_Snowpelt, 23774, 1, 2, 1), -- Snarlax Snowpelt
-(@Shirek, 28052, 1, 2, 1), -- Shirek
-(@Phytos, 28133, 1, 2, 1), -- Phytos
-(@Dark_Illidan, 26348, 1, 2, 1), -- Shadow of the Betrayer
+(@Mage_Bruiser, 28780, 1, 1, 1), -- Kirin Tor Guardian
+(@Orc_Bruiser, 4261, 1, 1, 1), -- Orc Bruiser
+(@Tanak_Ragepaw, 25376, 1, 1, 1), -- Tanak Ragepaw
+(@Hexxed, 7803, 1, 1, 1), -- Hexlord Rashiki
+(@Ravazic, 2879, 1, 1, 1), -- Ravazic
+(@Warlord_Skullcrush, 11583, 1, 1, 1), -- Warlord Skullcrush
+(@Earthshaker, 23356, 1, 1, 1), -- Earthshaker
+(@Chimaeron, 4269, 1, 1, 1), -- Chimaereon
+(@Watcher_OneEye, 11561, 1, 1, 1), -- Watcher One-Eye
+(@Grimgut, 11561, 1, 1, 1), -- Grimgut
+(@Mokor_the_Tactician, 11537, 1, 1, 1), -- Mokor the Tactician
+(@Captain_Clogg, 11561, 1, 1, 1), -- Guard-Captain Clogg
+(@King_Gorloc, 22607, 1, 1, 1), -- King Gorloc
+(@Snarlax_Snowpelt, 23774, 1, 1, 1), -- Snarlax Snowpelt
+(@Shirek, 28052, 1, 1, 1), -- Shirek
+(@Phytos, 28133, 1, 1, 1), -- Phytos
+(@Dark_Illidan, 26348, 1, 1, 1), -- Shadow of the Betrayer
 -- Azsharan Expedition
-(@Commander_Gara, 28059, 1, 2, 1), -- Commander Gara
-(@Surveyor_Delryn, 28770, 1, 2, 1), -- Surveyor Delryn
-(@Farseer_Serena, 31391, 1, 2, 1), -- Farseer Serena
-(@Spymaster_Jarre, 30465, 1, 2, 1), -- Spymaster Jarre
-(@Forward_Scout_Razza, 15577, 1, 2, 1), -- Forward Scout Razza
-(@Trixy_the_Fixer, 23080, 1, 2, 1), -- Trixy the Fixer
-(@Packmaster_Stonebrow, 3072, 1, 2, 1), -- Packmaster Stonebrow
-(@Malik_Stillblade, 27888, 1, 2, 1); -- Malik Stillblade
+(@Commander_Gara, 28059, 1, 1, 1), -- Commander Gara
+(@Surveyor_Delryn, 28770, 1, 1, 1), -- Surveyor Delryn
+(@Farseer_Serena, 31391, 1, 1, 1), -- Farseer Serena
+(@Spymaster_Jarre, 30465, 1, 1, 1), -- Spymaster Jarre
+(@Forward_Scout_Razza, 15577, 1, 1, 1), -- Forward Scout Razza
+(@Trixy_the_Fixer, 23080, 1, 1, 1), -- Trixy the Fixer
+(@Packmaster_Stonebrow, 3072, 1, 1, 1), -- Packmaster Stonebrow
+(@Malik_Stillblade, 27888, 1, 1, 1); -- Malik Stillblade
 
 -- Supply vendors
 DELETE FROM `npc_vendor` WHERE  `entry` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
 DELETE FROM `npc_trainer` WHERE `id` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
-INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES 
-(@Packmaster_Stonebrow,     1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Trixy_the_Fixer,          1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Malik_Stillblade,         1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Trixy_the_Fixer,          2, 929,    0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 3827,   0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 7676,   0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 5631,   0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 929,    0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 3827,   0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 7676,   0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 5631,   0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 929,    0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 3827,   0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 7676,   0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 5631,   0, 0, 0, 0); -- Free Potions from hub
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `extendedcost`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES 
+(@Packmaster_Stonebrow,     1, 14530,  2420, 0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          1, 14530,  2420, 0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Malik_Stillblade,         1, 14530,  2420, 0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          2, 929,    0, 0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 3827,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 7676,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 5631,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 929,    0, 0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 3827,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 7676,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 5631,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 929,    0, 0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 3827,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 7676,   0, 0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 5631,   0, 0, 0, 0, 0); -- Free Potions from hub
+
+-- Furbolg faction fix
+UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
@@ -577,7 +581,7 @@ INSERT INTO `reference_loot_template` VALUES
 -- Custom Elites
 REPLACE INTO `creature_loot_template` VALUES 
 (@Tanak_Ragepaw,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Hexxer,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Hexxed,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
 (@Ravazic,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
 (@Warlord_Skullcrush,   @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
 (@Earthshaker,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
@@ -1654,7 +1658,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Enchanted_Tiki_Warrior, 37, 1, 1, 310.002, 765.283, 259.663, 1.14503, 300, 5, 0, 'Crater_Horde'),
 (@Enchanted_Tiki_Warrior, 37, 1, 1, 292.141, 755.42, 259.81, 3.04962, 300, 5, 0, 'Crater_Horde'),
 (@Enchanted_Tiki_Warrior, 37, 1, 1, 276.937, 757.506, 259.805, 1.61783, 300, 5, 0, 'Crater_Horde'),
-(@Hexxer, 37, 1, 1, 282.025, 770.038, 263.773, 4.8804, 300, 0, 0, 'Crater_Horde');
+(@Hexxed, 37, 1, 1, 282.025, 770.038, 263.773, 4.8804, 300, 0, 0, 'Crater_Horde');
 -- -----------------------------------------------------------------------------------------------------------------------------
 
 -- TEMPLE SIDE
@@ -1884,7 +1888,7 @@ DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
 
 -- Hexxer
-SET @Creature = @Hexxer,
+SET @Creature = @Hexxed,
 @OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
 @SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
 @SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --

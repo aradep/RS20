@@ -56,6 +56,7 @@ UPDATE `item_template` SET `name` = REPLACE(`name`, 'Conqueror''s ', '');
 UPDATE `item_template` SET `name` = REPLACE(`name`, 'Valorous ', '');
 UPDATE `item_template` SET `name` = REPLACE(`name`, 'Heroes'' ', '');
 UPDATE `item_template` SET `name` = REPLACE(`name`, 'Sanctified ', '');
+UPDATE `item_template` SET `name` = REPLACE(`name`, ' of Triumph', '');
 UPDATE `item_template` SET `name` = REPLACE(`name`, ' of Conquest', '');
 UPDATE `item_template` SET `name` = REPLACE(`name`, 'Merciless Gladiator''s ', '');
 UPDATE `item_template` SET `name` = REPLACE(`name`, 'Vengeful Gladiator''s ', '');

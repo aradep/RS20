@@ -15,7 +15,7 @@ UPDATE `item_template` SET `name`='Heavy Shot', `dmg_min1`=5, `dmg_max1`=7, `buy
 UPDATE `item_template` SET `stackable`=1,  name='Endless Runecloth Bandage', `quality`=3, `buycount` = 1, `bonding`=0, `maxcount`=1, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=10839, `spellcharges_1`=0 WHERE `entry`=14529;
 
 -- Azshara Crater Bandage
-UPDATE `item_template` SET `stackable`=1,  name='Expedition Bandage', `description`='Freshly enchanted courtesy of the Kirin\'tor!', `quality`=4, `map`=37, `buycount` = 5, `bonding`=1, `maxcount`=5, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=18608, `spellcharges_1`=0 WHERE `entry`=21991;
+UPDATE `item_template` SET `stackable`=1,  name='Expedition Bandage', `description`='', `quality`=4, `map`=37, `buycount` = 20, `bonding`=1, `maxcount`=20, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=18608, `spellcharges_1`=0 WHERE `entry`=14530;
 
 -- Commendation of Bravery honor token
 UPDATE `item_template` SET `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHERE `entry` = 45706;
@@ -102,62 +102,3 @@ REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`,
 UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 101 WHERE `class` IN (2,4) AND `quality`=2 AND `disenchantID` > 0;
 -- Fix broken links
 DELETE dlt FROM `disenchant_loot_template` dlt LEFT JOIN `item_template` it ON dlt.`Entry` = it.`disenchantID` WHERE it.`disenchantID` IS NULL;
-
--- Nerf cool gems so we can use them without being OP
--- Dreadstones / Shadow Crystals
-UPDATE `item_template` SET `GemProperties` = 1162 WHERE `entry` = 40129; -- Sovereign Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1163 WHERE `entry` = 40130; -- Shifting Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1170 WHERE `entry` = 40131; -- Tenuous Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1164 WHERE `entry` = 40132; -- Glowing Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1169 WHERE `entry` = 40133; -- Purified Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1171 WHERE `entry` = 40134; -- Royal Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1173 WHERE `entry` = 40135; -- Mysterious Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1165 WHERE `entry` = 40136; -- Balanced Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1172 WHERE `entry` = 40137; -- Infused Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1166 WHERE `entry` = 40138; -- Regal Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1167 WHERE `entry` = 40139; -- Defender's Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1161 WHERE `entry` = 40140; -- Puissant Dreadstone
-UPDATE `item_template` SET `GemProperties` = 1168 WHERE `entry` = 40141; -- Guardian's Dreadstone
--- Eyes of Zul / Dark Jade
-UPDATE `item_template` SET `GemProperties` = 1196 WHERE `entry` = 40164; -- Timeless Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1197 WHERE `entry` = 40165; -- Jagged Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1198 WHERE `entry` = 40166; -- Vivid Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1199 WHERE `entry` = 40167; -- Enduring Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1200 WHERE `entry` = 40168; -- Steady Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1201 WHERE `entry` = 40169; -- Forceful Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1202 WHERE `entry` = 40170; -- Seer's Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1203 WHERE `entry` = 40171; -- Misty Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1204 WHERE `entry` = 40172; -- Shining Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1205 WHERE `entry` = 40173; -- Turbid Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1206 WHERE `entry` = 40174; -- Intricate Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1207 WHERE `entry` = 40175; -- Dazzling Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1208 WHERE `entry` = 40176; -- Sundered Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1209 WHERE `entry` = 40177; -- Lambent Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1210 WHERE `entry` = 40178; -- Opaque Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1211 WHERE `entry` = 40179; -- Energized Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1212 WHERE `entry` = 40180; -- Radiant Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1213 WHERE `entry` = 40181; -- Tense Eye of Zul
-UPDATE `item_template` SET `GemProperties` = 1214 WHERE `entry` = 40182; -- Shattered Eye of Zul
--- Ametrines / Huge Citrines
-UPDATE `item_template` SET `GemProperties` = 1174 WHERE `entry` = 40142; -- Inscribed Ametrine
-UPDATE `item_template` SET `GemProperties` = 1175 WHERE `entry` = 40143; -- Etched Ametrine
-UPDATE `item_template` SET `GemProperties` = 1177 WHERE `entry` = 40144; -- Champion's Ametrine
-UPDATE `item_template` SET `GemProperties` = 1178 WHERE `entry` = 40145; -- Resplendent Ametrine
-UPDATE `item_template` SET `GemProperties` = 1179 WHERE `entry` = 40146; -- Fierce Ametrine
-UPDATE `item_template` SET `GemProperties` = 1180 WHERE `entry` = 40147; -- Deadly Ametrine
-UPDATE `item_template` SET `GemProperties` = 1181 WHERE `entry` = 40148; -- Glinting Ametrine
-UPDATE `item_template` SET `GemProperties` = 1182 WHERE `entry` = 40149; -- Lucent Ametrine
-UPDATE `item_template` SET `GemProperties` = 1183 WHERE `entry` = 40150; -- Deft Ametrine
-UPDATE `item_template` SET `GemProperties` = 1189 WHERE `entry` = 40151; -- Luminous Ametrine
-UPDATE `item_template` SET `GemProperties` = 1184 WHERE `entry` = 40152; -- Potent Ametrine
-UPDATE `item_template` SET `GemProperties` = 1185 WHERE `entry` = 40153; -- Veiled Ametrine
-UPDATE `item_template` SET `GemProperties` = 1186 WHERE `entry` = 40154; -- Durable Ametrine
-UPDATE `item_template` SET `GemProperties` = 1187 WHERE `entry` = 40155; -- Reckless Ametrine
-UPDATE `item_template` SET `GemProperties` = 1188 WHERE `entry` = 40156; -- Wicked Ametrine
-UPDATE `item_template` SET `GemProperties` = 1190 WHERE `entry` = 40157; -- Pristine Ametrine
-UPDATE `item_template` SET `GemProperties` = 1191 WHERE `entry` = 40158; -- Empowered Ametrine
-UPDATE `item_template` SET `GemProperties` = 1192 WHERE `entry` = 40159; -- Stark Ametrine
-UPDATE `item_template` SET `GemProperties` = 1193 WHERE `entry` = 40160; -- Stalwart Ametrine
-UPDATE `item_template` SET `GemProperties` = 1194 WHERE `entry` = 40161; -- Glimmering Ametrine
-UPDATE `item_template` SET `GemProperties` = 1195 WHERE `entry` = 40162; -- Accurate Ametrine
-UPDATE `item_template` SET `GemProperties` = 1195 WHERE `entry` = 40163; -- Resolute Ametrine
