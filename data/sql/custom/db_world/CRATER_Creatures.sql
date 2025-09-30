@@ -208,12 +208,9 @@ SET @Firelord               = 482230;
 SET @Windseeker             = 482231;
 
 -- ------------------------------------------------------------------------------------------------------
+-- Creature template changes
 -- ------------------------------------------------------------------------------------------------------
 
--- Creature template changes
-
--- Professor Thadeus
-UPDATE `creature_template` SET `name`='Professor Paleo', `subname` = 'Antiquities Dealer', `faction`=2008 WHERE `entry` = @DarkmoonNPC;
 -- Naga
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Engineer' WHERE `entry` = @Naga_Engineer;
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Sorceress' WHERE `entry` = @Naga_Sorceress;
@@ -373,9 +370,9 @@ UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmo
 UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord);
 
 -- ------------------------------------------------------------------------------------------------------
+-- Custom creatures
 -- ------------------------------------------------------------------------------------------------------
 
--- Custom creatures
 REPLACE INTO `creature_template` 
 (`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `damagemodifier`,   `healthmodifier`,   `manamodifier`,     `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -410,6 +407,8 @@ REPLACE INTO `creature_template`
 (@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
 (@Dark_Illidan,         'Shade of the Betrayer',    '',                     @Dark_Illidan,          23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              514,            2048,           3,      76,             0,              'SmartAI');
 -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Model ID setting
 REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Probability`, `DisplayScale`, `VerifiedBuild`) VALUES 
 (@Firelord, 11121, 1, 2, 1), -- Firelord
 (@Windseeker, 14992, 1, 2, 1), -- Windseeker
@@ -465,9 +464,8 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `extendedcost`, `maxcount`, `
 UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
 
 -- ------------------------------------------------------------------------------------------------------
--- ------------------------------------------------------------------------------------------------------
-
 -- Gossip
+-- ------------------------------------------------------------------------------------------------------
 
 -- Surveyor Delryn
 SET @entry = @Surveyor_Delryn;
@@ -575,6 +573,20 @@ UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `healthmodifi
 28140, -- Gorloc Hatchling
 28139  -- Wolvar Pup
 );
+
+-- -------------------------------------------------------------------------------------------------------------------------------------
+-- Equips
+-- -------------------------------------------------------------------------------------------------------------------------------------
+
+-- Kirin Tor Mage --
+REPLACE INTO `creature_equip_template` VALUES (@Mage_Bruiser, 1, 45726, 45727, 0, 18019);
+REPLACE INTO `creature_template_addon` VALUES (@Mage_Bruiser, 0, 0, 0, 0, 0, 0, NULL);
+-- Camp Guard --
+REPLACE INTO `creature_equip_template` VALUES (@Orc_Bruiser, 1, 23503, 0, 0, 18019);
+REPLACE INTO `creature_template_addon` VALUES (@Orc_Bruiser, 0, 0, 0, 0, 0, 0, NULL);
+-- Spymaster Jarre --
+REPLACE INTO `creature_equip_template` VALUES (@Spymaster_Jarre, 1, 49713, 49714, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Spymaster_Jarre, 0, 0, 0, 0, 0, 0, NULL);
 
 -- -------------------------------------------------------------------------------------------------------------------------------------
 -- Creature loot

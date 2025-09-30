@@ -85,7 +85,7 @@ UPDATE `quest_offer_reward` SET `Emote1`= 1, `Emote2`= 1, `RewardText`='Your ges
 UPDATE `quest_template` SET `questlevel` = 20, `rewardchoiceitemid1`=0, `rewardchoiceitemid2`=0, `rewardchoiceitemid3`=0, `rewardchoiceitemid4`=0 WHERE `startitem` IN (44326,44259,31890,31914,19228,19267,19277,31891,19257,44294,31907);
 UPDATE `quest_template` SET `RewardChoiceItemID1`=42987, `RewardChoiceItemID2`=44254, `RewardChoiceItemID3`=44253, `RewardChoiceItemID4`=44255 WHERE `ID`=13326;
 
--- Add quest ender to Gem vendor
+-- Add questender to new Darkmoon NPC
 REPLACE INTO `creature_questender` VALUES (482019, 7907);
 REPLACE INTO `creature_questender` VALUES (482019, 7927);
 REPLACE INTO `creature_questender` VALUES (482019, 7928);
