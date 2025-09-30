@@ -7,8 +7,8 @@
 -- Azshara Crater creatures
 -- -----------------------------------
 
--- Creature IDs
-
+-- Blizzlike NPCs
+-- -----------------------------------
 -- Naga
 SET @Naga_Engineer = 17721;
 SET @Naga_Sorceress = 17722;
@@ -64,9 +64,6 @@ SET @FelSatyr_Felsworn = 7109;
 SET @FelSatyr_Shadowstalker = 7110;
 SET @FelSatyr_Hellcaller = 7111;
 SET @Felhound = 6010;
-
--- Horde side
-
 -- Giants
 SET @Rock_Giant = 7765;
 SET @Stone_Giant = 23725;
@@ -90,9 +87,6 @@ SET @Gnoll_Mystic = 11838;
 SET @Gnoll_Brute = 11839;
 SET @Gnoll_Shaman = 11837;
 SET @Gnoll_Gnoll = 10991;
-
--- Alliance side
-
 -- Goblin mine
 SET @Goblin_Worker = 674;
 SET @Goblin_Miner = 1094;
@@ -114,7 +108,7 @@ SET @Ogre_Captain = 11445;
 SET @Ogre_Warlock = 11448;
 SET @Doomguard = 11859;
 SET @Hyena_alpha = 13036;
--- Moonwell 
+-- Gorlocs 
 SET @Gorloc_Waddler = 25685;
 SET @Gorloc_Gibberer = 25686;
 SET @Gorloc_Steam_Belcher = 25687;
@@ -124,31 +118,30 @@ SET @Gorloc_Dredger = 25701;
 SET @Gorloc_Hatchling = 28140;
 SET @Gorloc_Oracle = 25688;
 SET @Water_Elemental = 17917;
--- Outside wolvar hold
+-- Wolvar
 SET @Wolvar_Tracker = 28077;
 SET @Wolvar_Hunter = 28079;
 SET @Wolvar_Scavenger = 28081;
 SET @Wolvar_Pup = 28139;
--- Inside wolvar hold
 SET @Wolvar_Spearbearer = 28080;
 SET @Wolvar_Ravager = 28078;
 SET @Wolvar_Berserker = 28076;
+-- Undead
 SET @Rotting_Highborne = 11477;
 SET @Skeletal_Highborne = 11476;
 SET @Anguished_Highborne = 7524;
 SET @Suffering_Highborne = 7523;
 SET @Highborne_Lichling = 6117;
 SET @Highborne_Apparition = 6116;
+-- Cave Beasts
 SET @Cave_Beast = 4387;
 SET @Cave_Creeper = 4382;
 SET @Cave_Rager = 4385;
 SET @Sap_Beast = 4020;
-
--- Temple side
-
--- Burning trees
+-- Treants
 SET @Withered_Treant = 7144;
 SET @Withered_Ancient = 7149;
+-- Harpies
 SET @Harpy_Ripper = 12579;
 SET @Harpy_Harpy = 4022;
 SET @Harpy_Roguefeather = 4023;
@@ -156,9 +149,11 @@ SET @Harpy_Slayer = 4024;
 SET @Harpy_Ambusher = 4025;
 SET @Harpy_Windcaller = 4026;
 SET @Harpy_Storm_Witch = 4027;
+-- Turtles
 SET @Turtle_Tortoise = 4142;
 SET @Turtle_Snapper = 4143;
 SET @Turtle_Borer = 4144;
+-- Elementals
 SET @Fire_Elemental = 575;
 SET @Air_Elemental = 28384;
 -- Temple ruins
@@ -179,22 +174,43 @@ SET @Shadowfiend = 27834;
 SET @Void_Lord = 32230;
 SET @Void_Beast = 33806;
 
+-- Custom NPCs
+-- -----------------------------------
 -- Elites
-SET @Tanak_Ragepaw = 31911;
-SET @Xavaric = 10648;
-SET @King_Gorloc = 25693;
-SET @Phytos = 50329;
-SET @Earthshaker = 12203;
-SET @Guard_Fengus = 14321;
-SET @Guard_Slipkik = 14323;
-SET @Guard_Moldar = 14326;
-SET @Chorush_the_Observer = 14324;
-SET @Chimaeron = 12800;
-SET @Hexxer = 7995;
-SET @Snarlax_Snowpelt = 46439;
-SET @Shirek = 32485;
-SET @King_Gordok = 11501;
-SET @Dark_Illidan = 71000;
+SET @Tanak_Ragepaw          = 482101;
+SET @Ravazic                = 482102;
+SET @King_Gorloc            = 482103;
+SET @Phytos                 = 482104;
+SET @Earthshaker            = 482105;
+SET @Watcher_OneEye         = 482106;
+SET @Grimgut                = 482107;
+SET @Captain_Clogg          = 482108;
+SET @Mokor_the_Tactician    = 482109;
+SET @Chimaeron              = 482110;
+SET @Hexxer                 = 482111;
+SET @Snarlax_Snowpelt       = 482112;
+SET @Shirek                 = 482113;
+SET @Warlord_Skullcrush     = 482114;
+SET @Dark_Illidan           = 482115;
+-- Azsharan Expedition
+SET @Commander_Gara         = 482201;
+SET @Purveyor_Delryn        = 482202;
+SET @Farseer_Serena         = 482203;
+SET @Spymaster_Jarre        = 482204;
+SET @Forward_Scout_Razza    = 482205;
+SET @Trixy_the_Fixer        = 482206;
+SET @Packmaster_Stonebrow   = 482207;
+SET @Malik_Stillblade       = 482208;
+SET @HonorCoin_Vendor       = 482209;
+-- Peacekeeepers
+SET @Mage_Bruiser           = 482209;
+SET @Orc_Bruiser            = 482210;
+-- Cosmetic
+SET @Firelord               = 482301;
+SET @Windseeker             = 482302;
+
+-- ------------------------------------------------------------------------------------------------------
+-- ------------------------------------------------------------------------------------------------------
 
 -- Creature template changes
 
@@ -340,68 +356,76 @@ UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry`=@Voidshrieker;
 UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry`=@Shadowfiend;
 UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry`=@Void_Lord;
 
+-- ------------------------------------------------------------------------------------------------------
+-- ------------------------------------------------------------------------------------------------------
+
 -- Custom creatures
 REPLACE INTO `creature_template` 
-(`entry`, `name`,                   `subname`,              `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
+(`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-(51502, 'Firelord',                 '',                     20,         20,         795,        131,        1,              1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
-(54435, 'Windseeker',               '',                     20,         20,         290,        0,          1,              1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
-(32565, 'Commander Gara',           'Azsharan Expedition',  20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
-(33642, 'Purveyor Delryn',          'Azsharan Expedition',  20,         20,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
-(39283, 'Farseer Serena',           'Azsharan Expedition',  20,         20,         2007,       3,          1,              1,              1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(52291, 'Spymaster Jarre',          'Azsharan Expedition',  20,         20,         2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(30469, 'Forward Scout Razza',      'Azsharan Expedition',  20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(30436, 'Trixy the Fixer',          'Supplies',             20,         20,         2007,       131,        1,              1.14286,        1.5,        0,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(5153,  'Packmaster Stonebrow',     'Supplies',             20,         20,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(22442, 'Malik Stillblade',         'Supplies',             20,         20,         2007,       131,        1,              1.14286,        1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(4624,  'Tower Guardian',           '',                     23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
-(64624, 'Orc Bruiser',              '',                     23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
-(31911, 'Tanak Ragepaw',            '',                     23,         23,         16,         0,          0.8,            1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(7995,  'Hexlord Rashiki',          '',                     23,         23,         7,          0,          0.8,            1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(10648, 'Xavaric',                  '',                     23,         23,         90,         0,          0.9,            1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
-(11501, 'Warlord Skullcrush',       '',                     23,         23,         45,         0,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(12203, 'Earthshaker',              'The Evergreen',        23,         23,         91,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
-(12800, 'Chimaereon',               '',                     23,         23,         16,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
-(14321, 'Watcher One-Eye',          '',                     23,         23,         45,         1,          0.8,            1.1,            0.65,       3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(14323, 'Grimgut',                  '',                     23,         23,         45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(14324, 'Mokor the Tactician',      '',                     23,         23,         45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
-(14326, 'Guard-Captain Clogg',      '',                     23,         23,         45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(25693, 'King Gorloc',              '',                     23,         23,         18,         0,          0.8,            1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
-(46439, 'Snarlax Snowpelt',         '',                     23,         23,         2001,       0,          0.8,            1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(32485, 'Shirek',                   'The Devourer',         23,         23,         14,         0,          1,              1.1,            1,          3,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
-(50329, 'Phytos',                   'The Glowing One',      23,         23,         16,         0,          0.8,            1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
-(71000, 'Shadow of the Betrayer',   '',                     23,         23,         16,         0,          0.8,            1.1,            2,          3,      1,              514,            2048,           3,      76,             1,              'SmartAI');
+(@Firelord,             'Firelord',                 'Cosmetic',             @Firelord,              20,         20,         795,        131,        1,          1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
+(@Windseeker,           'Windseeker',               'Cosmetic',             @Windseeker,            20,         20,         290,        0,          1,          1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
+-- NPCs
+(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  @Commander_Gara,        20,         20,         2007,       3,          1,          1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
+(@Purveyor_Delryn,      'Purveyor Delryn',          'Azsharan Expedition',  @Purveyor_Delryn,       20,         20,         2007,       3,          1,          1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  @Farseer_Serena,        20,         20,         2007,       3,          1,          1,              1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  @Spymaster_Jarre,       20,         20,         2007,       3,          1,          1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  @Forward_Scout_Razza,   20,         20,         2007,       3,          1,          1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             @Trixy_the_Fixer,       20,         20,         2007,       131,        1,          1.14286,        1.5,        0,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             @Packmaster_Stonebrow,  20,         20,         2007,       131,        1,          1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             @Malik_Stillblade,      20,         20,         2007,       131,        1,          1.14286,        1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Mage_Bruiser,         'Tower Guardian',           'Peacekeeper',          @Mage_Bruiser,          23,         23,         2008,       0,          1,          1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          @Orc_Bruiser,           23,         23,         2008,       0,          1,          1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
+-- Elites
+(@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         16,         0,          0.8,        1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Hexxer,               'Hexlord Rashiki',          '',                     @Hexxer,                23,         23,         7,          0,          0.8,        1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         90,         0,          0.9,        1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
+(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         45,         0,          0.8,        1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         91,         0,          0.8,        1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
+(@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         16,         0,          0.8,        1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
+(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         45,         1,          0.8,        1.1,            0.65,       3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         45,         1,          0.8,        1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         45,         1,          0.8,        1.1,            0.8,        3,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Captain_Clogg,        'Guard-Captain Clogg',      '',                     @Captain_Clogg,         23,         23,         45,         1,          0.8,        1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         18,         0,          0.8,        1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         2001,       0,          0.8,        1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Shirek,               'Shirek',                   'The Devourer',         @Shirek,                23,         23,         14,         0,          1,          1.1,            1,          3,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
+(@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         16,         0,          0.8,        1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
+(@Dark_Illidan,         'Shadow of the Betrayer',   '',                     @Dark_Illidan,          23,         23,         16,         0,          0.8,        1.1,            2,          3,      1,              514,            2048,           3,      76,             1,              'SmartAI');
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
--- Models
 REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES 
-(51502, 11121, 1, 2, 1), -- Firelord
-(54435, 14992, 1, 2, 1), -- Windseeker
-(4624, 28780, 1, 2, 1), -- Kirin Tor Guardian
-(64624, 4261, 1, 2, 1), -- Orc Bruiser
-(31911, 25376, 1, 2, 1), -- Tanak Ragepaw
-(7995, 7803, 1, 2, 1), -- Hexlord
-(10648, 2879, 1, 2, 1), -- Xavaric
-(11501, 11583, 1, 2, 1), -- Warlord Skullcrush
-(12203, 23356, 1, 2, 1), -- Earthshaker
-(12800, 4269, 1, 2, 1), -- Chimaereon
-(14321, 11561, 1, 2, 1), -- Watcher One-Eye
-(14323, 11561, 1, 2, 1), -- Grimgut
-(14324, 11537, 1, 2, 1), -- Mokor the Tactician
-(14326, 11561, 1, 2, 1), -- Guard-Captain Clogg
-(25693, 22607, 1, 2, 1), -- King Gorloc
-(46439, 23774, 1, 2, 1), -- Snarlax Snowpelt
-(32485, 28052, 1, 2, 1), -- Shirek
-(50329, 28133, 1, 2, 1), -- Phytos
-(71000, 26348, 1, 2, 1), -- Shadow of the Betrayer
-(32565, 28059, 1, 2, 1), -- Commander Gara
-(33642, 28770, 1, 2, 1), -- Purveyor Delryn
-(39283, 31391, 1, 2, 1), -- Farseer Serena
-(52291, 30465, 1, 2, 1), -- Spymaster Jarre
-(30469, 15577, 1, 2, 1), -- Forward Scout Razza
-(30436, 23080, 1, 2, 1), -- Trixy the Fixer
-(5153, 3072, 1, 2, 1),   -- Packmaster Stonebrow
-(22442, 27888, 1, 2, 1); -- Malik Stillblade
+(@Firelord, 11121, 1, 2, 1), -- Firelord
+(@Windseeker, 14992, 1, 2, 1), -- Windseeker
+-- Elites
+(@Mage_Bruiser, 28780, 1, 2, 1), -- Kirin Tor Guardian
+(@Orc_Bruiser, 4261, 1, 2, 1), -- Orc Bruiser
+(@Tanak_Ragepaw, 25376, 1, 2, 1), -- Tanak Ragepaw
+(@Hexxer, 7803, 1, 2, 1), -- Hexlord Rashiki
+(@Ravazic, 2879, 1, 2, 1), -- Ravazic
+(@Warlord_Skullcrush, 11583, 1, 2, 1), -- Warlord Skullcrush
+(@Earthshaker, 23356, 1, 2, 1), -- Earthshaker
+(@Chimaeron, 4269, 1, 2, 1), -- Chimaereon
+(@Watcher_OneEye, 11561, 1, 2, 1), -- Watcher One-Eye
+(@Grimgut, 11561, 1, 2, 1), -- Grimgut
+(@Mokor_the_Tactician, 11537, 1, 2, 1), -- Mokor the Tactician
+(@Captain_Clogg, 11561, 1, 2, 1), -- Guard-Captain Clogg
+(@King_Gorloc, 22607, 1, 2, 1), -- King Gorloc
+(@Snarlax_Snowpelt, 23774, 1, 2, 1), -- Snarlax Snowpelt
+(@Shirek, 28052, 1, 2, 1), -- Shirek
+(@Phytos, 28133, 1, 2, 1), -- Phytos
+(@Dark_Illidan, 26348, 1, 2, 1), -- Shadow of the Betrayer
+-- Azsharan Expedition
+(@Commander_Gara, 28059, 1, 2, 1), -- Commander Gara
+(@Purveyor_Delryn, 28770, 1, 2, 1), -- Purveyor Delryn
+(@Farseer_Serena, 31391, 1, 2, 1), -- Farseer Serena
+(@Spymaster_Jarre, 30465, 1, 2, 1), -- Spymaster Jarre
+(@Forward_Scout_Razza, 15577, 1, 2, 1), -- Forward Scout Razza
+(@Trixy_the_Fixer, 23080, 1, 2, 1), -- Trixy the Fixer
+(@Packmaster_Stonebrow, 3072, 1, 2, 1), -- Packmaster Stonebrow
+(@Malik_Stillblade, 27888, 1, 2, 1); -- Malik Stillblade
+
+-- ------------------------------------------------------------------------------------------------------
+-- ------------------------------------------------------------------------------------------------------
 
 -- Gossip
 
@@ -523,19 +547,19 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 -- HUB
 -- -------------------------------------------------------------------------------------
 -- Kirin Tor Mages
-(4624, 37, 1, 1, 742.412, 278.798, 295.175, 5.74359, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 724.119, 292.79, 303.783, 0.245792, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 737.471, 299.838, 295.094, 4.08248, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 726.032, 312.104, 295.175, 1.149, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 744.23, 307.003, 295.179, 1.20398, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 738.727, 305.29, 280.811, 1.43568, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 732.753, 307.501, 280.934, 0.999782, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 725.212, 296.288, 319.306, 5.93214, 300, 0, 0, 'Crater_Alliance'),
-(4624, 37, 1, 1, 737.246, 290.07, 281.782, 2.46834, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 742.412, 278.798, 295.175, 5.74359, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 724.119, 292.79, 303.783, 0.245792, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 737.471, 299.838, 295.094, 4.08248, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 726.032, 312.104, 295.175, 1.149, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 744.23, 307.003, 295.179, 1.20398, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 738.727, 305.29, 280.811, 1.43568, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 732.753, 307.501, 280.934, 0.999782, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 725.212, 296.288, 319.306, 5.93214, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_Bruiser, 37, 1, 1, 737.246, 290.07, 281.782, 2.46834, 300, 0, 0, 'Crater_Alliance'),
 -- Questgiver
-(52291, 37, 1, 1, 737.141, 308.849, 295.18, 1.18832, 300, 0, 0, 'Crater_Alliance'),
+(@Spymaster_Jarre, 37, 1, 1, 737.141, 308.849, 295.18, 1.18832, 300, 0, 0, 'Crater_Alliance'),
 -- Supplies/repair
-(22442, 37, 1, 1, 727.335, 296.277, 281.78, 6.17935, 300, 0, 0, 'Crater_Alliance'),
+(@Malik_Stillblade, 37, 1, 1, 727.335, 296.277, 281.78, 6.17935, 300, 0, 0, 'Crater_Alliance'),
 -- -------------------------------------------------------------------------------------
 -- Wandering Ancient
 (@Wandering_Ancient, 37, 1, 1, 748.324, 216.923, 275.715, 3.99918, 300, 5, 0, 'Crater_Alliance'),
@@ -669,11 +693,11 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Ogre_Mage_Lord, 37, 1, 1, 871.931, 25.0791, 322.751, 0.47756, 300, 0, 0, 'Crater_Alliance'),
 (@Ogre_Warlock, 37, 1, 1, 862.019, -5.70088, 303.463, 4.68744, 300, 0, 0, 'Crater_Alliance'),
 (@Ogre_Warlock, 37, 1, 1, 861.96, -14.5759, 303.961, 1.55763, 300, 0, 0, 'Crater_Alliance'),
-(@Chorush_the_Observer, 37, 1, 1, 888.579, 3.25164, 322.742, 5.25043, 300, 0, 0, 'Crater_Alliance'), -- Cho'rush (Elite)
-(@King_Gordok, 37, 1, 1, 1112.99, 34.8596, 319.516, 1.98269, 300, 0, 0, 'Crater_Alliance'), -- King Gordok (Elite)
-(@Guard_Moldar, 37, 1, 1, 1060.74, 17.098, 313.249, 3.42368, 300, 0, 0, 'Crater_Alliance'), -- Clogg (Elite)
-(@Guard_Fengus, 37, 1, 1, 638.516, 109.456, 300.584, 3.13516, 300, 0, 0, 'Crater_Alliance'), -- Watcher One-Eye (Elite)
-(@Guard_Slipkik, 37, 1, 1, 887.746, 4.24569, 307.63, 5.22249, 300, 0, 0, 'Crater_Alliance'), -- Grimgut (Elite)
+(@Mokor_the_Tactician, 37, 1, 1, 888.579, 3.25164, 322.742, 5.25043, 300, 0, 0, 'Crater_Alliance'), -- Cho'rush (Elite)
+(@Warlord_Skullcrush, 37, 1, 1, 1112.99, 34.8596, 319.516, 1.98269, 300, 0, 0, 'Crater_Alliance'), -- King Gordok (Elite)
+(@Captain_Clogg, 37, 1, 1, 1060.74, 17.098, 313.249, 3.42368, 300, 0, 0, 'Crater_Alliance'), -- Clogg (Elite)
+(@Watcher_OneEye, 37, 1, 1, 638.516, 109.456, 300.584, 3.13516, 300, 0, 0, 'Crater_Alliance'), -- Watcher One-Eye (Elite)
+(@Grimgut, 37, 1, 1, 887.746, 4.24569, 307.63, 5.22249, 300, 0, 0, 'Crater_Alliance'), -- Grimgut (Elite)
 -- Moonwell Gorlocs
 (@Gorloc_Steam_Belcher, 37, 1, 1, 824.859, 225.931, 264.359, 1.25192, 300, 5, 0, 'Crater_Alliance'),
 (@Gorloc_Mud_Splasher, 37, 1, 1, 829.359, 180.492, 263.372, 2.33576, 300, 5, 0, 'Crater_Alliance'),
@@ -996,26 +1020,25 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (29259, 37, 0, 1, 441.81, 145.932, 308.12, 5.361, 300, 0, 0, 'Crater_Central'),
 -- HUB
 -- -------------------------------------------------------------------------------------
--- Honor Coin and Gem vendors
-(30116, 37, 0, 1, 434.365, 146.056, 305.964, 6.21794, 300, 0, 0, 'Crater_Central'),
-(30117, 37, 0, 1, 435.359, 148.673, 305.964, 5.33436, 300, 0, 0, 'Crater_Central'),
+-- Honor Coin vendor
+(@HonorCoin_Vendor, 37, 0, 1, 434.365, 146.056, 305.964, 6.21794, 300, 0, 0, 'Crater_Central'),
 -- Mage Guardians
-(4624, 37, 1, 1, 447.098, 149.941, 305.965, 3.89705, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 446.8, 134.292, 267.756, 5.61313, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 452.478, 138.618, 267.78, 5.01623, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 434.831, 144.897, 268.44, 0.138903, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 440.124, 164.332, 281.833, 2.56971, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 422.983, 144.282, 281.832, 3.55931, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 425.291, 152.849, 281.832, 2.55007, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 460.213, 141.142, 281.833, 5.43562, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 442.676, 126.551, 281.832, 5.02329, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 443.888, 138.293, 281.746, 2.11732, 300, 0, 0, 'Crater_Central'),
-(4624, 37, 1, 1, 441.064, 139.197, 297.173, 1.39869, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 447.098, 149.941, 305.965, 3.89705, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 446.8, 134.292, 267.756, 5.61313, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 452.478, 138.618, 267.78, 5.01623, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 434.831, 144.897, 268.44, 0.138903, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 440.124, 164.332, 281.833, 2.56971, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 422.983, 144.282, 281.832, 3.55931, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 425.291, 152.849, 281.832, 2.55007, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 460.213, 141.142, 281.833, 5.43562, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 442.676, 126.551, 281.832, 5.02329, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 443.888, 138.293, 281.746, 2.11732, 300, 0, 0, 'Crater_Central'),
+(@Mage_Bruiser, 37, 1, 1, 441.064, 139.197, 297.173, 1.39869, 300, 0, 0, 'Crater_Central'),
 -- Questgivers
-(33642, 37, 1, 1, 436.47, 142.254, 305.964, 3.81776, 600, 0, 0, 'Crater_Central'),
-(39283, 37, 1, 1, 451.833, 133.937, 281.838, 5.37751, 300, 0, 0, 'Crater_Central'),
+(@Purveyor_Delryn, 37, 1, 1, 436.47, 142.254, 305.964, 3.81776, 600, 0, 0, 'Crater_Central'),
+(@Farseer_Serena, 37, 1, 1, 451.833, 133.937, 281.838, 5.37751, 300, 0, 0, 'Crater_Central'),
 -- Supplies/Repair
-(5153, 37, 1, 1, 450.308, 118.441, 263.27, 1.48271, 300, 0, 0, 'Crater_Central'),
+(@Packmaster_Stonebrow, 37, 1, 1, 450.308, 118.441, 263.27, 1.48271, 300, 0, 0, 'Crater_Central'),
 -- -------------------------------------------------------------------------------------
 -- Naga
 (@Naga_Ambusher, 37, 1, 1, 168.726, 134.046, 231.195, 4.23085, 300, 5, 0, 'Crater_Central'),
@@ -1340,7 +1363,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@FelSatyr_Hellcaller, 37, 1, 1, -94.476, 342.559, 293.283, 0.998142, 300, 5, 0, 'Crater_Central'),
 (@FelSatyr_Hellcaller, 37, 1, 1, -50.6106, 237.652, 295.084, 1.91706, 300, 5, 0, 'Crater_Central'),
 (@FelSatyr_Hellcaller, 37, 1, 1, -39.817, 198.805, 293.48, 6.1158, 300, 5, 0, 'Crater_Central'),
-(@Xavaric, 37, 1, 1, -107.353, 285.099, 293.688, 1.0688, 300, 5, 0, 'Crater_Central');
+(@Ravazic, 37, 1, 1, -107.353, 285.099, 293.688, 1.0688, 300, 5, 0, 'Crater_Central');
 -- -----------------------------------------------------------------------------------------------------------------------------
 -- -----------------------------------------------------------------------------------------------------------------------------
 
@@ -1350,22 +1373,21 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 -- HUB
 -- -------------------------------------------------------------------------------------
 -- Guardians
-(64624, 37, 1, 1, 140.423, 268.618, 295.826, 2.54305, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 159.985, 264.006, 295.803, 5.85744, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 157.459, 273.512, 289.318, 0.143668, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 144.658, 275.612, 289.318, 2.30744, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 157.918, 266.055, 273.359, 2.78655, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 137.626, 270.956, 273.757, 2.4292, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 140.423, 268.618, 295.826, 2.54305, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 159.985, 264.006, 295.803, 5.85744, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 157.459, 273.512, 289.318, 0.143668, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 144.658, 275.612, 289.318, 2.30744, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 157.918, 266.055, 273.359, 2.78655, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 137.626, 270.956, 273.757, 2.4292, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 161.43, 594.713, 270.775, 4.34687, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 158.288, 578.709, 270.776, 1.38591, 300, 0, 0, 'Crater_Horde'),
+(@Orc_Bruiser, 37, 1, 1, 138.412, 592.413, 269.27, 4.79063, 300, 0, 0, 'Crater_Horde'),
 -- Questgiver Razza
-(30469, 37, 1, 1, 152.27, 267.746, 295.856, 2.65297, 300, 0, 0, 'Crater_Horde'),
+(@Forward_Scout_Razza, 37, 1, 1, 152.27, 267.746, 295.856, 2.65297, 300, 0, 0, 'Crater_Horde'),
 -- Questgiver Gara
-(32565, 37, 1, 1, 168.784, 583.098, 270.777, 2.85324, 300, 0, 0, 'Crater_Horde'),
--- Orc Guardians
-(64624, 37, 1, 1, 161.43, 594.713, 270.775, 4.34687, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 158.288, 578.709, 270.776, 1.38591, 300, 0, 0, 'Crater_Horde'),
-(64624, 37, 1, 1, 138.412, 592.413, 269.27, 4.79063, 300, 0, 0, 'Crater_Horde'),
+(@Commander_Gara, 37, 1, 1, 168.784, 583.098, 270.777, 2.85324, 300, 0, 0, 'Crater_Horde'),
 -- Supplies/repair
-(30436, 37, 1, 1, 151.252, 597.073, 269.87, 5.41284, 300, 0, 0, 'Crater_Horde'),
+(@Trixy_the_Fixer, 37, 1, 1, 151.252, 597.073, 269.87, 5.41284, 300, 0, 0, 'Crater_Horde'),
 -- -------------------------------------------------------------------------------------
 -- Raptors
 (@Raptor_Raptor, 37, 1, 1, 351.688, 663.557, 270.813, 4.3518, 300, 10, 0, 'Crater_Horde'),
@@ -1483,8 +1505,8 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Temple';
 INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`wander_distance`, `movementtype`,`comment`) VALUES
 -- Fighting Elemental Lords
-(54435, 37, 1, 1, -576.471, -151.895, 332.449, 5.29497, 300, 0, 0, 'Crater_Temple'),
-(51502, 37, 1, 1, -538.987, -213.684, 318.972, 2.12589, 300, 0, 0, 'Crater_Temple'),
+(@Windseeker, 37, 1, 1, -576.471, -151.895, 332.449, 5.29497, 300, 0, 0, 'Crater_Temple'),
+(@Firelord, 37, 1, 1, -538.987, -213.684, 318.972, 2.12589, 300, 0, 0, 'Crater_Temple'),
 -- Harpies/Ancients
 (@Withered_Ancient, 37, 1, 1, -363.481, -128.933, 296.009, 3.95981, 300, 10, 0, 'Crater_Temple'),
 (@Harpy_Harpy, 37, 1, 1, -343.811, -5.37716, 300.673, 2.73457, 300, 5, 0, 'Crater_Temple'),
@@ -1638,7 +1660,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 -- -----------------------------------------------------------------------------------------------------------------------------
 
 -- Fix wander
-UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0 AND `comment` = 'Crater_Temple';
-UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0 AND `comment` = 'Crater_Temple';
+UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0 AND `comment` LIKE 'Crater_%';
+UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0 AND `comment` LIKE 'Crater_%';
 -- Turn off equipment_id for NPCs with no creature_equip_template
 UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FROM `creature_equip_template` WHERE `creature`.`id1` = `creature_equip_template`.`creatureid`);

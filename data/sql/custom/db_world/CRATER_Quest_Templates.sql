@@ -32,8 +32,14 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2` , `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES (1, 18869, 22577, 0, 0, 9, 0, 42316, 0, 0, 0, 0, 0, '', 'Mote of Shadow (22577) only drops from (18869) while on quest (42316) ');
 UPDATE `creature_loot_template` SET `Chance`=100 WHERE `Item`=22577;
 
+-- Questgivers
+SET 
+@Commander_Gara         = 482201,
+@Purveyor_Delryn        = 482202,
+@Farseer_Serena         = 482203,
+@Spymaster_Jarre        = 482204,
+@Forward_Scout_Razza    = 482205,
 -- Quest rewards
-SET
 @HonorCoin              = 37836,
 @FieldSupplies          = 20602,
 @MysteryBox             = 41426,
@@ -49,8 +55,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 33642, /* Loremaster Delryn */
-@QuestEnder                 = 33642, /* Loremaster Delryn */
+@QuestStarter               = @Purveyor_Delryn, /* Loremaster Delryn */
+@QuestEnder                 = @Purveyor_Delryn, /* Loremaster Delryn */
 
 @QuestType                  = 0, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -126,8 +132,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -203,8 +209,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 33642, /* Loremaster */
-@QuestEnder                 = 33642, /* Loremaster */
+@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
+@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -280,8 +286,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 30469, /* Forward Scout */
-@QuestEnder                 = 30469, /* Forward Scout */
+@QuestStarter               = @Forward_Scout_Razza, /* Forward Scout */
+@QuestEnder                 = @Forward_Scout_Razza, /* Forward Scout */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -357,8 +363,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 33642, /* Loremaster */
-@QuestEnder                 = 33642, /* Loremaster */
+@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
+@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -434,8 +440,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 30469, /* ForwardScout */
-@QuestEnder                 = 30469, /* ForwardScout */
+@QuestStarter               = @Forward_Scout_Razza, /* ForwardScout */
+@QuestEnder                 = @Forward_Scout_Razza, /* ForwardScout */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -511,8 +517,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 42332,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -588,8 +594,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -665,8 +671,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 33642, /* Loremaster */
-@QuestEnder                 = 33642, /* Loremaster */
+@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
+@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -742,8 +748,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -819,8 +825,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -896,8 +902,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -973,8 +979,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1050,8 +1056,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1127,8 +1133,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1204,8 +1210,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1281,8 +1287,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1358,8 +1364,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1435,8 +1441,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 33642, /* Loremaster */
-@QuestEnder                 = 33642, /* Loremaster */
+@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
+@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1512,8 +1518,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1589,8 +1595,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1666,8 +1672,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1743,8 +1749,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1821,8 +1827,8 @@ SET
 @PreviousQuest              = 42325,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1898,8 +1904,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 42325,
 
-@QuestStarter               = 33642, /* Loremaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1976,8 +1982,8 @@ SET
 @PreviousQuest              = 42324,
 @RewardNextQuest            = 42323,
 
-@QuestStarter               = 52291, /* Spymaster */
-@QuestEnder                 = 52291, /* Spymaster */
+@QuestStarter               = @Spymaster_Jarre, /* Spymaster */
+@QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2053,8 +2059,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2130,8 +2136,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2207,8 +2213,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 30469, /* ForwardScout */
-@QuestEnder                 = 30469, /* ForwardScout */
+@QuestStarter               = @Forward_Scout_Razza, /* ForwardScout */
+@QuestEnder                 = @Forward_Scout_Razza, /* ForwardScout */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2284,8 +2290,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 30469, /* ForwardScout */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Forward_Scout_Razza, /* ForwardScout */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2361,8 +2367,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 32565, /* CampCommander */
-@QuestEnder                 = 32565, /* CampCommander */
+@QuestStarter               = @Commander_Gara, /* CampCommander */
+@QuestEnder                 = @Commander_Gara, /* CampCommander */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2439,8 +2445,8 @@ SET
 @PreviousQuest              = 42306,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = 39283, /* Farseer */
-@QuestEnder                 = 39283, /* Farseer */
+@QuestStarter               = @Farseer_Serena, /* Farseer */
+@QuestEnder                 = @Farseer_Serena, /* Farseer */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -2465,7 +2471,7 @@ SET
 @RequestItems               = 'Have you found success?',
 @OfferReward                = 'Celebrate the victory $n, but there is still much to be done. The stain on this land is not yet washed clean.',
 
-@RewardItem1                = @MysteryBox,            @RequiredNpcOrGo1           = 46439,            @POIContinent               = 0,
+@RewardItem1                = @MysteryBox,            @RequiredNpcOrGo1           = 482112,            @POIContinent               = 0,
 @RewardAmount1              = 1,                @RequiredNpcOrGoCount1      = 1,                @POIx                       = 0,
 @RewardItem2                = @HonorCoin,            @RequiredNpcOrGo2           = 0,                @POIy                       = 0,
 @RewardAmount2              = @EliteQuest_HonorCoins,               @RequiredNpcOrGoCount2      = 0,                @POIPriority                = 0,
