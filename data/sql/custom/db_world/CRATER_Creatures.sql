@@ -428,24 +428,24 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Disp
 (@Malik_Stillblade, 27888, 1, 2, 1); -- Malik Stillblade
 
 -- Supply vendors
-DELETE FROM `npc_vendor` WHERE  `entry` IN (@Packmaster_Stonebrow,@Trixy_the_Fixer,@Malik_Stillblade);
-DELETE FROM `npc_trainer` WHERE `id` IN (@Packmaster_Stonebrow,@Trixy_the_Fixer,@Malik_Stillblade);
+DELETE FROM `npc_vendor` WHERE  `entry` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
+DELETE FROM `npc_trainer` WHERE `id` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES 
 (@Packmaster_Stonebrow,     1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
 (@Trixy_the_Fixer,          1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
 (@Malik_Stillblade,         1, 21991,  0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Trixy_the_Fixer,          1, 929,  0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          1, 3827,  0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          1, 7676,  0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          1, 5631,  0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         1, 929,  0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         1, 3827,  0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         1, 7676,  0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         1, 5631,  0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     1, 929,  0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     1, 3827,  0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     1, 7676,  0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     1, 5631,  0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 5631,   0, 0, 0, 0); -- Free Potions from hub
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
@@ -568,9 +568,9 @@ SET @Reference_EliteLoot = 48212;
 -- Elite loot reference
 DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_EliteLoot;
 INSERT INTO `reference_loot_template` VALUES
-(@Reference_EliteLoot, 40752,     0, 100, 0, 0, 1, 1, 1, '1x Emblem of Heroism'),
-(@Reference_EliteLoot, 34052,     0, 100, 0, 0, 1, 3, 3, '3x Dream Shard'),
-(@Reference_EliteLoot, 48208, 48208, 100, 0, 0, 5, 1, 1, '1x BoP Blue');
+(@Reference_EliteLoot, 40752,     0, 100, 0, 1, 0, 1, 1, '1x Emblem of Heroism'),
+(@Reference_EliteLoot, 34052,     0, 100, 0, 1, 0, 3, 3, '3x Dream Shard'),
+(@Reference_EliteLoot, 48208, 48208, 100, 0, 1, 5, 1, 1, '1x BoP Blue');
 
 -- Creature loot templates
 
@@ -1844,3 +1844,169 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@Orc_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 22120, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - On Aggro - Cast Charge'),
 (@Orc_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 2600, 3200, 0, 11, 26211, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Hamstring'),
 (@Orc_Bruiser, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 22427, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Concussion Blow');
+
+-- Fire elemental
+SET 
+@Creature = @Fire_Elemental,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=8444, @COOLDOWN_1=1000, @RECASTMIN_1=2000, @RECASTMAX_1=3000, @CHANCE_1=50, -- Scorch -- 
+@SPELL_2=9574, @COOLDOWN_2=2000, @RECASTMIN_2=4000, @RECASTMAX_2=8000, @CHANCE_2=50; -- Flame Buffet --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+UPDATE `creature_template` SET `AiName`='SmartAI' WHERE `entry`=@Creature;
+
+-- Air elemental
+SET 
+@Creature = @Air_Elemental,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=943, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=2000, @CHANCE_1=60, -- Lightning Bolt  -- 
+@SPELL_2=421, @COOLDOWN_2=8000, @RECASTMIN_2=10000, @RECASTMAX_2=15000, @CHANCE_2=40; -- Chain Lightning --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+UPDATE `creature_template` SET `AiName`='SmartAI' WHERE `entry`=@Creature;
+
+-- Water elemental
+SET @Creature = @Water_Elemental,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Water Bolt  -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40; -- Ice Lance --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+UPDATE `creature_template` SET `AiName`='SmartAI' WHERE `entry`=@Creature;
+
+-- Tanak_Ragepaw
+SET @Creature = @Tanak_Ragepaw,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Hexxer
+SET @Creature = @Hexxer,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Ravazic
+SET @Creature = @Ravazic,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Warlord_Skullcrush
+SET @Creature = @Warlord_Skullcrush,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Earthshaker
+SET @Creature = @Earthshaker,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Chimaeron
+SET @Creature = @Chimaeron,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Watcher_OneEye
+SET @Creature = @Watcher_OneEye,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Grimgut
+SET @Creature = @Grimgut,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Mokor_the_Tactician
+SET @Creature = @Mokor_the_Tactician,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Captain_Clogg
+SET @Creature = @Captain_Clogg,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- King_Gorloc
+SET @Creature = @King_Gorloc,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Snarlax_Snowpelt
+SET @Creature = @Snarlax_Snowpelt,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Shirek
+SET @Creature = @Shirek,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Phytos
+SET @Creature = @Phytos,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+-- Dark_Illidan
+SET @Creature = @Dark_Illidan,
+@OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
+@SPELL_1=32011, @COOLDOWN_1=1000, @RECASTMIN_1=1000, @RECASTMAX_1=3000, @CHANCE_1=60, -- Spell1 -- 
+@SPELL_2=30455, @COOLDOWN_2=4000, @RECASTMIN_2=5000, @RECASTMAX_2=8000, @CHANCE_2=40, -- Spell2 --
+@SPELL_3=30455, @COOLDOWN_3=4000, @RECASTMIN_3=5000, @RECASTMAX_3=8000, @CHANCE_3=40; -- Spell3 --
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
+
+
