@@ -19,10 +19,10 @@ SET @Naga_Oracle = 12321; -- Stormscale Toxicoloist
 SET @Naga_Slavemaster = 2369; -- Daggerspine Shorehunter
 SET @Naga_Ambusher = 2368; -- Daggerspine Shorestalker
 SET @Naga_Guardian = 2595; -- Daggerspine Raider
-SET @Naga_Defender = 2807; -- Daggerspine Wavecaller
+SET @Naga_Defender = 4713; -- Slitherblade Warrior
 SET @Naga_Soothsayer = 2370; -- Daggerspine Screamer
 SET @Naga_Enchantress = 2182; -- Stormscale Sorceress
-SET @Naga_Champion = 2775; -- Daggerspine Marauder
+SET @Naga_Champion = 4716; -- Slitherblade Tidehunter
 SET @Naga_Emissary = 2371; -- Daggerspine Siren
 -- Murlocs
 SET @Murloc_Coastrunner = 126;
@@ -173,6 +173,8 @@ SET @Void_Lord = 32230;
 
 -- Custom NPCs
 -- -----------------------------------
+SET @HonorCoin_Vendor       = 482018;
+SET @DarkmoonNPC            = 482019;
 -- Elites
 SET @Tanak_Ragepaw          = 482101;
 SET @Ravazic                = 482102;
@@ -198,19 +200,20 @@ SET @Forward_Scout_Razza    = 482205;
 SET @Trixy_the_Fixer        = 482206;
 SET @Packmaster_Stonebrow   = 482207;
 SET @Malik_Stillblade       = 482208;
-SET @HonorCoin_Vendor       = 482209;
 -- Peacekeeepers
-SET @Mage_Bruiser           = 482209;
-SET @Orc_Bruiser            = 482210;
+SET @Mage_Bruiser           = 482220;
+SET @Orc_Bruiser            = 482221;
 -- Cosmetic
-SET @Firelord               = 482301;
-SET @Windseeker             = 482302;
+SET @Firelord               = 482230;
+SET @Windseeker             = 482231;
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
 
 -- Creature template changes
 
+-- Professor Thadeus
+UPDATE `creature_template` SET `name`='Professor Paleo', `subname` = 'Antiquities Dealer', `faction`=2008 WHERE `entry` = @DarkmoonNPC;
 -- Naga
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Engineer' WHERE `entry` = @Naga_Engineer;
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Sorceress' WHERE `entry` = @Naga_Sorceress;
@@ -379,14 +382,14 @@ REPLACE INTO `creature_template`
 (@Firelord,             'Firelord',                 'Cosmetic',             0,                      20,         20,         7,                  25,                 7,                  795,        131,        1,              1.14286,        2,          3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
 (@Windseeker,           'Windseeker',               'Cosmetic',             0,                      20,         20,         7,                  25,                 7,                  290,        0,          1,              1,              2,          3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
 -- NPCs
-(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              ''),
-(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              ''),
-(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              1,              ''),
-(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              ''),
-(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              ''),
-(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              ''),
-(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              ''),
-(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              ''),
+(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           0,              ''),
+(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              0,              ''),
+(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              0,              ''),
+(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              0,              ''),
+(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              0,              ''),
+(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              0,              ''),
+(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              0,              ''),
+(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              0,              ''),
 -- Peacekeepers
 (@Mage_Bruiser,         'Mage Guardian',            'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
 (@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              ''),
@@ -394,18 +397,18 @@ REPLACE INTO `creature_template`
 (@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Hexxed,               'Grimtooth the Hexxed',     '',                     @Hexxed,                23,         23,         7,                  25,                 7,                  7,          0,          0.8,            1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         7,                  25,                 7,                  90,         0,          0.9,            1.1,            1,          3,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
-(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         7,                  25,                 7,                  45,         0,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         7,                  25,                 7,                  45,         0,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
 (@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         7,                  25,                 7,                  91,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
 (@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
-(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.65,       3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Captain_Clogg,        'Captain Clogg',            '',                     @Captain_Clogg,         23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.65,       3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Captain_Clogg,        'Captain Clogg',            '',                     @Captain_Clogg,         23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
 (@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         7,                  25,                 7,                  18,         0,          0.8,            1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
 (@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         7,                  25,                 7,                  2001,       0,          0.8,            1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Shirek,               'Shirek',                   'The Devourer',         @Shirek,                23,         23,         7,                  25,                 7,                  14,         0,          1,              1.1,            1,          3,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
 (@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
-(@Dark_Illidan,         'Shade of the Betrayer',    '',                     @Dark_Illidan,          23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              514,            2048,           3,      76,             1,              'SmartAI');
+(@Dark_Illidan,         'Shade of the Betrayer',    '',                     @Dark_Illidan,          23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              514,            2048,           3,      76,             0,              'SmartAI');
 -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Probability`, `DisplayScale`, `VerifiedBuild`) VALUES 
 (@Firelord, 11121, 1, 2, 1), -- Firelord
@@ -1192,6 +1195,8 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 -- -------------------------------------------------------------------------------------
 -- Honor Coin vendor
 (@HonorCoin_Vendor, 37, 0, 1, 434.365, 146.056, 305.964, 6.21794, 300, 0, 0, 'Crater_Central'),
+-- Professor Thadeus Paleo
+(@DarkmoonNPC, 37, 1, 1, 434.586, 148.855, 305.963, 5.3846, 300, 0, 0, 'Crater_Central'),
 -- Mage Guardians
 (@Mage_Bruiser, 37, 1, 1, 447.098, 149.941, 305.965, 3.89705, 300, 0, 0, 'Crater_Central'),
 (@Mage_Bruiser, 37, 1, 1, 446.8, 134.292, 267.756, 5.61313, 300, 0, 0, 'Crater_Central'),
@@ -1823,6 +1828,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Shadowfiend, 37, 1, 1, -665.484, -267.849, 351.117, 2.3634, 300, 10, 0, 'Crater_Temple'),
 (@Void_Lord, 37, 1, 1, -678.93, -288.911, 374.161, 5.10052, 300, 10, 0, 'Crater_Temple'),
 (@Void_Lord, 37, 1, 1, -619.551, -287.056, 374.161, 5.46573, 300, 10, 0, 'Crater_Temple'),
+(@Dark_Illidan, 37, 1, 1, -614.82, -240.438, 379.352, 3.76924, 300, 0, 0, 'Crater_Temple'),
 (@Dark_Illidan, 37, 1, 1, -614.82, -240.438, 379.352, 3.76924, 300, 0, 0, 'Crater_Temple');
 -- -----------------------------------------------------------------------------------------------------------------------------
 
