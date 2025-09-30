@@ -431,22 +431,22 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Prob
 -- Supply vendors
 DELETE FROM `npc_vendor` WHERE  `entry` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
 DELETE FROM `npc_trainer` WHERE `id` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
-INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `extendedcost`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES 
-(@Packmaster_Stonebrow,     1, 14530,  2420, 0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Trixy_the_Fixer,          1, 14530,  2420, 0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Malik_Stillblade,         1, 14530,  2420, 0, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
-(@Trixy_the_Fixer,          2, 929,    0, 0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 3827,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 7676,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 5631,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 929,    0, 0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 3827,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 7676,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 5631,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 929,    0, 0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 3827,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 7676,   0, 0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 5631,   0, 0, 0, 0, 0); -- Free Potions from hub
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `extendedcost`, `maxcount`, `incrtime`, `VerifiedBuild`) VALUES 
+(@Packmaster_Stonebrow,     1, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          1, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Malik_Stillblade,         1, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          2, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          2, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         2, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 5631,   0, 0, 0, 0); -- Free Potions from hub
 
 -- Furbolg faction fix
 UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
