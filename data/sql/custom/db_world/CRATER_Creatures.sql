@@ -356,6 +356,9 @@ UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry` = @Voidshrieker
 UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
 UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry` = @Void_Lord;
 
+-- Fix loot link
+UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord, @Void_Beast);
+
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
 
@@ -363,19 +366,19 @@ UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry` = @Void_Lord;
 REPLACE INTO `creature_template` 
 (`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-(@Firelord,             'Firelord',                 'Cosmetic',             @Firelord,              20,         20,         795,        131,        1,              1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
-(@Windseeker,           'Windseeker',               'Cosmetic',             @Windseeker,            20,         20,         290,        0,          1,              1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
+(@Firelord,             'Firelord',                 'Cosmetic',             0,                      20,         20,         795,        131,        1,              1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
+(@Windseeker,           'Windseeker',               'Cosmetic',             0,                      20,         20,         290,        0,          1,              1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
 -- NPCs
-(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  @Commander_Gara,        20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
-(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  @Surveyor_Delryn,       20,         20,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  @Farseer_Serena,        20,         20,         2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  @Spymaster_Jarre,       20,         20,         2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  @Forward_Scout_Razza,   20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             @Trixy_the_Fixer,       20,         20,         2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             @Packmaster_Stonebrow,  20,         20,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             @Malik_Stillblade,      20,         20,         2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Mage_Bruiser,         'Tower Guardian',           'Peacekeeper',          @Mage_Bruiser,          23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
-(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          @Orc_Bruiser,           23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
+(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             0,                      20,         20,         2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Mage_Bruiser,         'Tower Guardian',           'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
 -- Elites
 (@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Hexxer,               'Hexlord Rashiki',          '',                     @Hexxer,                23,         23,         7,          0,          0.8,            1.1,            1,          1,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
@@ -423,6 +426,8 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Disp
 (@Trixy_the_Fixer, 23080, 1, 2, 1), -- Trixy the Fixer
 (@Packmaster_Stonebrow, 3072, 1, 2, 1), -- Packmaster Stonebrow
 (@Malik_Stillblade, 27888, 1, 2, 1); -- Malik Stillblade
+
+-- Delete broken links
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
@@ -545,14 +550,30 @@ SET @Reference_EliteLoot = 48212;
 -- Elite loot reference
 DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_EliteLoot;
 INSERT INTO `reference_loot_template` VALUES
-(@Reference_EliteLoot, 40752,     0, 100, 0, 1, 1, 1, 1, '1x Emblem of Heroism'),
-(@Reference_EliteLoot, 34052,     0, 100, 0, 1, 1, 3, 3, '3x Dream Shard'),
-(@Reference_EliteLoot, 48208, 48208, 100, 0, 1, 1, 1, 1, '1x BoP Blue');
+(@Reference_EliteLoot, 40752,     0, 100, 0, 0, 1, 1, 1, '1x Emblem of Heroism'),
+(@Reference_EliteLoot, 34052,     0, 100, 0, 0, 1, 3, 3, '3x Dream Shard'),
+(@Reference_EliteLoot, 48208, 48208, 100, 0, 0, 5, 1, 1, '1x BoP Blue');
 
 -- Creature loot templates
 
+-- Custom Elites
+REPLACE INTO `creature_loot_template` VALUES 
+(@Tanak_Ragepaw,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Hexxer,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Ravazic,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Warlord_Skullcrush,   @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Earthshaker,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Chimaeron,            @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Watcher_OneEye,       @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Grimgut,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Mokor_the_Tactician,  @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Captain_Clogg,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@King_Gorloc,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Snarlax_Snowpelt,     @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Shirek,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Phytos,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Dark_Illidan,         @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
 -- Harpy Feather
-REPLACE INTO `creature_loot_template` VALUES
 (@Harpy_Ambusher,       4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
 (@Harpy_Harpy,          4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
 (@Harpy_Ripper,         4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
@@ -656,23 +677,6 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Air_Elemental,         22572, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Air'),
 (@Fire_Elemental,        22574, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Fire');
 
--- Custom Elites
-REPLACE INTO `creature_loot_template` VALUES 
-(@Tanak_Ragepaw,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Hexxer,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Ravazic,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Warlord_Skullcrush,   @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Earthshaker,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Chimaeron,            @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Watcher_OneEye,       @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Grimgut,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Mokor_the_Tactician,  @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Captain_Clogg,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@King_Gorloc,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Snarlax_Snowpelt,     @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Shirek,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Phytos,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
-(@Dark_Illidan,         @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot');
 
 -- -------------------------------------------------------------------------------------------------------------------------------------
 -- Creature placement
@@ -1810,14 +1814,14 @@ DELETE FROM `smart_scripts` WHERE `entryorguid` = @Windseeker;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Windseeker, 0, 0, 0, 1, 0, 100, 0, 1800, 2500, 1800, 2500, 0, 11, 61480, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Out of Combat - Cast Fake Swing');
 
 -- Mage Peacekeepers
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@Mage_Bruiser;
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @Mage_Bruiser;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES    (@Mage_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
 (@Mage_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 58534, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - On Aggro - Cast Deep Freeze'),
 (@Mage_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 1600, 2200, 0, 11, 46194, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Ice Lance'),
 (@Mage_Bruiser, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 42931, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Cone of Cold');
 
 -- Orc Peacekeepers
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@Orc_Bruiser;
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @Orc_Bruiser;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES    (@Orc_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
 (@Orc_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 22120, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - On Aggro - Cast Charge'),
 (@Orc_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 2600, 3200, 0, 11, 26211, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Hamstring'),
