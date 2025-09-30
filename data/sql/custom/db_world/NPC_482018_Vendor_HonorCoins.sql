@@ -12,7 +12,6 @@ SET
 @Entry      = 482018,
 @Model      = 27212,
 @Scale      = 1,
-@HoverHeight= 0,
 @Name       = "Keeper Rhydian",
 @Title      = "Honor Coin Trader",
 @Icon       = "Buy",
@@ -23,7 +22,7 @@ SET
 @Level      = 20,
 @Faction    = 2007;
 DELETE FROM `creature_template` WHERE `Entry` = @Entry;
-INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`, `unit_flags`, `MovementType`, `hoverHeight`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class, 0, 0, @HoverHeight, 'npc_pet_gen_valkyr_guardian');
+INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 

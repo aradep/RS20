@@ -10,7 +10,7 @@
 -- Creature
 SET
 @Entry      = 482019,
-@Model      = 27216,
+@Model      = 14890,
 @Scale      = 1,
 @Name       = "Paris P. Ogilvie",
 @Title      = "Antiquities Dealer",
