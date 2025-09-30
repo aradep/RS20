@@ -427,7 +427,21 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Disp
 (@Packmaster_Stonebrow, 3072, 1, 2, 1), -- Packmaster Stonebrow
 (@Malik_Stillblade, 27888, 1, 2, 1); -- Malik Stillblade
 
--- Delete broken links
+DELETE FROM `npc_vendor` WHERE  `entry` IN (5153,30436,22442);
+DELETE FROM `npc_trainer` WHERE `id` IN (5153,30436,22442);
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES 
+(5153,  1, 34722,  0, 0, 0, 0), /* Bandage */
+(30436, 1, 34722,  0, 0, 0, 0), /* Bandage */
+(22442, 1, 34722,  0, 0, 0, 0), /* Bandage */
+(5153,  1, 33447,  0, 0, 0, 0), /* Potion */
+(30436, 1, 33447,  0, 0, 0, 0), /* Potion */
+(22442, 1, 33447,  0, 0, 0, 0), /* Potion */
+(5153,  1, 33448,  0, 0, 0, 0), /* Potion */
+(30436, 1, 33448,  0, 0, 0, 0), /* Potion */
+(22442, 1, 33448,  0, 0, 0, 0), /* Potion */
+(5153,  1, 40087,  0, 0, 0, 0), /* Potion */
+(30436, 1, 40087,  0, 0, 0, 0), /* Potion */
+(22442, 1, 40087,  0, 0, 0, 0); /* Potion */
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
