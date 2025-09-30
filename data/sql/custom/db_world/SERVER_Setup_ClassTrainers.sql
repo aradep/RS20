@@ -435,8 +435,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Hunter, 1, 0, 43356); -- Glyph of Scare Beast
 DELETE FROM `npc_vendor` WHERE `Entry` = @Rogue;
 INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
-(@Rogue, 0, 0, 6947),  -- Instant Poison
-(@Rogue, 0, 0, 3775),  -- Crippling Poison
 (@Rogue, 0, 0, 5060),  -- Thieves Tools
 (@Rogue, 1, 0, 42955), -- Glyph of Ambush
 (@Rogue, 1, 0, 42956), -- Glyph of Backstab

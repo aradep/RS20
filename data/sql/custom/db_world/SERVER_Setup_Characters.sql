@@ -115,7 +115,7 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (4,  6991, 'Feed Pet'),
 (4,   982, 'Revive Pet'),
 (4, 65220, 'Avoidance'),
-(8, 57968, 'Instant Poison'),
+(8, 8679, 'Instant Poison'),
 (8, 3408, 'Crippling Poison'),
 (32, 56222, 'Dark Command'),
 (32,  8737, 'Mail'),
