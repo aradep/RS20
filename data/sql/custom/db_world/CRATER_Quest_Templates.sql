@@ -35,7 +35,7 @@ UPDATE `creature_loot_template` SET `Chance`=100 WHERE `Item`=22577;
 -- Questgivers
 SET 
 @Commander_Gara         = 482201,
-@Purveyor_Delryn        = 482202,
+@Surveyor_Delryn        = 482202,
 @Farseer_Serena         = 482203,
 @Spymaster_Jarre        = 482204,
 @Forward_Scout_Razza    = 482205,
@@ -55,8 +55,8 @@ SET
 @PreviousQuest              = 0,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = @Purveyor_Delryn, /* Loremaster Delryn */
-@QuestEnder                 = @Purveyor_Delryn, /* Loremaster Delryn */
+@QuestStarter               = @Surveyor_Delryn, /* Surveyor Delryn */
+@QuestEnder                 = @Surveyor_Delryn, /* Surveyor Delryn */
 
 @QuestType                  = 0, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -209,8 +209,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
-@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
+@QuestStarter               = @Surveyor_Delryn, /* Surveyor */
+@QuestEnder                 = @Surveyor_Delryn, /* Surveyor */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -224,13 +224,13 @@ SET
 
 @LogTitle                   = 'Stalking the Stalkers',
 @LogDescription           = 'The giant cats prowling this crater have a wonderfuly soft and exotic fur. A bundle of their pelts would demand a high price on the open market.$b$bAre you brave enough to stalk the stalkers, $N? Bring me some and I will reward you handsomely for your efforts.',
-@QuestDescription             = 'Loremaster Vyrin wants you to collect 5 Pristine Lynx Pelts from the Grovestalker Lynx inhabiting Azshara Crater.',
+@QuestDescription             = 'Surveyor Delryn wants you to collect 5 Pristine Lynx Pelts from the Grovestalker Lynx inhabiting Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Return to Loremaster Vyrin.',
+@QuestCompletionLog         = 'Return to Surveyor Delryn.',
 @RequestItems               = 'How goes the hunt, $r?',
 @OfferReward                = 'Splended! These pelts are in immaculate condition.$b$bYour payment, as promised.',
 
@@ -363,8 +363,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
-@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
+@QuestStarter               = @Surveyor_Delryn, /* Surveyor */
+@QuestEnder                 = @Surveyor_Delryn, /* Surveyor */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -378,13 +378,13 @@ SET
 
 @LogTitle                   = 'The Serpent Shrine',
 @LogDescription             = 'Naga scalemail isn\'t the hardest armor, but it is some of the most profitable. As it happens, the vicious serpents have been swarming around the ruins to the south and I would like to know why.$b$bBring me a generous amount of their scales, $n, and I will see to it that you are rewarded.',
-@QuestDescription           = 'Loremaster Vyrin wants you to collect Polished Naga Scales from the naga around the ruins in the central field of Azshara Crater.',
+@QuestDescription           = 'Surveyor Delryn wants you to collect Polished Naga Scales from the naga around the ruins in the central field of Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Return to Loremaster Vyrin.',
+@QuestCompletionLog         = 'Return to Surveyor Delryn.',
 @RequestItems               = 'Have you collected the scales?',
 @OfferReward                = 'Yes, these should do nicely! Fine work, $N.',
 
@@ -671,8 +671,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
-@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
+@QuestStarter               = @Surveyor_Delryn, /* Surveyor */
+@QuestEnder                 = @Surveyor_Delryn, /* Surveyor */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -686,13 +686,13 @@ SET
 
 @LogTitle                   = 'Feather Fever',
 @LogDescription          = 'Did you know Harpy Feathers can grow up to 24 inches in length? Just imagine a cloak made from tail feathers, or a robe! I must have them $n.$b$bGo to the canyon to the south, the harpies can be found among the cliffs.',
-@QuestDescription         = 'Loremaster Vyrin wants Harpy Feathers. You can find them in the mountains of southern Azshara Crater.',
+@QuestDescription         = 'Surveyor Delryn wants Harpy Feathers. You can find them in the mountains of southern Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Return to Loremaster Vyrin.',
+@QuestCompletionLog         = 'Return to Surveyor Delryn.',
 @RequestItems               = 'Have you collected those harpy feathers?',
 @OfferReward                = 'Excellent, $n! Your payment, as agreed upon.',
 
@@ -1441,8 +1441,8 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 0,
 
-@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
-@QuestEnder                 = @Purveyor_Delryn, /* Loremaster */
+@QuestStarter               = @Surveyor_Delryn, /* Surveyor */
+@QuestEnder                 = @Surveyor_Delryn, /* Surveyor */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
 @QuestLevel                 = 20,
@@ -1456,13 +1456,13 @@ SET
 
 @LogTitle                   = 'Natural Armor',
 @LogDescription             = 'The Ancients in this Crater have incredibly hard bark. It would be the ideal material to craft some lightweight armor with.$b$bBring down a few of the giants and harvest them for me, $c. I will reward you handsomely for this task.',
-@QuestDescription           = 'Loremaster Vyrin wants you to collect Petrified Ironbark from the Ancients wandering Azshara Crater.',
+@QuestDescription           = 'Surveyor Delryn wants you to collect Petrified Ironbark from the Ancients wandering Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
-@QuestCompletionLog         = 'Return to Loremaster Vyrin.',
+@QuestCompletionLog         = 'Return to Surveyor Delryn.',
 @RequestItems               = 'How did it go?',
 @OfferReward                = 'Perfect, $r! Please accept this as a token of my appreciation.',
 
@@ -1904,7 +1904,7 @@ SET
 @PreviousQuest              = 42111,
 @RewardNextQuest            = 42325,
 
-@QuestStarter               = @Purveyor_Delryn, /* Loremaster */
+@QuestStarter               = @Surveyor_Delryn, /* Surveyor */
 @QuestEnder                 = @Spymaster_Jarre, /* Spymaster */
 
 @QuestType                  = 2, /* 0:Autocomplete | 2:Normal */
@@ -1920,7 +1920,7 @@ SET
 
 @LogTitle                   = 'Piercing the Vale',
 @LogDescription          = 'An ogre known as One-Eye watches over us from atop the gate to the north. It is in the Exepedition\'s best interest to eliminate this scout before the ogres grow bold enough to advance on our position here.$b$bIf you manage to bring him down, deliver news of your success to our Spymaster Jarre. She\'s stationed at the lake tower in the vale on the other side of the gate.',
-@QuestDescription             = 'Loremaster Vyrin wants you to slay Watcher One-Eye. You can find him at the top of the gate leading into northern Azshara Crater.',
+@QuestDescription             = 'Surveyor Delryn wants you to slay Watcher One-Eye. You can find him at the top of the gate leading into northern Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
 @ObjectiveText2             = '',
@@ -2550,9 +2550,9 @@ DELETE FROM `pool_template` WHERE `entry`=6004;
 INSERT INTO `pool_template` VALUES (6004, 1, '');
 DELETE FROM `pool_quest` WHERE `pool_entry`=6004;
 INSERT INTO `pool_quest` VALUES
-(42302, 6004, 'Loremaster - Scales/Feathers/Pelts'),
-(42304, 6004, 'Loremaster - Scales/Feathers/Pelts'),
-(42308, 6004, 'Loremaster - Scales/Feathers/Pelts');
+(42302, 6004, 'Surveyor - Scales/Feathers/Pelts'),
+(42304, 6004, 'Surveyor - Scales/Feathers/Pelts'),
+(42308, 6004, 'Surveyor - Scales/Feathers/Pelts');
 
 DELETE FROM `pool_template` WHERE `entry`=6005;
 INSERT INTO `pool_template` VALUES (6005, 1, '');
@@ -2562,9 +2562,6 @@ INSERT INTO `pool_quest` VALUES
 (42305, 6005, 'Scout - Murlocs/Satyrs/Buzzards'),
 (42328, 6005, 'Scout - Murlocs/Satyrs/Buzzards');
 
+-- Fix questgiver being turned into 
 DELETE FROM `creature_queststarter` WHERE `id` IN (7765);
 DELETE FROM `creature_questender` WHERE `id` IN (7765);
-UPDATE `quest_template` SET `RewardKillHonor`=12, `RewardAmount1`=3, `RewardMoney`=150000, `RewardFactionOverride1`=50000 , `RewardHonor`=0 WHERE `QuestSortID`=268 AND `RewardItem1`>0 AND `SuggestedGroupNum`=0;
-UPDATE `quest_template` SET `RewardKillHonor`=16, `RewardAmount1`=5, `RewardMoney`=250000, `RewardFactionOverride1`=100000, `RewardHonor`=0 WHERE `QuestSortID`=268 AND `RewardItem1`>0 AND `SuggestedGroupNum`=2;
-UPDATE `quest_template` SET `RewardKillHonor`=20, `RewardAmount2`=7, `RewardMoney`=500000, `RewardFactionOverride1`=150000, `RewardHonor`=0 WHERE `QuestSortID`=268 AND `RewardItem1`>0 AND `SuggestedGroupNum`=3;
-UPDATE `quest_template` SET `RewardKillHonor`=24, `RewardAmount2`=10,`RewardMoney`=1000000,`RewardFactionOverride1`=250000, `RewardHonor`=0 WHERE `QuestSortID`=268 AND `RewardItem1`>0 AND `SuggestedGroupNum`=4;

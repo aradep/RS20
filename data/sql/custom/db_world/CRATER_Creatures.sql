@@ -17,7 +17,6 @@ SET @Naga_Siren = 17801;
 SET @Naga_Warrior = 17802;
 SET @Naga_Oracle = 17803;
 SET @Naga_Slavemaster = 17805;
-SET @Naga_WaterElemental = 17917;
 SET @Naga_Ambusher = 21865;
 SET @Naga_Guardian = 21873;
 SET @Naga_Defender = 17958;
@@ -64,9 +63,6 @@ SET @FelSatyr_Felsworn = 7109;
 SET @FelSatyr_Shadowstalker = 7110;
 SET @FelSatyr_Hellcaller = 7111;
 SET @Felhound = 6010;
--- Giants
-SET @Rock_Giant = 7765;
-SET @Stone_Giant = 23725;
 -- Raptors
 SET @Raptor_Raptor = 20734;
 SET @Raptor_Lashtail = 20751;
@@ -117,7 +113,6 @@ SET @Gorloc_Hunter = 25700;
 SET @Gorloc_Dredger = 25701;
 SET @Gorloc_Hatchling = 28140;
 SET @Gorloc_Oracle = 25688;
-SET @Water_Elemental = 17917;
 -- Wolvar
 SET @Wolvar_Tracker = 28077;
 SET @Wolvar_Hunter = 28079;
@@ -153,10 +148,15 @@ SET @Harpy_Storm_Witch = 4027;
 SET @Turtle_Tortoise = 4142;
 SET @Turtle_Snapper = 4143;
 SET @Turtle_Borer = 4144;
+-- Giants
+SET @Rock_Giant = 7765;
+SET @Stone_Giant = 23725;
 -- Elementals
 SET @Fire_Elemental = 575;
 SET @Air_Elemental = 28384;
+SET @Water_Elemental = 17917;
 -- Temple ruins
+SET @Wildsatyr_Assassin = 11454;
 SET @Wildsatyr_Satyr = 11451;
 SET @Wildsatyr_Rogue = 11452;
 SET @Wildsatyr_Trickster = 11453;
@@ -194,7 +194,7 @@ SET @Warlord_Skullcrush     = 482114;
 SET @Dark_Illidan           = 482115;
 -- Azsharan Expedition
 SET @Commander_Gara         = 482201;
-SET @Purveyor_Delryn        = 482202;
+SET @Surveyor_Delryn        = 482202;
 SET @Farseer_Serena         = 482203;
 SET @Spymaster_Jarre        = 482204;
 SET @Forward_Scout_Razza    = 482205;
@@ -215,146 +215,146 @@ SET @Windseeker             = 482302;
 -- Creature template changes
 
 -- Naga
-UPDATE `creature_template` SET `name`='Naga Ambusher' WHERE `entry`=@Naga_Ambusher;
-UPDATE `creature_template` SET `name`='Naga Defender' WHERE `entry`=@Naga_Defender;
-UPDATE `creature_template` SET `name`='Naga Soothsayer' WHERE `entry`=@Naga_Soothsayer;
-UPDATE `creature_template` SET `name`='Naga Enchantress' WHERE `entry`=@Naga_Enchantress;
-UPDATE `creature_template` SET `name`='Naga Champion' WHERE `entry`=@Naga_Champion;
+UPDATE `creature_template` SET `name`='Naga Ambusher' WHERE `entry` = @Naga_Ambusher;
+UPDATE `creature_template` SET `name`='Naga Defender' WHERE `entry` = @Naga_Defender;
+UPDATE `creature_template` SET `name`='Naga Soothsayer' WHERE `entry` = @Naga_Soothsayer;
+UPDATE `creature_template` SET `name`='Naga Enchantress' WHERE `entry` = @Naga_Enchantress;
+UPDATE `creature_template` SET `name`='Naga Champion' WHERE `entry` = @Naga_Champion;
 -- Murlocs
-UPDATE `creature_template` SET `name`='Murloc Coastrunner' WHERE `entry`=@Murloc_Coastrunner;
-UPDATE `creature_template` SET `name`='Murloc Tidehunter' WHERE `entry`=@Murloc_Tidehunter;
-UPDATE `creature_template` SET `name`='Murloc Flesheater' WHERE `entry`=@Murloc_Flesheater;
-UPDATE `creature_template` SET `name`='Murloc Hunter' WHERE `entry`=@Murloc_Hunter;
-UPDATE `creature_template` SET `name`='Murloc Netter' WHERE `entry`=@Murloc_Netter;
-UPDATE `creature_template` SET `name`='Murloc Oracle' WHERE `entry`=@Murloc_Oracle;
-UPDATE `creature_template` SET `name`='Murloc Nightcrawler' WHERE `entry`=@Murloc_Nightcrawler;
-UPDATE `creature_template` SET `name`='Murloc Scout' WHERE `entry`=@Murloc_Scout;
+UPDATE `creature_template` SET `name`='Murloc Coastrunner' WHERE `entry` = @Murloc_Coastrunner;
+UPDATE `creature_template` SET `name`='Murloc Tidehunter' WHERE `entry` = @Murloc_Tidehunter;
+UPDATE `creature_template` SET `name`='Murloc Flesheater' WHERE `entry` = @Murloc_Flesheater;
+UPDATE `creature_template` SET `name`='Murloc Hunter' WHERE `entry` = @Murloc_Hunter;
+UPDATE `creature_template` SET `name`='Murloc Netter' WHERE `entry` = @Murloc_Netter;
+UPDATE `creature_template` SET `name`='Murloc Oracle' WHERE `entry` = @Murloc_Oracle;
+UPDATE `creature_template` SET `name`='Murloc Nightcrawler' WHERE `entry` = @Murloc_Nightcrawler;
+UPDATE `creature_template` SET `name`='Murloc Scout' WHERE `entry` = @Murloc_Scout;
 -- Fields
-UPDATE `creature_template` SET `name`='Grovestalker Lynx' WHERE `entry`=@Grovestalker_Lynx;
-UPDATE `creature_template` SET `name`='Wandering Ancient' WHERE `entry`=@Wandering_Ancient;
-UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry`=@Withered_Ancient;
+UPDATE `creature_template` SET `name`='Grovestalker Lynx' WHERE `entry` = @Grovestalker_Lynx;
+UPDATE `creature_template` SET `name`='Wandering Ancient' WHERE `entry` = @Wandering_Ancient;
+UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
 -- Wreckage
-UPDATE `creature_template` SET `name`='Buzzard' WHERE `entry`=@Buzzard;
-UPDATE `creature_template` SET `name`='Giant Buzzard' WHERE `entry`=@Giant_Buzzard;
-UPDATE `creature_template` SET `name`='Skeleton' WHERE `entry`=@Wandering_Skeleton;
+UPDATE `creature_template` SET `name`='Buzzard' WHERE `entry` = @Buzzard;
+UPDATE `creature_template` SET `name`='Giant Buzzard' WHERE `entry` = @Giant_Buzzard;
+UPDATE `creature_template` SET `name`='Skeleton' WHERE `entry` = @Wandering_Skeleton;
 -- Furbolg Hold
-UPDATE `creature_template` SET `name`='Redfang Hunter' WHERE `entry`=@Furbolg_Hunter;
-UPDATE `creature_template` SET `name`='Redfang Warrior' WHERE `entry`=@Furbolg_Warrior;
-UPDATE `creature_template` SET `name`='Redfang Shaman' WHERE `entry`=@Furbolg_Shaman;
-UPDATE `creature_template` SET `name`='Redfang Trapper' WHERE `entry`=@Furbolg_Trapper;
-UPDATE `creature_template` SET `name`='Redfang Elder' WHERE `entry`=@Furbolg_Elder;
-UPDATE `creature_template` SET `name`='Redfang Ursa' WHERE `entry`=@Furbolg_Ursa;
-UPDATE `creature_template` SET `name`='Redfang Den Watcher' WHERE `entry`=@Furbolg_Pathfinder;
+UPDATE `creature_template` SET `name`='Redfang Hunter' WHERE `entry` = @Furbolg_Hunter;
+UPDATE `creature_template` SET `name`='Redfang Warrior' WHERE `entry` = @Furbolg_Warrior;
+UPDATE `creature_template` SET `name`='Redfang Shaman' WHERE `entry` = @Furbolg_Shaman;
+UPDATE `creature_template` SET `name`='Redfang Trapper' WHERE `entry` = @Furbolg_Trapper;
+UPDATE `creature_template` SET `name`='Redfang Elder' WHERE `entry` = @Furbolg_Elder;
+UPDATE `creature_template` SET `name`='Redfang Ursa' WHERE `entry` = @Furbolg_Ursa;
+UPDATE `creature_template` SET `name`='Redfang Den Watcher' WHERE `entry` = @Furbolg_Pathfinder;
 -- Satyr camp
-UPDATE `creature_template` SET `name`='Darkfire Satyr' WHERE `entry`=@FelSatyr_Satyr;
-UPDATE `creature_template` SET `name`='Darkfire Rogue' WHERE `entry`=@FelSatyr_Rogue;
-UPDATE `creature_template` SET `name`='Darkfire Trickster' WHERE `entry`=@FelSatyr_Trickster;
-UPDATE `creature_template` SET `name`='Darkfire Betrayer' WHERE `entry`=@FelSatyr_Betrayer;
-UPDATE `creature_template` SET `name`='Darkfire Felsworn' WHERE `entry`=@FelSatyr_Felsworn;
-UPDATE `creature_template` SET `name`='Darkfire Shadowstalker' WHERE `entry`=@FelSatyr_Shadowstalker;
-UPDATE `creature_template` SET `name`='Darkfire Hellcaller' WHERE `entry`=@FelSatyr_Hellcaller;
-UPDATE `creature_template` SET `name`='Felhound' WHERE `entry`=@Felhound;
+UPDATE `creature_template` SET `name`='Darkfire Satyr' WHERE `entry` = @FelSatyr_Satyr;
+UPDATE `creature_template` SET `name`='Darkfire Rogue' WHERE `entry` = @FelSatyr_Rogue;
+UPDATE `creature_template` SET `name`='Darkfire Trickster' WHERE `entry` = @FelSatyr_Trickster;
+UPDATE `creature_template` SET `name`='Darkfire Betrayer' WHERE `entry` = @FelSatyr_Betrayer;
+UPDATE `creature_template` SET `name`='Darkfire Felsworn' WHERE `entry` = @FelSatyr_Felsworn;
+UPDATE `creature_template` SET `name`='Darkfire Shadowstalker' WHERE `entry` = @FelSatyr_Shadowstalker;
+UPDATE `creature_template` SET `name`='Darkfire Hellcaller' WHERE `entry` = @FelSatyr_Hellcaller;
+UPDATE `creature_template` SET `name`='Felhound' WHERE `entry` = @Felhound;
 -- Horde Giants
-UPDATE `creature_template` SET `name`='Rock Giant' WHERE `entry`=@Rock_Giant;
+UPDATE `creature_template` SET `name`='Rock Giant' WHERE `entry` = @Rock_Giant;
 -- Horde Raptors
-UPDATE `creature_template` SET `name`='Daggermaw Raptor' WHERE `entry`=@Raptor_Raptor;
-UPDATE `creature_template` SET `name`='Daggermaw Lashtail' WHERE `entry`=@Raptor_Lashtail;
-UPDATE `creature_template` SET `name`='Daggermaw Devourer' WHERE `entry`=@Raptor_Devourer;
+UPDATE `creature_template` SET `name`='Daggermaw Raptor' WHERE `entry` = @Raptor_Raptor;
+UPDATE `creature_template` SET `name`='Daggermaw Lashtail' WHERE `entry` = @Raptor_Lashtail;
+UPDATE `creature_template` SET `name`='Daggermaw Devourer' WHERE `entry` = @Raptor_Devourer;
 -- Horde Serpent
-UPDATE `creature_template` SET `name`='Scalewing Serpent' WHERE `entry`=@Serpent_Serpent;
+UPDATE `creature_template` SET `name`='Scalewing Serpent' WHERE `entry` = @Serpent_Serpent;
 -- Horde Croc
-UPDATE `creature_template` SET `name`='Mangal Crocolisk' WHERE `entry`=@Mangal_Crocolisk;
+UPDATE `creature_template` SET `name`='Mangal Crocolisk' WHERE `entry` = @Mangal_Crocolisk;
 -- Horde Tiki warrior
-UPDATE `creature_template` SET `name`='Enchanted Tiki Warrior' WHERE `entry`=@Enchanted_Tiki_Warrior;
+UPDATE `creature_template` SET `name`='Enchanted Tiki Warrior' WHERE `entry` = @Enchanted_Tiki_Warrior;
 -- Horde Dragonspawn
-UPDATE `creature_template` SET `name`='Flamescale Dragonspawn' WHERE `entry`=@Dragonspawn_Dragonspawn;
-UPDATE `creature_template` SET `name`='Flamescale Wyrmkin' WHERE `entry`=@Dragonspawn_Wyrmkin;
-UPDATE `creature_template` SET `name`='Flamescale Broodling' WHERE `entry`=@Dragonspawn_Broodling;
+UPDATE `creature_template` SET `name`='Flamescale Dragonspawn' WHERE `entry` = @Dragonspawn_Dragonspawn;
+UPDATE `creature_template` SET `name`='Flamescale Wyrmkin' WHERE `entry` = @Dragonspawn_Wyrmkin;
+UPDATE `creature_template` SET `name`='Flamescale Broodling' WHERE `entry` = @Dragonspawn_Broodling;
 -- Horde Gnolls
-UPDATE `creature_template` SET `name`='Ashmane Alpha' WHERE `entry`=@Gnoll_Alpha;
-UPDATE `creature_template` SET `name`='Ashmane Mystic' WHERE `entry`=@Gnoll_Mystic;
-UPDATE `creature_template` SET `name`='Ashmane Brute' WHERE `entry`=@Gnoll_Brute;
-UPDATE `creature_template` SET `name`='Ashmane Shaman' WHERE `entry`=@Gnoll_Shaman;
-UPDATE `creature_template` SET `name`='Ashmane Gnoll' WHERE `entry`=@Gnoll_Gnoll;
+UPDATE `creature_template` SET `name`='Ashmane Alpha' WHERE `entry` = @Gnoll_Alpha;
+UPDATE `creature_template` SET `name`='Ashmane Mystic' WHERE `entry` = @Gnoll_Mystic;
+UPDATE `creature_template` SET `name`='Ashmane Brute' WHERE `entry` = @Gnoll_Brute;
+UPDATE `creature_template` SET `name`='Ashmane Shaman' WHERE `entry` = @Gnoll_Shaman;
+UPDATE `creature_template` SET `name`='Ashmane Gnoll' WHERE `entry` = @Gnoll_Gnoll;
 -- Goblin mine
-UPDATE `creature_template` SET `name`='Goblin Worker' WHERE `entry`=@Goblin_Worker;
-UPDATE `creature_template` SET `name`='Goblin Miner' WHERE `entry`=@Goblin_Miner;
-UPDATE `creature_template` SET `name`='Goblin Foreman' WHERE `entry`=@Goblin_Foreman;
-UPDATE `creature_template` SET `name`='Goblin Geologist' WHERE `entry`=@Goblin_Geologist;
-UPDATE `creature_template` SET `name`='Crystal Spider' WHERE `entry`=@Crystal_Spider;
+UPDATE `creature_template` SET `name`='Goblin Worker' WHERE `entry` = @Goblin_Worker;
+UPDATE `creature_template` SET `name`='Goblin Miner' WHERE `entry` = @Goblin_Miner;
+UPDATE `creature_template` SET `name`='Goblin Foreman' WHERE `entry` = @Goblin_Foreman;
+UPDATE `creature_template` SET `name`='Goblin Geologist' WHERE `entry` = @Goblin_Geologist;
+UPDATE `creature_template` SET `name`='Crystal Spider' WHERE `entry` = @Crystal_Spider;
 -- Ogres
-UPDATE `creature_template` SET `name`='Highland Ogre' WHERE `entry`=@Ogre_Enforcer;
-UPDATE `creature_template` SET `name`='Highland Mauler' WHERE `entry`=@Ogre_Mauler;
-UPDATE `creature_template` SET `name`='Highland Ogre Mage' WHERE `entry`=@Ogre_Mage;
-UPDATE `creature_template` SET `name`='Hyena' WHERE `entry`=@Ogre_Hyena;
-UPDATE `creature_template` SET `name`='Highland Brute' WHERE `entry`=@Ogre_Brute;
-UPDATE `creature_template` SET `name`='Highland Reaver' WHERE `entry`=@Ogre_Reaver;
-UPDATE `creature_template` SET `name`='Highland Mage-Lord' WHERE `entry`=@Ogre_Mage_Lord;
-UPDATE `creature_template` SET `name`='Highland Ogre Captain' WHERE `entry`=@Ogre_Captain;
-UPDATE `creature_template` SET `name`='Highland Ogre Warlock' WHERE `entry`=@Ogre_Warlock;
-UPDATE `creature_template` SET `name`='Hyena Alpha' WHERE `entry`=@Hyena_alpha;
+UPDATE `creature_template` SET `name`='Highland Ogre' WHERE `entry` = @Ogre_Enforcer;
+UPDATE `creature_template` SET `name`='Highland Mauler' WHERE `entry` = @Ogre_Mauler;
+UPDATE `creature_template` SET `name`='Highland Ogre Mage' WHERE `entry` = @Ogre_Mage;
+UPDATE `creature_template` SET `name`='Hyena' WHERE `entry` = @Ogre_Hyena;
+UPDATE `creature_template` SET `name`='Highland Brute' WHERE `entry` = @Ogre_Brute;
+UPDATE `creature_template` SET `name`='Highland Reaver' WHERE `entry` = @Ogre_Reaver;
+UPDATE `creature_template` SET `name`='Highland Mage-Lord' WHERE `entry` = @Ogre_Mage_Lord;
+UPDATE `creature_template` SET `name`='Highland Ogre Captain' WHERE `entry` = @Ogre_Captain;
+UPDATE `creature_template` SET `name`='Highland Ogre Warlock' WHERE `entry` = @Ogre_Warlock;
+UPDATE `creature_template` SET `name`='Hyena Alpha' WHERE `entry` = @Hyena_alpha;
 -- Gorlocs
-UPDATE `creature_template` SET `name`='Gorloc Waddler' WHERE `entry`=@Gorloc_Waddler;
-UPDATE `creature_template` SET `name`='Gorloc Gibberer' WHERE `entry`=@Gorloc_Gibberer;
-UPDATE `creature_template` SET `name`='Gorloc Streamrunner' WHERE `entry`=@Gorloc_Steam_Belcher;
-UPDATE `creature_template` SET `name`='Gorloc Mud Splasher' WHERE `entry`=@Gorloc_Mud_Splasher;
-UPDATE `creature_template` SET `name`='Gorloc Hunter' WHERE `entry`=@Gorloc_Hunter;
-UPDATE `creature_template` SET `name`='Gorloc Dredger' WHERE `entry`=@Gorloc_Dredger;
-UPDATE `creature_template` SET `name`='Gorloc Hatchling' WHERE `entry`=@Gorloc_Hatchling;
-UPDATE `creature_template` SET `name`='Gorloc Oracle' WHERE `entry`=@Gorloc_Oracle;
+UPDATE `creature_template` SET `name`='Gorloc Waddler' WHERE `entry` = @Gorloc_Waddler;
+UPDATE `creature_template` SET `name`='Gorloc Gibberer' WHERE `entry` = @Gorloc_Gibberer;
+UPDATE `creature_template` SET `name`='Gorloc Streamrunner' WHERE `entry` = @Gorloc_Steam_Belcher;
+UPDATE `creature_template` SET `name`='Gorloc Mud Splasher' WHERE `entry` = @Gorloc_Mud_Splasher;
+UPDATE `creature_template` SET `name`='Gorloc Hunter' WHERE `entry` = @Gorloc_Hunter;
+UPDATE `creature_template` SET `name`='Gorloc Dredger' WHERE `entry` = @Gorloc_Dredger;
+UPDATE `creature_template` SET `name`='Gorloc Hatchling' WHERE `entry` = @Gorloc_Hatchling;
+UPDATE `creature_template` SET `name`='Gorloc Oracle' WHERE `entry` = @Gorloc_Oracle;
 -- Wolvar
-UPDATE `creature_template` SET `name`='Ragepaw Tracker' WHERE `entry`=@Wolvar_Tracker;
-UPDATE `creature_template` SET `name`='Ragepaw Hunter' WHERE `entry`=@Wolvar_Hunter;
-UPDATE `creature_template` SET `name`='Ragepaw Scavenger' WHERE `entry`=@Wolvar_Scavenger;
-UPDATE `creature_template` SET `name`='Wolvar Pup' WHERE `entry`=@Wolvar_Pup;
-UPDATE `creature_template` SET `name`='Ragepaw Spearbearer' WHERE `entry`=@Wolvar_Spearbearer;
-UPDATE `creature_template` SET `name`='Ragepaw Ravager' WHERE `entry`=@Wolvar_Ravager;
-UPDATE `creature_template` SET `name`='Ragepaw Berserker' WHERE `entry`=@Wolvar_Berserker;
+UPDATE `creature_template` SET `name`='Ragepaw Tracker' WHERE `entry` = @Wolvar_Tracker;
+UPDATE `creature_template` SET `name`='Ragepaw Hunter' WHERE `entry` = @Wolvar_Hunter;
+UPDATE `creature_template` SET `name`='Ragepaw Scavenger' WHERE `entry` = @Wolvar_Scavenger;
+UPDATE `creature_template` SET `name`='Wolvar Pup' WHERE `entry` = @Wolvar_Pup;
+UPDATE `creature_template` SET `name`='Ragepaw Spearbearer' WHERE `entry` = @Wolvar_Spearbearer;
+UPDATE `creature_template` SET `name`='Ragepaw Ravager' WHERE `entry` = @Wolvar_Ravager;
+UPDATE `creature_template` SET `name`='Ragepaw Berserker' WHERE `entry` = @Wolvar_Berserker;
 -- Undead
-UPDATE `creature_template` SET `name`='Rotting Highborne' WHERE `entry`=@Rotting_Highborne;
-UPDATE `creature_template` SET `name`='Skeletal Highborne' WHERE `entry`=@Skeletal_Highborne;
-UPDATE `creature_template` SET `name`='Restless Highborne' WHERE `entry`=@Anguished_Highborne;
-UPDATE `creature_template` SET `name`='Suffering Spectre' WHERE `entry`=@Suffering_Highborne;
-UPDATE `creature_template` SET `name`='Lost Soul' WHERE `entry`=@Highborne_Lichling;
+UPDATE `creature_template` SET `name`='Rotting Highborne' WHERE `entry` = @Rotting_Highborne;
+UPDATE `creature_template` SET `name`='Skeletal Highborne' WHERE `entry` = @Skeletal_Highborne;
+UPDATE `creature_template` SET `name`='Restless Highborne' WHERE `entry` = @Anguished_Highborne;
+UPDATE `creature_template` SET `name`='Suffering Spectre' WHERE `entry` = @Suffering_Highborne;
+UPDATE `creature_template` SET `name`='Lost Soul' WHERE `entry` = @Highborne_Lichling;
 -- Moss Beasts
-UPDATE `creature_template` SET `name`='Cave Beast' WHERE `entry`=@Cave_Beast;
-UPDATE `creature_template` SET `name`='Cave Creeper' WHERE `entry`=@Cave_Creeper;
-UPDATE `creature_template` SET `name`='Cave Rager' WHERE `entry`=@Cave_Rager;
-UPDATE `creature_template` SET `name`='Animated Sap' WHERE `entry`=@Sap_Beast;
+UPDATE `creature_template` SET `name`='Cave Beast' WHERE `entry` = @Cave_Beast;
+UPDATE `creature_template` SET `name`='Cave Creeper' WHERE `entry` = @Cave_Creeper;
+UPDATE `creature_template` SET `name`='Cave Rager' WHERE `entry` = @Cave_Rager;
+UPDATE `creature_template` SET `name`='Animated Sap' WHERE `entry` = @Sap_Beast;
 -- Ancients
-UPDATE `creature_template` SET `name`='Withered Treant' WHERE `entry`=@Withered_Treant;
-UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry`=@Withered_Ancient;
+UPDATE `creature_template` SET `name`='Withered Treant' WHERE `entry` = @Withered_Treant;
+UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
 -- Harpies
-UPDATE `creature_template` SET `name`='Harpy Matriarch' WHERE `entry`=@Harpy_Ripper;
-UPDATE `creature_template` SET `name`='Harpy Scout' WHERE `entry`=@Harpy_Harpy;
-UPDATE `creature_template` SET `name`='Harpy Rogue' WHERE `entry`=@Harpy_Roguefeather;
-UPDATE `creature_template` SET `name`='Harpy Soldier' WHERE `entry`=@Harpy_Slayer;
-UPDATE `creature_template` SET `name`='Harpy Ambusher' WHERE `entry`=@Harpy_Ambusher;
-UPDATE `creature_template` SET `name`='Harpy Windcaller' WHERE `entry`=@Harpy_Windcaller;
-UPDATE `creature_template` SET `name`='Harpy Storm Witch' WHERE `entry`=@Harpy_Storm_Witch;
+UPDATE `creature_template` SET `name`='Harpy Matriarch' WHERE `entry` = @Harpy_Ripper;
+UPDATE `creature_template` SET `name`='Harpy Scout' WHERE `entry` = @Harpy_Harpy;
+UPDATE `creature_template` SET `name`='Harpy Rogue' WHERE `entry` = @Harpy_Roguefeather;
+UPDATE `creature_template` SET `name`='Harpy Soldier' WHERE `entry` = @Harpy_Slayer;
+UPDATE `creature_template` SET `name`='Harpy Ambusher' WHERE `entry` = @Harpy_Ambusher;
+UPDATE `creature_template` SET `name`='Harpy Windcaller' WHERE `entry` = @Harpy_Windcaller;
+UPDATE `creature_template` SET `name`='Harpy Storm Witch' WHERE `entry` = @Harpy_Storm_Witch;
 -- Turtles
-UPDATE `creature_template` SET `name`='Steelshell Tortoise' WHERE `entry`=@Turtle_Tortoise;
-UPDATE `creature_template` SET `name`='Steelshell Snapper' WHERE `entry`=@Turtle_Snapper;
-UPDATE `creature_template` SET `name`='Steelshell Borer' WHERE `entry`=@Turtle_Borer;
+UPDATE `creature_template` SET `name`='Steelshell Tortoise' WHERE `entry` = @Turtle_Tortoise;
+UPDATE `creature_template` SET `name`='Steelshell Snapper' WHERE `entry` = @Turtle_Snapper;
+UPDATE `creature_template` SET `name`='Steelshell Borer' WHERE `entry` = @Turtle_Borer;
 -- Elementals
-UPDATE `creature_template` SET `name`='Fire Elemental' WHERE `entry`=@Fire_Elemental;
-UPDATE `creature_template` SET `name`='Air Elemental' WHERE `entry`=@Air_Elemental;
+UPDATE `creature_template` SET `name`='Fire Elemental' WHERE `entry` = @Fire_Elemental;
+UPDATE `creature_template` SET `name`='Air Elemental' WHERE `entry` = @Air_Elemental;
 -- Temple Ruins Satyr
-UPDATE `creature_template` SET `name`='Felspawn Satyr' WHERE `entry`=@Wildsatyr_Satyr;
-UPDATE `creature_template` SET `name`='Felspawn Rogue' WHERE `entry`=@Wildsatyr_Rogue;
-UPDATE `creature_template` SET `name`='Felspawn Trickster' WHERE `entry`=@Wildsatyr_Trickster;
-UPDATE `creature_template` SET `name`='Felspawn Assassin' WHERE `entry`=@Wildsatyr_Felsworn;
-UPDATE `creature_template` SET `name`='Felspawn Shadowstalker' WHERE `entry`=@Wildsatyr_Shadowstalker;
-UPDATE `creature_template` SET `name`='Felspawn Hellcaller' WHERE `entry`=@Wildsatyr_Hellcaller;
-UPDATE `creature_template` SET `name`='Felspawn Imp' WHERE `entry`=@Wildsatyr_Imp;
+UPDATE `creature_template` SET `name`='Felspawn Satyr' WHERE `entry` = @Wildsatyr_Satyr;
+UPDATE `creature_template` SET `name`='Felspawn Rogue' WHERE `entry` = @Wildsatyr_Rogue;
+UPDATE `creature_template` SET `name`='Felspawn Trickster' WHERE `entry` = @Wildsatyr_Trickster;
+UPDATE `creature_template` SET `name`='Felspawn Assassin' WHERE `entry` = @Wildsatyr_Felsworn;
+UPDATE `creature_template` SET `name`='Felspawn Shadowstalker' WHERE `entry` = @Wildsatyr_Shadowstalker;
+UPDATE `creature_template` SET `name`='Felspawn Hellcaller' WHERE `entry` = @Wildsatyr_Hellcaller;
+UPDATE `creature_template` SET `name`='Felspawn Imp' WHERE `entry` = @Wildsatyr_Imp;
 -- Temple Interior Void
-UPDATE `creature_template` SET `name`='Voidwalker' WHERE `entry`=@Rogue_Voidwalker;
-UPDATE `creature_template` SET `name`='Collapsing Voidwalker' WHERE `entry`=@Collapsing_Voidwalker;
-UPDATE `creature_template` SET `name`='Surging Voidwalker' WHERE `entry`=@Voidspawn;
-UPDATE `creature_template` SET `name`='Voidwraith' WHERE `entry`=@Unstable_Voidwraith;
-UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry`=@Voidshrieker;
-UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry`=@Shadowfiend;
-UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry`=@Void_Lord;
+UPDATE `creature_template` SET `name`='Voidwalker' WHERE `entry` = @Rogue_Voidwalker;
+UPDATE `creature_template` SET `name`='Collapsing Voidwalker' WHERE `entry` = @Collapsing_Voidwalker;
+UPDATE `creature_template` SET `name`='Surging Voidwalker' WHERE `entry` = @Voidspawn;
+UPDATE `creature_template` SET `name`='Voidwraith' WHERE `entry` = @Unstable_Voidwraith;
+UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry` = @Voidshrieker;
+UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
+UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry` = @Void_Lord;
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
@@ -363,35 +363,35 @@ UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry`=@Void_Lord;
 REPLACE INTO `creature_template` 
 (`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-(@Firelord,             'Firelord',                 'Cosmetic',             @Firelord,              20,         20,         795,        131,        1,          1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
-(@Windseeker,           'Windseeker',               'Cosmetic',             @Windseeker,            20,         20,         290,        0,          1,          1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
+(@Firelord,             'Firelord',                 'Cosmetic',             @Firelord,              20,         20,         795,        131,        1,              1.14286,        2.1,        3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
+(@Windseeker,           'Windseeker',               'Cosmetic',             @Windseeker,            20,         20,         290,        0,          1,              1,              1.6,        3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
 -- NPCs
-(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  @Commander_Gara,        20,         20,         2007,       3,          1,          1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
-(@Purveyor_Delryn,      'Purveyor Delryn',          'Azsharan Expedition',  @Purveyor_Delryn,       20,         20,         2007,       3,          1,          1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  @Farseer_Serena,        20,         20,         2007,       3,          1,          1,              1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  @Spymaster_Jarre,       20,         20,         2007,       3,          1,          1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  @Forward_Scout_Razza,   20,         20,         2007,       3,          1,          1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             @Trixy_the_Fixer,       20,         20,         2007,       131,        1,          1.14286,        1.5,        0,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             @Packmaster_Stonebrow,  20,         20,         2007,       131,        1,          1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
-(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             @Malik_Stillblade,      20,         20,         2007,       131,        1,          1.14286,        1,          0,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
-(@Mage_Bruiser,         'Tower Guardian',           'Peacekeeper',          @Mage_Bruiser,          23,         23,         2008,       0,          1,          1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
-(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          @Orc_Bruiser,           23,         23,         2008,       0,          1,          1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  @Commander_Gara,        20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              'SmartAI'),
+(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  @Surveyor_Delryn,       20,         20,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  @Farseer_Serena,        20,         20,         2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  @Spymaster_Jarre,       20,         20,         2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  @Forward_Scout_Razza,   20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             @Trixy_the_Fixer,       20,         20,         2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             @Packmaster_Stonebrow,  20,         20,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              'SmartAI'),
+(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             @Malik_Stillblade,      20,         20,         2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              'SmartAI'),
+(@Mage_Bruiser,         'Tower Guardian',           'Peacekeeper',          @Mage_Bruiser,          23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              'SmartAI'),
+(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          @Orc_Bruiser,           23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              'SmartAI'),
 -- Elites
-(@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         16,         0,          0.8,        1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Hexxer,               'Hexlord Rashiki',          '',                     @Hexxer,                23,         23,         7,          0,          0.8,        1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         90,         0,          0.9,        1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
-(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         45,         0,          0.8,        1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         91,         0,          0.8,        1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
-(@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         16,         0,          0.8,        1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
-(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         45,         1,          0.8,        1.1,            0.65,       3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         45,         1,          0.8,        1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         45,         1,          0.8,        1.1,            0.8,        3,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Captain_Clogg,        'Guard-Captain Clogg',      '',                     @Captain_Clogg,         23,         23,         45,         1,          0.8,        1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         18,         0,          0.8,        1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
-(@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         2001,       0,          0.8,        1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Shirek,               'Shirek',                   'The Devourer',         @Shirek,                23,         23,         14,         0,          1,          1.1,            1,          3,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
-(@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         16,         0,          0.8,        1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
-(@Dark_Illidan,         'Shadow of the Betrayer',   '',                     @Dark_Illidan,          23,         23,         16,         0,          0.8,        1.1,            2,          3,      1,              514,            2048,           3,      76,             1,              'SmartAI');
+(@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Hexxer,               'Hexlord Rashiki',          '',                     @Hexxer,                23,         23,         7,          0,          0.8,            1.1,            1,          1,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         90,         0,          0.9,            1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
+(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         45,         0,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         91,         0,          0.8,            1.1,            2,          1,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
+(@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
+(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         45,         1,          0.8,            1.1,            0.65,       1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         45,         1,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         45,         1,          0.8,            1.1,            0.8,        1,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Captain_Clogg,        'Guard-Captain Clogg',      '',                     @Captain_Clogg,         23,         23,         45,         1,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         18,         0,          0.8,            1.1,            2.5,        1,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         2001,       0,          0.8,            1.1,            1,          1,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Shirek,               'Shirek',                   'The Devourer',         @Shirek,                23,         23,         14,         0,          1,              1.1,            1,          1,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
+(@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         16,         0,          0.8,            1.1,            0.55,       1,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
+(@Dark_Illidan,         'Shadow of the Betrayer',   '',                     @Dark_Illidan,          23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              514,            2048,           3,      76,             1,              'SmartAI');
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES 
 (@Firelord, 11121, 1, 2, 1), -- Firelord
@@ -416,7 +416,7 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Disp
 (@Dark_Illidan, 26348, 1, 2, 1), -- Shadow of the Betrayer
 -- Azsharan Expedition
 (@Commander_Gara, 28059, 1, 2, 1), -- Commander Gara
-(@Purveyor_Delryn, 28770, 1, 2, 1), -- Purveyor Delryn
+(@Surveyor_Delryn, 28770, 1, 2, 1), -- Surveyor Delryn
 (@Farseer_Serena, 31391, 1, 2, 1), -- Farseer Serena
 (@Spymaster_Jarre, 30465, 1, 2, 1), -- Spymaster Jarre
 (@Forward_Scout_Razza, 15577, 1, 2, 1), -- Forward Scout Razza
@@ -429,11 +429,11 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Disp
 
 -- Gossip
 
--- Purveyor Delryn
-SET @entry = 33642;
+-- Surveyor Delryn
+SET @entry = @Surveyor_Delryn;
 SET @text = 'Welcome to the Crater, $N. I hope you brought some potions...';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text` WHERE `id` = @entry;
@@ -442,10 +442,10 @@ DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Farseer Serena
-SET @entry = 39283;
+SET @entry = @Farseer_Serena;
 SET @text = 'Most children of Azeroth will never get to see this place.';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text` WHERE `id` = @entry;
@@ -454,10 +454,10 @@ DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Forward Scout Razza
-SET @entry = 30469;
+SET @entry = @Forward_Scout_Razza;
 SET @text = 'What can Razza do for ye, mon?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text` WHERE `id` = @entry;
@@ -466,10 +466,10 @@ DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Camp Commander Gara
-SET @entry = 32565;
+SET @entry = @Commander_Gara;
 SET @text = 'Don\'t be startin\' any fights in my camp, got it?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -478,10 +478,10 @@ DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Spymaster Jarre
-SET @entry = 52291;
+SET @entry = @Spymaster_Jarre;
 SET @text = 'Stay on yer toes, $R. It may be pretty \'round here but beauty attracts danger.';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -490,10 +490,10 @@ DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Packmaster Stonebrow
-SET @entry = 5153;
+SET @entry = @Packmaster_Stonebrow;
 SET @text = 'What kin I do for ye?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -504,10 +504,10 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 1, 69, 0, NULL);
 
 -- Malik Stillblade
-SET @entry = 22442;
+SET @entry = @Malik_Stillblade;
 SET @text = 'How may I assist you?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -516,10 +516,10 @@ DELETE FROM `broadcast_text`        WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Trixy the Fixer
-SET @entry = 30436;
+SET @entry = @Trixy_the_Fixer;
 SET @text = 'Got something that needs fixin\'?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -537,9 +537,146 @@ UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `speed_walk`=
 );
 
 -- -------------------------------------------------------------------------------------------------------------------------------------
+-- Creature loot
 -- -------------------------------------------------------------------------------------------------------------------------------------
 
+SET @Reference_EliteLoot = 48212;
+
+-- Elite loot reference
+DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_EliteLoot;
+INSERT INTO `reference_loot_template` VALUES
+(@Reference_EliteLoot, 40752,     0, 100, 0, 1, 1, 1, 1, '1x Emblem of Heroism'),
+(@Reference_EliteLoot, 34052,     0, 100, 0, 1, 1, 3, 3, '3x Dream Shard'),
+(@Reference_EliteLoot, 48208, 48208, 100, 0, 1, 1, 1, 1, '1x BoP Blue');
+
+-- Creature loot templates
+
+-- Harpy Feather
+REPLACE INTO `creature_loot_template` VALUES
+(@Harpy_Ambusher,       4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+(@Harpy_Harpy,          4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+(@Harpy_Ripper,         4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+(@Harpy_Roguefeather,   4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+(@Harpy_Slayer,         4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+(@Harpy_Storm_Witch,    4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+(@Harpy_Windcaller,     4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
+-- Malformed Satyr Horn
+(@FelSatyr_Betrayer,     38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Felsworn,     38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Hellcaller,   38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Rogue,        38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Satyr,        38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Shadowstalker,38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Trickster,    38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Assassin,    38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Hellcaller,  38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Imp,         38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Rogue,       38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Satyr,       38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Shadowstalker,38512,0,100,0,1,0,1,1,'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Trickster,   38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+-- Vulture Talon
+(@Buzzard,       5064, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Vulture Talon'),
+(@Giant_Buzzard, 5064, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Vulture Talon'),
+-- Gorloc Fin
+(@Gorloc_Dredger,       5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
+(@Gorloc_Gibberer,      5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
+(@Gorloc_Hunter,        5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
+(@Gorloc_Mud_Splasher,  5784,0,100,0,1,0,1,1,'Quest Item - Gorloc Fin'),
+(@Gorloc_Steam_Belcher, 5784,0,100,0,1,0,1,1,'Quest Item - Gorloc Fin'),
+(@Gorloc_Waddler,       5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
+-- Lynx Pelt
+(@Grovestalker_Lynx, 4742, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Pristine Lynx Pelt'),
+-- Crocolisk Hide
+(@Mangal_Crocolisk, 3348, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Thick Crocolisk Hide'),
+-- Ogre Warbeads
+(@Ogre_Brute,       21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+(@Ogre_Mauler,      21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+(@Ogre_Enforcer,    21982,0,100,0,1,0,1,1,'Quest Item - Ogre Warbeads'),
+(@Ogre_Mage,        21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+(@Ogre_Reaver,      21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+(@Ogre_Mage_Lord,   21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+(@Ogre_Captain,     21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+(@Ogre_Warlock,     21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
+-- Naga Scales
+(@Naga_Ambusher,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Myrmidon,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Oracle,     12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Siren,      12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Sorceress,  12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Warrior,    12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Guardian,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Defender,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Soothsayer, 12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Enchantress,12923,0,100,0,1,0,2,3,'Quest Item - Polished Naga Scales'),
+(@Naga_Champion,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+(@Naga_Emissary,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
+-- Wolvar Paw
+(@Wolvar_Berserker,     4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
+(@Wolvar_Hunter,        4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
+(@Wolvar_Ravager,       4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
+(@Wolvar_Scavenger,     4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
+(@Wolvar_Spearbearer,   4758,0,100,0,1,0,1,1,'Quest Item - Bloody Wolvar Paw'),
+(@Wolvar_Tracker,       4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
+-- Furbolg Totem
+(@Furbolg_Elder,        20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
+(@Furbolg_Hunter,       20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
+(@Furbolg_Shaman,       20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
+(@Furbolg_Trapper,      20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
+(@Furbolg_Warrior,      20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
+(@Furbolg_Ursa,         20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
+(@Furbolg_Pathfinder,   20741,0,100,0,1,0,1,1,'Quest Item - Whispering Ritual Totem'),
+-- Hexed Tiki Mask
+(@Enchanted_Tiki_Warrior, 43670, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Hexed Tiki Mask'),
+-- Black Dragonscale
+(@Dragonspawn_Dragonspawn,15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
+(@Dragonspawn_Broodling,  15416,0,100,0,1,0,1,1,'Quest Item - Black Dragonscales'),
+(@Dragonspawn_Wyrmkin,    15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
+-- Petrified Bark
+(@Withered_Ancient,     36786, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Petrified Ironbark'),
+(@Wandering_Ancient,    36786, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Petrified Ironbark'),
+-- Chimaera Horn
+(@Chimaeron,            33351, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Chimaera Horn'),
+-- Spirit Ash
+(@Anguished_Highborne,  20935, 0, 100, 1, 1, 0, 1, 2, 'Quest Item - Spirit Ash'),
+(@Suffering_Highborne,  20935, 0, 100, 1, 1, 0, 1, 2, 'Quest Item - Spirit Ash'),
+(@Highborne_Lichling,   20935, 0, 100, 1, 1, 0, 1, 2, 'Quest Item - Spirit Ash'),
+(@Highborne_Apparition, 20935, 0, 100, 1, 1, 0, 1, 2, 'Quest Item - Spirit Ash'),
+-- Motes
+(@Collapsing_Voidwalker, 22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Voidspawn,             22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Voidshrieker,          22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Rogue_Voidwalker,      22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Unstable_Voidwraith,   22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Shadowfiend,           22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Void_Lord,             22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Void_Beast,            22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
+(@Rock_Giant,            22573, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Earth'), 
+(@Water_Elemental,       22578, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Water'), 
+(@Air_Elemental,         22572, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Air'),
+(@Fire_Elemental,        22574, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Fire');
+
+-- Custom Elites
+REPLACE INTO `creature_loot_template` VALUES 
+(@Tanak_Ragepaw,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Hexxer,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Ravazic,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Warlord_Skullcrush,   @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Earthshaker,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Chimaeron,            @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Watcher_OneEye,       @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Grimgut,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Mokor_the_Tactician,  @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Captain_Clogg,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@King_Gorloc,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Snarlax_Snowpelt,     @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Shirek,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Phytos,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot'),
+(@Dark_Illidan,         @Reference_EliteLoot, @Reference_EliteLoot, 100, 1, 1, 1, 1, 1, 'Elite Loot');
+
+-- -------------------------------------------------------------------------------------------------------------------------------------
 -- Creature placement
+-- -------------------------------------------------------------------------------------------------------------------------------------
 
 -- ALLIANCE SIDE
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Alliance';
@@ -1011,7 +1148,6 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Skeletal_Highborne, 37, 1, 1, 888.167, 476.527, 212.201, 1.36952, 300, 5, 0, 'Crater_Alliance'),
 (@Phytos, 37, 1, 1, 979.455, 560.639, 208.858, 4.36288, 300, 0, 0, 'Crater_Alliance'); -- Phytos (Elite)
 -- -----------------------------------------------------------------------------------------------------------------------------
--- -----------------------------------------------------------------------------------------------------------------------------
 
 -- CENTRAL
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Central';
@@ -1035,7 +1171,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Mage_Bruiser, 37, 1, 1, 443.888, 138.293, 281.746, 2.11732, 300, 0, 0, 'Crater_Central'),
 (@Mage_Bruiser, 37, 1, 1, 441.064, 139.197, 297.173, 1.39869, 300, 0, 0, 'Crater_Central'),
 -- Questgivers
-(@Purveyor_Delryn, 37, 1, 1, 436.47, 142.254, 305.964, 3.81776, 600, 0, 0, 'Crater_Central'),
+(@Surveyor_Delryn, 37, 1, 1, 436.47, 142.254, 305.964, 3.81776, 600, 0, 0, 'Crater_Central'),
 (@Farseer_Serena, 37, 1, 1, 451.833, 133.937, 281.838, 5.37751, 300, 0, 0, 'Crater_Central'),
 -- Supplies/Repair
 (@Packmaster_Stonebrow, 37, 1, 1, 450.308, 118.441, 263.27, 1.48271, 300, 0, 0, 'Crater_Central'),
@@ -1057,7 +1193,7 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Naga_Oracle, 37, 1, 1, 209.542, 35.4424, 236.829, 4.91852, 300, 0, 0, 'Crater_Central'),
 (@Naga_Siren, 37, 1, 1, 210.732, 30.6131, 237.229, 1.89082, 300, 0, 0, 'Crater_Central'),
 (@Naga_Ambusher, 37, 1, 1, 119.943, 187.703, 245.116, 0.579216, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 111.586, 162.862, 238.436, 3.65013, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 111.586, 162.862, 238.436, 3.65013, 300, 5, 0, 'Crater_Central'),
 (@Naga_Sorceress, 37, 1, 1, 113.651, 153.756, 238.032, 4.94603, 300, 0, 0, 'Crater_Central'),
 (@Naga_Oracle, 37, 1, 1, 76.9081, 127.024, 237, 2.91971, 300, 0, 0, 'Crater_Central'),
 (@Naga_Sorceress, 37, 1, 1, 69.0562, 121.524, 237.633, 1.18791, 300, 0, 0, 'Crater_Central'),
@@ -1073,10 +1209,10 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Naga_Sorceress, 37, 1, 1, 140.828, 53.3268, 230.734, 5.40942, 300, 0, 0, 'Crater_Central'),
 (@Naga_Siren, 37, 1, 1, 145.025, 48.6078, 230.84, 2.34244, 300, 0, 0, 'Crater_Central'),
 (@Naga_Oracle, 37, 1, 1, 163.77, 61.1263, 229.772, 5.93957, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 168.584, 57.0571, 228.821, 4.62403, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 168.584, 57.0571, 228.821, 4.62403, 300, 5, 0, 'Crater_Central'),
 (@Naga_Myrmidon, 37, 1, 1, 155.97, 69.0175, 230.783, 3.26137, 300, 5, 0, 'Crater_Central'),
 (@Naga_Oracle, 37, 1, 1, 95.7655, 108.535, 230.023, 6.06917, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 110.182, 84.1449, 230.729, 4.15515, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 110.182, 84.1449, 230.729, 4.15515, 300, 5, 0, 'Crater_Central'),
 (@Naga_Sorceress, 37, 1, 1, 105.472, 88.4533, 230.836, 5.40786, 300, 0, 0, 'Crater_Central'),
 (@Naga_Myrmidon, 37, 1, 1, 95.1076, 68.2689, 230.783, 3.08464, 300, 5, 0, 'Crater_Central'),
 (@Naga_Oracle, 37, 1, 1, 108.935, 48.6811, 230.803, 2.16417, 300, 0, 0, 'Crater_Central'),
@@ -1088,13 +1224,13 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Naga_Ambusher, 37, 1, 1, 76.1217, 51.1656, 229.706, 3.60929, 300, 5, 0, 'Crater_Central'),
 (@Naga_Siren, 37, 1, 1, 104.96, 54.1397, 230.788, 5.31755, 300, 0, 0, 'Crater_Central'),
 (@Naga_Sorceress, 37, 1, 1, 129.093, 38.6969, 230.783, 4.80027, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 102.008, 112.609, 230.257, 3.32814, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 79.6149, 84.0125, 228.392, 1.74791, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 107.585, 31.7489, 229.102, 2.92601, 300, 5, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 139.376, 29.3712, 228.954, 5.31755, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 102.008, 112.609, 230.257, 3.32814, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 79.6149, 84.0125, 228.392, 1.74791, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 107.585, 31.7489, 229.102, 2.92601, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 139.376, 29.3712, 228.954, 5.31755, 300, 5, 0, 'Crater_Central'),
 (@Naga_Champion, 37, 1, 1, 111.319, 88.6275, 219.518, 4.36331, 300, 0, 0, 'Crater_Central'),
 (@Naga_Defender, 37, 1, 1, 105.92, 87.0266, 219.518, 5.74166, 300, 0, 0, 'Crater_Central'),
-(@Naga_WaterElemental, 37, 1, 1, 111.186, 54.738, 213.962, 1.01361, 300, 5, 0, 'Crater_Central'),
+(@Water_Elemental, 37, 1, 1, 111.186, 54.738, 213.962, 1.01361, 300, 5, 0, 'Crater_Central'),
 (@Naga_Champion, 37, 1, 1, 108.082, 48.5419, 213.964, 1.28458, 300, 0, 0, 'Crater_Central'),
 (@Naga_Soothsayer, 37, 1, 1, 138.798, 48.3056, 208.408, 1.31601, 300, 0, 0, 'Crater_Central'),
 (@Naga_Champion, 37, 1, 1, 145.001, 54.8991, 208.408, 3.51906, 300, 0, 0, 'Crater_Central'),
@@ -1365,7 +1501,6 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@FelSatyr_Hellcaller, 37, 1, 1, -39.817, 198.805, 293.48, 6.1158, 300, 5, 0, 'Crater_Central'),
 (@Ravazic, 37, 1, 1, -107.353, 285.099, 293.688, 1.0688, 300, 5, 0, 'Crater_Central');
 -- -----------------------------------------------------------------------------------------------------------------------------
--- -----------------------------------------------------------------------------------------------------------------------------
 
 -- HORDE SIDE
 DELETE FROM `creature` WHERE `map` = 37 AND `comment` = 'Crater_Horde';
@@ -1498,7 +1633,6 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Enchanted_Tiki_Warrior, 37, 1, 1, 292.141, 755.42, 259.81, 3.04962, 300, 5, 0, 'Crater_Horde'),
 (@Enchanted_Tiki_Warrior, 37, 1, 1, 276.937, 757.506, 259.805, 1.61783, 300, 5, 0, 'Crater_Horde'),
 (@Hexxer, 37, 1, 1, 282.025, 770.038, 263.773, 4.8804, 300, 0, 0, 'Crater_Horde');
--- -----------------------------------------------------------------------------------------------------------------------------
 -- -----------------------------------------------------------------------------------------------------------------------------
 
 -- TEMPLE SIDE
@@ -1657,10 +1791,34 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@Void_Lord, 37, 1, 1, -619.551, -287.056, 374.161, 5.46573, 300, 10, 0, 'Crater_Temple'),
 (@Dark_Illidan, 37, 1, 1, -614.82, -240.438, 379.352, 3.76924, 300, 0, 0, 'Crater_Temple');
 -- -----------------------------------------------------------------------------------------------------------------------------
--- -----------------------------------------------------------------------------------------------------------------------------
 
 -- Fix wander
 UPDATE `creature` SET `movementtype`=1 WHERE `map`=37 AND `wander_distance`>0 AND `comment` LIKE 'Crater_%';
 UPDATE `creature` SET `wander_distance`=0 WHERE `map`=37 AND `movementtype`=0 AND `comment` LIKE 'Crater_%';
 -- Turn off equipment_id for NPCs with no creature_equip_template
 UPDATE `creature` SET `equipment_id`=0 WHERE NOT EXISTS (SELECT `creatureid` FROM `creature_equip_template` WHERE `creature`.`id1` = `creature_equip_template`.`creatureid`);
+
+
+-- -----------------------------------------------------------------------------------------------------------------------------
+-- Smart scripts
+-- -----------------------------------------------------------------------------------------------------------------------------
+
+-- Giant elemental lords emoting attack
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @Firelord;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Firelord, 0, 0, 0, 1, 0, 100, 0, 1800, 2500, 1800, 2500, 0, 11, 61480, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Out of Combat - Cast Fake Swing');
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @Windseeker;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Windseeker, 0, 0, 0, 1, 0, 100, 0, 1800, 2500, 1800, 2500, 0, 11, 61480, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Out of Combat - Cast Fake Swing');
+
+-- Mage Peacekeepers
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Mage_Bruiser;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES    (@Mage_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
+(@Mage_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 58534, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - On Aggro - Cast Deep Freeze'),
+(@Mage_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 1600, 2200, 0, 11, 46194, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Ice Lance'),
+(@Mage_Bruiser, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 42931, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Cone of Cold');
+
+-- Orc Peacekeepers
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@Orc_Bruiser;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES    (@Orc_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
+(@Orc_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 22120, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - On Aggro - Cast Charge'),
+(@Orc_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 2600, 3200, 0, 11, 26211, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Hamstring'),
+(@Orc_Bruiser, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 22427, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Concussion Blow');

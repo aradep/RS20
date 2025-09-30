@@ -37,7 +37,6 @@ DELETE FROM `gameobject_template` WHERE `entry`=4406;
 INSERT INTO `gameobject_template` VALUES (4406, 3, 3851, 'Raptor Egg', '', 'Stealing', '', 1, 43, 2691, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 11723);
 DELETE FROM `gameobject_loot_template` WHERE `Entry`=2691;
 INSERT INTO `gameobject_loot_template` VALUES (2691, 46364, 0, 100, 1, 1, 0, 1, 1, 'Raptor Egg');
--- -----------------------------------
 
 -- Gameobject placement
 DELETE FROM `gameobject` WHERE `map` = 37 AND `Comment` = 'CustomGOB';
