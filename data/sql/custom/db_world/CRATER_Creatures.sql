@@ -10,20 +10,20 @@
 -- Blizzlike NPCs
 -- -----------------------------------
 -- Naga
-SET @Naga_Engineer = 17721;
-SET @Naga_Sorceress = 17722;
-SET @Naga_Myrmidon = 17800;
-SET @Naga_Siren = 17801;
-SET @Naga_Warrior = 17802;
-SET @Naga_Oracle = 17803;
-SET @Naga_Slavemaster = 17805;
-SET @Naga_Ambusher = 21865;
-SET @Naga_Guardian = 21873;
-SET @Naga_Defender = 17958;
-SET @Naga_Soothsayer = 17960;
-SET @Naga_Enchantress = 17961;
-SET @Naga_Champion = 17957;
-SET @Naga_Emissary = 18681;
+SET @Naga_Engineer = 2179; -- Stormscale Wave Rider
+SET @Naga_Sorceress = 2182; -- Stormscale Sorceress
+SET @Naga_Myrmidon = 2181; -- Stormscale Myrmidon
+SET @Naga_Siren = 2180; -- Stormscale Siren
+SET @Naga_Warrior = 2183; -- Stormscale Warrior
+SET @Naga_Oracle = 12321; -- Stormscale Toxicoloist
+SET @Naga_Slavemaster = 2369; -- Daggerspine Shorehunter
+SET @Naga_Ambusher = 2368; -- Daggerspine Shorestalker
+SET @Naga_Guardian = 2595; -- Daggerspine Raider
+SET @Naga_Defender = 2807; -- Daggerspine Wavecaller
+SET @Naga_Soothsayer = 2370; -- Daggerspine Screamer
+SET @Naga_Enchantress = 2182; -- Stormscale Sorceress
+SET @Naga_Champion = 2775; -- Daggerspine Marauder
+SET @Naga_Emissary = 2371; -- Daggerspine Siren
 -- Murlocs
 SET @Murloc_Coastrunner = 126;
 SET @Murloc_Tidehunter = 127;
@@ -170,7 +170,6 @@ SET @Unstable_Voidwraith = 18869;
 SET @Voidshrieker = 18870;
 SET @Shadowfiend = 27834;
 SET @Void_Lord = 32230;
-SET @Void_Beast = 33806;
 
 -- Custom NPCs
 -- -----------------------------------
@@ -213,199 +212,201 @@ SET @Windseeker             = 482302;
 -- Creature template changes
 
 -- Naga
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Engineer' WHERE `entry` = @Naga_Engineer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Sorceress' WHERE `entry` = @Naga_Sorceress;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Myrmidon' WHERE `entry` = @Naga_Myrmidon;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Siren' WHERE `entry` = @Naga_Siren;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Warrior' WHERE `entry` = @Naga_Warrior;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Oracle' WHERE `entry` = @Naga_Oracle;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Slavemaster' WHERE `entry` = @Naga_Slavemaster;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Ambusher' WHERE `entry` = @Naga_Ambusher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Guardian' WHERE `entry` = @Naga_Guardian;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Defender' WHERE `entry` = @Naga_Defender;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Soothsayer' WHERE `entry` = @Naga_Soothsayer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Enchantress' WHERE `entry` = @Naga_Enchantress;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Champion' WHERE `entry` = @Naga_Champion;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Emissary' WHERE `entry` = @Naga_Emissary;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Engineer' WHERE `entry` = @Naga_Engineer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Sorceress' WHERE `entry` = @Naga_Sorceress;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Myrmidon' WHERE `entry` = @Naga_Myrmidon;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Siren' WHERE `entry` = @Naga_Siren;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Warrior' WHERE `entry` = @Naga_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Oracle' WHERE `entry` = @Naga_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Slavemaster' WHERE `entry` = @Naga_Slavemaster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Ambusher' WHERE `entry` = @Naga_Ambusher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Guardian' WHERE `entry` = @Naga_Guardian;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Defender' WHERE `entry` = @Naga_Defender;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Soothsayer' WHERE `entry` = @Naga_Soothsayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Enchantress' WHERE `entry` = @Naga_Enchantress;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Champion' WHERE `entry` = @Naga_Champion;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Emissary' WHERE `entry` = @Naga_Emissary;
 -- Murlocs
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Coastrunner' WHERE `entry` = @Murloc_Coastrunner;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Tidehunter' WHERE `entry` = @Murloc_Tidehunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Flesheater' WHERE `entry` = @Murloc_Flesheater;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Hunter' WHERE `entry` = @Murloc_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Netter' WHERE `entry` = @Murloc_Netter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Oracle' WHERE `entry` = @Murloc_Oracle;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Nightcrawler' WHERE `entry` = @Murloc_Nightcrawler;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Scout' WHERE `entry` = @Murloc_Scout;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Coastrunner' WHERE `entry` = @Murloc_Coastrunner;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Tidehunter' WHERE `entry` = @Murloc_Tidehunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Flesheater' WHERE `entry` = @Murloc_Flesheater;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Hunter' WHERE `entry` = @Murloc_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Netter' WHERE `entry` = @Murloc_Netter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Oracle' WHERE `entry` = @Murloc_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Nightcrawler' WHERE `entry` = @Murloc_Nightcrawler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Scout' WHERE `entry` = @Murloc_Scout;
 -- Fields
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Grovestalker Lynx' WHERE `entry` = @Grovestalker_Lynx;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Wandering Ancient' WHERE `entry` = @Wandering_Ancient;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Grovestalker Lynx' WHERE `entry` = @Grovestalker_Lynx;
 -- Wreckage
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Buzzard' WHERE `entry` = @Buzzard;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Giant Buzzard' WHERE `entry` = @Giant_Buzzard;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Skeleton' WHERE `entry` = @Wandering_Skeleton;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Buzzard' WHERE `entry` = @Buzzard;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Giant Buzzard' WHERE `entry` = @Giant_Buzzard;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Skeleton' WHERE `entry` = @Wandering_Skeleton;
 -- Furbolg Hold
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Hunter' WHERE `entry` = @Furbolg_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Warrior' WHERE `entry` = @Furbolg_Warrior;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Shaman' WHERE `entry` = @Furbolg_Shaman;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Trapper' WHERE `entry` = @Furbolg_Trapper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Elder' WHERE `entry` = @Furbolg_Elder;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Ursa' WHERE `entry` = @Furbolg_Ursa;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Den Watcher' WHERE `entry` = @Furbolg_Pathfinder;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Hunter' WHERE `entry` = @Furbolg_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Warrior' WHERE `entry` = @Furbolg_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Shaman' WHERE `entry` = @Furbolg_Shaman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Trapper' WHERE `entry` = @Furbolg_Trapper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Elder' WHERE `entry` = @Furbolg_Elder;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Ursa' WHERE `entry` = @Furbolg_Ursa;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Den Watcher' WHERE `entry` = @Furbolg_Pathfinder;
 -- Satyr camp
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Satyr' WHERE `entry` = @FelSatyr_Satyr;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Rogue' WHERE `entry` = @FelSatyr_Rogue;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Trickster' WHERE `entry` = @FelSatyr_Trickster;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Betrayer' WHERE `entry` = @FelSatyr_Betrayer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Felsworn' WHERE `entry` = @FelSatyr_Felsworn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Shadowstalker' WHERE `entry` = @FelSatyr_Shadowstalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Hellcaller' WHERE `entry` = @FelSatyr_Hellcaller;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felhound' WHERE `entry` = @Felhound;
--- Horde Giants
-UPDATE `creature_template` SET `rank`=1, `minlevel`=23, `maxlevel`=23, `name`='Rock Giant' WHERE `entry` = @Rock_Giant;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Satyr' WHERE `entry` = @FelSatyr_Satyr;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Rogue' WHERE `entry` = @FelSatyr_Rogue;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Trickster' WHERE `entry` = @FelSatyr_Trickster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Betrayer' WHERE `entry` = @FelSatyr_Betrayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Felsworn' WHERE `entry` = @FelSatyr_Felsworn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Shadowstalker' WHERE `entry` = @FelSatyr_Shadowstalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Hellcaller' WHERE `entry` = @FelSatyr_Hellcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felhound' WHERE `entry` = @Felhound;
 -- Horde Raptors
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Raptor' WHERE `entry` = @Raptor_Raptor;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Lashtail' WHERE `entry` = @Raptor_Lashtail;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Devourer' WHERE `entry` = @Raptor_Devourer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Daggermaw Raptor' WHERE `entry` = @Raptor_Raptor;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Daggermaw Lashtail' WHERE `entry` = @Raptor_Lashtail;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Daggermaw Devourer' WHERE `entry` = @Raptor_Devourer;
 -- Horde Serpent
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Scalewing Serpent' WHERE `entry` = @Serpent_Serpent;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Scalewing Serpent' WHERE `entry` = @Serpent_Serpent;
 -- Horde Croc
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Mangal Crocolisk' WHERE `entry` = @Mangal_Crocolisk;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Mangal Crocolisk' WHERE `entry` = @Mangal_Crocolisk;
 -- Horde Tiki warrior
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Enchanted Tiki Warrior' WHERE `entry` = @Enchanted_Tiki_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Enchanted Tiki Warrior' WHERE `entry` = @Enchanted_Tiki_Warrior;
 -- Horde Dragonspawn
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Dragonspawn' WHERE `entry` = @Dragonspawn_Dragonspawn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Wyrmkin' WHERE `entry` = @Dragonspawn_Wyrmkin;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Broodling' WHERE `entry` = @Dragonspawn_Broodling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Flamescale Dragonspawn' WHERE `entry` = @Dragonspawn_Dragonspawn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Flamescale Wyrmkin' WHERE `entry` = @Dragonspawn_Wyrmkin;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Flamescale Broodling' WHERE `entry` = @Dragonspawn_Broodling;
 -- Horde Gnolls
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Alpha' WHERE `entry` = @Gnoll_Alpha;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Mystic' WHERE `entry` = @Gnoll_Mystic;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Brute' WHERE `entry` = @Gnoll_Brute;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Shaman' WHERE `entry` = @Gnoll_Shaman;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Gnoll' WHERE `entry` = @Gnoll_Gnoll;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Alpha' WHERE `entry` = @Gnoll_Alpha;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Mystic' WHERE `entry` = @Gnoll_Mystic;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Brute' WHERE `entry` = @Gnoll_Brute;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Shaman' WHERE `entry` = @Gnoll_Shaman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Gnoll' WHERE `entry` = @Gnoll_Gnoll;
 -- Goblin mine
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Worker' WHERE `entry` = @Goblin_Worker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Miner' WHERE `entry` = @Goblin_Miner;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Foreman' WHERE `entry` = @Goblin_Foreman;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Geologist' WHERE `entry` = @Goblin_Geologist;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Crystal Spider' WHERE `entry` = @Crystal_Spider;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Worker' WHERE `entry` = @Goblin_Worker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Miner' WHERE `entry` = @Goblin_Miner;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Foreman' WHERE `entry` = @Goblin_Foreman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Geologist' WHERE `entry` = @Goblin_Geologist;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Crystal Spider' WHERE `entry` = @Crystal_Spider;
 -- Ogres
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre' WHERE `entry` = @Ogre_Enforcer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Mauler' WHERE `entry` = @Ogre_Mauler;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre Mage' WHERE `entry` = @Ogre_Mage;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Hyena' WHERE `entry` = @Ogre_Hyena;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Brute' WHERE `entry` = @Ogre_Brute;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Reaver' WHERE `entry` = @Ogre_Reaver;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Mage-Lord' WHERE `entry` = @Ogre_Mage_Lord;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre Captain' WHERE `entry` = @Ogre_Captain;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=21, `maxlevel`=21, `name`='Highland Ogre Warlock' WHERE `entry` = @Ogre_Warlock;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Hyena Alpha' WHERE `entry` = @Hyena_alpha;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre' WHERE `entry` = @Ogre_Enforcer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Mauler' WHERE `entry` = @Ogre_Mauler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre Mage' WHERE `entry` = @Ogre_Mage;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Hyena' WHERE `entry` = @Ogre_Hyena;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Brute' WHERE `entry` = @Ogre_Brute;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Reaver' WHERE `entry` = @Ogre_Reaver;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Mage-Lord' WHERE `entry` = @Ogre_Mage_Lord;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre Captain' WHERE `entry` = @Ogre_Captain;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=21, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre Warlock' WHERE `entry` = @Ogre_Warlock;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Hyena Alpha' WHERE `entry` = @Hyena_alpha;
 -- Gorlocs
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Waddler' WHERE `entry` = @Gorloc_Waddler;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Gibberer' WHERE `entry` = @Gorloc_Gibberer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Streamrunner' WHERE `entry` = @Gorloc_Steam_Belcher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Mud Splasher' WHERE `entry` = @Gorloc_Mud_Splasher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Hunter' WHERE `entry` = @Gorloc_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Dredger' WHERE `entry` = @Gorloc_Dredger;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Hatchling' WHERE `entry` = @Gorloc_Hatchling;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Oracle' WHERE `entry` = @Gorloc_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Waddler' WHERE `entry` = @Gorloc_Waddler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Gibberer' WHERE `entry` = @Gorloc_Gibberer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Streamrunner' WHERE `entry` = @Gorloc_Steam_Belcher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Mud Splasher' WHERE `entry` = @Gorloc_Mud_Splasher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Hunter' WHERE `entry` = @Gorloc_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Dredger' WHERE `entry` = @Gorloc_Dredger;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Hatchling' WHERE `entry` = @Gorloc_Hatchling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Oracle' WHERE `entry` = @Gorloc_Oracle;
 -- Wolvar
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Tracker' WHERE `entry` = @Wolvar_Tracker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Hunter' WHERE `entry` = @Wolvar_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Scavenger' WHERE `entry` = @Wolvar_Scavenger;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Wolvar Pup' WHERE `entry` = @Wolvar_Pup;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Spearbearer' WHERE `entry` = @Wolvar_Spearbearer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Ravager' WHERE `entry` = @Wolvar_Ravager;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Berserker' WHERE `entry` = @Wolvar_Berserker;
--- Undead
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Rotting Highborne' WHERE `entry` = @Rotting_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Skeletal Highborne' WHERE `entry` = @Skeletal_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Restless Highborne' WHERE `entry` = @Anguished_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Suffering Spectre' WHERE `entry` = @Suffering_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Lost Soul' WHERE `entry` = @Highborne_Lichling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Tracker' WHERE `entry` = @Wolvar_Tracker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Hunter' WHERE `entry` = @Wolvar_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Scavenger' WHERE `entry` = @Wolvar_Scavenger;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Wolvar Pup' WHERE `entry` = @Wolvar_Pup;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Spearbearer' WHERE `entry` = @Wolvar_Spearbearer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Ravager' WHERE `entry` = @Wolvar_Ravager;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Berserker' WHERE `entry` = @Wolvar_Berserker;
 -- Moss Beasts
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Beast' WHERE `entry` = @Cave_Beast;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Creeper' WHERE `entry` = @Cave_Creeper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Rager' WHERE `entry` = @Cave_Rager;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Animated Sap' WHERE `entry` = @Sap_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Cave Beast' WHERE `entry` = @Cave_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Cave Creeper' WHERE `entry` = @Cave_Creeper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Cave Rager' WHERE `entry` = @Cave_Rager;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Animated Sap' WHERE `entry` = @Sap_Beast;
 -- Ancients
-UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Withered Treant' WHERE `entry` = @Withered_Treant;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Withered Treant' WHERE `entry` = @Withered_Treant;
 -- Harpies
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Matriarch' WHERE `entry` = @Harpy_Ripper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Scout' WHERE `entry` = @Harpy_Harpy;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Rogue' WHERE `entry` = @Harpy_Roguefeather;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Soldier' WHERE `entry` = @Harpy_Slayer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Ambusher' WHERE `entry` = @Harpy_Ambusher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Windcaller' WHERE `entry` = @Harpy_Windcaller;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Storm Witch' WHERE `entry` = @Harpy_Storm_Witch;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Matriarch' WHERE `entry` = @Harpy_Ripper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Scout' WHERE `entry` = @Harpy_Harpy;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Rogue' WHERE `entry` = @Harpy_Roguefeather;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Soldier' WHERE `entry` = @Harpy_Slayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Ambusher' WHERE `entry` = @Harpy_Ambusher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Windcaller' WHERE `entry` = @Harpy_Windcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Storm Witch' WHERE `entry` = @Harpy_Storm_Witch;
 -- Turtles
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Tortoise' WHERE `entry` = @Turtle_Tortoise;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Snapper' WHERE `entry` = @Turtle_Snapper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Borer' WHERE `entry` = @Turtle_Borer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Steelshell Tortoise' WHERE `entry` = @Turtle_Tortoise;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Steelshell Snapper' WHERE `entry` = @Turtle_Snapper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Steelshell Borer' WHERE `entry` = @Turtle_Borer;
 -- Elementals
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Fire Elemental' WHERE `entry` = @Fire_Elemental;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Air Elemental' WHERE `entry` = @Air_Elemental;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Water Elemental' WHERE `entry` = @Water_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Fire Elemental' WHERE `entry` = @Fire_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Air Elemental' WHERE `entry` = @Air_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Water Elemental' WHERE `entry` = @Water_Elemental;
 -- Temple Ruins Satyr
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Satyr' WHERE `entry` = @Wildsatyr_Satyr;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Rogue' WHERE `entry` = @Wildsatyr_Rogue;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Trickster' WHERE `entry` = @Wildsatyr_Trickster;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Assassin' WHERE `entry` = @Wildsatyr_Felsworn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Shadowstalker' WHERE `entry` = @Wildsatyr_Shadowstalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Hellcaller' WHERE `entry` = @Wildsatyr_Hellcaller;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Imp' WHERE `entry` = @Wildsatyr_Imp;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Satyr' WHERE `entry` = @Wildsatyr_Satyr;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Rogue' WHERE `entry` = @Wildsatyr_Rogue;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Trickster' WHERE `entry` = @Wildsatyr_Trickster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Assassin' WHERE `entry` = @Wildsatyr_Felsworn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Shadowstalker' WHERE `entry` = @Wildsatyr_Shadowstalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Hellcaller' WHERE `entry` = @Wildsatyr_Hellcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Imp' WHERE `entry` = @Wildsatyr_Imp;
 -- Temple Interior Void
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidwalker' WHERE `entry` = @Rogue_Voidwalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Collapsing Voidwalker' WHERE `entry` = @Collapsing_Voidwalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Surging Voidwalker' WHERE `entry` = @Voidspawn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidwraith' WHERE `entry` = @Unstable_Voidwraith;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidcaller' WHERE `entry` = @Voidshrieker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Void Lord' WHERE `entry` = @Void_Lord;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Void Beast' WHERE `entry` = @Void_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Voidwalker' WHERE `entry` = @Rogue_Voidwalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Collapsing Voidwalker' WHERE `entry` = @Collapsing_Voidwalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Surging Voidwalker' WHERE `entry` = @Voidspawn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Voidwraith' WHERE `entry` = @Unstable_Voidwraith;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Voidcaller' WHERE `entry` = @Voidshrieker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
+
+-- Elites
+-- Rock Giant
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Rock Giant' WHERE `entry` = @Rock_Giant;
+-- Undead
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Rotting Highborne' WHERE `entry` = @Rotting_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Skeletal Highborne' WHERE `entry` = @Skeletal_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Restless Highborne' WHERE `entry` = @Anguished_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Suffering Spectre' WHERE `entry` = @Suffering_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Lost Soul' WHERE `entry` = @Highborne_Lichling;
+-- Ancients
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Wandering Ancient' WHERE `entry` = @Wandering_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
+-- Void lords
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Void Lord' WHERE `entry` = @Void_Lord;
 
 -- Fix loot link
-UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord, @Void_Beast);
+UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord);
 
 -- ------------------------------------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------
 
 -- Custom creatures
 REPLACE INTO `creature_template` 
-(`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-(@Firelord,             'Firelord',                 'Cosmetic',             0,                      20,         20,         795,        131,        1,              1.14286,        2,          3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
-(@Windseeker,           'Windseeker',               'Cosmetic',             0,                      20,         20,         290,        0,          1,              1,              2,          3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
+(`entry`,               `name`,                     `subname`,              `lootid`,               `minlevel`, `maxlevel`, `damagemodifier`,   `healthmodifier`,   `manamodifier`,     `faction`, `npcflag`,   `speed_walk`,   `speed_run`,    `scale`,    `rank`, `unit_class`,   `unit_flags`,   `unit_flags2`,  `type`, `type_flags`,   `flags_extra`,  `AiName`) VALUES 
+-- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(@Firelord,             'Firelord',                 'Cosmetic',             0,                      20,         20,         7,                  25,                 7,                  795,        131,        1,              1.14286,        2,          3,      1,              33587200,       2048,           7,      0,              2,              'SmartAI'),
+(@Windseeker,           'Windseeker',               'Cosmetic',             0,                      20,         20,         7,                  25,                 7,                  290,        0,          1,              1,              2,          3,      1,              33587200,       2048,           4,      4,              2,              'SmartAI'),
 -- NPCs
-(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              ''),
-(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              ''),
-(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              1,              ''),
-(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              ''),
-(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  0,                      20,         20,         2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              ''),
-(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             0,                      20,         20,         2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              ''),
-(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              ''),
-(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              ''),
+(@Commander_Gara,       'Commander Gara',           'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.2,        1,      1,              32768,          2048,           7,      4096,           1,              ''),
+(@Surveyor_Delryn,      'Surveyor Delryn',          'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.1,        1,      8,              0,              2048,           7,      0,              1,              ''),
+(@Farseer_Serena,       'Farseer Serena',           'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1,          1,      1,              0,              2048,           7,      0,              1,              ''),
+(@Spymaster_Jarre,      'Spymaster Jarre',          'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              0.9,        1,      4,              32768,          2048,           7,      0,              1,              ''),
+(@Forward_Scout_Razza,  'Forward Scout Razza',      'Azsharan Expedition',  0,                      20,         20,         7,                  10,                 7,                  2007,       3,          1,              1,              1.2,        1,      1,              0,              2048,           7,      0,              1,              ''),
+(@Trixy_the_Fixer,      'Trixy the Fixer',          'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1.5,        1,      1,              32768,          2048,           7,      0,              1,              ''),
+(@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              1,              ''),
+(@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              1,              ''),
 -- Peacekeepers
-(@Mage_Bruiser,         'Mage Guardian',            'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
-(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          0,                      23,         23,         2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              ''),
+(@Mage_Bruiser,         'Mage Guardian',            'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
+(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              ''),
 -- Elites
-(@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Hexxed,               'Grimtooth the Hexxed',     '',                     @Hexxed,                23,         23,         7,          0,          0.8,            1.1,            1,          1,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         90,         0,          0.9,            1.1,            1,          1,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
-(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         45,         0,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         91,         0,          0.8,            1.1,            2,          1,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
-(@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
-(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         45,         1,          0.8,            1.1,            0.65,       1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         45,         1,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         45,         1,          0.8,            1.1,            0.8,        1,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@Captain_Clogg,        'Guard-Captain Clogg',      '',                     @Captain_Clogg,         23,         23,         45,         1,          0.8,            1.1,            1,          1,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
-(@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         18,         0,          0.8,            1.1,            2.5,        1,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
-(@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         2001,       0,          0.8,            1.1,            1,          1,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
-(@Shirek,               'Shirek',                   'The Devourer',         @Shirek,                23,         23,         14,         0,          1,              1.1,            1,          1,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
-(@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         16,         0,          0.8,            1.1,            0.55,       1,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
-(@Dark_Illidan,         'Shadow of the Betrayer',   '',                     @Dark_Illidan,          23,         23,         16,         0,          0.8,            1.1,            2,          1,      1,              514,            2048,           3,      76,             1,              'SmartAI');
--- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Hexxed,               'Grimtooth the Hexxed',     '',                     @Hexxed,                23,         23,         7,                  25,                 7,                  7,          0,          0.8,            1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Ravazic,              'Ravazic',                  '',                     @Ravazic,               23,         23,         7,                  25,                 7,                  90,         0,          0.9,            1.1,            1,          3,      2,              0,              2048,           3,      0,              0,              'SmartAI'),
+(@Warlord_Skullcrush,   'Warlord Skullcrush',       '',                     @Warlord_Skullcrush,    23,         23,         7,                  25,                 7,                  45,         0,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         7,                  25,                 7,                  91,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
+(@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
+(@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.65,       3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@Captain_Clogg,        'Captain Clogg',            '',                     @Captain_Clogg,         23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              1,              'SmartAI'),
+(@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         7,                  25,                 7,                  18,         0,          0.8,            1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         7,                  25,                 7,                  2001,       0,          0.8,            1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
+(@Shirek,               'Shirek',                   'The Devourer',         @Shirek,                23,         23,         7,                  25,                 7,                  14,         0,          1,              1.1,            1,          3,      1,              0,              2048,           1,      4,              0,              'SmartAI'),
+(@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
+(@Dark_Illidan,         'Shade of the Betrayer',    '',                     @Dark_Illidan,          23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              514,            2048,           3,      76,             1,              'SmartAI');
+-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Probability`, `DisplayScale`, `VerifiedBuild`) VALUES 
 (@Firelord, 11121, 1, 2, 1), -- Firelord
 (@Windseeker, 14992, 1, 2, 1), -- Windseeker
@@ -426,7 +427,7 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Prob
 (@Snarlax_Snowpelt, 23774, 1, 1, 1), -- Snarlax Snowpelt
 (@Shirek, 28052, 1, 1, 1), -- Shirek
 (@Phytos, 28133, 1, 1, 1), -- Phytos
-(@Dark_Illidan, 26348, 1, 1, 1), -- Shadow of the Betrayer
+(@Dark_Illidan, 26348, 1, 2, 1), -- Shadow of the Betrayer
 -- Azsharan Expedition
 (@Commander_Gara, 28059, 1, 1, 1), -- Commander Gara
 (@Surveyor_Delryn, 28770, 1, 1, 1), -- Surveyor Delryn
@@ -567,7 +568,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 DELETE FROM `npc_trainer` WHERE `id` IN (5153,30436,22442);
 
 -- Turn into critters
-UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `speed_walk`=0.7, `speed_run`=1.1,`damagemodifier`=1, `healthmodifier`=1.2, `lootid`=0, `minlevel`=1, `maxlevel`=1, `type`=8, `flags_extra`=0 WHERE `entry` IN (
+UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `speed_walk`=0.7, `speed_run`=1.1,`damagemodifier`=1, `healthmodifier`=1.2, `lootid`=0, `minlevel`=1, `maxlevel`=1, `type`=8, `flags_extra`=0 WHERE `entry` IN (
 28140, -- Gorloc Hatchling
 28139  -- Wolvar Pup
 );
@@ -701,7 +702,6 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Unstable_Voidwraith,   22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
 (@Shadowfiend,           22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
 (@Void_Lord,             22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
-(@Void_Beast,            22577, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Shadow'),
 (@Rock_Giant,            22573, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Earth'), 
 (@Water_Elemental,       22578, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Water'), 
 (@Air_Elemental,         22572, 0, 100, 1, 1, 1, 1, 1, 'Quest Item - Mote of Air'),
