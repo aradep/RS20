@@ -29,20 +29,20 @@ REPLACE INTO `quest_offer_reward` VALUES
 -- Herod starts Call to Arms quests
 REPLACE INTO `creature_queststarter` VALUES
 -- Alliance --
-(482031, 11335),
-(482031, 11338),
+(482010, 11335),
+(482010, 11338),
 -- Horde--
-(482031, 11342),
-(482031, 11339);
+(482010, 11342),
+(482010, 11339);
 
 -- Herod ends Call to Arms quests
 REPLACE INTO `creature_questender` VALUES
 -- Alliance --
-(482031, 11335),
-(482031, 11338),
+(482010, 11335),
+(482010, 11338),
 -- Horde--
-(482031, 11342),
-(482031, 11339);
+(482010, 11342),
+(482010, 11339);
 
 -- Delete exclusive group, both quests can be done
 UPDATE `quest_template_addon` SET `exclusivegroup` = 0 WHERE `ID` IN (11339,11342,11335,11338);

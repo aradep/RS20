@@ -4,7 +4,7 @@
 -- Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Gems
+-- Azshara Crater Darkmoon NPC
 -- -----------------------------------
 
 -- Creature
@@ -18,7 +18,7 @@ SET
 @Rank       = 1, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
 @Type       = 7, -- 0:None, 1:Beast, 2:Dragonkin, 3:Demon, 4:Elemental, 5:Giant, 6:Undead, 7:Humanoid, 8:Critter, 9:Mechanical --
 @Class      = 1,
-@Flags      = 131, -- 128: Normal vendor, 4224: Repair vendor
+@Flags      = 3, -- 128: Normal vendor, 4224: Repair vendor
 @Level      = 20,
 @Faction    = 1555;
 DELETE FROM `creature_template` WHERE `Entry` = @Entry;

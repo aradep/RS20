@@ -9,7 +9,7 @@
 
 -- Creature
 SET
-@Entry      = 482031,
+@Entry      = 482010,
 @Model      = 29537,
 @Scale      = 0.45,
 @HoverHeight= 2.5,
