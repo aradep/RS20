@@ -23,19 +23,6 @@ UPDATE `command` SET `security`='0' WHERE `name` IN ('character','character cust
 -- No mounts in Warsong Gulch
 UPDATE `instance_template` SET `allowMount`=0 WHERE `map`=489;
 
--- Vanilla title rewards for honorable kills
-DELETE FROM `achievement_reward` WHERE `ID` IN (238,513,515,516,512,509,239,869,870);
-INSERT INTO `achievement_reward` VALUES 
-(238, 1,  15, 0, 0, '', '', 0),
-(513, 2,  16, 0, 0, '', '', 0),
-(515, 3,  17, 0, 0, '', '', 0),
-(516, 6,  20, 0, 0, '', '', 0),
-(512, 8,  22, 0, 0, '', '', 0),
-(509, 11, 24, 0, 0, '', '', 0),
-(239, 12, 26, 0, 0, '', '', 0),
-(869, 13, 27, 0, 0, '', '', 0),
-(870, 14, 28, 0, 0, '', '', 0);
-
 -- Everyone gets Disenchanting
 DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell`= 13262;
 INSERT INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES ('0', '13262', 'Disenchant');

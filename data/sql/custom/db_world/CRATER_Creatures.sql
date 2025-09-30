@@ -567,9 +567,8 @@ UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `speed_walk`=
 -- Creature loot
 -- -------------------------------------------------------------------------------------------------------------------------------------
 
+-- Elite loot reference table
 SET @Reference_EliteLoot = 48212;
-
--- Elite loot reference
 DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_EliteLoot;
 INSERT INTO `reference_loot_template` VALUES
 (@Reference_EliteLoot, 40752,     0, 100, 0, 1, 0, 1, 1, '1x Emblem of Heroism'),
