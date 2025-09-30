@@ -50,18 +50,18 @@ INSERT INTO `npc_vendor`
 (@Entry,    17,         0,           1461), -- Slayer's Battle Axe
 (@Entry,    13,         0,           2035), -- Sword of the Night Sky
 (@Entry,    13,         0,           2046), -- Bluegill Kukri
-(@Entry,    21,         0,           2850), -- Bronze Shortsword
+(@Entry,    13,         0,           2850), -- Bronze Shortsword
 (@Entry,    13,         0,           3490), -- Deadly Bronze Poniard
 (@Entry,    13,         0,           3491), -- Heavy Bronze Mace
-(@Entry,    21,         0,           3740), -- Decapitating Sword
+(@Entry,    13,         0,           3740), -- Decapitating Sword
 (@Entry,    26,         0,           4372), -- Lovingly Crafted Boomstick
 (@Entry,    26,         0,           3039), -- Short Ash Bow
 (@Entry,    17,         0,           4818), -- Executioner's Sword
 (@Entry,    13,         0,           6360), -- Steelscale Crushfish
 (@Entry,    17,         0,           7956), -- Bronze Warhammer
-(@Entry,    21,         0,           15223), -- Jagged Star
+(@Entry,    13,         0,           15223), -- Jagged Star
 (@Entry,    13,         0,           15224), -- Battlesmasher
-(@Entry,    21,         0,           15230), -- Ridge Cleaver
+(@Entry,    13,         0,           15230), -- Ridge Cleaver
 (@Entry,    17,         0,           15259), -- Hefty Battlehammer
 (@Entry,    17,         0,           15269), -- Massive Battle Axe
 (@Entry,    17,         0,           15109), -- Staff of Soran'ruk
@@ -75,10 +75,10 @@ INSERT INTO `npc_vendor`
 (@Entry,    14,         0,           9816), -- Fortified Shield
 (@Entry,    14,         0,           15894), -- Bristlebark Buckler
 -- Offhand
-(@Entry,    14,         0,           7558), -- Shimmering Stave
-(@Entry,    14,         0,           38579), -- Venomous Tome
-(@Entry,    17,         0,           5250), -- Charred Wand
-(@Entry,    17,         0,           6677); -- Spellcrafter Wand
+(@Entry,    15,         0,           7558), -- Shimmering Stave
+(@Entry,    15,         0,           38579), -- Venomous Tome
+(@Entry,    15,         0,           5250), -- Charred Wand
+(@Entry,    15,         0,           6677); -- Spellcrafter Wand
 
 -- Buys for 0 / Sells for 1 / BoP / No DE
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1, `item_template`.`bonding`=1, `item_template`.`disenchantID`=0 WHERE `npc_vendor`.`entry` = @Entry;

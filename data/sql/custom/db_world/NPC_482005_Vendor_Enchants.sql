@@ -53,19 +53,16 @@ INSERT INTO `npc_vendor`
 (@Entry,       2,      @4xDreamShard,     38862), -- Enchant Boots - Greater Stamina
 (@Entry,       2,      @4xDreamShard,     38863), -- Enchant Boots - Greater Agility
 (@Entry,       2,      @4xDreamShard,     38864), -- Enchant Boots - Spirit
-(@Entry,       8,      @4xDreamShard,     7969), -- Mithril Spurs
 (@Entry,       3,      @4xDreamShard,     38798), -- Enchant Chest - Lesser Absorption
 (@Entry,       3,      @4xDreamShard,     38799), -- Enchant Chest - Mana
 (@Entry,       3,      @4xDreamShard,     38865), -- Enchant Chest - Greater Stats
 (@Entry,       3,      @4xDreamShard,     38866), -- Enchant Chest - Major Health
-(@Entry,       4,      @4xDreamShard,     23530), -- Felsteel Shield Spike
 (@Entry,       4,      @4xDreamShard,     38791), -- Enchant Shield - Lesser Protection
 (@Entry,       4,      @4xDreamShard,     38820), -- Enchant Shield - Lesser Block
 (@Entry,       4,      @4xDreamShard,     38861), -- Enchant Shield - Greater Stamina
 (@Entry,       5,      @4xDreamShard,     38835), -- Enchant Cloak - Lesser Agility
 (@Entry,       5,      @4xDreamShard,     38858), -- Enchant Cloak - Greater Resistance
 (@Entry,       5,      @4xDreamShard,     38859), -- Enchant Cloak - Superior Defense
-(@Entry,       5,      @4xDreamShard,     38895), -- Enchant Cloak - Dodge
 (@Entry,       6,      @10xDreamShard,     38838), -- Enchant Weapon - Fiery Weapon
 (@Entry,       6,      @10xDreamShard,     38840), -- Enchant Weapon - Demonslaying
 (@Entry,       6,      @10xDreamShard,     38868), -- Enchant Weapon - Icy Chill
@@ -81,5 +78,7 @@ INSERT INTO `npc_vendor`
 (@Entry,       7,      @10xDreamShard,     38874), -- Enchant 2H Weapon - Major Spirit
 (@Entry,       7,      @10xDreamShard,     38875), -- Enchant 2H Weapon - Major Intellect
 (@Entry,       7,      @10xDreamShard,     38896), -- Enchant 2H Weapon - Agility
+(@Entry,       8,      @4xDreamShard,      7969), -- Mithril Spurs
+(@Entry,       8,      @4xDreamShard,      23530), -- Felsteel Shield Spike
 (@Entry,       8,      @10xDreamShard,     6041), -- Steel Weapon Chain
 (@Entry,       8,      @4xDreamShard,      4407); -- Sniper Scope

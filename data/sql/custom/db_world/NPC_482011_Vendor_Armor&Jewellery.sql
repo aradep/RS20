@@ -46,6 +46,9 @@ INSERT INTO `npc_vendor`
 (@Entry,     3,          0,                6567), -- Shimmering Armor
 (@Entry,     3,          0,                6569), -- Shimmering Robe
 (@Entry,     3,          0,                6584), -- Scouting Tunic
+(@Entry,     3,          0,                15471), -- Brawnhide Armor
+(@Entry,     3,          0,                5814), -- Snapbrook Armor
+(@Entry,     3,          0,                17005), -- Boorguard Tunic
 (@Entry,     3,          0,                9818), -- Fortified Chain
 (@Entry,     4,          0,                4249), -- Dark Leather Belt
 (@Entry,     4,          0,                4250), -- Hillmans Belt
@@ -59,6 +62,8 @@ INSERT INTO `npc_vendor`
 (@Entry,     5,          0,                6568), -- Shimmering Trousers
 (@Entry,     5,          0,                9815), -- Fortified Leggings
 (@Entry,     5,          0,                14748), -- Hulking Leggings
+(@Entry,     5,          0,                6587), -- Scouting Trousers
+(@Entry,     5,          0,                5961), -- Dark Leather Pants
 (@Entry,     6,          0,                2232), -- Dark Runner Boots
 (@Entry,     6,          0,                3057), -- Forest Leather Boots
 (@Entry,     6,          0,                9792), -- Ivycloth Boots
@@ -89,10 +94,7 @@ INSERT INTO `npc_vendor`
 (@Entry,     9,          0,                4797), -- Fiery Cloak
 (@Entry,     9,          0,                4798), -- Heavy Runed Cloak
 (@Entry,     9,          0,                5751), -- Webwing Cloak
-(@Entry,     9,          0,                9794), -- Ivycloth Cloak
-(@Entry,     9,          0,                9805), -- Superior Cloak
 (@Entry,     9,          0,                15124), -- Robust Cloak
-(@Entry,     9,          0,                15526), -- Sentrys Cape
 (@Entry,     10,          0,                1076), -- Defias Renegade Ring
 (@Entry,     10,          0,                1462), -- Ring of the Shadow
 (@Entry,     10,          0,                4998), -- Blood Ring
