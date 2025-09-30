@@ -35,10 +35,8 @@ SET @Murloc_Nightcrawler = 544;
 SET @Murloc_Tidecaller = 545;
 SET @Murloc_Scout = 578;
 SET @Crawler = 6250;
--- Fields
+-- Lynx
 SET @Grovestalker_Lynx = 21022;
-SET @Wandering_Ancient = 12836;
-SET @Withered_Ancient = 7149;
 -- Wreckage
 SET @Buzzard = 2830;
 SET @Giant_Buzzard = 2831;
@@ -215,146 +213,157 @@ SET @Windseeker             = 482302;
 -- Creature template changes
 
 -- Naga
-UPDATE `creature_template` SET `name`='Naga Ambusher' WHERE `entry` = @Naga_Ambusher;
-UPDATE `creature_template` SET `name`='Naga Defender' WHERE `entry` = @Naga_Defender;
-UPDATE `creature_template` SET `name`='Naga Soothsayer' WHERE `entry` = @Naga_Soothsayer;
-UPDATE `creature_template` SET `name`='Naga Enchantress' WHERE `entry` = @Naga_Enchantress;
-UPDATE `creature_template` SET `name`='Naga Champion' WHERE `entry` = @Naga_Champion;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Engineer' WHERE `entry` = @Naga_Engineer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Sorceress' WHERE `entry` = @Naga_Sorceress;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Myrmidon' WHERE `entry` = @Naga_Myrmidon;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Siren' WHERE `entry` = @Naga_Siren;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Warrior' WHERE `entry` = @Naga_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Oracle' WHERE `entry` = @Naga_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Slavemaster' WHERE `entry` = @Naga_Slavemaster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Ambusher' WHERE `entry` = @Naga_Ambusher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Guardian' WHERE `entry` = @Naga_Guardian;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Defender' WHERE `entry` = @Naga_Defender;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Soothsayer' WHERE `entry` = @Naga_Soothsayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Enchantress' WHERE `entry` = @Naga_Enchantress;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Champion' WHERE `entry` = @Naga_Champion;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Emissary' WHERE `entry` = @Naga_Emissary;
 -- Murlocs
-UPDATE `creature_template` SET `name`='Murloc Coastrunner' WHERE `entry` = @Murloc_Coastrunner;
-UPDATE `creature_template` SET `name`='Murloc Tidehunter' WHERE `entry` = @Murloc_Tidehunter;
-UPDATE `creature_template` SET `name`='Murloc Flesheater' WHERE `entry` = @Murloc_Flesheater;
-UPDATE `creature_template` SET `name`='Murloc Hunter' WHERE `entry` = @Murloc_Hunter;
-UPDATE `creature_template` SET `name`='Murloc Netter' WHERE `entry` = @Murloc_Netter;
-UPDATE `creature_template` SET `name`='Murloc Oracle' WHERE `entry` = @Murloc_Oracle;
-UPDATE `creature_template` SET `name`='Murloc Nightcrawler' WHERE `entry` = @Murloc_Nightcrawler;
-UPDATE `creature_template` SET `name`='Murloc Scout' WHERE `entry` = @Murloc_Scout;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Coastrunner' WHERE `entry` = @Murloc_Coastrunner;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Tidehunter' WHERE `entry` = @Murloc_Tidehunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Flesheater' WHERE `entry` = @Murloc_Flesheater;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Hunter' WHERE `entry` = @Murloc_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Netter' WHERE `entry` = @Murloc_Netter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Oracle' WHERE `entry` = @Murloc_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Nightcrawler' WHERE `entry` = @Murloc_Nightcrawler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Scout' WHERE `entry` = @Murloc_Scout;
 -- Fields
-UPDATE `creature_template` SET `name`='Grovestalker Lynx' WHERE `entry` = @Grovestalker_Lynx;
-UPDATE `creature_template` SET `name`='Wandering Ancient' WHERE `entry` = @Wandering_Ancient;
-UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Grovestalker Lynx' WHERE `entry` = @Grovestalker_Lynx;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Wandering Ancient' WHERE `entry` = @Wandering_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
 -- Wreckage
-UPDATE `creature_template` SET `name`='Buzzard' WHERE `entry` = @Buzzard;
-UPDATE `creature_template` SET `name`='Giant Buzzard' WHERE `entry` = @Giant_Buzzard;
-UPDATE `creature_template` SET `name`='Skeleton' WHERE `entry` = @Wandering_Skeleton;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Buzzard' WHERE `entry` = @Buzzard;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Giant Buzzard' WHERE `entry` = @Giant_Buzzard;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Skeleton' WHERE `entry` = @Wandering_Skeleton;
 -- Furbolg Hold
-UPDATE `creature_template` SET `name`='Redfang Hunter' WHERE `entry` = @Furbolg_Hunter;
-UPDATE `creature_template` SET `name`='Redfang Warrior' WHERE `entry` = @Furbolg_Warrior;
-UPDATE `creature_template` SET `name`='Redfang Shaman' WHERE `entry` = @Furbolg_Shaman;
-UPDATE `creature_template` SET `name`='Redfang Trapper' WHERE `entry` = @Furbolg_Trapper;
-UPDATE `creature_template` SET `name`='Redfang Elder' WHERE `entry` = @Furbolg_Elder;
-UPDATE `creature_template` SET `name`='Redfang Ursa' WHERE `entry` = @Furbolg_Ursa;
-UPDATE `creature_template` SET `name`='Redfang Den Watcher' WHERE `entry` = @Furbolg_Pathfinder;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Hunter' WHERE `entry` = @Furbolg_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Warrior' WHERE `entry` = @Furbolg_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Shaman' WHERE `entry` = @Furbolg_Shaman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Trapper' WHERE `entry` = @Furbolg_Trapper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Elder' WHERE `entry` = @Furbolg_Elder;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Ursa' WHERE `entry` = @Furbolg_Ursa;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Den Watcher' WHERE `entry` = @Furbolg_Pathfinder;
 -- Satyr camp
-UPDATE `creature_template` SET `name`='Darkfire Satyr' WHERE `entry` = @FelSatyr_Satyr;
-UPDATE `creature_template` SET `name`='Darkfire Rogue' WHERE `entry` = @FelSatyr_Rogue;
-UPDATE `creature_template` SET `name`='Darkfire Trickster' WHERE `entry` = @FelSatyr_Trickster;
-UPDATE `creature_template` SET `name`='Darkfire Betrayer' WHERE `entry` = @FelSatyr_Betrayer;
-UPDATE `creature_template` SET `name`='Darkfire Felsworn' WHERE `entry` = @FelSatyr_Felsworn;
-UPDATE `creature_template` SET `name`='Darkfire Shadowstalker' WHERE `entry` = @FelSatyr_Shadowstalker;
-UPDATE `creature_template` SET `name`='Darkfire Hellcaller' WHERE `entry` = @FelSatyr_Hellcaller;
-UPDATE `creature_template` SET `name`='Felhound' WHERE `entry` = @Felhound;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Satyr' WHERE `entry` = @FelSatyr_Satyr;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Rogue' WHERE `entry` = @FelSatyr_Rogue;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Trickster' WHERE `entry` = @FelSatyr_Trickster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Betrayer' WHERE `entry` = @FelSatyr_Betrayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Felsworn' WHERE `entry` = @FelSatyr_Felsworn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Shadowstalker' WHERE `entry` = @FelSatyr_Shadowstalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Hellcaller' WHERE `entry` = @FelSatyr_Hellcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felhound' WHERE `entry` = @Felhound;
 -- Horde Giants
-UPDATE `creature_template` SET `name`='Rock Giant' WHERE `entry` = @Rock_Giant;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=23, `maxlevel`=23, `name`='Rock Giant' WHERE `entry` = @Rock_Giant;
 -- Horde Raptors
-UPDATE `creature_template` SET `name`='Daggermaw Raptor' WHERE `entry` = @Raptor_Raptor;
-UPDATE `creature_template` SET `name`='Daggermaw Lashtail' WHERE `entry` = @Raptor_Lashtail;
-UPDATE `creature_template` SET `name`='Daggermaw Devourer' WHERE `entry` = @Raptor_Devourer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Raptor' WHERE `entry` = @Raptor_Raptor;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Lashtail' WHERE `entry` = @Raptor_Lashtail;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Devourer' WHERE `entry` = @Raptor_Devourer;
 -- Horde Serpent
-UPDATE `creature_template` SET `name`='Scalewing Serpent' WHERE `entry` = @Serpent_Serpent;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Scalewing Serpent' WHERE `entry` = @Serpent_Serpent;
 -- Horde Croc
-UPDATE `creature_template` SET `name`='Mangal Crocolisk' WHERE `entry` = @Mangal_Crocolisk;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Mangal Crocolisk' WHERE `entry` = @Mangal_Crocolisk;
 -- Horde Tiki warrior
-UPDATE `creature_template` SET `name`='Enchanted Tiki Warrior' WHERE `entry` = @Enchanted_Tiki_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Enchanted Tiki Warrior' WHERE `entry` = @Enchanted_Tiki_Warrior;
 -- Horde Dragonspawn
-UPDATE `creature_template` SET `name`='Flamescale Dragonspawn' WHERE `entry` = @Dragonspawn_Dragonspawn;
-UPDATE `creature_template` SET `name`='Flamescale Wyrmkin' WHERE `entry` = @Dragonspawn_Wyrmkin;
-UPDATE `creature_template` SET `name`='Flamescale Broodling' WHERE `entry` = @Dragonspawn_Broodling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Dragonspawn' WHERE `entry` = @Dragonspawn_Dragonspawn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Wyrmkin' WHERE `entry` = @Dragonspawn_Wyrmkin;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Broodling' WHERE `entry` = @Dragonspawn_Broodling;
 -- Horde Gnolls
-UPDATE `creature_template` SET `name`='Ashmane Alpha' WHERE `entry` = @Gnoll_Alpha;
-UPDATE `creature_template` SET `name`='Ashmane Mystic' WHERE `entry` = @Gnoll_Mystic;
-UPDATE `creature_template` SET `name`='Ashmane Brute' WHERE `entry` = @Gnoll_Brute;
-UPDATE `creature_template` SET `name`='Ashmane Shaman' WHERE `entry` = @Gnoll_Shaman;
-UPDATE `creature_template` SET `name`='Ashmane Gnoll' WHERE `entry` = @Gnoll_Gnoll;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Alpha' WHERE `entry` = @Gnoll_Alpha;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Mystic' WHERE `entry` = @Gnoll_Mystic;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Brute' WHERE `entry` = @Gnoll_Brute;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Shaman' WHERE `entry` = @Gnoll_Shaman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Gnoll' WHERE `entry` = @Gnoll_Gnoll;
 -- Goblin mine
-UPDATE `creature_template` SET `name`='Goblin Worker' WHERE `entry` = @Goblin_Worker;
-UPDATE `creature_template` SET `name`='Goblin Miner' WHERE `entry` = @Goblin_Miner;
-UPDATE `creature_template` SET `name`='Goblin Foreman' WHERE `entry` = @Goblin_Foreman;
-UPDATE `creature_template` SET `name`='Goblin Geologist' WHERE `entry` = @Goblin_Geologist;
-UPDATE `creature_template` SET `name`='Crystal Spider' WHERE `entry` = @Crystal_Spider;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Worker' WHERE `entry` = @Goblin_Worker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Miner' WHERE `entry` = @Goblin_Miner;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Foreman' WHERE `entry` = @Goblin_Foreman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Geologist' WHERE `entry` = @Goblin_Geologist;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Crystal Spider' WHERE `entry` = @Crystal_Spider;
 -- Ogres
-UPDATE `creature_template` SET `name`='Highland Ogre' WHERE `entry` = @Ogre_Enforcer;
-UPDATE `creature_template` SET `name`='Highland Mauler' WHERE `entry` = @Ogre_Mauler;
-UPDATE `creature_template` SET `name`='Highland Ogre Mage' WHERE `entry` = @Ogre_Mage;
-UPDATE `creature_template` SET `name`='Hyena' WHERE `entry` = @Ogre_Hyena;
-UPDATE `creature_template` SET `name`='Highland Brute' WHERE `entry` = @Ogre_Brute;
-UPDATE `creature_template` SET `name`='Highland Reaver' WHERE `entry` = @Ogre_Reaver;
-UPDATE `creature_template` SET `name`='Highland Mage-Lord' WHERE `entry` = @Ogre_Mage_Lord;
-UPDATE `creature_template` SET `name`='Highland Ogre Captain' WHERE `entry` = @Ogre_Captain;
-UPDATE `creature_template` SET `name`='Highland Ogre Warlock' WHERE `entry` = @Ogre_Warlock;
-UPDATE `creature_template` SET `name`='Hyena Alpha' WHERE `entry` = @Hyena_alpha;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre' WHERE `entry` = @Ogre_Enforcer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Mauler' WHERE `entry` = @Ogre_Mauler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre Mage' WHERE `entry` = @Ogre_Mage;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Hyena' WHERE `entry` = @Ogre_Hyena;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Brute' WHERE `entry` = @Ogre_Brute;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Reaver' WHERE `entry` = @Ogre_Reaver;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Mage-Lord' WHERE `entry` = @Ogre_Mage_Lord;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre Captain' WHERE `entry` = @Ogre_Captain;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=21, `maxlevel`=21, `name`='Highland Ogre Warlock' WHERE `entry` = @Ogre_Warlock;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Hyena Alpha' WHERE `entry` = @Hyena_alpha;
 -- Gorlocs
-UPDATE `creature_template` SET `name`='Gorloc Waddler' WHERE `entry` = @Gorloc_Waddler;
-UPDATE `creature_template` SET `name`='Gorloc Gibberer' WHERE `entry` = @Gorloc_Gibberer;
-UPDATE `creature_template` SET `name`='Gorloc Streamrunner' WHERE `entry` = @Gorloc_Steam_Belcher;
-UPDATE `creature_template` SET `name`='Gorloc Mud Splasher' WHERE `entry` = @Gorloc_Mud_Splasher;
-UPDATE `creature_template` SET `name`='Gorloc Hunter' WHERE `entry` = @Gorloc_Hunter;
-UPDATE `creature_template` SET `name`='Gorloc Dredger' WHERE `entry` = @Gorloc_Dredger;
-UPDATE `creature_template` SET `name`='Gorloc Hatchling' WHERE `entry` = @Gorloc_Hatchling;
-UPDATE `creature_template` SET `name`='Gorloc Oracle' WHERE `entry` = @Gorloc_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Waddler' WHERE `entry` = @Gorloc_Waddler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Gibberer' WHERE `entry` = @Gorloc_Gibberer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Streamrunner' WHERE `entry` = @Gorloc_Steam_Belcher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Mud Splasher' WHERE `entry` = @Gorloc_Mud_Splasher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Hunter' WHERE `entry` = @Gorloc_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Dredger' WHERE `entry` = @Gorloc_Dredger;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Hatchling' WHERE `entry` = @Gorloc_Hatchling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Oracle' WHERE `entry` = @Gorloc_Oracle;
 -- Wolvar
-UPDATE `creature_template` SET `name`='Ragepaw Tracker' WHERE `entry` = @Wolvar_Tracker;
-UPDATE `creature_template` SET `name`='Ragepaw Hunter' WHERE `entry` = @Wolvar_Hunter;
-UPDATE `creature_template` SET `name`='Ragepaw Scavenger' WHERE `entry` = @Wolvar_Scavenger;
-UPDATE `creature_template` SET `name`='Wolvar Pup' WHERE `entry` = @Wolvar_Pup;
-UPDATE `creature_template` SET `name`='Ragepaw Spearbearer' WHERE `entry` = @Wolvar_Spearbearer;
-UPDATE `creature_template` SET `name`='Ragepaw Ravager' WHERE `entry` = @Wolvar_Ravager;
-UPDATE `creature_template` SET `name`='Ragepaw Berserker' WHERE `entry` = @Wolvar_Berserker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Tracker' WHERE `entry` = @Wolvar_Tracker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Hunter' WHERE `entry` = @Wolvar_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Scavenger' WHERE `entry` = @Wolvar_Scavenger;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Wolvar Pup' WHERE `entry` = @Wolvar_Pup;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Spearbearer' WHERE `entry` = @Wolvar_Spearbearer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Ravager' WHERE `entry` = @Wolvar_Ravager;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Berserker' WHERE `entry` = @Wolvar_Berserker;
 -- Undead
-UPDATE `creature_template` SET `name`='Rotting Highborne' WHERE `entry` = @Rotting_Highborne;
-UPDATE `creature_template` SET `name`='Skeletal Highborne' WHERE `entry` = @Skeletal_Highborne;
-UPDATE `creature_template` SET `name`='Restless Highborne' WHERE `entry` = @Anguished_Highborne;
-UPDATE `creature_template` SET `name`='Suffering Spectre' WHERE `entry` = @Suffering_Highborne;
-UPDATE `creature_template` SET `name`='Lost Soul' WHERE `entry` = @Highborne_Lichling;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Rotting Highborne' WHERE `entry` = @Rotting_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Skeletal Highborne' WHERE `entry` = @Skeletal_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Restless Highborne' WHERE `entry` = @Anguished_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Suffering Spectre' WHERE `entry` = @Suffering_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=23, `name`='Lost Soul' WHERE `entry` = @Highborne_Lichling;
 -- Moss Beasts
-UPDATE `creature_template` SET `name`='Cave Beast' WHERE `entry` = @Cave_Beast;
-UPDATE `creature_template` SET `name`='Cave Creeper' WHERE `entry` = @Cave_Creeper;
-UPDATE `creature_template` SET `name`='Cave Rager' WHERE `entry` = @Cave_Rager;
-UPDATE `creature_template` SET `name`='Animated Sap' WHERE `entry` = @Sap_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Beast' WHERE `entry` = @Cave_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Creeper' WHERE `entry` = @Cave_Creeper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Rager' WHERE `entry` = @Cave_Rager;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Animated Sap' WHERE `entry` = @Sap_Beast;
 -- Ancients
-UPDATE `creature_template` SET `name`='Withered Treant' WHERE `entry` = @Withered_Treant;
-UPDATE `creature_template` SET `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Withered Treant' WHERE `entry` = @Withered_Treant;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
 -- Harpies
-UPDATE `creature_template` SET `name`='Harpy Matriarch' WHERE `entry` = @Harpy_Ripper;
-UPDATE `creature_template` SET `name`='Harpy Scout' WHERE `entry` = @Harpy_Harpy;
-UPDATE `creature_template` SET `name`='Harpy Rogue' WHERE `entry` = @Harpy_Roguefeather;
-UPDATE `creature_template` SET `name`='Harpy Soldier' WHERE `entry` = @Harpy_Slayer;
-UPDATE `creature_template` SET `name`='Harpy Ambusher' WHERE `entry` = @Harpy_Ambusher;
-UPDATE `creature_template` SET `name`='Harpy Windcaller' WHERE `entry` = @Harpy_Windcaller;
-UPDATE `creature_template` SET `name`='Harpy Storm Witch' WHERE `entry` = @Harpy_Storm_Witch;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Matriarch' WHERE `entry` = @Harpy_Ripper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Scout' WHERE `entry` = @Harpy_Harpy;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Rogue' WHERE `entry` = @Harpy_Roguefeather;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Soldier' WHERE `entry` = @Harpy_Slayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Ambusher' WHERE `entry` = @Harpy_Ambusher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Windcaller' WHERE `entry` = @Harpy_Windcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Storm Witch' WHERE `entry` = @Harpy_Storm_Witch;
 -- Turtles
-UPDATE `creature_template` SET `name`='Steelshell Tortoise' WHERE `entry` = @Turtle_Tortoise;
-UPDATE `creature_template` SET `name`='Steelshell Snapper' WHERE `entry` = @Turtle_Snapper;
-UPDATE `creature_template` SET `name`='Steelshell Borer' WHERE `entry` = @Turtle_Borer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Tortoise' WHERE `entry` = @Turtle_Tortoise;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Snapper' WHERE `entry` = @Turtle_Snapper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Borer' WHERE `entry` = @Turtle_Borer;
 -- Elementals
-UPDATE `creature_template` SET `name`='Fire Elemental' WHERE `entry` = @Fire_Elemental;
-UPDATE `creature_template` SET `name`='Air Elemental' WHERE `entry` = @Air_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Fire Elemental' WHERE `entry` = @Fire_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Air Elemental' WHERE `entry` = @Air_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Water Elemental' WHERE `entry` = @Water_Elemental;
 -- Temple Ruins Satyr
-UPDATE `creature_template` SET `name`='Felspawn Satyr' WHERE `entry` = @Wildsatyr_Satyr;
-UPDATE `creature_template` SET `name`='Felspawn Rogue' WHERE `entry` = @Wildsatyr_Rogue;
-UPDATE `creature_template` SET `name`='Felspawn Trickster' WHERE `entry` = @Wildsatyr_Trickster;
-UPDATE `creature_template` SET `name`='Felspawn Assassin' WHERE `entry` = @Wildsatyr_Felsworn;
-UPDATE `creature_template` SET `name`='Felspawn Shadowstalker' WHERE `entry` = @Wildsatyr_Shadowstalker;
-UPDATE `creature_template` SET `name`='Felspawn Hellcaller' WHERE `entry` = @Wildsatyr_Hellcaller;
-UPDATE `creature_template` SET `name`='Felspawn Imp' WHERE `entry` = @Wildsatyr_Imp;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Satyr' WHERE `entry` = @Wildsatyr_Satyr;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Rogue' WHERE `entry` = @Wildsatyr_Rogue;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Trickster' WHERE `entry` = @Wildsatyr_Trickster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Assassin' WHERE `entry` = @Wildsatyr_Felsworn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Shadowstalker' WHERE `entry` = @Wildsatyr_Shadowstalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Hellcaller' WHERE `entry` = @Wildsatyr_Hellcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Imp' WHERE `entry` = @Wildsatyr_Imp;
 -- Temple Interior Void
-UPDATE `creature_template` SET `name`='Voidwalker' WHERE `entry` = @Rogue_Voidwalker;
-UPDATE `creature_template` SET `name`='Collapsing Voidwalker' WHERE `entry` = @Collapsing_Voidwalker;
-UPDATE `creature_template` SET `name`='Surging Voidwalker' WHERE `entry` = @Voidspawn;
-UPDATE `creature_template` SET `name`='Voidwraith' WHERE `entry` = @Unstable_Voidwraith;
-UPDATE `creature_template` SET `name`='Voidcaller' WHERE `entry` = @Voidshrieker;
-UPDATE `creature_template` SET `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
-UPDATE `creature_template` SET `name`='Void Lord' WHERE `entry` = @Void_Lord;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidwalker' WHERE `entry` = @Rogue_Voidwalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Collapsing Voidwalker' WHERE `entry` = @Collapsing_Voidwalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Surging Voidwalker' WHERE `entry` = @Voidspawn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidwraith' WHERE `entry` = @Unstable_Voidwraith;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidcaller' WHERE `entry` = @Voidshrieker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Void Lord' WHERE `entry` = @Void_Lord;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=22, `maxlevel`=23, `name`='Void Beast' WHERE `entry` = @Void_Beast;
 
 -- Fix loot link
 UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord, @Void_Beast);

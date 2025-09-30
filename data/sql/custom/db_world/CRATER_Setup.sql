@@ -17,6 +17,6 @@ INSERT INTO `game_graveyard` VALUES (4, 37, 444.971, 141.985, 305.974, 'Azshara 
 DELETE FROM `game_graveyard` WHERE `ID` IN (1460,10);
 INSERT INTO `game_graveyard` VALUES (1460, 37, 444.971, 141.985, 305.974, 'Azshara Crater');
 INSERT INTO `game_graveyard` VALUES (10, 37, 444.971, 141.985, 305.964, 'Azshara Crater');
-DELETE FROM `graveyard_zone` WHERE `ID` IN (1460,10) AND `GhostZone`=238;
-INSERT INTO `graveyard_zone` VALUES (1460, 238, 469, 'Azshara Crater');
-INSERT INTO `graveyard_zone` VALUES (10, 238, 67, 'Azshara Crater');
+DELETE FROM `graveyard_zone` WHERE `ID` IN (1460,10) AND `GhostZone`=268;
+INSERT INTO `graveyard_zone` VALUES (1460, 268, 469, 'Azshara Crater');
+INSERT INTO `graveyard_zone` VALUES (10, 268, 67, 'Azshara Crater');
