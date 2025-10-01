@@ -9,7 +9,7 @@
 
 -- Creature template
 SET
-@Entry      := 482022,
+@Entry      := 482023,
 @Model      := 22360,
 @Name       := "Anya",
 @Title      := "Pet Adoptions",

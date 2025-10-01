@@ -43,7 +43,7 @@ SET
 @Ring10Spell   = 31131, -- Reduces damage taken while affected by Stun and Fear effects by 30%.
 @Ring10Name    = 'Unbreakable Will', @Ring10Subname = '',
 @Ring11ID      = 45471,
-@Ring11Spell   = 13789, -- Increases your Dodge chance by 6% and gives you 10% melee haste.
+@Ring11Spell   = 38427, -- Your melee attacks have a chance to grant you 50 mana.
 @Ring11Name    = 'Ring of the Maelstrom', @Ring11Subname = '',
 @Ring12ID      = 45297,
 @Ring12Spell   = 31830, -- All attacks against you have a 10% chance to cause half damage.

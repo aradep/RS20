@@ -248,7 +248,7 @@ UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='G
 -- Wreckage
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Buzzard;
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Giant Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Giant_Buzzard;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Skeleton', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wandering_Skeleton;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Skeleton', `healthmodifier`=0.5, `manamodifier`=@ManaMod_Normal, `damagemodifier`=0.5 WHERE `entry` = @Wandering_Skeleton;
 -- Furbolg Hold
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Hunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Hunter;
 UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Warrior', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Warrior;
@@ -361,7 +361,7 @@ UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='S
 
 -- Elites
 -- Rock Giant
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Rock Giant', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Rock_Giant;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Rock Giant', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite, `faction`=16 WHERE `entry` = @Rock_Giant;
 -- Undead
 UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Rotting Highborne', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Rotting_Highborne;
 UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Skeletal Highborne', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Skeletal_Highborne;
@@ -423,20 +423,20 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Prob
 -- Elites
 (@Mage_Bruiser, 28780, 1, 1, 1), -- Kirin Tor Guardian
 (@Orc_Bruiser, 4261, 1, 1, 1), -- Orc Bruiser
-(@Tanak_Ragepaw, 25376, 1, 1, 1), -- Tanak Ragepaw
+(@Tanak_Ragepaw, 25376, 2, 1, 1), -- Tanak Ragepaw
 (@Hexxed, 7803, 1, 1, 1), -- Hexlord Rashiki
 (@Ravazic, 2879, 1, 1, 1), -- Ravazic
 (@Warlord_Skullcrush, 11583, 1, 1, 1), -- Warlord Skullcrush
-(@Earthshaker, 23356, 1, 1, 1), -- Earthshaker
-(@Chimaeron, 4269, 1, 1, 1), -- Chimaereon
-(@Watcher_OneEye, 11561, 1, 1, 1), -- Watcher One-Eye
+(@Earthshaker, 23356, 2, 1, 1), -- Earthshaker
+(@Chimaeron, 4269, 2, 1, 1), -- Chimaereon
+(@Watcher_OneEye, 11561, 0.6, 1, 1), -- Watcher One-Eye
 (@Grimgut, 11561, 1, 1, 1), -- Grimgut
-(@Mokor_the_Tactician, 11537, 1, 1, 1), -- Mokor the Tactician
+(@Mokor_the_Tactician, 11537, 0.8, 1, 1), -- Mokor the Tactician
 (@Captain_Clogg, 11561, 1, 1, 1), -- Guard-Captain Clogg
-(@King_Gorloc, 22607, 1, 1, 1), -- King Gorloc
+(@King_Gorloc, 22607, 2.5, 1, 1), -- King Gorloc
 (@Snarlax_Snowpelt, 23774, 1, 1, 1), -- Snarlax Snowpelt
-(@Shirek, 28052, 1, 1, 1), -- Shirek
-(@Phytos, 28133, 1, 1, 1), -- Phytos
+(@Shirek, 28052, 0.55, 1, 1), -- Shirek
+(@Phytos, 28133, 2, 1, 1), -- Phytos
 (@Dark_Illidan, 26348, 1, 2, 1), -- Shadow of the Betrayer
 -- Azsharan Expedition
 (@Commander_Gara, 28059, 1, 1, 1), -- Commander Gara

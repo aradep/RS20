@@ -2153,7 +2153,7 @@ SET
 @SpecialFlags               = 1,
 
 @LogTitle                   = 'Foreign Affairs',
-@LogDescription            = 'Don\'t tell Serena but my party had to kill a few gnolls on the way here and I think I\'ve started some sort of rebellion. Now their soldiers are harassing our camp and setting traps... it\'s a real shit show.$b$bCan you go take care of this for me? Just take out a few of their higher-ups, I\'m sure the survivors will get the picture.',
+@LogDescription            = 'Don\'t tell Serena but my party had to kill a few gnolls on the way here and I think we started some sort of rebellion. Now their soldiers are harassing our camp and setting traps... it\'s a real shit show.$b$bCan you handle this for me? Just take out a few of their higher-ups, I\'m sure the rest will get the picture and leave us alone.',
 @QuestDescription           = 'Commander Gara wants you to kill Ashmane Gnolls in the swamps of Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',

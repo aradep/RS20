@@ -64,7 +64,7 @@ UPDATE `item_template` SET `sellprice` = 0 WHERE `entry` IN (6041, 23530);
 UPDATE `item_template` SET `subclass`=3 WHERE `class`=4 AND `subclass`=4;
 
 -- Potions
-UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice`=0, `buycount`=10, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
+UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice`=0, `buycount`=5, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
 929,	-- Healing Potion
 3827,	-- Mana Potion
 7676,   -- Thistle Tea
@@ -79,6 +79,9 @@ UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice
 
 -- Easy sellback free potions
 UPDATE `item_template` SET `sellprice`=1 WHERE `entry` IN (929, 3827, 7676, 5631);
+
+-- Bottomless free potions
+UPDATE `item_template` SET `quality`=3, `maxcount`=1, `spellcharges_1`=0, `buycount`=1 WHERE `entry` IN (929, 3827, 7676, 5631);
 
 -- Elixirs
 UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice`=0, `buycount`=5, `maxcount`=0, `requiredlevel`=0, `requiredskill`=0, `requiredskillrank`=0, `bonding`=0 WHERE `entry` IN (
@@ -97,8 +100,10 @@ UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice
 -- Disenchanting blues yields 1x Dream Shard
 REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (100, 34052, 0, 100, 0, 1, 0, 1, 2, 'Dream Shard');
 UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 100 WHERE `class` IN (2,4) AND `quality`=3 AND `disenchantID` > 0;
+
 -- Disenchanting greens yields 1x Small Dream Shard
 REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (101, 34053, 0, 100, 0, 1, 0, 1, 2, 'Small Dream Shard');
 UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 101 WHERE `class` IN (2,4) AND `quality`=2 AND `disenchantID` > 0;
+
 -- Fix broken links
 DELETE dlt FROM `disenchant_loot_template` dlt LEFT JOIN `item_template` it ON dlt.`Entry` = it.`disenchantID` WHERE it.`disenchantID` IS NULL;

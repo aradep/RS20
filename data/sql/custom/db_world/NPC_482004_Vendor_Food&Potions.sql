@@ -52,21 +52,21 @@ INSERT INTO `npc_vendor`
 (@Entry,    13,            0,               7676), -- Thistle Tea
 (@Entry,    14,            0,               5631), -- Rage Potion
 (@Entry,    15,         2985,               2459), -- Swiftness Potion
-(@Entry,    15,         2985,               5634), -- Free Action Potion
-(@Entry,    15,         2985,               6048), -- Shadow Protection Potion
-(@Entry,    15,         2985,               6051), -- Holy Protection Potion
-(@Entry,    15,         2985,               1450), -- Potion of Fervor
-(@Entry,    15,         2985,               3384), -- Minor Magic Resistance Potion
-(@Entry,    16,         2985,               3391), -- Elixir of Ogre's Strength
-(@Entry,    16,         2985,               6662), -- Elixir of Giant Growth
-(@Entry,    16,         2985,               3390), -- Elixir of Lesser Agility
-(@Entry,    16,         2985,              45621), -- Elixir of Minor Accuracy
-(@Entry,    16,         2985,               6373), -- Elixir of Firepower
-(@Entry,    16,         2985,               3383), -- Elixir of Wisdom
-(@Entry,    16,         2985,               3389), -- Elixir of Defense
-(@Entry,    16,         2985,               3825), -- Elixir of Fortitude
-(@Entry,    16,         2985,               3388), -- Strong Troll's Blood Elixir
-(@Entry,    16,         2985,               5996); -- Elixir of Water Breathing
+(@Entry,    16,         2985,               5634), -- Free Action Potion
+(@Entry,    17,         2985,               6048), -- Shadow Protection Potion
+(@Entry,    18,         2985,               6051), -- Holy Protection Potion
+(@Entry,    18,         2985,               1450), -- Potion of Fervor
+(@Entry,    18,         2985,               3384), -- Minor Magic Resistance Potion
+(@Entry,    19,         2985,               3391), -- Elixir of Ogre's Strength
+(@Entry,    19,         2985,               6662), -- Elixir of Giant Growth
+(@Entry,    19,         2985,               3390), -- Elixir of Lesser Agility
+(@Entry,    19,         2985,              45621), -- Elixir of Minor Accuracy
+(@Entry,    19,         2985,               6373), -- Elixir of Firepower
+(@Entry,    19,         2985,               3383), -- Elixir of Wisdom
+(@Entry,    19,         2985,               3389), -- Elixir of Defense
+(@Entry,    19,         2985,               3825), -- Elixir of Fortitude
+(@Entry,    19,         2985,               3388), -- Strong Troll's Blood Elixir
+(@Entry,    19,         2985,               5996); -- Elixir of Water Breathing
 
 -- Food
 UPDATE `item_template` SET `requiredlevel` = 0, `bonding` = 0, `buycount` = 20, `stackable` = 20, `buyprice` = 0, `sellprice` = 0, `itemlevel` = 25, `flags` = 0, `requiredreputationfaction` = 0, `requiredreputationrank` = 0 WHERE `entry` IN (43087,13810,11950,4538,4537,42430,22895,42428,42431,42433);

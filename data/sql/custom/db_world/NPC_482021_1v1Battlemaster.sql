@@ -9,7 +9,7 @@
 
 -- Creature 1
 SET
-@Entry      = 482020,
+@Entry      = 482021,
 @Model      = 29267,
 @Name       = "Sara",
 @Title      = "1v1 Battlemaster",
@@ -38,7 +38,7 @@ INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 1234
 
 -- Creature 2
 SET
-@Entry      = 482021,
+@Entry      = 482022,
 @Model      = 29267,
 @Name       = "Svalna",
 @Title      = "1v1 Battlemaster",

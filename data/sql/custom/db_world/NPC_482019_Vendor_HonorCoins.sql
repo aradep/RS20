@@ -9,7 +9,7 @@
 
 -- Creature
 SET
-@Entry      = 482018,
+@Entry      = 482019,
 @Model      = 27212,
 @Scale      = 1,
 @Name       = "Keeper Rhydian",

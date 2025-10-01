@@ -24,8 +24,8 @@ SET
 @Spectator7   = 32749,
 @ArenaVend    = 482017,
 @HonorVend    = 482018,
-@OneVsOne1    = 482020,
-@OneVsOne2    = 482021,
+@OneVsOne1    = 482021,
+@OneVsOne2    = 482022,
 @Lichking     = 482199, 
 @GUID         = 4820001;
 
