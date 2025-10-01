@@ -42,43 +42,46 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
-(@Entry,       1,      @4xDreamShard,     38851), -- Enchant Gloves - Minor Haste
-(@Entry,       1,      @4xDreamShard,     38857), -- Enchant Gloves - Greater Strength
-(@Entry,       1,      @4xDreamShard,     38886), -- Enchant Gloves - Shadow Power
-(@Entry,       1,      @4xDreamShard,     38887), -- Enchant Gloves - Frost Power
-(@Entry,       1,      @4xDreamShard,     38888), -- Enchant Gloves - Fire Power
-(@Entry,       1,      @4xDreamShard,     38889), -- Enchant Gloves - Healing Power
-(@Entry,       1,      @4xDreamShard,     38890), -- Enchant Gloves - Superior Agility
-(@Entry,       2,      @4xDreamShard,     38837), -- Enchant Boots - Minor Speed
-(@Entry,       2,      @4xDreamShard,     38862), -- Enchant Boots - Greater Stamina
-(@Entry,       2,      @4xDreamShard,     38863), -- Enchant Boots - Greater Agility
-(@Entry,       2,      @4xDreamShard,     38864), -- Enchant Boots - Spirit
-(@Entry,       3,      @4xDreamShard,     38798), -- Enchant Chest - Lesser Absorption
-(@Entry,       3,      @4xDreamShard,     38799), -- Enchant Chest - Mana
-(@Entry,       3,      @4xDreamShard,     38865), -- Enchant Chest - Greater Stats
-(@Entry,       3,      @4xDreamShard,     38866), -- Enchant Chest - Major Health
-(@Entry,       4,      @4xDreamShard,     38791), -- Enchant Shield - Lesser Protection
-(@Entry,       4,      @4xDreamShard,     38820), -- Enchant Shield - Lesser Block
-(@Entry,       4,      @4xDreamShard,     38861), -- Enchant Shield - Greater Stamina
-(@Entry,       5,      @4xDreamShard,     38835), -- Enchant Cloak - Lesser Agility
-(@Entry,       5,      @4xDreamShard,     38858), -- Enchant Cloak - Greater Resistance
-(@Entry,       5,      @4xDreamShard,     38859), -- Enchant Cloak - Superior Defense
-(@Entry,       6,      @10xDreamShard,     38838), -- Enchant Weapon - Fiery Weapon
-(@Entry,       6,      @10xDreamShard,     38840), -- Enchant Weapon - Demonslaying
-(@Entry,       6,      @10xDreamShard,     38868), -- Enchant Weapon - Icy Chill
-(@Entry,       6,      @10xDreamShard,     38870), -- Enchant Weapon - Superior Striking
-(@Entry,       6,      @10xDreamShard,     38871), -- Enchant Weapon - Lifestealing
-(@Entry,       6,      @10xDreamShard,     38872), -- Enchant Weapon - Unholy Weapon
-(@Entry,       6,      @10xDreamShard,     38873), -- Enchant Weapon - Crusader
-(@Entry,       6,      @10xDreamShard,     38878), -- Enchant Weapon - Healing Power
-(@Entry,       6,      @10xDreamShard,     38879), -- Enchant Weapon - Strength
-(@Entry,       6,      @10xDreamShard,     38880), -- Enchant Weapon - Agility
-(@Entry,       6,      @10xDreamShard,     38883), -- Enchant Weapon - Mighty Spirit
-(@Entry,       7,      @10xDreamShard,     38869), -- Enchant 2H Weapon - Superior Impact
-(@Entry,       7,      @10xDreamShard,     38874), -- Enchant 2H Weapon - Major Spirit
-(@Entry,       7,      @10xDreamShard,     38875), -- Enchant 2H Weapon - Major Intellect
-(@Entry,       7,      @10xDreamShard,     38896), -- Enchant 2H Weapon - Agility
-(@Entry,       8,      @4xDreamShard,      7969), -- Mithril Spurs
-(@Entry,       8,      @4xDreamShard,      23530), -- Felsteel Shield Spike
-(@Entry,       8,      @10xDreamShard,     6041), -- Steel Weapon Chain
-(@Entry,       8,      @4xDreamShard,      4407); -- Sniper Scope
+(@Entry,       1,       0,                38851), -- Enchant Gloves - Minor Haste
+(@Entry,       1,       0,                38857), -- Enchant Gloves - Greater Strength
+(@Entry,       1,       0,                38886), -- Enchant Gloves - Shadow Power
+(@Entry,       1,       0,                38887), -- Enchant Gloves - Frost Power
+(@Entry,       1,       0,                38888), -- Enchant Gloves - Fire Power
+(@Entry,       1,       0,                38889), -- Enchant Gloves - Healing Power
+(@Entry,       1,       0,                38890), -- Enchant Gloves - Superior Agility
+(@Entry,       2,       0,                38837), -- Enchant Boots - Minor Speed
+(@Entry,       2,       0,                38862), -- Enchant Boots - Greater Stamina
+(@Entry,       2,       0,                38863), -- Enchant Boots - Greater Agility
+(@Entry,       2,       0,                38864), -- Enchant Boots - Spirit
+(@Entry,       3,       0,                38798), -- Enchant Chest - Lesser Absorption
+(@Entry,       3,       0,                38799), -- Enchant Chest - Mana
+(@Entry,       3,       0,                38865), -- Enchant Chest - Greater Stats
+(@Entry,       3,       0,                38866), -- Enchant Chest - Major Health
+(@Entry,       4,       0,                38791), -- Enchant Shield - Lesser Protection
+(@Entry,       4,       0,                38820), -- Enchant Shield - Lesser Block
+(@Entry,       4,       0,                38861), -- Enchant Shield - Greater Stamina
+(@Entry,       5,       0,                38835), -- Enchant Cloak - Lesser Agility
+(@Entry,       5,       0,                38858), -- Enchant Cloak - Greater Resistance
+(@Entry,       5,       0,                38859), -- Enchant Cloak - Superior Defense
+(@Entry,       6,       0,                38838), -- Enchant Weapon - Fiery Weapon
+(@Entry,       6,       0,                38840), -- Enchant Weapon - Demonslaying
+(@Entry,       6,       0,                38868), -- Enchant Weapon - Icy Chill
+(@Entry,       6,       0,                38870), -- Enchant Weapon - Superior Striking
+(@Entry,       6,       0,                38871), -- Enchant Weapon - Lifestealing
+(@Entry,       6,       0,                38872), -- Enchant Weapon - Unholy Weapon
+(@Entry,       6,       0,                38873), -- Enchant Weapon - Crusader
+(@Entry,       6,       0,                38878), -- Enchant Weapon - Healing Power
+(@Entry,       6,       0,                38879), -- Enchant Weapon - Strength
+(@Entry,       6,       0,                38880), -- Enchant Weapon - Agility
+(@Entry,       6,       0,                38883), -- Enchant Weapon - Mighty Spirit
+(@Entry,       7,       0,                38869), -- Enchant 2H Weapon - Superior Impact
+(@Entry,       7,       0,                38874), -- Enchant 2H Weapon - Major Spirit
+(@Entry,       7,       0,                38875), -- Enchant 2H Weapon - Major Intellect
+(@Entry,       7,       0,                38896), -- Enchant 2H Weapon - Agility
+(@Entry,       8,       0,                7969), -- Mithril Spurs
+(@Entry,       8,       0,                23530), -- Felsteel Shield Spike
+(@Entry,       8,       0,                6041), -- Steel Weapon Chain
+(@Entry,       8,       0,                4407); -- Sniper Scope
+
+-- Buy for 0, sell for 1
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;

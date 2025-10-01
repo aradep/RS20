@@ -211,160 +211,168 @@ SET @Windseeker             = 482231;
 -- Creature template changes
 -- ------------------------------------------------------------------------------------------------------
 
+-- Health/Mana/Dmg Modifiers
+SET @HealthMod_Normal   = 1.0;
+SET @ManaMod_Normal     = 1.0;
+SET @DamageMod_Normal   = 1.0;
+SET @HealthMod_Elite    = 4.0;
+SET @ManaMod_Elite      = 4.0;
+SET @DamageMod_Elite    = 4.0;
+
 -- Naga
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Engineer' WHERE `entry` = @Naga_Engineer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Sorceress' WHERE `entry` = @Naga_Sorceress;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Myrmidon' WHERE `entry` = @Naga_Myrmidon;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Siren' WHERE `entry` = @Naga_Siren;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Warrior' WHERE `entry` = @Naga_Warrior;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Oracle' WHERE `entry` = @Naga_Oracle;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Slavemaster' WHERE `entry` = @Naga_Slavemaster;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Ambusher' WHERE `entry` = @Naga_Ambusher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Guardian' WHERE `entry` = @Naga_Guardian;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Defender' WHERE `entry` = @Naga_Defender;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Soothsayer' WHERE `entry` = @Naga_Soothsayer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Enchantress' WHERE `entry` = @Naga_Enchantress;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Champion' WHERE `entry` = @Naga_Champion;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Naga Emissary' WHERE `entry` = @Naga_Emissary;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Engineer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Engineer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Sorceress', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Sorceress;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Myrmidon', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Myrmidon;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Siren', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Siren;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Warrior', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Oracle', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Slavemaster', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Slavemaster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Ambusher', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Ambusher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Guardian', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Guardian;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Defender', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Defender;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Soothsayer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Soothsayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Enchantress', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Enchantress;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Champion', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Champion;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Naga Emissary', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Emissary;
 -- Murlocs
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Coastrunner' WHERE `entry` = @Murloc_Coastrunner;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Tidehunter' WHERE `entry` = @Murloc_Tidehunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Flesheater' WHERE `entry` = @Murloc_Flesheater;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Hunter' WHERE `entry` = @Murloc_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Netter' WHERE `entry` = @Murloc_Netter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Oracle' WHERE `entry` = @Murloc_Oracle;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Nightcrawler' WHERE `entry` = @Murloc_Nightcrawler;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Murloc Scout' WHERE `entry` = @Murloc_Scout;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Coastrunner', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Coastrunner;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Tidehunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Tidehunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Flesheater', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Flesheater;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Hunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Netter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Netter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Oracle', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Nightcrawler', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Nightcrawler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Murloc Scout', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Murloc_Scout;
 -- Fields
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Grovestalker Lynx' WHERE `entry` = @Grovestalker_Lynx;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Grovestalker Lynx', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Grovestalker_Lynx;
 -- Wreckage
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Buzzard' WHERE `entry` = @Buzzard;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Giant Buzzard' WHERE `entry` = @Giant_Buzzard;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Skeleton' WHERE `entry` = @Wandering_Skeleton;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Buzzard;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Giant Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Giant_Buzzard;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Skeleton', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wandering_Skeleton;
 -- Furbolg Hold
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Hunter' WHERE `entry` = @Furbolg_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Warrior' WHERE `entry` = @Furbolg_Warrior;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Shaman' WHERE `entry` = @Furbolg_Shaman;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Trapper' WHERE `entry` = @Furbolg_Trapper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Elder' WHERE `entry` = @Furbolg_Elder;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Ursa' WHERE `entry` = @Furbolg_Ursa;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Redfang Den Watcher' WHERE `entry` = @Furbolg_Pathfinder;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Hunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Warrior', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Shaman', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Shaman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Trapper', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Trapper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Elder', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Elder;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Ursa', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Ursa;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Redfang Den Watcher', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Pathfinder;
 -- Satyr camp
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Satyr' WHERE `entry` = @FelSatyr_Satyr;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Rogue' WHERE `entry` = @FelSatyr_Rogue;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Trickster' WHERE `entry` = @FelSatyr_Trickster;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Betrayer' WHERE `entry` = @FelSatyr_Betrayer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Felsworn' WHERE `entry` = @FelSatyr_Felsworn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Shadowstalker' WHERE `entry` = @FelSatyr_Shadowstalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Darkfire Hellcaller' WHERE `entry` = @FelSatyr_Hellcaller;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felhound' WHERE `entry` = @Felhound;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Satyr', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Satyr;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Rogue', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Rogue;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Trickster', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Trickster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Betrayer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Betrayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Felsworn', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Felsworn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Shadowstalker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Shadowstalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Darkfire Hellcaller', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @FelSatyr_Hellcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felhound', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Felhound;
 -- Horde Raptors
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Daggermaw Raptor' WHERE `entry` = @Raptor_Raptor;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Daggermaw Lashtail' WHERE `entry` = @Raptor_Lashtail;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Daggermaw Devourer' WHERE `entry` = @Raptor_Devourer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Raptor', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Raptor_Raptor;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Lashtail', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Raptor_Lashtail;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Daggermaw Devourer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Raptor_Devourer;
 -- Horde Serpent
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Scalewing Serpent' WHERE `entry` = @Serpent_Serpent;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Scalewing Serpent', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Serpent_Serpent;
 -- Horde Croc
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Mangal Crocolisk' WHERE `entry` = @Mangal_Crocolisk;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Mangal Crocolisk', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Mangal_Crocolisk;
 -- Horde Tiki warrior
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Enchanted Tiki Warrior' WHERE `entry` = @Enchanted_Tiki_Warrior;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Enchanted Tiki Warrior', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Enchanted_Tiki_Warrior;
 -- Horde Dragonspawn
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Flamescale Dragonspawn' WHERE `entry` = @Dragonspawn_Dragonspawn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Flamescale Wyrmkin' WHERE `entry` = @Dragonspawn_Wyrmkin;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Flamescale Broodling' WHERE `entry` = @Dragonspawn_Broodling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Dragonspawn', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Dragonspawn_Dragonspawn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Wyrmkin', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Dragonspawn_Wyrmkin;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Flamescale Broodling', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Dragonspawn_Broodling;
 -- Horde Gnolls
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Alpha' WHERE `entry` = @Gnoll_Alpha;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Mystic' WHERE `entry` = @Gnoll_Mystic;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Brute' WHERE `entry` = @Gnoll_Brute;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Shaman' WHERE `entry` = @Gnoll_Shaman;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ashmane Gnoll' WHERE `entry` = @Gnoll_Gnoll;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Alpha', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gnoll_Alpha;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Mystic', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gnoll_Mystic;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Brute', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gnoll_Brute;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Shaman', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gnoll_Shaman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ashmane Gnoll', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gnoll_Gnoll;
 -- Goblin mine
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Worker' WHERE `entry` = @Goblin_Worker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Miner' WHERE `entry` = @Goblin_Miner;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Foreman' WHERE `entry` = @Goblin_Foreman;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Goblin Geologist' WHERE `entry` = @Goblin_Geologist;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Crystal Spider' WHERE `entry` = @Crystal_Spider;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Worker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Goblin_Worker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Miner', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Goblin_Miner;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Foreman', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Goblin_Foreman;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Goblin Geologist', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Goblin_Geologist;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Crystal Spider', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Crystal_Spider;
 -- Ogres
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre' WHERE `entry` = @Ogre_Enforcer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Mauler' WHERE `entry` = @Ogre_Mauler;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre Mage' WHERE `entry` = @Ogre_Mage;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Hyena' WHERE `entry` = @Ogre_Hyena;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Brute' WHERE `entry` = @Ogre_Brute;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Reaver' WHERE `entry` = @Ogre_Reaver;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Mage-Lord' WHERE `entry` = @Ogre_Mage_Lord;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre Captain' WHERE `entry` = @Ogre_Captain;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=21, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Highland Ogre Warlock' WHERE `entry` = @Ogre_Warlock;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Hyena Alpha' WHERE `entry` = @Hyena_alpha;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Enforcer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Mauler', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Mauler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre Mage', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Mage;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Hyena', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Hyena;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Brute', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Brute;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Reaver', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Reaver;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Mage-Lord', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Mage_Lord;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Highland Ogre Captain', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Captain;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=21, `maxlevel`=21, `name`='Highland Ogre Warlock', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Warlock;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Hyena Alpha', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Hyena_alpha;
 -- Gorlocs
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Waddler' WHERE `entry` = @Gorloc_Waddler;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Gibberer' WHERE `entry` = @Gorloc_Gibberer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Streamrunner' WHERE `entry` = @Gorloc_Steam_Belcher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Mud Splasher' WHERE `entry` = @Gorloc_Mud_Splasher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Hunter' WHERE `entry` = @Gorloc_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Dredger' WHERE `entry` = @Gorloc_Dredger;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Hatchling' WHERE `entry` = @Gorloc_Hatchling;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Gorloc Oracle' WHERE `entry` = @Gorloc_Oracle;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Waddler', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Waddler;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Gibberer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Gibberer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Streamrunner', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Steam_Belcher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Mud Splasher', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Mud_Splasher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Hunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Dredger', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Dredger;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Hatchling', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Hatchling;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Gorloc Oracle', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Gorloc_Oracle;
 -- Wolvar
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Tracker' WHERE `entry` = @Wolvar_Tracker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Hunter' WHERE `entry` = @Wolvar_Hunter;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Scavenger' WHERE `entry` = @Wolvar_Scavenger;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Wolvar Pup' WHERE `entry` = @Wolvar_Pup;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Spearbearer' WHERE `entry` = @Wolvar_Spearbearer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Ravager' WHERE `entry` = @Wolvar_Ravager;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Ragepaw Berserker' WHERE `entry` = @Wolvar_Berserker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Tracker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Tracker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Hunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Hunter;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Scavenger', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Scavenger;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Wolvar Pup', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Pup;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Spearbearer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Spearbearer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Ravager', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Ravager;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Ragepaw Berserker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wolvar_Berserker;
 -- Moss Beasts
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Cave Beast' WHERE `entry` = @Cave_Beast;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Cave Creeper' WHERE `entry` = @Cave_Creeper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Cave Rager' WHERE `entry` = @Cave_Rager;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Animated Sap' WHERE `entry` = @Sap_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Beast', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Cave_Beast;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Creeper', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Cave_Creeper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Cave Rager', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Cave_Rager;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Animated Sap', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Sap_Beast;
 -- Ancients
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Withered Treant' WHERE `entry` = @Withered_Treant;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Withered Treant', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Withered_Treant;
 -- Harpies
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Matriarch' WHERE `entry` = @Harpy_Ripper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Scout' WHERE `entry` = @Harpy_Harpy;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Rogue' WHERE `entry` = @Harpy_Roguefeather;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Soldier' WHERE `entry` = @Harpy_Slayer;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Ambusher' WHERE `entry` = @Harpy_Ambusher;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Windcaller' WHERE `entry` = @Harpy_Windcaller;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Harpy Storm Witch' WHERE `entry` = @Harpy_Storm_Witch;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Matriarch', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Ripper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Scout', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Harpy;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Rogue', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Roguefeather;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Soldier', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Slayer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Ambusher', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Ambusher;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Windcaller', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Windcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Harpy Storm Witch', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Harpy_Storm_Witch;
 -- Turtles
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Steelshell Tortoise' WHERE `entry` = @Turtle_Tortoise;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Steelshell Snapper' WHERE `entry` = @Turtle_Snapper;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Steelshell Borer' WHERE `entry` = @Turtle_Borer;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Tortoise', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Turtle_Tortoise;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Snapper', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Turtle_Snapper;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Steelshell Borer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Turtle_Borer;
 -- Elementals
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Fire Elemental' WHERE `entry` = @Fire_Elemental;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Air Elemental' WHERE `entry` = @Air_Elemental;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Water Elemental' WHERE `entry` = @Water_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Fire Elemental', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Fire_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Air Elemental', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Air_Elemental;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Water Elemental', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Water_Elemental;
 -- Temple Ruins Satyr
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Satyr' WHERE `entry` = @Wildsatyr_Satyr;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Rogue' WHERE `entry` = @Wildsatyr_Rogue;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Trickster' WHERE `entry` = @Wildsatyr_Trickster;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Assassin' WHERE `entry` = @Wildsatyr_Felsworn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Shadowstalker' WHERE `entry` = @Wildsatyr_Shadowstalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Hellcaller' WHERE `entry` = @Wildsatyr_Hellcaller;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Felspawn Imp' WHERE `entry` = @Wildsatyr_Imp;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Satyr', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Satyr;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Rogue', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Rogue;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Trickster', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Trickster;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Assassin', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Felsworn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Shadowstalker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Shadowstalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Hellcaller', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Hellcaller;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Felspawn Imp', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wildsatyr_Imp;
 -- Temple Interior Void
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Voidwalker' WHERE `entry` = @Rogue_Voidwalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Collapsing Voidwalker' WHERE `entry` = @Collapsing_Voidwalker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Surging Voidwalker' WHERE `entry` = @Voidspawn;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Voidwraith' WHERE `entry` = @Unstable_Voidwraith;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Voidcaller' WHERE `entry` = @Voidshrieker;
-UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `healthmodifier`=2, `manamodifier`=3, `damagemodifier`=2, `name`='Shadowfiend' WHERE `entry` = @Shadowfiend;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidwalker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Rogue_Voidwalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Collapsing Voidwalker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Collapsing_Voidwalker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Surging Voidwalker', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Voidspawn;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidwraith', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Unstable_Voidwraith;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Voidcaller', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Voidshrieker;
+UPDATE `creature_template` SET `rank`=0, `minlevel`=19, `maxlevel`=21, `name`='Shadowfiend', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Shadowfiend;
 
 -- Elites
 -- Rock Giant
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Rock Giant' WHERE `entry` = @Rock_Giant;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Rock Giant', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Rock_Giant;
 -- Undead
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Rotting Highborne' WHERE `entry` = @Rotting_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Skeletal Highborne' WHERE `entry` = @Skeletal_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Restless Highborne' WHERE `entry` = @Anguished_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Suffering Spectre' WHERE `entry` = @Suffering_Highborne;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Lost Soul' WHERE `entry` = @Highborne_Lichling;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Rotting Highborne', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Rotting_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Skeletal Highborne', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Skeletal_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Restless Highborne', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Anguished_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Suffering Spectre', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Suffering_Highborne;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Lost Soul', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Highborne_Lichling;
 -- Ancients
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Wandering Ancient' WHERE `entry` = @Wandering_Ancient;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Withered Ancient' WHERE `entry` = @Withered_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Wandering Ancient', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Wandering_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Withered Ancient', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Withered_Ancient;
 -- Void lords
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `healthmodifier`=4, `manamodifier`=3, `damagemodifier`=3, `name`='Void Lord' WHERE `entry` = @Void_Lord;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Void Lord', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Void_Lord;
 
 -- Fix loot link
 UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord);
