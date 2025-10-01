@@ -369,8 +369,8 @@ UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='R
 UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Suffering Spectre', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Suffering_Highborne;
 UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Lost Soul', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Highborne_Lichling;
 -- Ancients
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Wandering Ancient', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Wandering_Ancient;
-UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Withered Ancient', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Withered_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Wandering Ancient', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite, `faction`=15 WHERE `entry` = @Wandering_Ancient;
+UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Withered Ancient', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite, `faction`=15 WHERE `entry` = @Withered_Ancient;
 -- Void lords
 UPDATE `creature_template` SET `rank`=1, `minlevel`=21, `maxlevel`=22, `name`='Void Lord', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Void_Lord;
 
