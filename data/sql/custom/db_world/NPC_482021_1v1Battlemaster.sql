@@ -1,7 +1,7 @@
 -- -----------------------------------
 -- Dragonshrine Instant-20 Funserver
 -- Made for AzerothCore 3.3.5a
--- Discord: @Degen
+-- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
 -- Coliseum - 1v1 Arena battlemaster

@@ -1,7 +1,7 @@
 -- -----------------------------------
 -- Dragonshrine Instant-20 Funserver
 -- Made for AzerothCore 3.3.5a
--- Discord: @Degen
+-- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
 -- Azshara Crater - Honor Coin vendor
@@ -26,7 +26,7 @@ INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlev
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
--- Placement handled in CRATER_Creatures.sql
+-- Placement handled in SERVER_Setup_AzsharaCrater.sql
 
 -- Extended costs
 SET
