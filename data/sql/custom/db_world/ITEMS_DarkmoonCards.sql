@@ -86,18 +86,18 @@ UPDATE `quest_template` SET `questlevel` = 20, `rewardchoiceitemid1`=0, `rewardc
 UPDATE `quest_template` SET `RewardChoiceItemID1`=42987, `RewardChoiceItemID2`=44254, `RewardChoiceItemID3`=44253, `RewardChoiceItemID4`=44255 WHERE `ID`=13326;
 
 -- Add questender to new Darkmoon NPC
-REPLACE INTO `creature_questender` VALUES (482019, 7907);
-REPLACE INTO `creature_questender` VALUES (482019, 7927);
-REPLACE INTO `creature_questender` VALUES (482019, 7928);
-REPLACE INTO `creature_questender` VALUES (482019, 7929);
-REPLACE INTO `creature_questender` VALUES (482019, 10938);
-REPLACE INTO `creature_questender` VALUES (482019, 10939);
-REPLACE INTO `creature_questender` VALUES (482019, 10940);
-REPLACE INTO `creature_questender` VALUES (482019, 10941);
-REPLACE INTO `creature_questender` VALUES (482019, 13324);
-REPLACE INTO `creature_questender` VALUES (482019, 13325);
-REPLACE INTO `creature_questender` VALUES (482019, 13326);
-REPLACE INTO `creature_questender` VALUES (482019, 13327);
+REPLACE INTO `creature_questender` VALUES (482020, 7907);
+REPLACE INTO `creature_questender` VALUES (482020, 7927);
+REPLACE INTO `creature_questender` VALUES (482020, 7928);
+REPLACE INTO `creature_questender` VALUES (482020, 7929);
+REPLACE INTO `creature_questender` VALUES (482020, 10938);
+REPLACE INTO `creature_questender` VALUES (482020, 10939);
+REPLACE INTO `creature_questender` VALUES (482020, 10940);
+REPLACE INTO `creature_questender` VALUES (482020, 10941);
+REPLACE INTO `creature_questender` VALUES (482020, 13324);
+REPLACE INTO `creature_questender` VALUES (482020, 13325);
+REPLACE INTO `creature_questender` VALUES (482020, 13326);
+REPLACE INTO `creature_questender` VALUES (482020, 13327);
 
 -- Lesser Cards
 -- -----------------------------------

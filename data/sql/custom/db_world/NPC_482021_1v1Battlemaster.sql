@@ -70,5 +70,5 @@ DELETE FROM `npc_text` WHERE `ID`=23000;
 INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (23000, 'One-on-one is the purest form of gladiatorial combat. Are you brave enough to enter the arena alone?');
 
 -- Battlemaster entry
-DELETE FROM `battlemaster_entry` WHERE `entry` IN (482020,482021);
-INSERT INTO `battlemaster_entry` (`entry`, `bg_template`) VALUES (482020, 6), (482021, 6);
+DELETE FROM `battlemaster_entry` WHERE `entry` IN (@Entry,@Entry+1);
+INSERT INTO `battlemaster_entry` (`entry`, `bg_template`) VALUES (@Entry, 6), (@Entry+1, 6);
