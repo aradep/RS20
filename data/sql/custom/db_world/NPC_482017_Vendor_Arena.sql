@@ -49,13 +49,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    1,          @600Arena,          19024), -- Arena Grand Master
 -- 2000 Honor
 (@Entry,    2,          @400Arena,          45706), -- Commendation of Bravery
--- Heirloom Arcanums
-(@Entry,    3,          @800Arena,         44149), -- Arcanum of Torment
-(@Entry,    3,          @800Arena,         44150), -- Arcanum of the Stalwart Protector
-(@Entry,    3,          @800Arena,         44152), -- Arcanum of Blissful Mending
-(@Entry,    3,          @800Arena,         44159), -- Arcanum of Burning Mysteries
-(@Entry,    3,          @800Arena,         44701), -- Arcanum of the Savage Gladiator
-(@Entry,    3,          @800Arena,         44702), -- Arcanum of the Savage Gladiator
 -- Tabards
 (@Entry,    4,          @1500Arena1800Rating,  45983), -- Furious Tabard
 (@Entry,    4,          @1500Arena2000Rating,  49086), -- Relentless Tabard

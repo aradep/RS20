@@ -81,7 +81,22 @@ INSERT INTO `npc_vendor`
 (@Entry,       8,       0,                7969), -- Mithril Spurs
 (@Entry,       8,       0,                23530), -- Felsteel Shield Spike
 (@Entry,       8,       0,                6041), -- Steel Weapon Chain
-(@Entry,       8,       0,                4407); -- Sniper Scope
+(@Entry,       8,       0,                4407), -- Sniper Scope
+(@Entry,      10,       @4xDreamShard,    11645), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    11622), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    11646), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    11647), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    11648), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    11649), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    18329), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    18330), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    18331), -- Arcanum
+(@Entry,      11,       @10xDreamShard,   28882), -- Inscription
+(@Entry,      11,       @10xDreamShard,   28881), -- Inscription
+(@Entry,      11,       @10xDreamShard,   28885), -- Inscription
+(@Entry,      11,       @10xDreamShard,   28908), -- Inscription
+(@Entry,      11,       @10xDreamShard,   28904), -- Inscription
+(@Entry,      11,       @10xDreamShard,   28907); -- Inscription
 
 -- Buy for 0, sell for 1
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;

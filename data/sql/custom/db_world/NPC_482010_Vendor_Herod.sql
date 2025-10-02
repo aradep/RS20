@@ -93,9 +93,4 @@ INSERT INTO `npc_vendor`
 (@Entry,    4,          @EmblemofHeroism_x25,         42945), -- Venerable Dal'Rend's Sacred Charge
 (@Entry,    4,          @EmblemofHeroism_x35,         42946), -- Charmed Ancient Bone Bow
 (@Entry,    4,          @EmblemofHeroism_x35,         42947), -- Dignified Headmaster's Charge
-(@Entry,    4,          @EmblemofHeroism_x35,         42943), -- Bloodied Arcanite Reaper
--- Heirloom Inscriptions
-(@Entry,    5,          @EmblemofHeroism_x100,        44133), -- Greater Inscription of the Axe
-(@Entry,    5,          @EmblemofHeroism_x100,        44134), -- Greater Inscription of the Crag
-(@Entry,    5,          @EmblemofHeroism_x100,        44135), -- Greater Inscription of the Storm
-(@Entry,    5,          @EmblemofHeroism_x100,        44136); -- Greater Inscription of the Pinnacle
+(@Entry,    4,          @EmblemofHeroism_x35,         42943); -- Bloodied Arcanite Reaper
