@@ -497,15 +497,15 @@ UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=19, `maxle
 
 -- Elites
 -- Naga
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Defender', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Defender;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Soothsayer', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Soothsayer;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Enchantress', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Enchantress;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Champion', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Champion;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Emissary', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Naga_Emissary;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Defender', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Naga_Defender;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Soothsayer', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Naga_Soothsayer;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Enchantress', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Naga_Enchantress;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Champion', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Naga_Champion;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Naga Emissary', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Naga_Emissary;
 -- Ogres
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Highland Mage-Lord', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Mage_Lord;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Highland Ogre Captain', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Captain;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Highland Ogre Warlock', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Ogre_Warlock;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Highland Mage-Lord', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Ogre_Mage_Lord;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Highland Ogre Captain', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Ogre_Captain;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Highland Ogre Warlock', `healthmodifier`=@HealthMod_Elite, `manamodifier`=@ManaMod_Elite, `damagemodifier`=@DamageMod_Elite WHERE `entry` = @Ogre_Warlock;
 -- Rock Giant
 UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxlevel`=22, `name`='Rock Giant', `healthmodifier`=@HealthMod_Elite,  `manamodifier`=@ManaMod_Elite,  `damagemodifier`=@DamageMod_Elite, `faction`=16 WHERE `entry` = @Rock_Giant;
 -- Undead
@@ -552,9 +552,9 @@ REPLACE INTO `creature_template`
 (@Earthshaker,          'Earthshaker',              'The Evergreen',        @Earthshaker,           23,         23,         7,                  25,                 7,                  91,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           5,      12,             0,              'SmartAI'),
 (@Chimaeron,            'Chimaereon',               '',                     @Chimaeron,             23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              64,             2048,           1,      65541,          0,              'SmartAI'),
 (@Watcher_OneEye,       'Watcher One-Eye',          '',                     @Watcher_OneEye,        23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.65,       3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
-(@Grimgut,              'Grimgut',                  '',                     @Grimgut,               23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
-(@Mokor_the_Tactician,  'Mokor the Tactician',      '',                     @Mokor_the_Tactician,   23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              0,              'SmartAI'),
-(@Captain_Clogg,        'Captain Clogg',            '',                     @Captain_Clogg,         23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Grimgut,              'Grimgut',                  'King of the Ring',     @Grimgut,               23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Mokor_the_Tactician,  'Flamecaller Mokor',        '',                     @Mokor_the_Tactician,   23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            0.8,        3,      2,              0,              2048,           7,      4,              0,              'SmartAI'),
+(@Captain_Clogg,        'Guard-Captain Klobb',      '',                     @Captain_Clogg,         23,         23,         7,                  25,                 7,                  45,         1,          0.8,            1.1,            1,          3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
 (@King_Gorloc,          'King Gorloc',              '',                     @King_Gorloc,           23,         23,         7,                  25,                 7,                  18,         0,          0.8,            1.1,            2.5,        3,      1,              0,              2048,           7,      4,              0,              'SmartAI'),
 (@Snarlax_Snowpelt,     'Snarlax Snowpelt',         '',                     @Snarlax_Snowpelt,      23,         23,         7,                  25,                 7,                  2001,       0,          0.8,            1.1,            1,          3,      2,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Phytos,               'Phytos',                   'The Glowing One',      @Phytos,                23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            0.55,       3,      1,              32832,          2048,           4,      332,            0,              'SmartAI'),
@@ -576,7 +576,7 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Prob
 (@Chimaeron, 4269, 2, 1, 1), -- Chimaereon
 (@Watcher_OneEye, 11561, 0.6, 1, 1), -- Watcher One-Eye
 (@Grimgut, 11561, 1, 1, 1), -- Grimgut
-(@Mokor_the_Tactician, 11537, 0.8, 1, 1), -- Mokor the Tactician
+(@Mokor_the_Tactician, 11537, 0.8, 1, 1), -- Flamecaller Mokor
 (@Captain_Clogg, 11561, 1, 1, 1), -- Guard-Captain Clogg
 (@King_Gorloc, 22607, 2.5, 1, 1), -- King Gorloc
 (@Snarlax_Snowpelt, 23774, 1, 1, 1), -- Snarlax Snowpelt
@@ -730,15 +730,32 @@ UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `healthmodifi
 -- Equips
 -- -------------------------------------------------------------------------------------------------------------------------------------
 
--- Kirin Tor Mage --
 REPLACE INTO `creature_equip_template` VALUES (@Mage_Bruiser, 1, 45726, 45727, 0, 18019);
 REPLACE INTO `creature_template_addon` VALUES (@Mage_Bruiser, 0, 0, 0, 0, 0, 0, NULL);
--- Camp Guard --
+
 REPLACE INTO `creature_equip_template` VALUES (@Orc_Bruiser, 1, 23503, 0, 0, 18019);
 REPLACE INTO `creature_template_addon` VALUES (@Orc_Bruiser, 0, 0, 0, 0, 0, 0, NULL);
--- Spymaster Jarre --
+
 REPLACE INTO `creature_equip_template` VALUES (@Spymaster_Jarre, 1, 49713, 49714, 0, 0);
 REPLACE INTO `creature_template_addon` VALUES (@Spymaster_Jarre, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Ravazic, 1, 31448, 29185, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Ravazic, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Warlord_Skullcrush, 1, 18520, 0, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Warlord_Skullcrush, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Watcher_OneEye, 1, 32421, 32421, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Watcher_OneEye, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Mokor_the_Tactician, 1, 28188, 0, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Mokor_the_Tactician, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Captain_Clogg, 1, 41243, 13375, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Captain_Clogg, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Dark_Illidan, 1, 18584, 18583, 0, 0);
+REPLACE INTO `creature_template_addon` VALUES (@Dark_Illidan, 0, 0, 0, 0, 0, 0, NULL);
 
 -- -------------------------------------------------------------------------------------------------------------------------------------
 -- Creature loot
@@ -760,7 +777,7 @@ INSERT INTO `reference_loot_template` VALUES
 (@Reference_BossLoot, 34052,     0, 100, 0, 1, 0, 3, 3, '3x Dream Shard');
 
 -- Creature loot tables
-DELETE FROM `creature_loot_template` WHERE `entry` IN(@Naga_Engineer,@Naga_Sorceress,@Naga_Myrmidon,@Naga_Siren,@Naga_Warrior,@Naga_Oracle,@Naga_Slavemaster,@Naga_Ambusher,@Naga_Guardian,@Naga_Defender,@Naga_Soothsayer,@Naga_Enchantress,@Naga_Champion,@Naga_Emissary,@Murloc_Coastrunner,@Murloc_Tidehunter,@Murloc_Flesheater,@Murloc_Hunter,@Murloc_Netter,@Murloc_Oracle,@Murloc_Nightcrawler,@Murloc_Scout,@Grovestalker_Lynx,@Buzzard,@Giant_Buzzard,@Wandering_Skeleton,@Furbolg_Hunter,@Furbolg_Warrior,@Furbolg_Shaman,@Furbolg_Trapper,@Furbolg_Elder,@Furbolg_Ursa,@Furbold_Denwatcher,@FelSatyr_Satyr,@FelSatyr_Rogue,@FelSatyr_Trickster,@FelSatyr_Betrayer,@FelSatyr_Felsworn,@FelSatyr_Shadowstalker,@FelSatyr_Hellcaller,@Felhound,@Raptor_Raptor,@Raptor_Lashtail,@Raptor_Devourer,@Serpent_Serpent,@Mangal_Crocolisk,@Enchanted_Tiki_Warrior,@Dragonspawn_Dragonspawn,@Dragonspawn_Wyrmkin,@Dragonspawn_Broodling,@Gnoll_Alpha,@Gnoll_Mystic,@Gnoll_Brute,@Gnoll_Shaman,@Gnoll_Gnoll,@Goblin_Worker,@Goblin_Miner,@Goblin_Foreman,@Goblin_Geologist,@Crystal_Spider,@Ogre_Enforcer,@Ogre_Mauler,@Ogre_Mage,@Ogre_Hyena,@Ogre_Brute,@Ogre_Reaver,@Ogre_Mage_Lord,@Ogre_Captain,@Ogre_Warlock,@Hyena_alpha,@Gorloc_Waddler,@Gorloc_Gibberer,@Gorloc_Steam_Belcher,@Gorloc_Mud_Splasher,@Gorloc_Hunter,@Gorloc_Dredger,@Gorloc_Oracle,@Wolvar_Tracker,@Wolvar_Hunter,@Wolvar_Scavenger,@Wolvar_Spearbearer,@Wolvar_Ravager,@Wolvar_Berserker,@Cave_Beast,@Cave_Creeper,@Cave_Rager,@Sap_Beast,@Withered_Treant,@Harpy_Ripper,@Harpy_Harpy,@Harpy_Roguefeather,@Harpy_Slayer,@Harpy_Ambusher,@Harpy_Windcaller,@Harpy_Storm_Witch,@Turtle_Tortoise,@Turtle_Snapper,@Turtle_Borer,@Fire_Elemental,@Air_Elemental,@Water_Elemental,@Wildsatyr_Satyr,@Wildsatyr_Rogue,@Wildsatyr_Trickster,@Wildsatyr_Felsworn,@Wildsatyr_Shadowstalker,@Wildsatyr_Hellcaller,@Wildsatyr_Imp,@Rogue_Voidwalker,@Collapsing_Voidwalker,@Voidspawn,@Unstable_Voidwraith,@Voidshrieker,@Shadowfiend);
+DELETE FROM `creature_loot_template` WHERE `entry` IN (@Naga_Engineer,@Naga_Sorceress,@Naga_Myrmidon,@Naga_Siren,@Naga_Warrior,@Naga_Oracle,@Naga_Slavemaster,@Naga_Ambusher,@Naga_Guardian,@Naga_Defender,@Naga_Soothsayer,@Naga_Enchantress,@Naga_Champion,@Naga_Emissary,@Murloc_Coastrunner,@Murloc_Tidehunter,@Murloc_Flesheater,@Murloc_Hunter,@Murloc_Netter,@Murloc_Oracle,@Murloc_Nightcrawler,@Murloc_Scout,@Grovestalker_Lynx,@Buzzard,@Giant_Buzzard,@Wandering_Skeleton,@Furbolg_Hunter,@Furbolg_Warrior,@Furbolg_Shaman,@Furbolg_Trapper,@Furbolg_Elder,@Furbolg_Ursa,@Furbold_Denwatcher,@FelSatyr_Satyr,@FelSatyr_Rogue,@FelSatyr_Trickster,@FelSatyr_Betrayer,@FelSatyr_Felsworn,@FelSatyr_Shadowstalker,@FelSatyr_Hellcaller,@Felhound,@Raptor_Raptor,@Raptor_Lashtail,@Raptor_Devourer,@Serpent_Serpent,@Mangal_Crocolisk,@Enchanted_Tiki_Warrior,@Dragonspawn_Dragonspawn,@Dragonspawn_Wyrmkin,@Dragonspawn_Broodling,@Gnoll_Alpha,@Gnoll_Mystic,@Gnoll_Brute,@Gnoll_Shaman,@Gnoll_Gnoll,@Goblin_Worker,@Goblin_Miner,@Goblin_Foreman,@Goblin_Geologist,@Crystal_Spider,@Ogre_Enforcer,@Ogre_Mauler,@Ogre_Mage,@Ogre_Hyena,@Ogre_Brute,@Ogre_Reaver,@Ogre_Mage_Lord,@Ogre_Captain,@Ogre_Warlock,@Hyena_alpha,@Gorloc_Waddler,@Gorloc_Gibberer,@Gorloc_Steam_Belcher,@Gorloc_Mud_Splasher,@Gorloc_Hunter,@Gorloc_Dredger,@Gorloc_Oracle,@Wolvar_Tracker,@Wolvar_Hunter,@Wolvar_Scavenger,@Wolvar_Spearbearer,@Wolvar_Ravager,@Wolvar_Berserker,@Cave_Beast,@Cave_Creeper,@Cave_Rager,@Sap_Beast,@Withered_Treant,@Harpy_Ripper,@Harpy_Harpy,@Harpy_Roguefeather,@Harpy_Slayer,@Harpy_Ambusher,@Harpy_Windcaller,@Harpy_Storm_Witch,@Turtle_Tortoise,@Turtle_Snapper,@Turtle_Borer,@Fire_Elemental,@Air_Elemental,@Water_Elemental,@Wildsatyr_Satyr,@Wildsatyr_Rogue,@Wildsatyr_Trickster,@Wildsatyr_Felsworn,@Wildsatyr_Shadowstalker,@Wildsatyr_Hellcaller,@Wildsatyr_Imp,@Rogue_Voidwalker,@Collapsing_Voidwalker,@Voidspawn,@Unstable_Voidwraith,@Voidshrieker,@Shadowfiend);
 REPLACE INTO `creature_loot_template` VALUES 
 (@Naga_Engineer,              @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
 (@Naga_Sorceress,             @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
@@ -822,7 +839,7 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Ogre_Mage,                  @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
 (@Ogre_Hyena,                 @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
 (@Ogre_Brute,                 @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
-(@Ogre_Reaver,                @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),\
+(@Ogre_Reaver,                @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
 (@Hyena_alpha,                @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
 (@Gorloc_Waddler,             @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
 (@Gorloc_Gibberer,            @Reference_NormalLoot, @Reference_NormalLoot, 100, 0, 1, 0, 1, 1, 'Normal Loot'),
@@ -4359,8 +4376,8 @@ SET
 @SpecialFlags               = 0,
 
 @LogTitle                   = 'Tactical Strike',
-@LogDescription           = 'We need to take out the brains behind all this brawn before we can go after their leader.$b$bMokor the Tactician commands the bulk of the forces from atop his tower to the east. He is guarded, so bring friends.',
-@QuestDescription          = 'Spymaster Jarre wants you to kill Mokor the Tactician at his tower in northern Azshara Crater.',
+@LogDescription           = 'We need to take out the brains behind all this brawn before we can go after their leader.$b$bFlamecaller Mokor commands the bulk of the forces from atop his tower to the east. He is guarded, so bring friends.',
+@QuestDescription          = 'Spymaster Jarre wants you to kill Flamecaller Mokor at his tower in northern Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
 @ObjectiveText2             = '',
