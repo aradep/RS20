@@ -50,10 +50,10 @@ INSERT INTO `npc_vendor`
 -- AGM
 (@Entry,    3,          @800Arena,          19024), -- Arena Grand Master
 -- Custom heirloom weapons
-(@Entry,    4,          @1500Arena,         48509), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48513), -- Custom heirloom weapon
 (@Entry,    4,          @1500Arena,         48511), -- Custom heirloom weapon
 (@Entry,    4,          @1500Arena,         48402), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48404), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48517), -- Custom heirloom weapon
 (@Entry,    4,          @1500Arena,         48410), -- Custom heirloom weapon
 (@Entry,    4,          @1500Arena,         48519), -- Custom heirloom weapon
 (@Entry,    4,          @1500Arena,         48420), -- Custom heirloom weapon
