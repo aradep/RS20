@@ -40,66 +40,50 @@ SET
 DELETE FROM `npc_vendor` WHERE `Entry` = @Entry;
 INSERT INTO `npc_vendor` 
 -- ----------------------------------------------------------------------------------------
-(`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
+(`Entry`,   `Slot`, `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Currency
-(@Entry,    2,          @HonorCoin_x30,  45706), -- 2000 Honor Commendation
-(@Entry,    2,          @HonorCoin_x30,  41888), -- Bag of 10x Emblem of Heroism
--- Gems
-(@Entry,    4,          @HonorCoin_x200,  40129), -- Sovereign Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40130), -- Shifting Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40131), -- Tenuous Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40132), -- Glowing Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40133), -- Purified Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40134), -- Royal Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40135), -- Mysterious Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40136), -- Balanced Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40137), -- Infused Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40138), -- Regal Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40139), -- Defender's Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40140), -- Puissant Dreadstone
-(@Entry,    4,          @HonorCoin_x200,  40141), -- Guardian's Dreadstone
-(@Entry,    5,          @HonorCoin_x200,  40164), -- Timeless Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40165), -- Jagged Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40166), -- Vivid Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40167), -- Enduring Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40168), -- Steady Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40169), -- Forceful Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40170), -- Seer's Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40171), -- Misty Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40172), -- Shining Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40173), -- Turbid Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40174), -- Intricate Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40175), -- Dazzling Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40176), -- Sundered Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40177), -- Lambent Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40178), -- Opaque Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40179), -- Energized Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40180), -- Radiant Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40181), -- Tense Eye of Zul
-(@Entry,    5,          @HonorCoin_x200,  40182), -- Shattered Eye of Zul
-(@Entry,    6,          @HonorCoin_x200,  40142), -- Inscribed Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40143), -- Etched Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40144), -- Champion's Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40145), -- Resplendent Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40146), -- Fierce Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40147), -- Deadly Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40148), -- Glinting Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40149), -- Lucent Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40150), -- Deft Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40151), -- Luminous Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40152), -- Potent Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40153), -- Veiled Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40154), -- Durable Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40155), -- Reckless Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40156), -- Wicked Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40157), -- Pristine Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40158), -- Empowered Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40159), -- Stark Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40160), -- Stalwart Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40161), -- Glimmering Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40162), -- Accurate Ametrine
-(@Entry,    6,          @HonorCoin_x200,  40163); -- Resolute Ametrine
+(@Entry,     1,     @HonorCoin_x30,  45706), -- 2000 Honor Commendation
+(@Entry,     1,     @HonorCoin_x30,  41888), -- Bag of 10x Emblem of Heroism
+-- Armor
+(@Entry,     2,     @HonorCoin_x70,    23173), -- Abomination Skin Leggings
+(@Entry,     2,     @HonorCoin_x70,    34107), -- Tattered Shoulderpads
+(@Entry,     2,     @HonorCoin_x70,    20427), -- Battle Healers Cloak
+(@Entry,     2,     @HonorCoin_x70,    20428), -- Caretakers Cape
+(@Entry,     2,     @HonorCoin_x70,     7348), -- Fletchers Gloves
+(@Entry,     2,     @HonorCoin_x70,     2041), -- Tunic of Westfall
+(@Entry,     2,     @HonorCoin_x70,     7133), -- Brutal Hauberk
+(@Entry,     2,     @HonorCoin_x70,     5943), -- Rift Bracers
+(@Entry,     2,     @HonorCoin_x70,     6087), -- Chausses of Westfall
+(@Entry,     2,     @HonorCoin_x70,     7002), -- Arctic Buckler
+(@Entry,     2,     @HonorCoin_x70,     6414), -- Seal of Sylvanas
+(@Entry,     2,     @HonorCoin_x70,    21568), -- Rune of Duty
+(@Entry,     2,     @HonorCoin_x70,    21566), -- Rune of Perfection
+(@Entry,     2,     @HonorCoin_x70,    20426), -- Advisors Ring
+(@Entry,     2,     @HonorCoin_x70,    20429), -- Legionnaires Band
+(@Entry,     2,     @HonorCoin_x70,    20431), -- Lorekeepers Ring
+(@Entry,     2,     @HonorCoin_x70,    20439), -- Protectors Band
+(@Entry,     2,     @HonorCoin_x70,    20442), -- Scouts Medallion
+(@Entry,     2,     @HonorCoin_x70,    20444), -- Sentinels Medallion
+-- Weapon
+(@Entry,     3,     @HonorCoin_x120,     7001), -- Gravestone Scepter
+(@Entry,     3,     @HonorCoin_x120,    25464), -- Blood-Tempered Sanseur
+(@Entry,     3,     @HonorCoin_x120,    23171), -- The Axe of Severing
+(@Entry,     3,     @HonorCoin_x120,     2042), -- Staff of Westfall
+(@Entry,     3,     @HonorCoin_x120,     6504), -- Wingblade
+(@Entry,     3,     @HonorCoin_x120,     6505), -- Crescent Staff
+(@Entry,     3,     @HonorCoin_x120,    20425), -- Advisors Gnarled Staff
+(@Entry,     3,     @HonorCoin_x120,    20434), -- Lorekeep ers Staff
+(@Entry,     3,     @HonorCoin_x120,    20430), -- Legionnaires Sword
+(@Entry,     3,     @HonorCoin_x120,    20440), -- Protectors Sword
+(@Entry,     3,     @HonorCoin_x120,    20437), -- Outriders Bow
+(@Entry,     3,     @HonorCoin_x120,    20438), -- Outrunners Bow
+(@Entry,     3,     @HonorCoin_x120,    20441), -- Scouts Blade
+(@Entry,     3,     @HonorCoin_x120,    20443), -- Sentinels Blade
+(@Entry,     3,     @HonorCoin_x120,    22980), -- Staff of the Sun
+(@Entry,     3,     @HonorCoin_x120,    22982), -- Farstriders Longbow
+(@Entry,     3,     @HonorCoin_x120,    22984), -- Dawnblade
+(@Entry,     3,     @HonorCoin_x120,    22995); -- Sindorei Warblade
 -- ----------------------------------------------------------------------------------------
 
 -- Refundable

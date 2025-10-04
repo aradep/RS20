@@ -9,7 +9,7 @@
 
 -- PvP Rewards
 SET 
-@Item   = 43346, -- Spoils of War
+@Item   = 45986, -- Spoils of War
 @Honor  = 150,
 @Arena  = 50,
 @Gold   = 250000;
