@@ -609,7 +609,7 @@ INSERT INTO `reference_loot_template`
 (@Ref_Rings,    50614,      0,          10,         1,            1,          'Grand Executioner'),
 (@Ref_Rings,    45608,      0,          10,         1,            1,          'Guiding Light'),
 (@Ref_Rings,    45871,      0,          10,         1,            1,          'Seal of Azeroth'),
-(@Ref_Rings,    45471,      0,          10,         1,            1,          'Gathering Storm'),
+(@Ref_Rings,    28793,      0,          10,         1,            1,          'Gathering Storm'),
 (@Ref_Rings,    45297,      0,          10,         1,            1,          'Lifewarden'),
 (@Ref_Rings,    51001,      0,          10,         1,            1,          'Pins and Needles'),
 (@Ref_Rings,    34230,      0,          10,         1,            1,          'Safe Haven'),

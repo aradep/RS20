@@ -17,8 +17,8 @@ SET
 @GossipMenu = 0,
 @Broadcast  = 0,
 @NpcText    = 23000,
-@MinLevel   = 80,
-@MaxLevel   = 80,
+@MinLevel   = 20,
+@MaxLevel   = 20,
 @Faction    = 35,
 @NPCFlags   = 1048577,
 @Scale      = 0.5,
@@ -37,8 +37,15 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` VALUES (@Entry, 0, @Model, @Scale, 1, 12340);
 
 -- Gossip text
-DELETE FROM `npc_text` WHERE `ID`=23000;
-INSERT INTO `npc_text` (`ID`, `text0_0`) VALUES (23000, 'One-on-one is the purest form of gladiatorial combat. Are you brave enough to enter the arena alone?');
+SET @text = 'One-on-one is the purest form of gladiatorial combat. Are you brave enough to enter the arena alone?';
+SET @broadcast = (@entry + 100000);
+UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
+INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
+DELETE FROM `npc_text` WHERE `id` = @entry;
+INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
+INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Battlemaster entry
 DELETE FROM `battlemaster_entry` WHERE `entry` IN (@Entry);

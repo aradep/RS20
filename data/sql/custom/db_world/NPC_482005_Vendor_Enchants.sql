@@ -57,7 +57,6 @@ INSERT INTO `npc_vendor`
 (@Entry,       3,       0,                38799), -- Enchant Chest - Mana
 (@Entry,       3,       0,                38865), -- Enchant Chest - Greater Stats
 (@Entry,       3,       0,                38866), -- Enchant Chest - Major Health
-(@Entry,       4,       0,                38791), -- Enchant Shield - Lesser Protection
 (@Entry,       4,       0,                38820), -- Enchant Shield - Lesser Block
 (@Entry,       4,       0,                38861), -- Enchant Shield - Greater Stamina
 (@Entry,       5,       0,                38835), -- Enchant Cloak - Lesser Agility
@@ -81,6 +80,7 @@ INSERT INTO `npc_vendor`
 (@Entry,       8,       0,                7969), -- Mithril Spurs
 (@Entry,       8,       0,                23530), -- Felsteel Shield Spike
 (@Entry,       8,       0,                6041), -- Steel Weapon Chain
+(@Entry,       8,       0,                6043), -- Iron Counterweight
 (@Entry,       8,       0,                4407), -- Sniper Scope
 (@Entry,      10,       @4xDreamShard,    11645), -- Arcanum
 (@Entry,      10,       @4xDreamShard,    11622), -- Arcanum

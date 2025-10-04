@@ -29,7 +29,7 @@ SET @Bonus1 = -80;
 REPLACE INTO `spell_dbc` VALUES (56242, 0, 0, 0, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 6, 0, 0, 1, 0, 0, 0, 0, 0, @Bonus1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 108, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'Glyph of Incinerate', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 'Increases the damage done by Incinerate by $56242m1%.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0);
 
 -- Starting Spells
-DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell` IN (22812,18562,1543,5384,2139,42894,35395,20927,596,15473,2094,1856,1064,8512,11719,29722,18499,3411,37441,37185,47567,55683,38435,56242);
+DELETE FROM `playercreateinfo_spell_custom` WHERE `Spell` IN (8177,8232,17364,3127,30798,22812,18562,1543,5384,2139,42894,35395,20927,596,15473,2094,1856,1064,8512,11719,29722,18499,3411,37441,37185,47567,55683,38435,56242);
 REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALUES
 -- Druid
 (1024, 22812, 'Barkskin'),
@@ -40,7 +40,7 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 -- Mage
 (128, 2139, 'Counterspell'),
 (128, 30451, 'Arcane Blast - Bonus'),
-(128, 37441, 'Improved Arcane Blast - damage reduced'),
+(128, 37441, 'Arcane Blast - damage reduced'),
 -- Paladin
 (2, 35395, 'Crusader Strike'),
 (2, 20925, 'Holy Shield - Bonus'),
@@ -48,19 +48,24 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 -- Priest
 (16, 596, 'Prayer of Healing - Bonus'),
 (16, 15473, 'Shadowform'),
-(16, 47567, 'Divine Providence - Prayer of Healing buff/nerf'),
-(16, 55683, 'Holy Nova - buffed to counter Prayer of Healing nerf'),
+(16, 47567, 'Prayer of Healing nerf'),
+(16, 55683, 'Holy Nova buff (PoH nerf also nerfs Holy Nova so it needs to get re-buffed)'),
 -- Rogue
 (8, 2094, 'Blind'),
 (8, 1856, 'Vanish'),
 -- Shaman
-(64, 1064, 'Chain Heal - Bonus'),
-(64, 8512, 'Windfury Totem'),
-(64, 38435, 'Improved Chain Heal - damage reduced'),
+(64, 3127, 'Parry'),
+(64, 30798, 'Dual Wield'),
+(64, 17364, 'Stormstrike'),
+(64, 8177, 'Grounding Totem'),
+-- (64, 1064, 'Chain Heal - Bonus'),
+-- (64, 38435, 'Chain Heal - damage reduced'),
+-- (64, 8512, 'Windfury Totem'),
+-- (64, 8232, 'Windfury Weapon'),
 -- Warlock
 (256, 11719, 'Curse of Tongues'),
 (256, 29722, 'Incinerate - Bonus'),
-(256, 56242, 'Glyph of Incinerate - damage reduced'),
+(256, 56242, 'Incinerate - damage reduced'),
 -- Warrior
 (1, 18499, 'Berserker Rage'),
 (1, 3411, 'Intervene');

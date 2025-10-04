@@ -36,7 +36,7 @@ SET
 @WarriorSpell1= 57499,  -- Your Charge, Intercept and Intervene abilities are now usable while in combat and in any stance. In addition, your Intervene ability will remove all movement impairing effects.
 @WarriorSpell2= 0,  -- 
 @WarriorName  = 'Darkmoon Card: Warpath',
-@PaladinSpell1= 53556,  -- Increases the range of your Judgement of Light and Judgement of Wisdom spells by 15 yards and increases your chance to hit by 2%.
+@PaladinSpell1= 53591,  -- Increases your spell power by an amount equal to 40% of your Strength and increases the amount healed by your critical heals by 20%.
 @PaladinSpell2= 0,  -- 
 @PaladinName  = 'Darkmoon Card: Avenger',
 @HunterSpell1 = 56317,  -- Increases your pet's damage by 16% and you and your pet's movement speed by 8% while your pet is active. This does not stack with other movement speed increasing effects.

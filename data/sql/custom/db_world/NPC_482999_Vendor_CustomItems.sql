@@ -19,7 +19,7 @@ SET
 @Ring8ID       = 50614,
 @Ring9ID       = 45608,
 @Ring10ID      = 45871,
-@Ring11ID      = 45471,
+@Ring11ID      = 28793,
 @Ring12ID      = 45297,
 @Ring13ID      = 51001,
 @Ring14ID      = 34230,

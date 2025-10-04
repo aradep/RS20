@@ -25,10 +25,10 @@ SET
 @Ring4Name     = 'Hand of the Prophet', @Ring4Subname = '',
 @Ring5ID       = 47224,
 @Ring5Spell    = 13964, -- Gives you a 5% chance to get an extra attack on the same target after hitting your target with your Sword or Axe.
-@Ring5Name     = 'Blademaster\'s Band', @Ring5Subname = '',
-@Ring6ID       = 45471,
+@Ring5Name     = 'Blademaster\'s Signet', @Ring5Subname = '',
+@Ring6ID       = 33496,
 @Ring6Spell    = 12974, -- Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike.
-@Ring6Name     = 'Eye of the Storm', @Ring6Subname = '',
+@Ring6Name     = 'Infinite Loop', @Ring6Subname = '',
 @Ring7ID       = 50398,
 @Ring7Spell    = 51688, -- Your critical strike damage is increased by 16% when the target has less health than you (as a percentage of total health).
 @Ring7Name     = 'Mortal Coil', @Ring7Subname = '',
@@ -38,13 +38,13 @@ SET
 -- Yellow socket
 @Ring9ID       = 45608,
 @Ring9Spell    = 31823, -- Reduces the duration of Curse, Disease and Poison effects by 30%.
-@Ring9Name     = 'Pure Platinum Band', @Ring9Subname = '',
+@Ring9Name     = 'Pure Platinum Ring', @Ring9Subname = '',
 @Ring10ID      = 45871,
 @Ring10Spell   = 31131, -- Reduces damage taken while affected by Stun and Fear effects by 30%.
 @Ring10Name    = 'Unbreakable Will', @Ring10Subname = '',
-@Ring11ID      = 33496,
-@Ring11Spell   = 38427, -- Your melee attacks have a chance to grant you 50 mana.
-@Ring11Name    = 'Infinite Loop', @Ring11Subname = '',
+@Ring11ID      = 28793,
+@Ring11Spell   = 23266, -- When struck in combat inflicts 13 Fire damage to the attacker.
+@Ring11Name    = 'Phoenixfire Band', @Ring11Subname = '',
 @Ring12ID      = 45297,
 @Ring12Spell   = 31830, -- All attacks against you have a 10% chance to cause half damage.
 @Ring12Name    = 'Glimpse of Immortality', @Ring12Subname = '',
@@ -150,7 +150,7 @@ UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3314   -- +8 Cr
 WHERE `spellid_1` = @Ring6Spell; -- Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike
 -- Ring 11
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3360   -- +8 Parry Rating
-WHERE `spellid_1` = @Ring11Spell; -- Your melee attacks have a chance to grant you 50 mana.
+WHERE `spellid_1` = @Ring11Spell; -- When struck in combat inflicts 13 Fire damage to the attacker.
 -- Ring 7
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3778   -- +8 Expertise Rating
 WHERE `spellid_1` = @Ring7Spell; -- Your critical strike damage is increased by 20% when the target has less health than you
