@@ -17,7 +17,7 @@ UPDATE `item_template` SET `name`='Golden Certificate', `description`='', `Quali
 UPDATE `item_template` SET `name`='Emblem of Heroism', `description`='', `requiredlevel`=0, `quality`=4, `itemlevel`=20 WHERE `entry`= 40752;
 
 -- Emblem of Valor
-UPDATE `item_template` SET `name`='Emblem of Style', `description`='', `requiredlevel`=0, `itemlevel`=20 WHERE `entry`= 40753;
+UPDATE `item_template` SET `name`='Emblem of Valor', `description`='', `requiredlevel`=0, `itemlevel`=20 WHERE `entry`= 40753;
 
 -- Small Dream Shard
 UPDATE `item_template` SET `bonding`=0, `quality` = 3, `stackable` = 200 WHERE `entry` = 34053;

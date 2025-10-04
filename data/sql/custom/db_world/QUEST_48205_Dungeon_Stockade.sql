@@ -75,8 +75,8 @@ SET
 
 @RewardItem1                = 41426,
 @RewardAmount1              = 1,
-@RewardItem2                = 0,
-@RewardAmount2              = 0,
+@RewardItem2                = 40753,
+@RewardAmount2              = 1,
 @RewardItem3                = 0,
 @RewardAmount3              = 0,
 @RewardItem4                = 0,

@@ -38,6 +38,9 @@ INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 
 DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
 INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
+-- Ghost visual
+-- REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 0, 0, 0, '57932');
+
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
@@ -91,6 +94,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    4,          @EmblemofHeroism_x25,         42948), -- Devout Aurastone Hammer
 (@Entry,    4,          @EmblemofHeroism_x25,         44091), -- Sharpened Scarlet Kris
 (@Entry,    4,          @EmblemofHeroism_x25,         42945), -- Venerable Dal'Rend's Sacred Charge
-(@Entry,    4,          @EmblemofHeroism_x35,         42946), -- Charmed Ancient Bone Bow
-(@Entry,    4,          @EmblemofHeroism_x35,         42947), -- Dignified Headmaster's Charge
-(@Entry,    4,          @EmblemofHeroism_x35,         42943); -- Bloodied Arcanite Reaper
+(@Entry,    4,          @EmblemofHeroism_x40,         42946), -- Charmed Ancient Bone Bow
+(@Entry,    4,          @EmblemofHeroism_x40,         42947), -- Dignified Headmaster's Charge
+(@Entry,    4,          @EmblemofHeroism_x40,         42943); -- Bloodied Arcanite Reaper

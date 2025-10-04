@@ -48,16 +48,16 @@ INSERT INTO `npc_vendor`
 -- 2000 Honor
 (@Entry,    1,          @400Arena,          45706), -- Commendation of Bravery
 -- AGM
-(@Entry,    3,          @800Arena,          19024), -- Arena Grand Master
+(@Entry,    3,          @600Arena,          19024), -- Arena Grand Master
 -- Custom heirloom weapons
-(@Entry,    4,          @1500Arena,         48513), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48511), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48402), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48517), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48410), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48519), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48420), -- Custom heirloom weapon
-(@Entry,    4,          @1500Arena,         48424), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48513), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48511), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48402), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48517), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48410), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48519), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48420), -- Custom heirloom weapon
+(@Entry,    4,          @800Arena,          48424), -- Custom heirloom weapon
 -- Tabards
 (@Entry,    5,          @1500Arena1800Rating,  45983), -- Furious Tabard
 (@Entry,    5,          @1500Arena2000Rating,  49086), -- Relentless Tabard

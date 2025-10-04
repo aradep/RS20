@@ -44,7 +44,7 @@ SET
 SET
 @Entry      = 482999,
 @Model      = 18154,
-@Scale      = 0.2,
+@Scale      = 0.18,
 @Name       = "Beta Test Vendor",
 @Title      = "Custom Items",
 @Icon       = "Buy", -- Directions, Gunner, vehicleCursor, Driver, Attack, Buy, Speak, Pickup, Interact, Trainer, Taxi, Repair, LootAll --
