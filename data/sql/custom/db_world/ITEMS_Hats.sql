@@ -9,7 +9,7 @@
 
 -- Item template updates
 UPDATE `item_template` SET 
-`itemlevel` = 35, 
+`itemlevel` = 1, 
 `requiredlevel` = 0, 
 `armor`=43, 
 `maxdurability`=60, 
@@ -50,20 +50,3 @@ UPDATE `item_template` SET
 `spellid_2` = 0, 
 `spellid_3` = 0
 WHERE `requiredlevel` IN (60,70,80) AND `class` = 4 AND `inventorytype` = 1 AND `allowableclass` > 0 AND `itemset` > 0;
-
--- Remove "Valorous" etc. from names
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Conqueror''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Valorous ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Heroes'' ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Sanctified ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, ' of Triumph', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, ' of Conquest', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Merciless Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Vengeful Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Brutal Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Savage Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Hateful Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Deadly Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Furious Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Relentless Gladiator''s ', '');
-UPDATE `item_template` SET `name` = REPLACE(`name`, 'Wrathful Gladiator''s ', '');
