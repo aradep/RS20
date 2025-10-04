@@ -743,33 +743,54 @@ REPLACE INTO `creature_template_addon` VALUES (@Spymaster_Jarre, 0, 0, 0, 0, 0, 
 -- Creature loot
 -- -------------------------------------------------------------------------------------------------------------------------------------
 
--- Elite loot reference table
-SET @Reference_EliteLoot = 48212;
+-- Normal creature loot reference table
+SET @Reference_NormalLoot = 48212;
+DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_NormalLoot;
+INSERT INTO `reference_loot_template` VALUES
+(@Reference_NormalLoot, 40752,     0, 100, 0, 1, 0, 1, 1, '1x Emblem of Heroism'),
+(@Reference_NormalLoot, 34052,     0, 100, 0, 1, 0, 3, 3, '3x Dream Shard'),
+(@Reference_NormalLoot, 48208, 48208, 100, 0, 1, 5, 1, 1, '1x BoP Blue');
+
+-- Elite creature reference table
+SET @Reference_EliteLoot = 48213;
 DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_EliteLoot;
 INSERT INTO `reference_loot_template` VALUES
 (@Reference_EliteLoot, 40752,     0, 100, 0, 1, 0, 1, 1, '1x Emblem of Heroism'),
 (@Reference_EliteLoot, 34052,     0, 100, 0, 1, 0, 3, 3, '3x Dream Shard'),
 (@Reference_EliteLoot, 48208, 48208, 100, 0, 1, 5, 1, 1, '1x BoP Blue');
 
--- Creature loot templates
+-- Boss creature loot reference table
+SET @Reference_BossLoot = 48214;
+DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_BossLoot;
+INSERT INTO `reference_loot_template` VALUES
+(@Reference_BossLoot, 40752,     0, 100, 0, 1, 0, 1, 1, '1x Emblem of Heroism'),
+(@Reference_BossLoot, 34052,     0, 100, 0, 1, 0, 3, 3, '3x Dream Shard'),
+(@Reference_BossLoot, 48208, 48208, 100, 0, 1, 5, 1, 1, '1x BoP Blue');
 
--- Custom Elites
+-- Normal creatures
+
+-- Elite creatures
+
+-- Bossses
 REPLACE INTO `creature_loot_template` VALUES 
-(@Tanak_Ragepaw,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Hexxed,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Ravazic,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Warlord_Skullcrush,   @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Earthshaker,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Chimaeron,            @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Watcher_OneEye,       @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Grimgut,              @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Mokor_the_Tactician,  @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Captain_Clogg,        @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@King_Gorloc,          @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Snarlax_Snowpelt,     @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Shirek,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Phytos,               @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
-(@Dark_Illidan,         @Reference_EliteLoot, @Reference_EliteLoot, 100, 0, 1, 1, 1, 1, 'Elite Loot'),
+(@Tanak_Ragepaw,        @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Hexxed,               @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Ravazic,              @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Warlord_Skullcrush,   @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Earthshaker,          @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Chimaeron,            @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Watcher_OneEye,       @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Grimgut,              @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Mokor_the_Tactician,  @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Captain_Clogg,        @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@King_Gorloc,          @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Snarlax_Snowpelt,     @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Shirek,               @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Phytos,               @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+(@Dark_Illidan,         @Reference_BossLoot, @Reference_BossLoot, 100, 0, 1, 1, 1, 1, 'Boss Loot'),
+
+-- Quest items
+
 -- Harpy Feather
 (@Harpy_Ambusher,       4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),
 (@Harpy_Harpy,          4753, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Harpy Feather'),

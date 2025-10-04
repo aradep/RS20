@@ -91,6 +91,7 @@ INSERT INTO `npc_vendor`
 (@Entry,      10,       @4xDreamShard,    18329), -- Arcanum
 (@Entry,      10,       @4xDreamShard,    18330), -- Arcanum
 (@Entry,      10,       @4xDreamShard,    18331), -- Arcanum
+(@Entry,      10,       @4xDreamShard,    11643), -- Arcanum
 (@Entry,      11,       @10xDreamShard,   28882), -- Inscription
 (@Entry,      11,       @10xDreamShard,   28881), -- Inscription
 (@Entry,      11,       @10xDreamShard,   28885), -- Inscription
@@ -99,4 +100,4 @@ INSERT INTO `npc_vendor`
 (@Entry,      11,       @10xDreamShard,   28907); -- Inscription
 
 -- Buy for 0, sell for 1
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`requiredlevel`=0, `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;
+UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 WHERE `npc_vendor`.`entry` = @Entry;

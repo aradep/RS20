@@ -648,11 +648,6 @@ INSERT INTO `npc_vendor` (`Entry`, `Slot`, `ExtendedCost`, `Item`) VALUES
 (@Druid, 1, 0, 43674), -- Glyph of Dash
 (@Druid, 1, 0, 44922); -- Glyph of Typhoon
 
--- Reduce prices to buy 0 / sell 1
-UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` 
-SET `item_template`.`buyprice`=0, `item_template`.`sellprice`=1 
-WHERE `npc_vendor`.`entry` IN (@Paladin, @Warrior, @Rogue, @Shaman, @Priest, @Warlock, @Mage, @Druid, @Hunter);
-
 -- Glyph/Reagent gossip option
 UPDATE `broadcast_text` SET `maletext`='I need Glyphs and Reagents.', `femaletext`=`maletext` WHERE `id`=17573;
 UPDATE `broadcast_text` SET `maletext`='I need Glyphs and Reagents.', `femaletext`=`maletext` WHERE `id`=17574;

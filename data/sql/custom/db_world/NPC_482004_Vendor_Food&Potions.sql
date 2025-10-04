@@ -40,7 +40,7 @@ INSERT INTO `npc_vendor`
 (@Entry,     1,            0,              43087), -- Elwynn Apple
 (@Entry,     2,            0,              42431), -- Dalaran Brownie
 (@Entry,     3,            0,              13810), -- Eversong Sunfruit
-(@Entry,     4,            0,              42433), -- Chocolate Cheesecake
+(@Entry,     4,            0,              42434), -- Strawberry Cheesecake
 (@Entry,     5,            0,              11950), -- Tirisfal Grapes
 (@Entry,     6,            0,              22895), -- Cinnamon Bun
 (@Entry,     7,            0,               4538), -- Hillsbrad Watermelon
@@ -67,16 +67,3 @@ INSERT INTO `npc_vendor`
 (@Entry,    19,         2985,               3825), -- Elixir of Fortitude
 (@Entry,    19,         2985,               3388), -- Strong Troll's Blood Elixir
 (@Entry,    19,         2985,               5996); -- Elixir of Water Breathing
-
--- Food
-UPDATE `item_template` SET `requiredlevel` = 0, `bonding` = 0, `buycount` = 20, `stackable` = 20, `buyprice` = 0, `sellprice` = 0, `itemlevel` = 25, `flags` = 0, `requiredreputationfaction` = 0, `requiredreputationrank` = 0 WHERE `entry` IN (43087,13810,11950,4538,4537,42430,22895,42428,42431,42433);
-UPDATE `item_template` SET `name`= 'Elwynn Apple',         `spellid_1`= 65422 WHERE `entry`= 43087;
-UPDATE `item_template` SET `name`= 'Eversong Orange',      `spellid_1`= 65421 WHERE `entry`= 13810;
-UPDATE `item_template` SET `name`= 'Tirisfal Grapes',      `spellid_1`= 65420 WHERE `entry`= 11950;
-UPDATE `item_template` SET `name`= 'Hillsbrad Watermelon', `spellid_1`= 65419 WHERE `entry`= 4538;
-UPDATE `item_template` SET `name`= 'Kezan Banana',         `spellid_1`= 65418 WHERE `entry`= 4537;
-UPDATE `item_template` SET `name`= 'Sprinkle Doughnut',     `spellid_1`= 65419 WHERE `entry`= 42430;
-UPDATE `item_template` SET `name`= 'Cinnamon Bun',         `spellid_1`= 65420 WHERE `entry`= 22895;
-UPDATE `item_template` SET `name`= 'Vanilla Cupcake',      `spellid_1`= 65418 WHERE `entry`= 42428;
-UPDATE `item_template` SET `name`= 'Truffle Brownie',      `spellid_1`= 65422 WHERE `entry`= 42431;
-UPDATE `item_template` SET `name`= 'Chocolate Cake',       `spellid_1`= 65421 WHERE `entry`= 42433;
