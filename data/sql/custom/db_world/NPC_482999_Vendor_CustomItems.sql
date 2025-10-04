@@ -43,8 +43,8 @@ SET
 -- Creature
 SET
 @Entry      = 482999,
-@Model      = 27216,
-@Scale      = 1,
+@Model      = 18154,
+@Scale      = 0.2,
 @Name       = "Beta Test Vendor",
 @Title      = "Custom Items",
 @Icon       = "Buy", -- Directions, Gunner, vehicleCursor, Driver, Attack, Buy, Speak, Pickup, Interact, Trainer, Taxi, Repair, LootAll --
@@ -58,6 +58,11 @@ DELETE FROM `creature_template` WHERE Entry = @Entry;
 INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
 DELETE FROM `creature_template_model` WHERE CreatureID = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
+
+-- Placement
+DELETE FROM `creature` WHERE `id1` = @Entry;
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.02, -431.596, 11.2723, 0.0029068, 300, 0, 0, 605, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Vendor List
 DELETE FROM npc_vendor WHERE `Entry` = @Entry;

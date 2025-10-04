@@ -9,7 +9,7 @@
 
 -- Item template updates
 UPDATE `item_template` SET 
-`itemlevel` = 1, 
+`itemlevel` = 35, 
 `requiredlevel` = 0, 
 `armor`=43, 
 `maxdurability`=60, 

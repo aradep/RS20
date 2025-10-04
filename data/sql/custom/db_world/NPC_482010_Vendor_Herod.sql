@@ -10,12 +10,12 @@
 -- Creature
 SET
 @Entry      = 482010,
-@Model      = 29537,
-@Scale      = 0.45,
+@Model      = 18154,
+@Scale      = 0.2,
 @HoverHeight= 2.5,
-@Name       = "Herod",
+@Name       = "D'oreh",
 @Title      = "The Custodian",
-@Icon       = "Speak",
+@Icon       = "Buy",
 @Rank       = 1,
 @Type       = 7,
 @Class      = 1,
@@ -28,7 +28,7 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
 -- Gossip text
-SET @text = 'May we all live on in the immortal stone.';
+SET @text = 'You are welcome in these halls, $N.';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -41,7 +41,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1986.17, -431.643, 11.2724, 3.15336, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1985.24, -431.722, 11.2722, 3.14431, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Extended costs
 SET

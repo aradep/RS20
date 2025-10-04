@@ -13,7 +13,7 @@ SET
 -- Red socket
 @Ring1ID       = 46010,
 @Ring1Spell    = 51463, -- Your auto attacks deal an additional 12% Shadow damage.
-@Ring1Name     = 'Insidious Signet', @Ring1Subname = '',
+@Ring1Name     = 'Piercing Gaze', @Ring1Subname = '',
 @Ring2ID       = 50424,
 @Ring2Spell    = 51885, -- Increases your Attack Power by 100% of your Intellect.
 @Ring2Name     = 'Twist of Fate', @Ring2Subname = '',
@@ -179,7 +179,7 @@ WHERE `spellid_1` = @Ring12Spell; -- All attacks against you have a 10% chance t
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3363   -- +9 Block Value
 WHERE `spellid_1` = @Ring13Spell; -- Whenever you take damage from or block a melee attack you cause damage equal to 20% of your block value
 -- Ring 14
-UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3821   -- +8 Resilience Rating
+UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3821   -- +8 Resilience Rating
 WHERE `spellid_1` = @Ring14Spell; -- Reduces the damage taken by area of effect attacks by 30%.
 -- Ring 20
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3302   -- +8 Defense Rating
