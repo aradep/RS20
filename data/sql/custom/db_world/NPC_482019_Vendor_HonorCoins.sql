@@ -43,7 +43,7 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Currency
-(@Entry,    2,          @HonorCoin_x50,   45706), -- 2000 Honor Commendation
+(@Entry,    2,          @HonorCoin_x30,   45706), -- 2000 Honor Commendation
 (@Entry,    2,          @HonorCoin_x50,   41888), -- Bag of 40x Dream Shards
 -- Gems
 (@Entry,    4,          @HonorCoin_x200,  40129), -- Sovereign Dreadstone

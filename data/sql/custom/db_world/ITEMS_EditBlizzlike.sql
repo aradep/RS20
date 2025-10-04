@@ -34,8 +34,8 @@ UPDATE `item_template` SET `stackable`=1,  name='Expedition Bandage', `descripti
 UPDATE `item_template` SET `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHERE `entry` = 45706;
 
 -- Custom 2-minute PvP Trinket
-UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=10 WHERE `entry` = 42123; -- Alliance
-UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=10 WHERE `entry` = 42122; -- Horde
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=12 WHERE `entry` = 42123; -- Alliance
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=12 WHERE `entry` = 42122; -- Horde
 
 -- Heirloom Arcanums/Inscriptions
 UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` = 7 AND `class` = 12;
@@ -107,6 +107,9 @@ UPDATE `item_template` SET `quality`=1, `stackable`=20, `buyprice`=0, `sellprice
 3825 -- Elixir of Fortitude
 );
 
+-- Thistle Tea now shares a cd with rage potion and other potions
+UPDATE `item_template` SET `spellcooldown_1`=0, `spellcategory_1`=4, `spellcategorycooldown_1`=60000 WHERE `entry`=7676;
+
 -- Disenchanting blues yields 1x Dream Shard
 REPLACE INTO `disenchant_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES (100, 34052, 0, 100, 0, 1, 0, 1, 2, 'Dream Shard');
 UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 100 WHERE `class` IN (2,4) AND `quality`=3 AND `disenchantID` > 0;
@@ -143,3 +146,13 @@ REPLACE INTO `spell_dbc` VALUES
 (35432, 0, 0, 0, 256, 0, 8192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 15, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31, 8, 53, 0, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1948, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4050, 0, 1, 0, 0, 'Inscription of the Knight', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188,'Permanently adds 13 defense rating to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0),
 (35434, 0, 0, 0, 256, 0, 8192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 15, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31, 8, 53, 0, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4050, 0, 1, 0, 0, 'Inscription of the Oracle', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188,'Permanently adds 6 mana per 5 sec to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0),
 (35438, 0, 0, 0, 256, 0, 8192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 15, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31, 8, 53, 0, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2850, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4050, 0, 1, 0, 0, 'Inscription of the Blade', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188,'Permanently adds 13 critical strike rating to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0);
+
+-- Custom heirloom gladiator weapons
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134746112, `scalingstatdistribution`=297, `scalingstatvalue`=51, `name`='Gladiator\'s Spike' WHERE `entry` = 48509; -- 1H Extra Attack
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=351, `scalingstatvalue`=516, `name`='Gladiator\'s Truncheon' WHERE `entry` = 48511; -- 1H Agi/AP
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=293, `scalingstatvalue`=1032, `name`='Gladiator\'s Sunderer' WHERE `entry` = 48402; -- 2H Str/Stm
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=352, `scalingstatvalue`=1032, `name`='Gladiator\'s Crusher' WHERE `entry` = 48404; -- 2H Agi/Arp
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=296, `scalingstatvalue`=36872, `name`='Gladiator\'s Staff' WHERE `entry` = 48410; -- Caster Staff
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=295, `scalingstatvalue`=34820, `name`='Gladiator\'s Salvation' WHERE `entry` = 48519; -- Healing Mace
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=294, `scalingstatvalue`=8208, `name`='Gladiator\'s Recurve' WHERE `entry` = 48420; -- Bow
+UPDATE `item_template` SET `requiredlevel`=0, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `flags`=134221824, `scalingstatdistribution`=294, `scalingstatvalue`=8208, `name`='Gladiator\'s Shotgun' WHERE `entry` = 48424; -- Gun

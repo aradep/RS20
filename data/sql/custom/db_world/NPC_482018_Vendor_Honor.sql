@@ -52,7 +52,7 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`,     `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Battle Standards
-(@Entry,    1,          @1250Honor,       18606), -- Battle Standard
+(@Entry,    1,           @500Honor,       18606), -- Battle Standard
 (@Entry,    1,          @1250Honor,       18607), -- Battle Standard
 -- 2-minute Trinket
 (@Entry,    2,          @2400Honor,       42123), -- Medallion the Alliance
@@ -71,12 +71,7 @@ INSERT INTO `npc_vendor`
 (@Entry,    4,          @5000Honor,       48718), -- Repurposed Lava Dredger
 (@Entry,    4,          @8000Honor,       44092), -- Reforged Truesilver Champion
 (@Entry,    4,          @8000Honor,       44093), -- Upgraded Dwarven Hand Cannon
-(@Entry,    4,          @8000Honor,       44095), -- Grand Staff of Jordan
--- Heirloom Inscriptions
-(@Entry,    5,          @20000Honor,      44133), -- Greater Inscription of the Axe
-(@Entry,    5,          @20000Honor,      44134), -- Greater Inscription of the Crag
-(@Entry,    5,          @20000Honor,      44135), -- Greater Inscription of the Storm
-(@Entry,    5,          @20000Honor,      44136); -- Greater Inscription of the Pinnacle
+(@Entry,    4,          @8000Honor,       44095); -- Grand Staff of Jordan
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

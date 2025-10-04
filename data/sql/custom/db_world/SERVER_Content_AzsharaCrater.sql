@@ -316,8 +316,8 @@ SET @Void_Lord = 32230;
 
 -- Custom NPCs
 -- -----------------------------------
-SET @HonorCoin_Vendor       = 482018;
-SET @DarkmoonNPC            = 482019;
+SET @HonorCoin_Vendor       = 482019;
+SET @DarkmoonNPC            = 482020;
 -- Elites
 SET @Tanak_Ragepaw          = 482101;
 SET @Ravazic                = 482102;
@@ -595,21 +595,21 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Prob
 DELETE FROM `npc_vendor` WHERE  `entry` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
 DELETE FROM `npc_trainer` WHERE `id` IN (@Packmaster_Stonebrow, @Trixy_the_Fixer, @Malik_Stillblade);
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `extendedcost`, `maxcount`, `incrtime`, `VerifiedBuild`) VALUES 
-(@Packmaster_Stonebrow,     1, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better but only works in Crater)
-(@Trixy_the_Fixer,          1, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better but only works in Crater)
-(@Malik_Stillblade,         1, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better but only works in Crater)
-(@Trixy_the_Fixer,          2, 929,    0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 3827,   0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 7676,   0, 0, 0, 0), -- Free Potions from hub
-(@Trixy_the_Fixer,          2, 5631,   0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 929,    0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 3827,   0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 7676,   0, 0, 0, 0), -- Free Potions from hub
-(@Malik_Stillblade,         2, 5631,   0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 929,    0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 3827,   0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 7676,   0, 0, 0, 0), -- Free Potions from hub
-(@Packmaster_Stonebrow,     2, 5631,   0, 0, 0, 0); -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Trixy_the_Fixer,          1, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Malik_Stillblade,         1, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 929,    0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 3827,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 7676,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     1, 5631,   0, 0, 0, 0), -- Free Potions from hub
+(@Packmaster_Stonebrow,     2, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Trixy_the_Fixer,          2, 14530,  2420, 0, 0, 0), -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
+(@Malik_Stillblade,         2, 14530,  2420, 0, 0, 0); -- Expedition Bandage (Slightly better than Runecloth but only works in Crater)
 
 -- Furbolg faction fix
 UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
@@ -2782,7 +2782,7 @@ SET
 @SpecialFlags               = 0,
 
 @LogTitle                   = 'Unnatural Selection',
-@LogDescription           = 'The furbolgs nearby are unusually aggressive and yesterday I noticed a group carrying totems that didn\'t look... normal, let\'s just put it that way.$b$bI need you to collect a few of those totems for me to study. With any luck we can figure out what\'s going on.',
+@LogDescription           = 'Have you noticed the furbolgs nearby? They\'re unusually aggressive and yesterday I seen a few carrying totems that didn\'t look like normal tribal artifacts.$b$bI need you to collect a few of those totems for me to study. With any luck we can figure out what\'s going on.',
 @QuestDescription          = 'Farseer Serena wants you to collect totems from the Redfang furbolg of central Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',

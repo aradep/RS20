@@ -13,7 +13,7 @@ SET
 -- Red socket
 @Ring1ID       = 46010,
 @Ring1Spell    = 51463, -- Your auto attacks deal an additional 12% Shadow damage.
-@Ring1Name     = 'Whispering Ring', @Ring1Subname = '',
+@Ring1Name     = 'Piercing Gaze', @Ring1Subname = '',
 @Ring2ID       = 50424,
 @Ring2Spell    = 51885, -- Increases your Attack Power by 100% of your Intellect.
 @Ring2Name     = 'Twist of Fate', @Ring2Subname = '',
@@ -26,9 +26,9 @@ SET
 @Ring5ID       = 47224,
 @Ring5Spell    = 13964, -- Gives you a 5% chance to get an extra attack on the same target after hitting your target with your Sword or Axe.
 @Ring5Name     = 'Blademaster\'s Band', @Ring5Subname = '',
-@Ring6ID       = 33496,
-@Ring6Spell    = 16284, -- Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.
-@Ring6Name     = 'Infinite Loop', @Ring6Subname = '',
+@Ring6ID       = 45471,
+@Ring6Spell    = 12974, -- Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike.
+@Ring6Name     = 'Eye of the Storm', @Ring6Subname = '',
 @Ring7ID       = 50398,
 @Ring7Spell    = 51688, -- Your critical strike damage is increased by 16% when the target has less health than you (as a percentage of total health).
 @Ring7Name     = 'Mortal Coil', @Ring7Subname = '',
@@ -42,9 +42,9 @@ SET
 @Ring10ID      = 45871,
 @Ring10Spell   = 31131, -- Reduces damage taken while affected by Stun and Fear effects by 30%.
 @Ring10Name    = 'Unbreakable Will', @Ring10Subname = '',
-@Ring11ID      = 45471,
+@Ring11ID      = 33496,
 @Ring11Spell   = 38427, -- Your melee attacks have a chance to grant you 50 mana.
-@Ring11Name    = 'Ring of the Maelstrom', @Ring11Subname = '',
+@Ring11Name    = 'Infinite Loop', @Ring11Subname = '',
 @Ring12ID      = 45297,
 @Ring12Spell   = 31830, -- All attacks against you have a 10% chance to cause half damage.
 @Ring12Name    = 'Glimpse of Immortality', @Ring12Subname = '',
@@ -140,17 +140,17 @@ WHERE `spellid_1` = @Ring19Spell; -- 20% chance that your heals on others will a
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3882   -- +8 Armor Penetration
 WHERE `spellid_1` = @Ring1Spell; -- Your auto attacks deal an additional 12% Shadow damage
 -- Ring 2
-UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3877   -- +16 Attack Power
+UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3353   -- +8 Intellect
 WHERE `spellid_1` = @Ring2Spell; -- Increases your Attack Power by 100% of your Intellect
 -- Ring 5
 UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 2844   -- +8 Hit Rating
 WHERE `spellid_1` = @Ring5Spell; -- Gives you a 5% chance to get an extra attack on the same target after hitting with a Sword or Axe
 -- Ring 6
-UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3314   -- +8 Critical Strike Rating
+UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3314   -- +8 Critical Strike Rating
 WHERE `spellid_1` = @Ring6Spell; -- Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike
 -- Ring 11
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3360   -- +8 Parry Rating
-WHERE `spellid_1` = @Ring11Spell; -- Increases your Dodge chance by 6% and gives you 10% melee haste
+WHERE `spellid_1` = @Ring11Spell; -- Your melee attacks have a chance to grant you 50 mana.
 -- Ring 7
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3778   -- +8 Expertise Rating
 WHERE `spellid_1` = @Ring7Spell; -- Your critical strike damage is increased by 20% when the target has less health than you
@@ -161,10 +161,10 @@ WHERE `spellid_1` = @Ring8Spell; -- 8% chance after being hit by any damaging at
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 2392   -- +12 Mana per 5 sec
 WHERE `spellid_1` = @Ring15Spell; -- Regenerate mana equal to 10% of your Intellect every 5 sec, even while casting
 -- Ring 16
-UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3314   -- +8 Critical Strike Rating
+UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3753   -- +9 Spell Power 
 WHERE `spellid_1` = @Ring16Spell; -- Your spell criticals will refund 30% of their base mana cost
 -- Ring 17
-UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3753   -- +9 Spell Power
+UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3314   -- +8 Critical Strike Rating
 WHERE `spellid_1` = @Ring17Spell; -- Critical heals create a protective shield absorbing 20% of the amount healed for 12 sec
 -- Ring 10
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3821   -- +8 Resilience Rating
@@ -173,7 +173,7 @@ WHERE `spellid_1` = @Ring10Spell; -- Reduces damage taken while affected by Stun
 UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3766   -- +12 Stamina
 WHERE `spellid_1` = @Ring9Spell; -- Reduces the duration of Curse, Disease and Poison effects by 30%
 -- Ring 12
-UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3304   -- +8 Dodge Rating
+UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3304   -- +8 Dodge Rating
 WHERE `spellid_1` = @Ring12Spell; -- All attacks against you have a 10% chance to cause half damage
 -- Ring 13
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3363   -- +9 Block Value
@@ -182,5 +182,5 @@ WHERE `spellid_1` = @Ring13Spell; -- Whenever you take damage from or block a me
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3821   -- +8 Resilience Rating
 WHERE `spellid_1` = @Ring14Spell; -- Reduces the damage taken by area of effect attacks by 30%.
 -- Ring 20
-UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3302   -- +8 Defense Rating
+UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3302   -- +8 Defense Rating
 WHERE `spellid_1` = @Ring20Spell; -- Regenerates 6% of your total Health over 6 sec after being the victim of a critical strike

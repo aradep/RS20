@@ -45,14 +45,23 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 (`Entry`,   `Slot`,     `ExtendedCost`,    `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
--- AGM
-(@Entry,    1,          @600Arena,          19024), -- Arena Grand Master
 -- 2000 Honor
-(@Entry,    2,          @400Arena,          45706), -- Commendation of Bravery
+(@Entry,    1,          @400Arena,          45706), -- Commendation of Bravery
+(@Entry,    2,          @600Arena,          41888), -- Bag of 40x Dream Shards
+-- AGM
+(@Entry,    3,          @800Arena,          19024), -- Arena Grand Master
+-- Custom heirloom weapons
+(@Entry,    4,          @1500Arena,         48509), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48511), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48402), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48404), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48410), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48519), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48420), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,         48424), -- Custom heirloom weapon
 -- Tabards
-(@Entry,    4,          @1500Arena1800Rating,  45983), -- Furious Tabard
-(@Entry,    4,          @1500Arena2000Rating,  49086), -- Relentless Tabard
-(@Entry,    4,          @1500Arena2200Rating,  51534); -- Wrathful Tabard
-
+(@Entry,    5,          @1500Arena1800Rating,  45983), -- Furious Tabard
+(@Entry,    5,          @1500Arena2000Rating,  49086), -- Relentless Tabard
+(@Entry,    5,          @1500Arena2200Rating,  51534); -- Wrathful Tabard
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;
