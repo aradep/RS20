@@ -41,7 +41,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1985.24, -431.722, 11.2722, 3.14431, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1985.39, -431.642, 11.2733, 3.1246, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Extended costs
 SET
