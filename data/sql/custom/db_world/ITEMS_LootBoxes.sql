@@ -612,11 +612,11 @@ INSERT INTO `reference_loot_template`
 (@Ref_Rings,    28793,      0,          10,         1,            1,          'Gathering Storm'),
 (@Ref_Rings,    45297,      0,          10,         1,            1,          'Lifewarden'),
 (@Ref_Rings,    51001,      0,          10,         1,            1,          'Pins and Needles'),
-(@Ref_Rings,    34230,      0,          10,         1,            1,          'Safe Haven'),
+(@Ref_Rings,    45471,      0,          10,         1,            1,          'Safe Haven'),
 (@Ref_Rings,    34837,      0,          10,         1,            1,          'Lifestream Band'),
 (@Ref_Rings,    33498,      0,          10,         1,            1,          'Emerald Dreamcatcher'),
 (@Ref_Rings,    45326,      0,          10,         1,            1,          'Ring of the Aesir'),
-(@Ref_Rings,    47700,      0,          10,         1,            1,          'Saving Grace'),
+(@Ref_Rings,    31326,      0,          10,         1,            1,          'Saving Grace'),
 (@Ref_Rings,    34625,      0,          10,         1,            1,          'Hope''s Diamond'),
 (@Ref_Rings,    45157,      0,          10,         1,            1,          'Broken Promise');
 -- --------------------------------------------------------------------------------------------------------------------

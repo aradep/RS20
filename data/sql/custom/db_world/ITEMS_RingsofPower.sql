@@ -13,7 +13,7 @@ SET
 -- Red socket
 @Ring1ID       = 46010,
 @Ring1Spell    = 51463, -- Your auto attacks deal an additional 12% Shadow damage.
-@Ring1Name     = 'Piercing Gaze', @Ring1Subname = '',
+@Ring1Name     = 'Insidious Signet', @Ring1Subname = '',
 @Ring2ID       = 50424,
 @Ring2Spell    = 51885, -- Increases your Attack Power by 100% of your Intellect.
 @Ring2Name     = 'Twist of Fate', @Ring2Subname = '',
@@ -22,7 +22,7 @@ SET
 @Ring3Name     = 'Mind\'s Eye', @Ring3Subname = '',
 @Ring4ID       = 31921,
 @Ring4Spell    = 15031, -- Increases your spell power by 25% of your total Spirit.
-@Ring4Name     = 'Hand of the Prophet', @Ring4Subname = '',
+@Ring4Name     = 'Voice of the Prophet', @Ring4Subname = '',
 @Ring5ID       = 47224,
 @Ring5Spell    = 13964, -- Gives you a 5% chance to get an extra attack on the same target after hitting your target with your Sword or Axe.
 @Ring5Name     = 'Blademaster\'s Signet', @Ring5Subname = '',
@@ -44,27 +44,27 @@ SET
 @Ring10Name    = 'Unbreakable Will', @Ring10Subname = '',
 @Ring11ID      = 28793,
 @Ring11Spell   = 23266, -- When struck in combat inflicts 13 Fire damage to the attacker.
-@Ring11Name    = 'Phoenixfire Band', @Ring11Subname = '',
+@Ring11Name    = 'Flame Wreath', @Ring11Subname = '',
 @Ring12ID      = 45297,
 @Ring12Spell   = 31830, -- All attacks against you have a 10% chance to cause half damage.
 @Ring12Name    = 'Glimpse of Immortality', @Ring12Subname = '',
 @Ring13ID      = 51001,
 @Ring13Spell   = 58874, -- Whenever you take damage from or block a melee attack you cause damage equal to 20% of your block value.
 @Ring13Name    = 'Pins and Needles', @Ring13Subname = '',
-@Ring14ID      = 34230,
+@Ring14ID      = 45471,
 @Ring14Spell   = 31213, -- Reduces the damage taken by area of effect attacks by 30%.
-@Ring14Name    = 'Ring of Safe Havens', @Ring14Subname = '',
+@Ring14Name    = 'Eye of the Storm', @Ring14Subname = '',
 -- Blue socket
 @Ring15ID      = 34837,
 @Ring15Spell   = 33956, -- Regenerate mana equal to 10% of your Intellect every 5 sec, even while casting.
-@Ring15Name    = 'Lifestream Band', @Ring15Subname = '',
+@Ring15Name    = 'Circle of Life', @Ring15Subname = '',
 @Ring16ID      = 33498,
 @Ring16Spell   = 29076, -- Your spell criticals will refund 30% of their base mana cost.
 @Ring16Name    = 'Emerald Dreamcatcher', @Ring16Subname = '',
 @Ring17ID      = 45326,
 @Ring17Spell   = 47511, -- Critical heals create a protective shield on the target, absorbing 20% of the amount healed. Lasts 12 sec.
 @Ring17Name    = 'Guiding Light', @Ring17Subname = '',
-@Ring18ID      = 47700,
+@Ring18ID      = 31326,
 @Ring18Spell   = 47560, -- Increases healing by 12% on friendly targets at or below 50% health.
 @Ring18Name    = 'Saving Grace', @Ring18Subname = '',
 @Ring19ID      = 34625,
@@ -146,10 +146,10 @@ WHERE `spellid_1` = @Ring2Spell; -- Increases your Attack Power by 100% of your 
 UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 2844   -- +8 Hit Rating
 WHERE `spellid_1` = @Ring5Spell; -- Gives you a 5% chance to get an extra attack on the same target after hitting with a Sword or Axe
 -- Ring 6
-UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3314   -- +8 Critical Strike Rating
+UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3314   -- +8 Critical Strike Rating
 WHERE `spellid_1` = @Ring6Spell; -- Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike
 -- Ring 11
-UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3360   -- +8 Parry Rating
+UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3766   -- +12 Stamina
 WHERE `spellid_1` = @Ring11Spell; -- When struck in combat inflicts 13 Fire damage to the attacker.
 -- Ring 7
 UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 3778   -- +8 Expertise Rating
@@ -158,7 +158,7 @@ WHERE `spellid_1` = @Ring7Spell; -- Your critical strike damage is increased by 
 UPDATE `item_template` SET `socketColor_1` = 4, `socketBonus`  = 3303   -- +8 Haste Rating
 WHERE `spellid_1` = @Ring8Spell; -- 8% chance after being hit by any damaging attack that the next 4 weapon swings will generate an additional attack
 -- Ring 15
-UPDATE `item_template` SET `socketColor_1` = 2, `socketBonus`  = 2392   -- +12 Mana per 5 sec
+UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 2392   -- +12 Mana per 5 sec
 WHERE `spellid_1` = @Ring15Spell; -- Regenerate mana equal to 10% of your Intellect every 5 sec, even while casting
 -- Ring 16
 UPDATE `item_template` SET `socketColor_1` = 8, `socketBonus`  = 3753   -- +9 Spell Power 

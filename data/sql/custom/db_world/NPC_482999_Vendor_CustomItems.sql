@@ -22,11 +22,11 @@ SET
 @Ring11ID      = 28793,
 @Ring12ID      = 45297,
 @Ring13ID      = 51001,
-@Ring14ID      = 34230,
+@Ring14ID      = 45471,
 @Ring15ID      = 34837,
 @Ring16ID      = 33498,
 @Ring17ID      = 45326,
-@Ring18ID      = 47700,
+@Ring18ID      = 31326,
 @Ring19ID      = 34625,
 @Ring20ID      = 45157,
 -- Darkmoon Cards
