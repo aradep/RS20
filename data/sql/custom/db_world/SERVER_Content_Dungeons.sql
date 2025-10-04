@@ -69,23 +69,14 @@ INSERT INTO `game_graveyard` (`ID`, `Map`, `x`, `y`, `z`, `Comment`) VALUES
 -- Loot changes
 -- -----------------------------------
 
--- Add 1x extra random BoP to end bosses
-DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Random BoP';
-REPLACE INTO `creature_loot_template` VALUES
-(639,  48208, 48208, 100, 0, 1, 5, 1, 1, 'Edwin VanCleef - Random BoP'),
-(1716, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Bazil Thredd - Random BoP'),
-(3654, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Mutanus the Devourer - Random BoP'),
-(4275, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Archmage Arugal - Random BoP'),
-(4829, 48208, 48208, 100, 0, 1, 5, 1, 1, 'Akumai - Random BoP');
-
 -- Add 1x Darkmoon Card to end bosses
 DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Darkmoon Card';
 REPLACE INTO `creature_loot_template` VALUES
-(639, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Edwin VanCleef - Darkmoon Card'),
-(1716, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Bazil Thredd - Darkmoon Card'),
-(3654, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Mutanus the Devourer - Darkmoon Card'),
-(4275, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Archmage Arugal - Darkmoon Card'),
-(4829, 48207, 48207, 100, 0, 1, 6, 1, 1, 'Akumai - Darkmoon Card');
+(639, 48207, 48207, 100, 0, 1, 9, 1, 1, 'Edwin VanCleef - Darkmoon Card'),
+(1716, 48207, 48207, 100, 0, 1, 9, 1, 1, 'Bazil Thredd - Darkmoon Card'),
+(3654, 48207, 48207, 100, 0, 1, 9, 1, 1, 'Mutanus the Devourer - Darkmoon Card'),
+(4275, 48207, 48207, 100, 0, 1, 9, 1, 1, 'Archmage Arugal - Darkmoon Card'),
+(4829, 48207, 48207, 100, 0, 1, 9, 1, 1, 'Akumai - Darkmoon Card');
 
 -- Add 1x Emblem of Heroism to all bosses (2x to end bosses)
 DELETE FROM `creature_loot_template` WHERE `comment` LIKE '% - Emblem of Heroism';
