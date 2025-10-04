@@ -55,6 +55,7 @@ INSERT INTO `npc_vendor`
 (@Entry,    1,          @DreamShard_x4,          2292), -- Necrology Robes
 (@Entry,    1,          @DreamShard_x4,         12979), -- Firebane Cloak
 -- Leather
+(@Entry,    2,          @DreamShard_x4,          7348), -- Fletchers Gloves
 (@Entry,    2,          @DreamShard_x4,          1121), -- Feet of the Lynx
 (@Entry,    2,          @DreamShard_x4,          1489), -- Gloomshroud Armor
 (@Entry,    2,          @DreamShard_x4,          2314), -- Toughened Leather Armor

@@ -50,7 +50,6 @@ INSERT INTO `npc_vendor`
 (@Entry,     2,     @HonorCoin_x70,    34107), -- Tattered Shoulderpads
 (@Entry,     2,     @HonorCoin_x70,    20427), -- Battle Healers Cloak
 (@Entry,     2,     @HonorCoin_x70,    20428), -- Caretakers Cape
-(@Entry,     2,     @HonorCoin_x70,     7348), -- Fletchers Gloves
 (@Entry,     2,     @HonorCoin_x70,     2041), -- Tunic of Westfall
 (@Entry,     2,     @HonorCoin_x70,     7133), -- Brutal Hauberk
 (@Entry,     2,     @HonorCoin_x70,     5943), -- Rift Bracers

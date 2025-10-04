@@ -15,7 +15,6 @@ SET
 @Ref_PetToy          = 48205,
 @Ref_EngiItem        = 48206,
 @Ref_Darkmoon        = 48207,
-@Ref_BoEBlue         = 48208,
 @Ref_Rings           = 48211;
 
 -- Mystery Box

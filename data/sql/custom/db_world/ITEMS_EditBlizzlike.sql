@@ -120,6 +120,7 @@ UPDATE `item_template` SET `requireddisenchantskill` = 0, `disenchantID` = 101 W
 
 -- Fix broken links
 DELETE dlt FROM `disenchant_loot_template` dlt LEFT JOIN `item_template` it ON dlt.`Entry` = it.`disenchantID` WHERE it.`disenchantID` IS NULL;
+DELETE FROM `reference_loot_template` WHERE `entry` IN (10012,10013,10014,21512);
 
 -- Arcanum and Inscription items
 UPDATE `item_template` SET `requiredreputationfaction`=0, `requiredreputationrank`=0, `requiredlevel`=0, `quality`=3, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `bonding`=0 WHERE `entry` IN (28882,28881,28885,28908,28904,28907); -- Inscription
