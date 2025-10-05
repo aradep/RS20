@@ -50,14 +50,15 @@ INSERT INTO `npc_vendor`
 -- AGM
 (@Entry,    3,          @600Arena,          19024), -- Arena Grand Master
 -- Custom heirloom weapons
-(@Entry,    4,          @800Arena,          48513), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48511), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48402), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48517), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48410), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48519), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48420), -- Custom heirloom weapon
-(@Entry,    4,          @800Arena,          48424), -- Custom heirloom weapon
+(@Entry,    4,          @1500Arena,          40866), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          40869), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          41038), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          41217), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          41275), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          41683), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          41869), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          41965), -- Custom heirloom shoulder
+(@Entry,    4,          @1500Arena,          42011), -- Custom heirloom shoulder
 -- Tabards
 (@Entry,    5,          @1500Arena1800Rating,  45983), -- Furious Tabard
 (@Entry,    5,          @1500Arena2000Rating,  49086), -- Relentless Tabard
