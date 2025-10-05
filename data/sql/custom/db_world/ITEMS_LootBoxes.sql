@@ -198,7 +198,7 @@ SET
 @Money          = 0,
 @Name           = 'Hat Box',
 @Description    = 'Contains a special hat!';
-UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money, `maxcount`=0 where `entry`=@Entry;
 
 -- Loot template - Hat Box PvE
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
@@ -391,7 +391,7 @@ SET
 @Money          = 0,
 @Name           = 'Hat Box',
 @Description    = 'Contains a special hat!';
-UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money, `maxcount`=0 where `entry`=@Entry;
 
 -- Loot template - Hat Box PvP
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
