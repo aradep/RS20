@@ -39,11 +39,11 @@ INSERT INTO `item_loot_template`
 (@Entry,    43102,      0,                  100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,    34052,      0,                  100,        0,          4,          4,          '4x Dream Shard'),
 (@Entry,    51316,      @Ref_Darkmoon,      100,        0,          1,          1,          'Darkmoon Card'),
+(@Entry,    10569,      0,                  100,        5,          1,          1,          'PvE Hat'), -- PvE only reward
 -- Grouped
 (@Entry,    20602,      0,                    0,        1,          1,          1,          'Field Supplies'),
 (@Entry,    10456,      0,                    0,        1,          1,          1,          'Big Bomg Bag'),
 -- Chance
-(@Entry,     10569,     0,                   25,        5,          1,          1,          'PvE Hat'), -- PvE only reward
 (@Entry,        4,      @Ref_PetToy,         10,        7,          1,          1,          'Pet/Toy'),
 (@Entry,        5,      @Ref_Rings,           5,       10,          1,          1,          'Ring of Power'),
 (@Entry,    46114,      0,                    1,       11,          1,          1,          'Mount Certificate');
@@ -69,11 +69,10 @@ INSERT INTO `item_loot_template`
 (@Entry,      43102,      0,                 100,        0,          1,          1,          '1x Frozen Orb'),
 (@Entry,      34052,      0,                 100,        0,          4,          4,          '4x Dream Shard'),
 (@Entry,      51316,      @Ref_Darkmoon,     100,        0,          1,          1,          'Darkmoon Card'),
+(@Entry,      21512,      0,                 100,        5,          1,          1,          'PvP Hat'), -- PvP only reward
 -- Grouped
 (@Entry,      20602,      0,                   0,        1,          1,          1,          'Field Supplies'),
 (@Entry,      10456,      0,                   0,        1,          1,          1,          'Big Bomg Bag'),
--- Chance
-(@Entry,      21512,      0,                  25,        5,          1,          1,          'PvP Hat'), -- PvP only reward
 -- Chance
 (@Entry,          4,      @Ref_PetToy,        15,        7,          1,          1,          'Pet/Toy'),
 (@Entry,          5,      @Ref_Rings,          5,       10,          1,          1,          'Ring of Power'),

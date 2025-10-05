@@ -33,20 +33,20 @@ REPLACE INTO `quest_offer_reward` VALUES
 -- Herod starts Call to Arms quests
 REPLACE INTO `creature_queststarter` VALUES
 -- Alliance --
-(482010, 11335),
-(482010, 11338),
+(482030, 11335),
+(482030, 11338),
 -- Horde--
-(482010, 11342),
-(482010, 11339);
+(482030, 11342),
+(482030, 11339);
 
 -- Herod ends Call to Arms quests
 REPLACE INTO `creature_questender` VALUES   
 -- Alliance --
-(482010, 11335),
-(482010, 11338),
+(482030, 11335),
+(482030, 11338),
 -- Horde--
-(482010, 11342),
-(482010, 11339);
+(482030, 11342),
+(482030, 11339);
 
 -- Remove disable for Call to Arms quests
 DELETE FROM `disables` WHERE `comment` LIKE '%Call to Arms:%';

@@ -34,11 +34,11 @@ REPLACE INTO `quest_offer_reward` VALUES
 
 -- Herod starts breadcrumb
 REPLACE INTO `creature_queststarter` VALUES
-(482010, 51339), -- DM breadcrumb
-(482010, 51342), -- WC breadcrumb
-(482010, 51335), -- SFK breadcrumb
-(482010, 51336), -- BFD breadcrumb
-(482010, 51338); -- STK breadcrumb
+(482030, 51339), -- DM breadcrumb
+(482030, 51342), -- WC breadcrumb
+(482030, 51335), -- SFK breadcrumb
+(482030, 51336), -- BFD breadcrumb
+(482030, 51338); -- STK breadcrumb
 
 -- Dungeon NPCs end breadcrumb
 REPLACE INTO `creature_questender` VALUES

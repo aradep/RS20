@@ -4,47 +4,32 @@
 -- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Mall - Herod
+-- Mall - Heirlooms
 -- -----------------------------------
 
 -- Creature
 SET
-@Entry      = 482010,
-@Model      = 29537,
-@Scale      = 0.45,
-@HoverHeight= 2.5,
-@Name       = "Herod",
-@Title      = "The Custodian",
-@Icon       = "Speak",
-@Rank       = 1,
-@Type       = 7,
+@Entry      = 482009,
+@Model      = 18154,
+@Scale      = 0.18,
+@Name       = "K\'uri",
+@Title      = "Heirlooms",
+@Icon       = "Buy", -- Directions, Gunner, vehicleCursor, Driver, Attack, Buy, Speak, Pickup, Interact, Trainer, Taxi, Repair, LootAll --
+@Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
+@Type       = 7, -- 0:None, 1:Beast, 2:Dragonkin, 3:Demon, 4:Elemental, 5:Giant, 6:Undead, 7:Humanoid, 8:Critter, 9:Mechanical --
+@Flags      = 128, -- 128: Normal vendor, 4224: Repair vendor
+@Level      = 23,
 @Class      = 1,
-@Flags      = 4227,
-@Level      = 20,
 @Faction    = 35;
-DELETE FROM `creature_template` WHERE `Entry` = @Entry;
-INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`, `unit_flags`, `MovementType`, `hoverHeight`, `ScriptName`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class, 0, 0, @HoverHeight, '');
-DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
+DELETE FROM `creature_template` WHERE Entry = @Entry;
+INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlevel`, `Maxlevel`, `Faction`, `Rank`, `NpcFlag`, `Type`, `unit_class`) VALUES (@Entry, @Name, @Title, @Icon, @Level, @Level, @Faction, @Rank, @Flags, @Type, @Class);                    
+DELETE FROM `creature_template_model` WHERE CreatureID = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
-
--- Gossip text
-SET @text = 'May we all live on in the immortal stone.';
-SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
-DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
-INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
-DELETE FROM `npc_text` WHERE `id` = @entry;
-INSERT INTO `npc_text` VALUES (@entry, @text, @text, @broadcast, 0, 0, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
-DELETE FROM `broadcast_text` WHERE `id` IN (@broadcast);
-INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
-
--- Ghost visual
--- REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 0, 0, 0, '57932');
 
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1986.17, -431.643, 11.2724, 3.15336, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.02, -431.596, 11.2723, 0.0029068, 300, 0, 0, 605, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
 
 -- Extended costs
 SET
