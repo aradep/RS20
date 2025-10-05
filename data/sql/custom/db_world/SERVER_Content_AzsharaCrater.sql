@@ -781,12 +781,12 @@ SET @Reference_BossLoot   = 48214;
 DELETE FROM `reference_loot_template` WHERE `entry` IN (@Reference_NormalLoot, @Reference_EliteLoot, @Reference_BossLoot);
 INSERT INTO `reference_loot_template` VALUES
 -- Normal
-(@Reference_NormalLoot,  34053,     0,  20, 0, 1, 0, 1, 1, 'Small Dream Shard'),
+(@Reference_NormalLoot,  34053,     0,  10, 0, 1, 0, 1, 1, 'Small Dream Shard'),
 -- Elite
-(@Reference_EliteLoot,   34052,     0, 100, 0, 1, 0, 1, 1, 'Small Dream Shard'),
+(@Reference_EliteLoot,   34052,     0,  30, 0, 1, 0, 1, 2, 'Small Dream Shard'),
 -- Boss
 (@Reference_BossLoot,    37836,     0, 100, 0, 1, 0, 5, 5, '5x Honor coin'),
-(@Reference_BossLoot,    34052,     0, 100, 0, 1, 0, 4, 4, '4x Dream Shard');
+(@Reference_BossLoot,    34052,     0, 100, 0, 1, 0, 2, 2, '2x Dream Shard');
 
 -- Creature loot tables
 DELETE FROM `creature_loot_template` WHERE `entry` IN (@Naga_Engineer,@Naga_Sorceress,@Naga_Myrmidon,@Naga_Siren,@Naga_Warrior,@Naga_Oracle,@Naga_Slavemaster,@Naga_Ambusher,@Naga_Guardian,@Naga_Defender,@Naga_Soothsayer,@Naga_Enchantress,@Naga_Champion,@Naga_Emissary,@Murloc_Coastrunner,@Murloc_Tidehunter,@Murloc_Flesheater,@Murloc_Hunter,@Murloc_Netter,@Murloc_Oracle,@Murloc_Nightcrawler,@Murloc_Scout,@Grovestalker_Lynx,@Buzzard,@Giant_Buzzard,@Wandering_Skeleton,@Furbolg_Hunter,@Furbolg_Warrior,@Furbolg_Shaman,@Furbolg_Trapper,@Furbolg_Elder,@Furbolg_Ursa,@Furbold_Denwatcher,@FelSatyr_Satyr,@FelSatyr_Rogue,@FelSatyr_Trickster,@FelSatyr_Betrayer,@FelSatyr_Felsworn,@FelSatyr_Shadowstalker,@FelSatyr_Hellcaller,@Felhound,@Raptor_Raptor,@Raptor_Lashtail,@Raptor_Devourer,@Serpent_Serpent,@Mangal_Crocolisk,@Enchanted_Tiki_Warrior,@Dragonspawn_Dragonspawn,@Dragonspawn_Wyrmkin,@Dragonspawn_Broodling,@Gnoll_Alpha,@Gnoll_Mystic,@Gnoll_Brute,@Gnoll_Shaman,@Gnoll_Gnoll,@Goblin_Worker,@Goblin_Miner,@Goblin_Foreman,@Goblin_Geologist,@Crystal_Spider,@Ogre_Enforcer,@Ogre_Mauler,@Ogre_Mage,@Ogre_Hyena,@Ogre_Brute,@Ogre_Reaver,@Ogre_Mage_Lord,@Ogre_Captain,@Ogre_Warlock,@Hyena_alpha,@Gorloc_Waddler,@Gorloc_Gibberer,@Gorloc_Steam_Belcher,@Gorloc_Mud_Splasher,@Gorloc_Hunter,@Gorloc_Dredger,@Gorloc_Oracle,@Wolvar_Tracker,@Wolvar_Hunter,@Wolvar_Scavenger,@Wolvar_Spearbearer,@Wolvar_Ravager,@Wolvar_Berserker,@Cave_Beast,@Cave_Creeper,@Cave_Rager,@Sap_Beast,@Withered_Treant,@Harpy_Ripper,@Harpy_Harpy,@Harpy_Roguefeather,@Harpy_Slayer,@Harpy_Ambusher,@Harpy_Windcaller,@Harpy_Storm_Witch,@Turtle_Tortoise,@Turtle_Snapper,@Turtle_Borer,@Fire_Elemental,@Air_Elemental,@Water_Elemental,@Wildsatyr_Satyr,@Wildsatyr_Rogue,@Wildsatyr_Trickster,@Wildsatyr_Felsworn,@Wildsatyr_Shadowstalker,@Wildsatyr_Hellcaller,@Wildsatyr_Imp,@Rogue_Voidwalker,@Collapsing_Voidwalker,@Voidspawn,@Unstable_Voidwraith,@Voidshrieker,@Shadowfiend);
