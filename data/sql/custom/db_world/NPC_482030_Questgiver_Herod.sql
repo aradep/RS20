@@ -28,7 +28,7 @@ DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
 -- Gossip text
-SET @text = 'May we all live on in the immortal stone.';
+SET @text = 'May we all live on in immortal stone.';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry`=@entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -44,4 +44,4 @@ REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 0, 0, 0, '57932'
 -- Placement
 DELETE FROM `creature` WHERE `id1` = @Entry;
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES 
-(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1986.17, -431.643, 11.2724, 3.15336, 300, 0, 0, 484, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
+(@Entry, 0, 0, 189, 0, 0, 1, 1, 0, 1978.02, -431.596, 11.2723, 0.0029068, 300, 0, 0, 605, 0, 0, 0, 0, 0, '', NULL, 0, 'CustomNPC');
