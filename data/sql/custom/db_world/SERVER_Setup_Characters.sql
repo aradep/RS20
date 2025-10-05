@@ -114,7 +114,6 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (4,  2641, 'Dismiss Pet'),
 (4,  6991, 'Feed Pet'),
 (4,   982, 'Revive Pet'),
-(4, 65220, 'Avoidance'),
 (8, 8679, 'Instant Poison'),
 (8, 3408, 'Crippling Poison'),
 (32, 56222, 'Dark Command'),
@@ -127,7 +126,6 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (64, 5394, 'Healing Stream Totem'),
 (256,  697, 'Summon Voidwalker'),
 (256,  712, 'Summon Succubus'),
-(256,32233, 'Avoidance'),
 -- Weapon Spells
 (431,   201,   'ONE-HANDED SWORDS'),
 (39,    202,   'TWO-HANDED SWORDS'),
