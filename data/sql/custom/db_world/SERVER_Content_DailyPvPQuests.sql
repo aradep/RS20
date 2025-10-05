@@ -44,17 +44,8 @@ REPLACE INTO `creature_questender` VALUES
 (482010, 11342),
 (482010, 11339);
 
--- Delete exclusive group, both quests can be done
-UPDATE `quest_template_addon` SET `exclusivegroup` = 0 WHERE `ID` IN (11339,11342,11335,11338);
+-- Exclusive group, only one daily PvP quest can be done.
+UPDATE `quest_template_addon` SET `exclusivegroup` = 1 WHERE `ID` IN (11339,11342,11335,11338);
 
 -- Remove disable for Call to Arms quests
 DELETE FROM `disables` WHERE `comment` LIKE '%Call to Arms:%';
-
--- Pool Dungeon quests together and only have 2 active per day, same as the PvP quests
-REPLACE INTO `pool_template` VALUES (48200, 2, 'Dungeon Daily');
-REPLACE INTO `pool_quest` VALUES
-(48201, 48200, 'Dungeon Daily'),
-(48202, 48200, 'Dungeon Daily'),
-(48203, 48200, 'Dungeon Daily'),
-(48204, 48200, 'Dungeon Daily'),
-(48205, 48200, 'Dungeon Daily');
