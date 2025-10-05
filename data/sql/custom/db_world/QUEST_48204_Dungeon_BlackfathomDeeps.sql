@@ -29,7 +29,7 @@ SET
 
 @LogTitle                   = 'Pearl Diving',
 @QuestDescription           = '"Just wear this" he says, "the murlocs won\'t even notice you!" Well the local wildlife down here is more than just murlocs and some of them have big meaty claws.$b$bListen, you look strong. I need you to go in there and clear them out so I can get back to pearl diving. In exchange I\'ll give you some of the treasures I found.$b$bDo we have a deal?',
-@LogDescription             = 'Mergle the Murloc wants you to slay the hostile wildlife within Blackfathom Deeps.',
+@LogDescription             = 'Mergle the Murloc wants you to clear out the hostile wildlife within Blackfathom Deeps.',
 @AreaDescription            = '',
 @ObjectiveText1             = 'Aku\'mai slain',
 @ObjectiveText2             = '',
