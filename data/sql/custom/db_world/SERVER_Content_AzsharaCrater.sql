@@ -2357,8 +2357,8 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 SET @Creature = @Dark_Illidan,
 @OnAggro=4, @InCombat=0, @Cast=11, @Target=2, @Self=1, @NoOverlap=32,
 @SPELL_1=52633, @COOLDOWN_1=1000,  @RECASTMIN_1=2000,  @RECASTMAX_1=4000,  @CHANCE_1=50, -- Spell1 -- Cast often - Void Strike
-@SPELL_2=69405, @COOLDOWN_2=8000,  @RECASTMIN_2=8000,  @RECASTMAX_2=14000,  @CHANCE_2=30, -- Spell2 -- Cast semi - Consuming Shadows
-@SPELL_3=33916, @COOLDOWN_3=15000, @RECASTMIN_3=15000, @RECASTMAX_3=20000, @CHANCE_3=20; -- Spell3 -- Case rare - Void Drain
+@SPELL_2=69405, @COOLDOWN_2=5000,  @RECASTMIN_2=5000,  @RECASTMAX_2=8000,  @CHANCE_2=30, -- Spell2 -- Cast semi - Consuming Shadows
+@SPELL_3=20741, @COOLDOWN_3=10000, @RECASTMIN_3=10000, @RECASTMAX_3=16000, @CHANCE_3=20; -- Spell3 -- Case rare - Shadow Bolt Volley
 DELETE FROM `smart_scripts` WHERE `entryorguid`=@Creature;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Creature, 0, 2, 0, @InCombat, 0, @CHANCE_1, 0, 0, @COOLDOWN_1, @RECASTMIN_1, @RECASTMAX_1, 0, @Cast, @SPELL_1, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 3, 0, @InCombat, 0, @CHANCE_2, 0, 0, @COOLDOWN_2, @RECASTMIN_2, @RECASTMAX_2, 0, @Cast, @SPELL_2, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target'),(@Creature, 0, 4, 0, @InCombat, 0, @CHANCE_3, 0, 0, @COOLDOWN_3, @RECASTMIN_3, @RECASTMAX_3, 0, @Cast, @SPELL_3, @NoOverlap, 0, 0, 0, 0, @Target, 0, 0, 0, 0, 0, 0, 0, 0, 'In Combat - Cast on Target');
 
