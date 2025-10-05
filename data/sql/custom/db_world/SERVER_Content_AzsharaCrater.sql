@@ -632,7 +632,7 @@ UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
 SET @entry = @Surveyor_Delryn;
 SET @text = 'The law can\'t protect you here. It would be wise to prepare before venturing forth.';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text` WHERE `id` = @entry;
@@ -644,7 +644,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 SET @entry = @Farseer_Serena;
 SET @text = 'Most children of Azeroth will never get to see this place.';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text` WHERE `id` = @entry;
@@ -656,7 +656,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 SET @entry = @Forward_Scout_Razza;
 SET @text = 'What can Razza do for ye, mon?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text` WHERE `id` = @entry;
@@ -668,7 +668,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 SET @entry = @Commander_Gara;
 SET @text = 'Don\'t be startin\' any fights in my camp, got it?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -680,7 +680,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 SET @entry = @Spymaster_Jarre;
 SET @text = 'Stay on yer toes, $R. It may be pretty \'round here but beauty attracts danger.';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -692,7 +692,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 SET @entry = @Packmaster_Stonebrow;
 SET @text = 'What kin I do for ye?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -706,7 +706,7 @@ REPLACE INTO `creature_template_addon` VALUES (@Entry, 0, 0, 0, 1, 69, 0, NULL);
 SET @entry = @Malik_Stillblade;
 SET @text = 'How may I assist you?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -718,7 +718,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 SET @entry = @Trixy_the_Fixer;
 SET @text = 'Got something that needs fixin?';
 SET @broadcast = (@entry + 100000);
-UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
+UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES (@entry, @entry);
 DELETE FROM `npc_text`              WHERE `id` = @entry;
@@ -1017,14 +1017,14 @@ REPLACE INTO `creature_loot_template` VALUES
 (@FelSatyr_Hellcaller,   38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@FelSatyr_Rogue,        38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@FelSatyr_Satyr,        38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
-(@FelSatyr_Shadowstalker,38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
+(@FelSatyr_Shadowstalker, 38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@FelSatyr_Trickster,    38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@Wildsatyr_Assassin,    38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@Wildsatyr_Hellcaller,  38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@Wildsatyr_Imp,         38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@Wildsatyr_Rogue,       38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 (@Wildsatyr_Satyr,       38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
-(@Wildsatyr_Shadowstalker,38512,0,100,0,1,0,1,1,'Quest Item - Malformed Satyr Horn'),
+(@Wildsatyr_Shadowstalker, 38512,0,100,0,1,0,1,1,'Quest Item - Malformed Satyr Horn'),
 (@Wildsatyr_Trickster,   38512, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Malformed Satyr Horn'),
 -- Vulture Talon
 (@Buzzard,       5064, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Vulture Talon'),
@@ -1059,7 +1059,7 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Naga_Guardian,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Defender,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Soothsayer, 12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
-(@Naga_Enchantress,12923,0,100,0,1,0,2,3,'Quest Item - Polished Naga Scales'),
+(@Naga_Enchantress, 12923,0,100,0,1,0,2,3,'Quest Item - Polished Naga Scales'),
 (@Naga_Champion,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Emissary,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 -- Wolvar Paw
@@ -1080,7 +1080,7 @@ REPLACE INTO `creature_loot_template` VALUES
 -- Hexed Tiki Mask
 (@Enchanted_Tiki_Warrior, 43670, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Hexed Tiki Mask'),
 -- Black Dragonscale
-(@Dragonspawn_Dragonspawn,15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
+(@Dragonspawn_Dragonspawn, 15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
 (@Dragonspawn_Broodling,  15416,0,100,0,1,0,1,1,'Quest Item - Black Dragonscales'),
 (@Dragonspawn_Wyrmkin,    15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
 -- Petrified Bark
@@ -5033,3 +5033,5 @@ DELETE FROM `creature_questender` WHERE `id` IN (7765);
 
 -- Fix broken conditions because I messed with creature loot
 DELETE FROM `conditions` WHERE `SourceGroup` IN (429,431,432,433,568,7149,7523,7524,10816,17981,18870,28080,28081,@Naga_Engineer,@Naga_Sorceress,@Naga_Myrmidon,@Naga_Siren,@Naga_Warrior,@Naga_Oracle,@Naga_Slavemaster,@Naga_Ambusher,@Naga_Guardian,@Naga_Defender,@Naga_Soothsayer,@Naga_Enchantress,@Naga_Champion,@Naga_Emissary,@Murloc_Coastrunner,@Murloc_Tidehunter,@Murloc_Flesheater,@Murloc_Hunter,@Murloc_Netter,@Murloc_Oracle,@Murloc_Nightcrawler,@Murloc_Scout,@Grovestalker_Lynx,@Buzzard,@Giant_Buzzard,@Wandering_Skeleton,@Furbolg_Hunter,@Furbolg_Warrior,@Furbolg_Shaman,@Furbolg_Trapper,@Furbolg_Elder,@Furbolg_Ursa,@Furbold_Denwatcher,@FelSatyr_Satyr,@FelSatyr_Rogue,@FelSatyr_Trickster,@FelSatyr_Betrayer,@FelSatyr_Felsworn,@FelSatyr_Shadowstalker,@FelSatyr_Hellcaller,@Felhound,@Raptor_Raptor,@Raptor_Lashtail,@Raptor_Devourer,@Serpent_Serpent,@Mangal_Crocolisk,@Enchanted_Tiki_Warrior,@Dragonspawn_Dragonspawn,@Dragonspawn_Wyrmkin,@Dragonspawn_Broodling,@Gnoll_Alpha,@Gnoll_Mystic,@Gnoll_Brute,@Gnoll_Shaman,@Gnoll_Gnoll,@Goblin_Worker,@Goblin_Miner,@Goblin_Foreman,@Goblin_Geologist,@Crystal_Spider,@Ogre_Enforcer,@Ogre_Mauler,@Ogre_Mage,@Ogre_Hyena,@Ogre_Brute,@Ogre_Reaver,@Ogre_Mage_Lord,@Ogre_Captain,@Ogre_Warlock,@Hyena_alpha,@Gorloc_Waddler,@Gorloc_Gibberer,@Gorloc_Steam_Belcher,@Gorloc_Mud_Splasher,@Gorloc_Hunter,@Gorloc_Dredger,@Gorloc_Oracle,@Wolvar_Tracker,@Wolvar_Hunter,@Wolvar_Scavenger,@Wolvar_Spearbearer,@Wolvar_Ravager,@Wolvar_Berserker,@Cave_Beast,@Cave_Creeper,@Cave_Rager,@Sap_Beast,@Withered_Treant,@Harpy_Ripper,@Harpy_Harpy,@Harpy_Roguefeather,@Harpy_Slayer,@Harpy_Ambusher,@Harpy_Windcaller,@Harpy_Storm_Witch,@Turtle_Tortoise,@Turtle_Snapper,@Turtle_Borer,@Wildsatyr_Satyr,@Wildsatyr_Rogue,@Wildsatyr_Trickster,@Wildsatyr_Felsworn,@Wildsatyr_Shadowstalker,@Wildsatyr_Hellcaller,@Wildsatyr_Imp);
+
+-- Finish :)

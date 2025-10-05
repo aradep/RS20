@@ -148,44 +148,44 @@ REPLACE INTO `spell_dbc` VALUES
 (35434, 0, 0, 0, 256, 0, 8192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 15, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31, 8, 53, 0, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4050, 0, 1, 0, 0, 'Inscription of the Oracle', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188,'Permanently adds 6 mana per 5 sec to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0),
 (35438, 0, 0, 0, 256, 0, 8192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 15, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31, 8, 53, 0, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2850, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4050, 0, 1, 0, 0, 'Inscription of the Blade', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188,'Permanently adds 13 critical strike rating to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712190, '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 16712188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0);
 
--- Custom heirloom Furious Gladiator shoulder armor
--- Furious Gladiators Plate Shoulders (Warrior)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=300, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40866;
--- Furious Gladiators Scaled Shoulders (Paladin)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=301, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40869;
--- Furious Gladiators Ringmail Spaulders (Shaman)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=303, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41038;
--- Furious Gladiators Chain Spaulders (Hunter)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41217;
--- Furious Gladiators Kodohide Spaulders (Druid)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=305, `scalingstatvalue`=65, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41275;
--- Furious Gladiators Leather Spaulders (Rogue)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41683;
--- Furious Gladiators Mooncloth Mantle (Priest)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41869;
--- Furious Gladiators Silk Amice (Mage)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41965;
--- Furious Gladiators Felweave Amice (Warlock)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 42011;
+-- Custom heirloom Gladiator shoulder armor
+-- Warrior
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Plate Shoulders',     `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=300, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40866;
+-- Paladin
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Scaled Shoulders',    `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=301, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40869;
+-- Shaman
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Ringmail Spaulders',  `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=303, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41038;
+-- Hunter
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Chain Spaulders',     `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41217;
+-- Druid
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Kodohide Spaulders',  `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=305, `scalingstatvalue`=65, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41275;
+-- Rogue
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Leather Spaulders',   `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41683;
+-- Priest
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Mooncloth Mantle',    `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41869;
+-- Mage
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Silk Amice',          `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41965;
+-- Warlock
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Felweave Amice',      `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=0, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 42011;
 
 /*
--- Custom heirloom Furious Gladiator shoulder armor (with PvP set bonuses)
--- Furious Gladiators Plate Shoulders (Warrior)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=37513, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=300, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40866;
--- Furious Gladiators Scaled Shoulders (Paladin)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=61776, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=301, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40869;
--- Furious Gladiators Ringmail Spaulders (Shaman)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=44299, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=303, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41038;
--- Furious Gladiators Chain Spaulders (Hunter)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=44292, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41217;
--- Furious Gladiators Kodohide Spaulders (Druid)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=23218, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=305, `scalingstatvalue`=65, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41275;
--- Furious Gladiators Leather Spaulders (Rogue)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=21975, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41683;
--- Furious Gladiators Mooncloth Mantle (Priest)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=33333, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41869;
--- Furious Gladiators Silk Amice (Mage)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=44302, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41965;
--- Furious Gladiators Felweave Amice (Warlock)
-UPDATE `item_template` SET `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=23047, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 42011;
+-- Custom heirloom Gladiator shoulder armor (with PvP set bonuses)
+-- Warrior
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Plate Shoulders',     `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=37513, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=300, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40866;
+-- Paladin
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Scaled Shoulders',    `requiredlevel`=0, `subclass`=3, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=61776, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=301, `scalingstatvalue`=257, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 40869;
+-- Shaman
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Ringmail Spaulders',  `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=44299, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=303, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41038;
+-- Hunter
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Chain Spaulders',     `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=44292, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41217;
+-- Druid
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Kodohide Spaulders',  `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=23218, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=305, `scalingstatvalue`=65, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41275;
+-- Rogue
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Leather Spaulders',   `requiredlevel`=0, `subclass`=2, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=21975, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=302, `scalingstatvalue`=129, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41683;
+-- Priest
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Mooncloth Mantle',    `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=33333, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41869;
+-- Mage
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Silk Amice',          `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=44302, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 41965;
+-- Warlock
+UPDATE `item_template` SET `name`='Dusty Gladiator\'s Felweave Amice',      `requiredlevel`=0, `subclass`=1, `itemset`=0, `armor`=0, `quality`=7, `itemlevel`=35, `buyprice`=0, `sellprice`=0, `spellid_1`=23047, `spelltrigger_1`=1, `spellid_2`=0, `flags`=134221824, `scalingstatdistribution`=306, `scalingstatvalue`=33, `socketColor_1`=0, `socketcolor_2`=0, `socketBonus`=0 WHERE `entry` = 42011;
 */
