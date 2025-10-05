@@ -716,7 +716,7 @@ INSERT INTO `broadcast_text` VALUES (@broadcast, 0, @text, @text, 0, 1, 0, 0, 0,
 
 -- Trixy the Fixer
 SET @entry = @Trixy_the_Fixer;
-SET @text = 'Got something that needs fixin\'?';
+SET @text = 'Got something that needs fixin?';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET npcflag = npcflag|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu`           WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -776,17 +776,80 @@ REPLACE INTO `creature_template_addon` VALUES (@Dark_Illidan, 0, 0, 0, 0, 0, 0, 
 SET @Reference_NormalLoot = 48212;
 SET @Reference_EliteLoot  = 48213;
 SET @Reference_BossLoot   = 48214;
+SET @Reference_RandomBoE  = 48215;
 
 -- Reference loot tables
 DELETE FROM `reference_loot_template` WHERE `entry` IN (@Reference_NormalLoot, @Reference_EliteLoot, @Reference_BossLoot);
 INSERT INTO `reference_loot_template` VALUES
 -- Normal
-(@Reference_NormalLoot,  34053,     0,  10, 0, 1, 0, 1, 1, 'Small Dream Shard'),
+(@Reference_NormalLoot,  34053,                0,                     20, 0, 1, 0, 1, 1, 'Small Dream Shard'),
+(@Reference_NormalLoot,  @Reference_RandomBoE, @Reference_RandomBoE,   5, 0, 1, 0, 1, 1, 'Random BoE'),
 -- Elite
-(@Reference_EliteLoot,   34052,     0,  30, 0, 1, 0, 1, 2, 'Small Dream Shard'),
+(@Reference_EliteLoot,   34052,                0,                     20, 0, 1, 0, 1, 1, 'Dream Shard'),
+(@Reference_EliteLoot,   @Reference_RandomBoE, @Reference_RandomBoE,  10, 0, 1, 0, 1, 1, 'Random BoE'),
 -- Boss
-(@Reference_BossLoot,    37836,     0, 100, 0, 1, 0, 5, 5, '5x Honor coin'),
-(@Reference_BossLoot,    34052,     0, 100, 0, 1, 0, 2, 2, '2x Dream Shard');
+(@Reference_BossLoot,    37836,                0,                    100, 0, 1, 0, 5, 5, '5x Honor coin'),
+(@Reference_BossLoot,    34052,                0,                    100, 0, 1, 0, 2, 2, '2x Dream Shard'),
+(@Reference_BossLoot,    @Reference_RandomBoE, @Reference_RandomBoE, 100, 0, 1, 0, 1, 1, 'Random BoE');
+
+-- Reference template - Field supplies potions
+DELETE FROM `reference_loot_template` WHERE `entry` = @Reference_RandomBoE;
+INSERT INTO `reference_loot_template` 
+-- ----------------------------------------------------------------------------------------------------------------------
+(`Entry`,               `Item`,   `Chance`,     `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
+-- ----------------------------------------------------------------------------------------------------------------------
+(@Reference_RandomBoE,  4320,      100,         1,          1,          1,          'Spidersilk Boots'),
+(@Reference_RandomBoE,  45626,     100,         1,          1,          1,          'Spidersilk Drape'),
+(@Reference_RandomBoE,  12998,     100,         1,          1,          1,          'Magicians Mantle'),
+(@Reference_RandomBoE,  1486,      100,         1,          1,          1,          'Tree Bark Jacket'),
+(@Reference_RandomBoE,  2911,      100,         1,          1,          1,          'Kellers Girdle'),
+(@Reference_RandomBoE,  12987,     100,         1,          1,          1,          'Darkweave Breeches'),
+(@Reference_RandomBoE,  12977,     100,         1,          1,          1,          'Magefist Gloves'),
+(@Reference_RandomBoE,  2059,      100,         1,          1,          1,          'Sentry Cloak'),
+(@Reference_RandomBoE,  1974,      100,         1,          1,          1,          'Mindthrust Bracers'),
+(@Reference_RandomBoE,  2292,      100,         1,          1,          1,          'Necrology Robes'),
+(@Reference_RandomBoE,  12979,     100,         1,          1,          1,          'Firebane Cloak'),
+(@Reference_RandomBoE,  7348,      100,         1,          1,          1,          'Fletchers Gloves'),
+(@Reference_RandomBoE,  1121,      100,         1,          1,          1,          'Feet of the Lynx'),
+(@Reference_RandomBoE,  1489,      100,         1,          1,          1,          'Gloomshroud Armor'),
+(@Reference_RandomBoE,  2314,      100,         1,          1,          1,          'Toughened Leather Armor'),
+(@Reference_RandomBoE,  12988,     100,         1,          1,          1,          'Starsight Tunic'),
+(@Reference_RandomBoE,  12999,     100,         1,          1,          1,          'Drakewing Bands'),
+(@Reference_RandomBoE,  12982,     100,         1,          1,          1,          'Silverlinked Footguards'),
+(@Reference_RandomBoE,  12994,     100,         1,          1,          1,          'Thorbias Gauntlets'),
+(@Reference_RandomBoE,  39897,     100,         1,          1,          1,          'Azure Shoulderguards'),
+(@Reference_RandomBoE,  12978,     100,         1,          1,          1,          'Stormbringer Belt'),
+(@Reference_RandomBoE,  5425,      100,         1,          1,          1,          'Runescale Girdle'),
+(@Reference_RandomBoE,  6332,      100,         1,          1,          1,          'Black Pearl Ring'),
+(@Reference_RandomBoE,  12985,     100,         1,          1,          1,          'Ring of Defense'),
+(@Reference_RandomBoE,  12996,     100,         1,          1,          1,          'Band of Purification'),
+(@Reference_RandomBoE,  30804,     100,         1,          1,          1,          'Bronze Band of Force'),
+(@Reference_RandomBoE,  1481,      100,         1,          1,          1,          'Grimclaw'),
+(@Reference_RandomBoE,  2194,      100,         1,          1,          1,          'Diamond Hammer'),
+(@Reference_RandomBoE,  2236,      100,         1,          1,          1,          'Blackfang'),
+(@Reference_RandomBoE,  3413,      100,         1,          1,          1,          'Doomspike'),
+(@Reference_RandomBoE,  3021,      100,         1,          1,          1,          'Ranger Bow'),
+(@Reference_RandomBoE,  890,       100,         1,          1,          1,          'Twisted Chanters Staff'),
+(@Reference_RandomBoE,  3415,      100,         1,          1,          1,          'Staff of the Friar'),
+(@Reference_RandomBoE,  2271,      100,         1,          1,          1,          'Staff of the Blessed Seer'),
+(@Reference_RandomBoE,  2567,      100,         1,          1,          1,          'Evocators Blade'),
+(@Reference_RandomBoE,  12990,     100,         1,          1,          1,          'Razors Edge'),
+(@Reference_RandomBoE,  12992,     100,         1,          1,          1,          'Searing Blade'),
+(@Reference_RandomBoE,  12989,     100,         1,          1,          1,          'Gargoyles Bite'),
+(@Reference_RandomBoE,  12983,     100,         1,          1,          1,          'Rakzur Club'),
+(@Reference_RandomBoE,  13136,     100,         1,          1,          1,          'Lil Timmys Peashooter'),
+(@Reference_RandomBoE,  935,       100,         1,          1,          1,          'Night Watch Shortsword'),
+(@Reference_RandomBoE,  5423,      100,         1,          1,          1,          'Boahns Fang'),
+(@Reference_RandomBoE,  5426,      100,         1,          1,          1,          'Serpents Kiss'),
+(@Reference_RandomBoE,  12975,     100,         1,          1,          1,          'Prospector Axe'),
+(@Reference_RandomBoE,  12976,     100,         1,          1,          1,          'Ironpatch Blade'),
+(@Reference_RandomBoE,  2879,      100,         1,          1,          1,          'Antipodean Rod'),
+(@Reference_RandomBoE,  5183,      100,         1,          1,          1,          'Pulsating Hydra Heart'),
+(@Reference_RandomBoE,  12997,     100,         1,          1,          1,          'Redbeard Crest'),
+(@Reference_RandomBoE,  43654,     100,         1,          1,          1,          'Tome of the Dawn'),
+(@Reference_RandomBoE,  43655,     100,         1,          1,          1,          'Book of Survival'),
+(@Reference_RandomBoE,  43515,     100,         1,          1,          1,          'Mystic Tome');
+-- ----------------------------------------------------------------------------------------------------------------------
 
 -- Creature loot tables
 DELETE FROM `creature_loot_template` WHERE `entry` IN (@Naga_Engineer,@Naga_Sorceress,@Naga_Myrmidon,@Naga_Siren,@Naga_Warrior,@Naga_Oracle,@Naga_Slavemaster,@Naga_Ambusher,@Naga_Guardian,@Naga_Defender,@Naga_Soothsayer,@Naga_Enchantress,@Naga_Champion,@Naga_Emissary,@Murloc_Coastrunner,@Murloc_Tidehunter,@Murloc_Flesheater,@Murloc_Hunter,@Murloc_Netter,@Murloc_Oracle,@Murloc_Nightcrawler,@Murloc_Scout,@Grovestalker_Lynx,@Buzzard,@Giant_Buzzard,@Wandering_Skeleton,@Furbolg_Hunter,@Furbolg_Warrior,@Furbolg_Shaman,@Furbolg_Trapper,@Furbolg_Elder,@Furbolg_Ursa,@Furbold_Denwatcher,@FelSatyr_Satyr,@FelSatyr_Rogue,@FelSatyr_Trickster,@FelSatyr_Betrayer,@FelSatyr_Felsworn,@FelSatyr_Shadowstalker,@FelSatyr_Hellcaller,@Felhound,@Raptor_Raptor,@Raptor_Lashtail,@Raptor_Devourer,@Serpent_Serpent,@Mangal_Crocolisk,@Enchanted_Tiki_Warrior,@Dragonspawn_Dragonspawn,@Dragonspawn_Wyrmkin,@Dragonspawn_Broodling,@Gnoll_Alpha,@Gnoll_Mystic,@Gnoll_Brute,@Gnoll_Shaman,@Gnoll_Gnoll,@Goblin_Worker,@Goblin_Miner,@Goblin_Foreman,@Goblin_Geologist,@Crystal_Spider,@Ogre_Enforcer,@Ogre_Mauler,@Ogre_Mage,@Ogre_Hyena,@Ogre_Brute,@Ogre_Reaver,@Ogre_Mage_Lord,@Ogre_Captain,@Ogre_Warlock,@Hyena_alpha,@Gorloc_Waddler,@Gorloc_Gibberer,@Gorloc_Steam_Belcher,@Gorloc_Mud_Splasher,@Gorloc_Hunter,@Gorloc_Dredger,@Gorloc_Oracle,@Wolvar_Tracker,@Wolvar_Hunter,@Wolvar_Scavenger,@Wolvar_Spearbearer,@Wolvar_Ravager,@Wolvar_Berserker,@Cave_Beast,@Cave_Creeper,@Cave_Rager,@Sap_Beast,@Withered_Treant,@Harpy_Ripper,@Harpy_Harpy,@Harpy_Roguefeather,@Harpy_Slayer,@Harpy_Ambusher,@Harpy_Windcaller,@Harpy_Storm_Witch,@Turtle_Tortoise,@Turtle_Snapper,@Turtle_Borer,@Fire_Elemental,@Air_Elemental,@Water_Elemental,@Wildsatyr_Satyr,@Wildsatyr_Rogue,@Wildsatyr_Trickster,@Wildsatyr_Felsworn,@Wildsatyr_Shadowstalker,@Wildsatyr_Hellcaller,@Wildsatyr_Imp,@Rogue_Voidwalker,@Collapsing_Voidwalker,@Voidspawn,@Unstable_Voidwraith,@Voidshrieker,@Shadowfiend);
