@@ -10,8 +10,8 @@
 -- PvP Rewards
 SET 
 @Item   = 45986, -- Spoils of War
-@Honor  = 150,
-@Arena  = 50,
+@Honor  = 0,
+@Arena  = 0,
 @Gold   = 250000;
 
 -- PvP Daily Quests

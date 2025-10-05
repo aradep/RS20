@@ -56,7 +56,7 @@ SET
 @Money          = 0,
 @Name           = 'Spoils of War',
 @Description    = 'Contains random items.';
-UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
+UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money, `lockid`=0 where `entry`=@Entry;
 
 -- Loot template - Spoils of War
 DELETE FROM `item_loot_template` WHERE `entry` = @Entry;
