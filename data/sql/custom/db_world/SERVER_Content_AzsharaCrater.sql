@@ -347,6 +347,7 @@ SET @Malik_Stillblade       = 482208;
 -- Peacekeeepers
 SET @Mage_Bruiser           = 482220;
 SET @Orc_Bruiser            = 482221;
+SET @Mage_BruiserCopy       = 482222;
 -- Cosmetic
 SET @Firelord               = 482230;
 SET @Windseeker             = 482231;
@@ -523,6 +524,10 @@ UPDATE `creature_template` SET `lootid`=`entry`, `rank`=1, `minlevel`=20, `maxle
 -- Fix loot link
 UPDATE `creature_template` SET `lootid` = `entry` WHERE `entry` IN (@Fire_Elemental, @Rock_Giant, @Water_Elemental, @Naga_Ambusher, @Naga_Guardian, @Shadowfiend, @Air_Elemental, @Enchanted_Tiki_Warrior, @Void_Lord);
 
+-- Scale up small bois
+UPDATE `creature_template_model` SET `DisplayScale`=1.35 WHERE `CreatureID` = @Ogre_Reaver;
+UPDATE `creature_template_model` SET `DisplayScale`=1.2 WHERE `CreatureID` = @Ogre_Mage;
+UPDATE `creature_template_model` SET `DisplayScale`=1.3 WHERE `CreatureID` = @Ogre_Brute;
 -- ------------------------------------------------------------------------------------------------------
 -- Custom creature templates
 -- ------------------------------------------------------------------------------------------------------
@@ -542,8 +547,9 @@ REPLACE INTO `creature_template`
 (@Packmaster_Stonebrow, 'Packmaster Stonebrow',     'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1,              1.2,        1,      1,              32768,          2048,           7,      0,              0,              ''),
 (@Malik_Stillblade,     'Malik Stillblade',         'Supplies',             0,                      20,         20,         7,                  10,                 7,                  2007,       131,        1,              1.14286,        1,          1,      1,              0,              2048,           7,      0,              0,              ''),
 -- Peacekeepers
-(@Mage_Bruiser,         'Mage Guardian',            'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
-(@Orc_Bruiser,          'Orc Bruiser',              'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              ''),
+(@Mage_Bruiser,         'Archmage Magnus',          'Peacekeeper',          0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
+(@Mage_BruiserCopy,     'Mirror Image',             '',                     0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      8,              32768,          2048,           7,      0,              0,              ''),
+(@Orc_Bruiser,          'Orc Peacekeeper',          '',                     0,                      23,         23,         7,                  35,                 7,                  2008,       0,          1,              1,              1.15,       1,      1,              32768,          2048,           7,      0,              0,              ''),
 -- Elites
 (@Tanak_Ragepaw,        'Tanak Ragepaw',            '',                     @Tanak_Ragepaw,         23,         23,         7,                  25,                 7,                  16,         0,          0.8,            1.1,            2,          3,      1,              32768,          2048,           7,      4,              0,              'SmartAI'),
 (@Hexxed,               'Grimtooth the Hexxed',     '',                     @Hexxed,                23,         23,         7,                  25,                 7,                  7,          0,          0.8,            1.1,            1,          3,      8,              32768,          2048,           7,      4,              0,              'SmartAI'),
@@ -566,8 +572,9 @@ REPLACE INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `Prob
 (@Firelord, 11121, 1, 2, 1), -- Firelord
 (@Windseeker, 14992, 1, 2, 1), -- Windseeker
 -- Elites
-(@Mage_Bruiser, 28780, 1, 1, 1), -- Kirin Tor Guardian
-(@Orc_Bruiser, 4261, 1, 1, 1), -- Orc Bruiser
+(@Mage_Bruiser, 28780, 1, 1.15, 1), -- Kirin Tor Guardian
+(@Mage_BruiserCopy, 28780, 1, 1.15, 1), -- Kirin Tor Guardian Mirror Image
+(@Orc_Bruiser, 4261, 1, 1.15, 1), -- Orc Bruiser
 (@Tanak_Ragepaw, 25376, 2, 1, 1), -- Tanak Ragepaw
 (@Hexxed, 7803, 1, 1, 1), -- Hexlord Rashiki
 (@Ravazic, 2879, 1, 1, 1), -- Ravazic
@@ -732,6 +739,9 @@ UPDATE `creature_template` SET `rank`=0, `mingold`=0, `maxgold`=0, `healthmodifi
 
 REPLACE INTO `creature_equip_template` VALUES (@Mage_Bruiser, 1, 45726, 45727, 0, 18019);
 REPLACE INTO `creature_template_addon` VALUES (@Mage_Bruiser, 0, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `creature_equip_template` VALUES (@Mage_BruiserCopy, 1, 45726, 45727, 0, 18019);
+REPLACE INTO `creature_template_addon` VALUES (@Mage_BruiserCopy, 0, 0, 0, 0, 0, 0, NULL);
 
 REPLACE INTO `creature_equip_template` VALUES (@Orc_Bruiser, 1, 23503, 0, 0, 18019);
 REPLACE INTO `creature_template_addon` VALUES (@Orc_Bruiser, 0, 0, 0, 0, 0, 0, NULL);
@@ -1042,15 +1052,15 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 -- HUB
 -- -------------------------------------------------------------------------------------
 -- Kirin Tor Mages
-(@Mage_Bruiser, 37, 1, 1, 742.412, 278.798, 295.175, 5.74359, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 724.119, 292.79, 303.783, 0.245792, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 737.471, 299.838, 295.094, 4.08248, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 726.032, 312.104, 295.175, 1.149, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 744.23, 307.003, 295.179, 1.20398, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 738.727, 305.29, 280.811, 1.43568, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 732.753, 307.501, 280.934, 0.999782, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 725.212, 296.288, 319.306, 5.93214, 300, 0, 0, 'Crater_Alliance'),
-(@Mage_Bruiser, 37, 1, 1, 737.246, 290.07, 281.782, 2.46834, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 742.412, 278.798, 295.175, 5.74359, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 724.119, 292.79, 303.783, 0.245792, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 737.471, 299.838, 295.094, 4.08248, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 726.032, 312.104, 295.175, 1.149, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 744.23, 307.003, 295.179, 1.20398, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 738.727, 305.29, 280.811, 1.43568, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 732.753, 307.501, 280.934, 0.999782, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 725.212, 296.288, 319.306, 5.93214, 300, 0, 0, 'Crater_Alliance'),
+(@Mage_BruiserCopy, 37, 1, 1, 737.246, 290.07, 281.782, 2.46834, 300, 0, 0, 'Crater_Alliance'),
 -- Questgiver
 (@Spymaster_Jarre, 37, 1, 1, 737.141, 308.849, 295.18, 1.18832, 300, 0, 0, 'Crater_Alliance'),
 -- Supplies/repair
@@ -1520,16 +1530,16 @@ INSERT INTO `creature` (`id1`,`map`,`equipment_id`,`spawnmask`,`position_x`,`pos
 (@DarkmoonNPC, 37, 1, 1, 434.586, 148.855, 305.963, 5.3846, 300, 0, 0, 'Crater_Central'),
 -- Mage Guardians
 (@Mage_Bruiser, 37, 1, 1, 447.098, 149.941, 305.965, 3.89705, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 446.8, 134.292, 267.756, 5.61313, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 452.478, 138.618, 267.78, 5.01623, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 434.831, 144.897, 268.44, 0.138903, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 440.124, 164.332, 281.833, 2.56971, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 422.983, 144.282, 281.832, 3.55931, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 425.291, 152.849, 281.832, 2.55007, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 460.213, 141.142, 281.833, 5.43562, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 442.676, 126.551, 281.832, 5.02329, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 443.888, 138.293, 281.746, 2.11732, 300, 0, 0, 'Crater_Central'),
-(@Mage_Bruiser, 37, 1, 1, 441.064, 139.197, 297.173, 1.39869, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 446.8, 134.292, 267.756, 5.61313, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 452.478, 138.618, 267.78, 5.01623, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 434.831, 144.897, 268.44, 0.138903, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 440.124, 164.332, 281.833, 2.56971, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 422.983, 144.282, 281.832, 3.55931, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 425.291, 152.849, 281.832, 2.55007, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 460.213, 141.142, 281.833, 5.43562, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 442.676, 126.551, 281.832, 5.02329, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 443.888, 138.293, 281.746, 2.11732, 300, 0, 0, 'Crater_Central'),
+(@Mage_BruiserCopy, 37, 1, 1, 441.064, 139.197, 297.173, 1.39869, 300, 0, 0, 'Crater_Central'),
 -- Questgivers
 (@Surveyor_Delryn, 37, 1, 1, 436.47, 142.254, 305.964, 3.81776, 600, 0, 0, 'Crater_Central'),
 (@Farseer_Serena, 37, 1, 1, 451.833, 133.937, 281.838, 5.37751, 300, 0, 0, 'Crater_Central'),
@@ -2170,16 +2180,26 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @Windseeker;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES (@Windseeker, 0, 0, 0, 1, 0, 100, 0, 1800, 2500, 1800, 2500, 0, 11, 61480, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Out of Combat - Cast Fake Swing');
 
--- Mage Peacekeepers
+-- Mage Peacekeeper
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @Mage_Bruiser;
-INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES    (@Mage_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
+(@Mage_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
 (@Mage_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 58534, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - On Aggro - Cast Deep Freeze'),
 (@Mage_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 1600, 2200, 0, 11, 46194, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Ice Lance'),
 (@Mage_Bruiser, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 42931, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Cone of Cold');
 
+-- Mage Peacekeepers mirror images
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @Mage_BruiserCopy;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
+(@Mage_BruiserCopy, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
+(@Mage_BruiserCopy, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 58534, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - On Aggro - Cast Deep Freeze'),
+(@Mage_BruiserCopy, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 1600, 2200, 0, 11, 46194, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Ice Lance'),
+(@Mage_BruiserCopy, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 42931, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Kirin Tor Guardian - In Combat - Cast Cone of Cold');
+
 -- Orc Peacekeepers
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @Orc_Bruiser;
-INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES    (@Orc_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
+(@Orc_Bruiser, 0, 1, 0, 25, 0, 100, 0, 0, 0, 0, 0, 0, 11, 18950, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Cast Invisibility and Stealth Detection'),
 (@Orc_Bruiser, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 0, 11, 22120, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - On Aggro - Cast Charge'),
 (@Orc_Bruiser, 0, 3, 0, 0, 0, 100, 0, 0, 3000, 2600, 3200, 0, 11, 26211, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Hamstring'),
 (@Orc_Bruiser, 0, 4, 0, 0, 0, 100, 0, 0, 3000, 3000, 5000, 0, 11, 22427, 32, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Orc Guardian - In Combat - Cast Concussion Blow');
