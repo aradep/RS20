@@ -34,7 +34,7 @@ SET
 @400Arena = 2432,
 @600Arena = 2374,
 @800Arena = 2423,
-@1500Arena = 2288,
+@1300Arena1600Rating = 2621,
 @1500Arena1800Rating = 2383,
 @1500Arena2000Rating = 1435,
 @1500Arena2200Rating = 2359;
@@ -50,15 +50,15 @@ INSERT INTO `npc_vendor`
 -- AGM
 (@Entry,    3,          @600Arena,          19024), -- Arena Grand Master
 -- Custom heirloom weapons
-(@Entry,    4,          @1500Arena,          40866), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          40869), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          41038), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          41217), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          41275), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          41683), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          41869), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          41965), -- Custom heirloom shoulder
-(@Entry,    4,          @1500Arena,          42011), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  40866), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  40869), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  41038), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  41217), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  41275), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  41683), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  41869), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  41965), -- Custom heirloom shoulder
+(@Entry,    4,          @1300Arena1600Rating,  42011), -- Custom heirloom shoulder
 -- Tabards
 (@Entry,    5,          @1500Arena1800Rating,  45983), -- Furious Tabard
 (@Entry,    5,          @1500Arena2000Rating,  49086), -- Relentless Tabard
