@@ -12,7 +12,7 @@ SET
 @Entry      = 482009,
 @Model      = 18154,
 @Scale      = 0.18,
-@Name       = "K\'uri",
+@Name       = "Sa\'li",
 @Title      = "Artifacts",
 @Icon       = "Buy", -- Directions, Gunner, vehicleCursor, Driver, Attack, Buy, Speak, Pickup, Interact, Trainer, Taxi, Repair, LootAll --
 @Rank       = 0, -- 0	Normal, 1:Elite, 2:Rare Elite, 3:Boss, 4:Rare --
