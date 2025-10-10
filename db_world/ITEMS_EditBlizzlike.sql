@@ -31,11 +31,11 @@ UPDATE `item_template` SET `stackable`=1,  name='Endless Runecloth Bandage', `qu
 UPDATE `item_template` SET `stackable`=1,  name='Expedition Bandage', `description`='', `quality`=1, `map`=37, `buycount` = 20, `bonding`=1, `maxcount`=20, `buyprice`=0, `sellprice`=0, `requiredskill`=0, `requiredskillrank`=0, `spellid_1`=18608, `spellcharges_1`=0 WHERE `entry`=14530;
 
 -- Commendation of Bravery honor token
-UPDATE `item_template` SET `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHERE `entry` = 45706;
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `maxcount` = 0, `buycount` = 1, `stackable` = 20 WHERE `entry` = 45706;
 
 -- Custom 2-minute PvP Trinket
-UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=12 WHERE `entry` = 42123; -- Alliance
-UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=12 WHERE `entry` = 42122; -- Horde
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=10 WHERE `entry` = 42123; -- Alliance
+UPDATE `item_template` SET `requiredlevel`=20, `flags`=134217728, `quality`=7, `itemlevel`=30, `stat_value1`=10 WHERE `entry` = 42122; -- Horde
 
 -- Heirloom Arcanums/Inscriptions
 UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` = 7 AND `class` = 12;
@@ -47,7 +47,7 @@ UPDATE `item_template` SET `RequiredSkill`=0, `RequiredSkillRank`=0 WHERE `entry
 UPDATE `item_template` SET `requiredreputationfaction`=0, `requiredreputationrank`=0 WHERE `entry` IN (46820,46821);
 
 -- No durability
--- UPDATE `item_template` SET `maxdurability`=0 WHERE `maxdurability`>0;
+UPDATE `item_template` SET `maxdurability`=0 WHERE `maxdurability`>0;
 
 -- Rogue poisons unlimited use
 UPDATE `item_template` SET `maxcount`= 1, `spellcharges_1`= 0 WHERE `entry` IN (6947,3775);

@@ -73,10 +73,10 @@ INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, 
 
 -- Add flag auras
 REPLACE INTO `creature_addon` (`guid`, `auras`) VALUES 
-(@GUID+1, 32609), /* Horde Dummy */ 
-(@GUID+2, 32610), /* Alliance Dummy */
-(@GUID+3, 32609), /* Horde Dummy */ 
-(@GUID+4, 32610); /* Alliance Dummy */
+(@GUID+1, 32610), /* Horde Dummy */ 
+(@GUID+2, 32609), /* Alliance Dummy */
+(@GUID+3, 32610), /* Horde Dummy */ 
+(@GUID+4, 32609); /* Alliance Dummy */
 
 -- Spectators
 DELETE FROM `creature` WHERE `id1` IN (@Spectator1,@Spectator2,@Spectator3,@Spectator4,@Spectator5,@Spectator6,@Spectator7) AND `Comment` = 'CustomNPC';
