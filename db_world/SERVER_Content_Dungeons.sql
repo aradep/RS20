@@ -4,10 +4,10 @@
 -- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Dungeons setup
+-- Server content - Dungeons
 -- -----------------------------------
 
--- Move graveyard right outside entrance portals
+-- Move graveyards right outside entrance portal
 -- -----------------------------------
 
 -- DM
@@ -64,6 +64,9 @@ DELETE FROM `game_graveyard` WHERE `ID` IN (1,106);
 INSERT INTO `game_graveyard` (`ID`, `Map`, `x`, `y`, `z`, `Comment`) VALUES
 (1, @DungeonMap, @DungeonX, @DungeonY, @DungeonZ, 'Custom Graveyard'),
 (106,   @DungeonMap, @DungeonX, @DungeonY, @DungeonZ, 'Custom Graveyard');
+-- --------------------------------------------------------------------------------------- --
+
+-- Dungeon loot
 
 -- Update drop chance of rares like Shadowfang to 0.5%
 UPDATE `creature_loot_template` clt JOIN `item_template` it ON clt.`item` = it.`entry`

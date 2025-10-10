@@ -4,7 +4,7 @@
 -- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Server setup - Main player hub
+-- Server content - Mall hub
 -- -----------------------------------
 
 -- Player starting location

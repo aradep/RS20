@@ -4,7 +4,7 @@
 -- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Server setup - Dueling arena
+-- Server content - Dueling arena
 -- -----------------------------------
 
 -- NPCs

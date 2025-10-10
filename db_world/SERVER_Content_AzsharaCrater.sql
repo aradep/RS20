@@ -4,7 +4,7 @@
 -- Author Discord: @Degen
 -- 2025
 -- -----------------------------------
--- Azshara Crater
+-- Server content - Azshara Crater
 -- -----------------------------------
 
 -- Make Azshara Crater a Free-for-all PvP map
@@ -2507,11 +2507,11 @@ SET
 @FieldSupplies          = 20602,
 @MysteryBox             = 41426,
 
-@NormalQuest_Gold       = 60000,
+@NormalQuest_Gold       = 40000,
 @NormalQuest_HonorCoins = 5,
 
-@EliteQuest_Gold        = 250000,
-@EliteQuest_HonorCoins  = 15;
+@EliteQuest_Gold        = 100000,
+@EliteQuest_HonorCoins  = 10;
 
 -- Quest templates
 SET
