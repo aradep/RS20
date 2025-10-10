@@ -19,7 +19,7 @@ SET
 @Rank       = 1,
 @Type       = 7,
 @Class      = 1,
-@Flags      = 3,
+@Flags      = 9306115,
 @Level      = 20,
 @Faction    = 35;
 DELETE FROM `creature_template` WHERE `Entry` = @Entry;
