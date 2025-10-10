@@ -17,6 +17,9 @@ UPDATE `npc_trainer` SET `MoneyCost` = 0 WHERE `ReqLevel` > 0;
 -- Free stable slots
 REPLACE INTO `stableslotprices_dbc` (`ID`, `Cost`) VALUES (1,0),(2,0),(3,0),(4,0);
 
+-- Turn off riding mail
+UPDATE `mail_level_reward` SET `level`=21 WHERE `level`=20;
+
 -- Account command permissions
 UPDATE `command` SET `security`='0' WHERE `name` IN ('character','character customize','character changefaction','character changerace','account','account password','account lock ip');
 
