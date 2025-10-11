@@ -630,7 +630,7 @@ UPDATE `creature_template` SET `faction` = 2003 WHERE `faction` = 2001;
 
 -- Surveyor Delryn
 SET @entry = @Surveyor_Delryn;
-SET @text = 'The law can\'t protect you here. It would be wise to prepare before venturing forth.';
+SET @text = 'The law can\'t protect you here, $C. It would be wise to prepare before venturing forth.';
 SET @broadcast = (@entry + 100000);
 UPDATE `creature_template` SET `npcflag` = `npcflag`|1, `gossip_menu_id`=@entry WHERE  `entry` = @entry;
 DELETE FROM `gossip_menu` WHERE `menuID` = @entry AND `TextID` = @entry;
@@ -2507,10 +2507,10 @@ SET
 @FieldSupplies          = 20602,
 @MysteryBox             = 41426,
 
-@NormalQuest_Gold       = 40000,
+@NormalQuest_Gold       = 20000,
 @NormalQuest_HonorCoins = 5,
 
-@EliteQuest_Gold        = 100000,
+@EliteQuest_Gold        = 50000,
 @EliteQuest_HonorCoins  = 10;
 
 -- Quest templates
@@ -2543,7 +2543,7 @@ SET
 @ObjectiveText4             = '', 
 @QuestCompletionLog         = '',
 @RequestItems               = '',
-@OfferReward                = 'Welcome to the Crater, $C.$b$bMy companions and I are here on orders from Dalaran to survey and establish a foothold in the area, but we didn\'t expect this kind of resistance from the local wildlife.$b$bIf you can help us keep this position secure until reinforcements arrive, the Kirin\'tor can make it worth your while. You will find more members of the expedition team in the vale to the north and the swamp to the west, I\'m sure they are just as eager for assistance.',
+@OfferReward                = 'My companions and I are here on orders from Dalaran to survey and establish a foothold in the area, but we didn\'t expect this kind of resistance from the local wildlife.$b$bIf you can help us keep this position secure until reinforcements arrive, the Kirin\'tor will make it worth your while. You can find more members of my team in the vale to the north and the swamp to the west, I\'m sure they are just as eager for assistance.',
 
 @RewardItem1                = 0,                @RequiredNpcOrGo1           = 0,                @POIContinent               = 0,
 @RewardAmount1              = 0,                @RequiredNpcOrGoCount1      = 0,                @POIx                       = 0,

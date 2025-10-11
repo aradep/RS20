@@ -12,7 +12,7 @@ SET
 @Item   = 45986, -- Spoils of War
 @Honor  = 0,
 @Arena  = 0,
-@Gold   = 50000;
+@Gold   = 100000;
 
 -- PvP Daily Quests
 REPLACE INTO `quest_template` VALUES 
@@ -70,7 +70,7 @@ SET
 @Item   = 41426, -- Mystery Box
 @Honor  = 0,
 @Arena  = 0,
-@Gold   = 50000;
+@Gold   = 100000;
 
 -- Breadcrumb Quests
 REPLACE INTO `quest_template` VALUES 
