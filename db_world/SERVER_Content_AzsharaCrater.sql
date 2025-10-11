@@ -782,11 +782,11 @@ SET @Reference_RandomBoE  = 48215;
 DELETE FROM `reference_loot_template` WHERE `entry` IN (@Reference_NormalLoot, @Reference_EliteLoot, @Reference_BossLoot);
 INSERT INTO `reference_loot_template` VALUES
 -- Normal
-(@Reference_NormalLoot,  34053,                0,                     20, 0, 1, 0, 1, 1, 'Small Dream Shard'),
-(@Reference_NormalLoot,  @Reference_RandomBoE, @Reference_RandomBoE,   5, 0, 1, 0, 1, 1, 'Random BoE'),
+(@Reference_NormalLoot,  34053,                0,                     10, 0, 1, 0, 1, 1, 'Small Dream Shard'),
+(@Reference_NormalLoot,  @Reference_RandomBoE, @Reference_RandomBoE,   2, 0, 1, 0, 1, 1, 'Random BoE'),
 -- Elite
-(@Reference_EliteLoot,   34052,                0,                     20, 0, 1, 0, 1, 1, 'Dream Shard'),
-(@Reference_EliteLoot,   @Reference_RandomBoE, @Reference_RandomBoE,  10, 0, 1, 0, 1, 1, 'Random BoE'),
+(@Reference_EliteLoot,   34052,                0,                     10, 0, 1, 0, 1, 1, 'Dream Shard'),
+(@Reference_EliteLoot,   @Reference_RandomBoE, @Reference_RandomBoE,   5, 0, 1, 0, 1, 1, 'Random BoE'),
 -- Boss
 (@Reference_BossLoot,    37836,                0,                    100, 0, 1, 0, 5, 5, '5x Honor coin'),
 (@Reference_BossLoot,    34052,                0,                    100, 0, 1, 0, 2, 2, '2x Dream Shard'),
@@ -1033,8 +1033,8 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Gorloc_Dredger,       5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
 (@Gorloc_Gibberer,      5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
 (@Gorloc_Hunter,        5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
-(@Gorloc_Mud_Splasher,  5784,0,100,0,1,0,1,1,'Quest Item - Gorloc Fin'),
-(@Gorloc_Steam_Belcher, 5784,0,100,0,1,0,1,1,'Quest Item - Gorloc Fin'),
+(@Gorloc_Mud_Splasher,  5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
+(@Gorloc_Steam_Belcher, 5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
 (@Gorloc_Waddler,       5784, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Gorloc Fin'),
 -- Lynx Pelt
 (@Grovestalker_Lynx, 4742, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Pristine Lynx Pelt'),
@@ -1043,7 +1043,7 @@ REPLACE INTO `creature_loot_template` VALUES
 -- Ogre Warbeads
 (@Ogre_Brute,       21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
 (@Ogre_Mauler,      21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
-(@Ogre_Enforcer,    21982,0,100,0,1,0,1,1,'Quest Item - Ogre Warbeads'),
+(@Ogre_Enforcer,    21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
 (@Ogre_Mage,        21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
 (@Ogre_Reaver,      21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
 (@Ogre_Mage_Lord,   21982, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Ogre Warbeads'),
@@ -1059,7 +1059,7 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Naga_Guardian,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Defender,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Soothsayer, 12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
-(@Naga_Enchantress, 12923,0,100,0,1,0,2,3,'Quest Item - Polished Naga Scales'),
+(@Naga_Enchantress, 12923,0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Champion,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 (@Naga_Emissary,   12923, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Polished Naga Scales'),
 -- Wolvar Paw
@@ -1067,7 +1067,7 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Wolvar_Hunter,        4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
 (@Wolvar_Ravager,       4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
 (@Wolvar_Scavenger,     4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
-(@Wolvar_Spearbearer,   4758,0,100,0,1,0,1,1,'Quest Item - Bloody Wolvar Paw'),
+(@Wolvar_Spearbearer,   4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
 (@Wolvar_Tracker,       4758, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Bloody Wolvar Paw'),
 -- Furbolg Totem
 (@Furbolg_Elder,        20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
@@ -1076,13 +1076,13 @@ REPLACE INTO `creature_loot_template` VALUES
 (@Furbolg_Trapper,      20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
 (@Furbolg_Warrior,      20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
 (@Furbolg_Ursa,         20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
-(@Furbold_Denwatcher,   20741,0,100,0,1,0,1,1,'Quest Item - Whispering Ritual Totem'),
+(@Furbold_Denwatcher,   20741, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Whispering Ritual Totem'),
 -- Hexed Tiki Mask
 (@Enchanted_Tiki_Warrior, 43670, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Hexed Tiki Mask'),
 -- Black Dragonscale
-(@Dragonspawn_Dragonspawn, 15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
-(@Dragonspawn_Broodling,  15416,0,100,0,1,0,1,1,'Quest Item - Black Dragonscales'),
-(@Dragonspawn_Wyrmkin,    15416,0,100,0,1,0,2,3,'Quest Item - Black Dragonscales'),
+(@Dragonspawn_Dragonspawn, 15416, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Black Dragonscales'),
+(@Dragonspawn_Broodling,   15416, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Black Dragonscales'),
+(@Dragonspawn_Wyrmkin,     15416, 0, 100, 1, 1, 0, 2, 3, 'Quest Item - Black Dragonscales'),
 -- Petrified Bark
 (@Withered_Ancient,     36786, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Petrified Ironbark'),
 (@Wandering_Ancient,    36786, 0, 100, 1, 1, 0, 1, 1, 'Quest Item - Petrified Ironbark'),
@@ -2996,7 +2996,7 @@ SET
 @SpecialFlags               = 0,
 
 @LogTitle                   = 'Unnatural Selection',
-@LogDescription           = 'Have you noticed the furbolgs nearby? They\'re unusually aggressive and yesterday I seen a few carrying totems that didn\'t look like normal tribal artifacts.$b$bI need you to collect a few of those totems for me to study. With any luck we can figure out what\'s going on.',
+@LogDescription           = 'The furbolgs in this area are unusually aggressive even for their kind, and yesterday I noticed a few carrying totems that don\'t look like normal tribal artifacts.$b$bI need you to collect a few of those totems for me to study. With any luck we can figure out what\'s going on.',
 @QuestDescription          = 'Farseer Serena wants you to collect totems from the Redfang furbolg of central Azshara Crater.',
 @AreaDescription            = '',
 @ObjectiveText1             = '',
@@ -4925,10 +4925,10 @@ SET
 @SpecialFlags               = 0,
 
 @LogTitle                   = 'Paranormal Activity',
-@LogDescription            = 'There is an unnatural darkness in these totems, $n. I sense it prying at my mind, searching for a way in. It is no wonder the furbolgs have fallen under this influence.$b$bWe must locate the source of this corruption before it spreads. Venture into the furbolgs burrow and look for anything... unusual.',
-@QuestDescription           = 'Farseer Serena wants you to enter the furbolg burrow in central Azshara Crater and search for the source of the corruption.',
-@AreaDescription            = 'Find the source of the corruption.',
-@ObjectiveText1             = 'Clease the corruption.',
+@LogDescription            = 'There is a strange darkness in these totems, $n. I sense it prying at my mind, searching for a way in... It is no mystery why the furbolgs have fallen under this influence.$b$bWe must locate the source of this corruption before it spreads. Venture into the furbolgs burrow and look for anything... unusual.',
+@QuestDescription           = 'Farseer Serena wants you to enter the furbolg den in central Azshara Crater and search for the source of the corruption.',
+@AreaDescription            = 'Enter the furbolg den.',
+@ObjectiveText1             = 'Clease the corruption',
 @ObjectiveText2             = '',
 @ObjectiveText3             = '',
 @ObjectiveText4             = '', 
