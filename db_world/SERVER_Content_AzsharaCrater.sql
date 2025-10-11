@@ -782,14 +782,13 @@ SET @Reference_RandomBoE  = 48215;
 DELETE FROM `reference_loot_template` WHERE `entry` IN (@Reference_NormalLoot, @Reference_EliteLoot, @Reference_BossLoot);
 INSERT INTO `reference_loot_template` VALUES
 -- Normal
-(@Reference_NormalLoot,  34053,                0,                     10, 0, 1, 0, 1, 1, 'Small Dream Shard'),
+(@Reference_NormalLoot,  34053,                0,                     15, 0, 1, 0, 1, 1, 'Small Dream Shard'),
 (@Reference_NormalLoot,  @Reference_RandomBoE, @Reference_RandomBoE,   2, 0, 1, 0, 1, 1, 'Random BoE'),
 -- Elite
-(@Reference_EliteLoot,   34052,                0,                     10, 0, 1, 0, 1, 1, 'Dream Shard'),
+(@Reference_EliteLoot,   34052,                0,                     15, 0, 1, 0, 1, 1, 'Dream Shard'),
 (@Reference_EliteLoot,   @Reference_RandomBoE, @Reference_RandomBoE,   5, 0, 1, 0, 1, 1, 'Random BoE'),
 -- Boss
-(@Reference_BossLoot,    37836,                0,                    100, 0, 1, 0, 5, 5, '5x Honor coin'),
-(@Reference_BossLoot,    34052,                0,                    100, 0, 1, 0, 2, 2, '2x Dream Shard'),
+(@Reference_BossLoot,    34052,                0,                    100, 0, 1, 0, 3, 3, '3x Dream Shard'),
 (@Reference_BossLoot,    @Reference_RandomBoE, @Reference_RandomBoE, 100, 0, 1, 0, 1, 1, 'Random BoE');
 
 -- Reference template - Field supplies potions
