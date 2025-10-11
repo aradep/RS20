@@ -26,6 +26,9 @@ INSERT INTO `creature_template` (`Entry`, `Name`, `Subname`, `IconName`, `Minlev
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
 INSERT INTO `creature_template_model` (`CreatureID`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES (@Entry, @Model, @Scale, 1);
 
+-- Use only one model
+UPDATE `creature_model_info` SET `DisplayID_Other_Gender`=21667 WHERE `DisplayID`=21667;
+
 -- Placement handled in SERVER_Content_AzsharaCrater.sql
 
 -- Gossip
