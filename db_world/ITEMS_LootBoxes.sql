@@ -175,7 +175,7 @@ INSERT INTO `reference_loot_template`
 -- Bag of Shards
 SET
 @Entry          = 41888,
-@Quality        = 4,
+@Quality        = 3,
 @Money          = 0,
 @Name           = 'Bag of Dream Shards',
 @Description    = 'Contains ten Dream Shards.';

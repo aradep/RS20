@@ -43,46 +43,46 @@ INSERT INTO `npc_vendor`
 (`Entry`,   `Slot`, `ExtendedCost`,   `Item`) VALUES
 -- ----------------------------------------------------------------------------------------
 -- Currency
-(@Entry,     1,     @HonorCoin_x30,  45706), -- 2000 Honor Commendation
-(@Entry,     1,     @HonorCoin_x30,  41888), -- Bag of 10x Emblem of Heroism
+(@Entry,     1,     @HonorCoin_x30,    45706), -- 2000 Honor Commendation
+(@Entry,     1,     @HonorCoin_x50,    41888), -- Bag of 10x Dream Shard
 -- Armor
-(@Entry,     2,     @HonorCoin_x70,    23173), -- Abomination Skin Leggings
-(@Entry,     2,     @HonorCoin_x70,    34107), -- Tattered Shoulderpads
-(@Entry,     2,     @HonorCoin_x70,    20427), -- Battle Healers Cloak
-(@Entry,     2,     @HonorCoin_x70,    20428), -- Caretakers Cape
-(@Entry,     2,     @HonorCoin_x70,     2041), -- Tunic of Westfall
-(@Entry,     2,     @HonorCoin_x70,     7133), -- Brutal Hauberk
-(@Entry,     2,     @HonorCoin_x70,     5943), -- Rift Bracers
-(@Entry,     2,     @HonorCoin_x70,     6087), -- Chausses of Westfall
-(@Entry,     2,     @HonorCoin_x70,     7002), -- Arctic Buckler
-(@Entry,     2,     @HonorCoin_x70,     6414), -- Seal of Sylvanas
-(@Entry,     2,     @HonorCoin_x70,    21568), -- Rune of Duty
-(@Entry,     2,     @HonorCoin_x70,    21566), -- Rune of Perfection
-(@Entry,     2,     @HonorCoin_x70,    20426), -- Advisors Ring
-(@Entry,     2,     @HonorCoin_x70,    20429), -- Legionnaires Band
-(@Entry,     2,     @HonorCoin_x70,    20431), -- Lorekeepers Ring
-(@Entry,     2,     @HonorCoin_x70,    20439), -- Protectors Band
-(@Entry,     2,     @HonorCoin_x70,    20442), -- Scouts Medallion
-(@Entry,     2,     @HonorCoin_x70,    20444), -- Sentinels Medallion
+(@Entry,     2,     @HonorCoin_x30,    23173), -- Abomination Skin Leggings
+(@Entry,     2,     @HonorCoin_x30,    34107), -- Tattered Shoulderpads
+(@Entry,     2,     @HonorCoin_x30,    20427), -- Battle Healers Cloak
+(@Entry,     2,     @HonorCoin_x30,    20428), -- Caretakers Cape
+(@Entry,     2,     @HonorCoin_x30,     2041), -- Tunic of Westfall
+(@Entry,     2,     @HonorCoin_x30,     7133), -- Brutal Hauberk
+(@Entry,     2,     @HonorCoin_x30,     5943), -- Rift Bracers
+(@Entry,     2,     @HonorCoin_x30,     6087), -- Chausses of Westfall
+(@Entry,     2,     @HonorCoin_x30,     7002), -- Arctic Buckler
+(@Entry,     2,     @HonorCoin_x30,     6414), -- Seal of Sylvanas
+(@Entry,     2,     @HonorCoin_x30,    21568), -- Rune of Duty
+(@Entry,     2,     @HonorCoin_x30,    21566), -- Rune of Perfection
+(@Entry,     2,     @HonorCoin_x30,    20426), -- Advisors Ring
+(@Entry,     2,     @HonorCoin_x30,    20429), -- Legionnaires Band
+(@Entry,     2,     @HonorCoin_x30,    20431), -- Lorekeepers Ring
+(@Entry,     2,     @HonorCoin_x30,    20439), -- Protectors Band
+(@Entry,     2,     @HonorCoin_x30,    20442), -- Scouts Medallion
+(@Entry,     2,     @HonorCoin_x30,    20444), -- Sentinels Medallion
 -- Weapon
-(@Entry,     3,     @HonorCoin_x120,     7001), -- Gravestone Scepter
-(@Entry,     3,     @HonorCoin_x120,    25464), -- Blood-Tempered Sanseur
-(@Entry,     3,     @HonorCoin_x120,    23171), -- The Axe of Severing
-(@Entry,     3,     @HonorCoin_x120,     2042), -- Staff of Westfall
-(@Entry,     3,     @HonorCoin_x120,     6504), -- Wingblade
-(@Entry,     3,     @HonorCoin_x120,     6505), -- Crescent Staff
-(@Entry,     3,     @HonorCoin_x120,    20425), -- Advisors Gnarled Staff
-(@Entry,     3,     @HonorCoin_x120,    20434), -- Lorekeep ers Staff
-(@Entry,     3,     @HonorCoin_x120,    20430), -- Legionnaires Sword
-(@Entry,     3,     @HonorCoin_x120,    20440), -- Protectors Sword
-(@Entry,     3,     @HonorCoin_x120,    20437), -- Outriders Bow
-(@Entry,     3,     @HonorCoin_x120,    20438), -- Outrunners Bow
-(@Entry,     3,     @HonorCoin_x120,    20441), -- Scouts Blade
-(@Entry,     3,     @HonorCoin_x120,    20443), -- Sentinels Blade
-(@Entry,     3,     @HonorCoin_x120,    22980), -- Staff of the Sun
-(@Entry,     3,     @HonorCoin_x120,    22982), -- Farstriders Longbow
-(@Entry,     3,     @HonorCoin_x120,    22984), -- Dawnblade
-(@Entry,     3,     @HonorCoin_x120,    22995); -- Sindorei Warblade
+(@Entry,     3,     @HonorCoin_x50,     7001), -- Gravestone Scepter
+(@Entry,     3,     @HonorCoin_x50,    25464), -- Blood-Tempered Sanseur
+(@Entry,     3,     @HonorCoin_x50,    23171), -- The Axe of Severing
+(@Entry,     3,     @HonorCoin_x50,     2042), -- Staff of Westfall
+(@Entry,     3,     @HonorCoin_x50,     6504), -- Wingblade
+(@Entry,     3,     @HonorCoin_x50,     6505), -- Crescent Staff
+(@Entry,     3,     @HonorCoin_x50,    20425), -- Advisors Gnarled Staff
+(@Entry,     3,     @HonorCoin_x50,    20434), -- Lorekeep ers Staff
+(@Entry,     3,     @HonorCoin_x50,    20430), -- Legionnaires Sword
+(@Entry,     3,     @HonorCoin_x50,    20440), -- Protectors Sword
+(@Entry,     3,     @HonorCoin_x50,    20437), -- Outriders Bow
+(@Entry,     3,     @HonorCoin_x50,    20438), -- Outrunners Bow
+(@Entry,     3,     @HonorCoin_x50,    20441), -- Scouts Blade
+(@Entry,     3,     @HonorCoin_x50,    20443), -- Sentinels Blade
+(@Entry,     3,     @HonorCoin_x50,    22980), -- Staff of the Sun
+(@Entry,     3,     @HonorCoin_x50,    22982), -- Farstriders Longbow
+(@Entry,     3,     @HonorCoin_x50,    22984), -- Dawnblade
+(@Entry,     3,     @HonorCoin_x50,    22995); -- Sindorei Warblade
 -- ----------------------------------------------------------------------------------------
 
 -- Refundable
