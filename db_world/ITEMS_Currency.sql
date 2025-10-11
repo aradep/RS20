@@ -8,7 +8,7 @@
 -- -----------------------------------
 
 -- Honor Coin
-UPDATE `item_template` SET `requiredlevel`=0, `quality`=2, `name`='Honor Coin', `description`=''  WHERE `entry` = 37836;
+UPDATE `item_template` SET `requiredlevel`=0, `quality`=3, `name`='Honor Coin', `description`=''  WHERE `entry` = 37836;
 
 -- Mount Certificate
 UPDATE `item_template` SET `name`='Mount Certificate', `description`='Can be exchanged for a special mount.', `Quality`=7, `flags`=134283264 WHERE `entry`= 46114;

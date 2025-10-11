@@ -2510,8 +2510,8 @@ SET
 @NormalQuest_Gold       = 40000,
 @NormalQuest_HonorCoins = 5,
 
-@EliteQuest_Gold        = 100000,
-@EliteQuest_HonorCoins  = 10;
+@EliteQuest_Gold        = 120000,
+@EliteQuest_HonorCoins  = 15;
 
 -- Quest templates
 SET

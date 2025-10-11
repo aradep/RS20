@@ -177,8 +177,8 @@ SET
 @Entry          = 41888,
 @Quality        = 4,
 @Money          = 0,
-@Name           = 'Bag of Emblems',
-@Description    = 'Contains 10x Emblems of Heroism.';
+@Name           = 'Bag of Dream Shards',
+@Description    = 'Contains ten Dream Shards.';
 UPDATE `item_template` SET `name`=@Name,`description`=@Description, `quality`=@Quality, `minmoneyloot`=@Money, `maxmoneyloot`=@Money where `entry`=@Entry;
 
 -- Loot template - Bag of Shards
@@ -187,7 +187,7 @@ INSERT INTO `item_loot_template`
 -- ----------------------------------------------------------------------------------------------------------------------
 (`Entry`,   `Item`,     `reference`,    `Chance`,   `groupid`,  `mincount`, `maxcount`, `comment`) VALUES
 -- ----------------------------------------------------------------------------------------------------------------------
-(@Entry,    40752,      0,              0,          1,          10,         10,         '10x Emblem of Heroism');
+(@Entry,     34052,      0,              0,          1,          10,         10,         '10x Dream Shard');
 -- ----------------------------------------------------------------------------------------------------------------------
 
 -- Hat Box PvE
