@@ -386,9 +386,9 @@ UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxle
 -- Fields
 UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Grovestalker Lynx', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Grovestalker_Lynx;
 -- Wreckage
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Buzzard;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Giant Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Giant_Buzzard;
-UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Skeleton', `healthmodifier`=0.5, `manamodifier`=@ManaMod_Normal, `damagemodifier`=0.5 WHERE `entry` = @Wandering_Skeleton;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=17, `maxlevel`=18, `name`='Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Buzzard;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=17, `maxlevel`=18, `name`='Giant Buzzard', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Giant_Buzzard;
+UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=17, `maxlevel`=18, `name`='Skeleton', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Wandering_Skeleton;
 -- Furbolg Hold
 UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Thistlefur Hunter', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Hunter;
 UPDATE `creature_template` SET `lootid`=`entry`, `rank`=0, `minlevel`=18, `maxlevel`=21, `name`='Thistlefur Warrior', `healthmodifier`=@HealthMod_Normal, `manamodifier`=@ManaMod_Normal, `damagemodifier`=@DamageMod_Normal WHERE `entry` = @Furbolg_Warrior;
