@@ -69,9 +69,9 @@ INSERT INTO `npc_vendor`
 (@Entry,    4,          @5000Honor,       44096), -- Battleworn Thrash Blade
 (@Entry,    4,          @5000Honor,       48716), -- Venerable Mass of McGowan
 (@Entry,    4,          @5000Honor,       48718), -- Repurposed Lava Dredger
-(@Entry,    4,          @8000Honor,       44092), -- Reforged Truesilver Champion
-(@Entry,    4,          @8000Honor,       44093), -- Upgraded Dwarven Hand Cannon
-(@Entry,    4,          @8000Honor,       44095); -- Grand Staff of Jordan
+(@Entry,    4,          @6000Honor,       44092), -- Reforged Truesilver Champion
+(@Entry,    4,          @6000Honor,       44093), -- Upgraded Dwarven Hand Cannon
+(@Entry,    4,          @6000Honor,       44095); -- Grand Staff of Jordan
 
 -- Refundable
 UPDATE `item_template` INNER JOIN `npc_vendor` ON `item_template`.`entry` = `npc_vendor`.`item` SET `item_template`.`flags` = `item_template`.`flags` | 4096 WHERE `npc_vendor`.`entry` = @Entry;

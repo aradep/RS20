@@ -79,6 +79,6 @@ INSERT INTO `npc_vendor`
 (@Entry,    4,          @EmblemofHeroism_x25,         42948), -- Devout Aurastone Hammer
 (@Entry,    4,          @EmblemofHeroism_x25,         44091), -- Sharpened Scarlet Kris
 (@Entry,    4,          @EmblemofHeroism_x25,         42945), -- Venerable Dal'Rend's Sacred Charge
-(@Entry,    4,          @EmblemofHeroism_x40,         42946), -- Charmed Ancient Bone Bow
-(@Entry,    4,          @EmblemofHeroism_x40,         42947), -- Dignified Headmaster's Charge
-(@Entry,    4,          @EmblemofHeroism_x40,         42943); -- Bloodied Arcanite Reaper
+(@Entry,    4,          @EmblemofHeroism_x30,         42946), -- Charmed Ancient Bone Bow
+(@Entry,    4,          @EmblemofHeroism_x30,         42947), -- Dignified Headmaster's Charge
+(@Entry,    4,          @EmblemofHeroism_x30,         42943); -- Bloodied Arcanite Reaper
