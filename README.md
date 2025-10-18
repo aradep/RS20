@@ -1,6 +1,8 @@
-"Dragonshrine" Instant-20 Funserver
+"Dragonshrine" Instant-20 Funserver.
 
-DB-only setup. No patch, no core edits.
+Server setup files.
+
+DB-only. No patch no core edits.
 
 Made for AzerothCore
 
