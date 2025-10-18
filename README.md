@@ -1,2 +1,5 @@
-# project20
-Instant 20 custom blizzlike funserver
+-- -----------------------------------
+-- "Dragonshrine" Instant-20 Funserver
+-- SQL-only setup. No patch, no core edits.
+-- Made for AzerothCore 3.3.5a
+-- 2025
