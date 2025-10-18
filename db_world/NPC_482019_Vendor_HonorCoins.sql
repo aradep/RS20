@@ -1,5 +1,5 @@
 -- -----------------------------------
--- Dragonshrine Instant-20 Funserver
+-- "Hall of Champions" Instant-20 Funserver
 -- Made for AzerothCore 3.3.5a
 -- Author Discord: @Degen
 -- 2025
