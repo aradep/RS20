@@ -1,5 +1,4 @@
--- -----------------------------------
--- "Dragonshrine" Instant-20 Funserver
--- SQL-only setup. No patch, no core edits.
--- Made for AzerothCore 3.3.5a
--- 2025
+"Dragonshrine" Instant-20 Funserver
+DB-only setup. No patch, no core edits.
+Made for AzerothCore
+2025
