@@ -19,6 +19,9 @@ UPDATE `item_template` SET `name`='Emblem of Heroism', `description`='', `requir
 -- Emblem of Valor
 UPDATE `item_template` SET `name`='Emblem of Valor', `description`='', `requiredlevel`=0, `itemlevel`=20 WHERE `entry`= 40753;
 
+-- Emblem of Frost
+UPDATE `item_template` SET `name`='Emblem of Frost', `description`='Thank you for testing.', `requiredlevel`=0, `itemlevel`=20 WHERE `entry`= 49426;
+
 -- Small Dream Shard
 UPDATE `item_template` SET `bonding`=0, `quality` = 3, `stackable` = 200 WHERE `entry` = 34053;
 

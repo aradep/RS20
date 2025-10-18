@@ -43,6 +43,9 @@ UPDATE `item_template` SET `requiredlevel` = 0, `buyprice` = 0 WHERE `quality` =
 -- Lucky Fishing Hat
 UPDATE `item_template` SET `RequiredSkill`=0, `RequiredSkillRank`=0 WHERE `entry`=19972;
 
+-- Beta Testers Tabard
+UPDATE `item_template` SET `Name`='Beta Tester\'s Tabard', `quality`=4, `description`='Est. 2017' WHERE `entry`=35280;
+
 -- Wymling pet remove rep requirement
 UPDATE `item_template` SET `requiredreputationfaction`=0, `requiredreputationrank`=0 WHERE `entry` IN (46820,46821);
 

@@ -47,6 +47,7 @@ INSERT INTO `npc_vendor`
 -- ----------------------------------------------------------------------------------------
 -- 2000 Honor
 (@Entry,    1,          @400Arena,          45706), -- Commendation of Bravery
+(@Entry,    2,          @600Arena,          41888), -- Bag of 10x Dream Shard
 -- AGM
 (@Entry,    3,          @600Arena,          19024), -- Arena Grand Master
 -- Custom heirloom weapons
