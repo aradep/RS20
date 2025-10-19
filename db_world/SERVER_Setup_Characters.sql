@@ -129,6 +129,9 @@ REPLACE INTO `playercreateinfo_spell_custom` (`classmask`, `Spell`, `Note`) VALU
 (64, 5394, 'Healing Stream Totem'),
 (256,  697, 'Summon Voidwalker'),
 (256,  712, 'Summon Succubus'),
+(1024,  5487, 'Bear Form'),
+(1024,  6795, 'Growl'),
+(1024,  6807, 'Maul'),
 -- Weapon Spells
 (431,   201,   'ONE-HANDED SWORDS'),
 (39,    202,   'TWO-HANDED SWORDS'),
