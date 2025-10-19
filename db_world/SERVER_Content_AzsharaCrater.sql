@@ -357,9 +357,9 @@ SET @Windseeker             = 482231;
 -- ------------------------------------------------------------------------------------------------------
 
 -- Health/Mana/Dmg Modifiers
-SET @HealthMod_Normal   = 1.0;
-SET @ManaMod_Normal     = 1.0;
-SET @DamageMod_Normal   = 1.0;
+SET @HealthMod_Normal   = 1.5;
+SET @ManaMod_Normal     = 1.5;
+SET @DamageMod_Normal   = 1.5;
 SET @HealthMod_Elite    = 4.0;
 SET @ManaMod_Elite      = 4.0;
 SET @DamageMod_Elite    = 4.0;
